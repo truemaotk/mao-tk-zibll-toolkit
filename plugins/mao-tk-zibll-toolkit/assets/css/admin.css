@@ -1,0 +1,182 @@
+/* All selectors remain inside the plugin root; native WP buttons retain scheme colors. */
+.mao-tk-toolkit {
+    --mao-tk-accent: #2563eb;
+    --mao-tk-text: #20314b;
+    --mao-tk-muted: #5d6e85;
+    --mao-tk-border: #dce5f1;
+    --mao-tk-surface: #fff;
+    --mao-tk-subtle: #f3f7fd;
+    --mao-tk-radius: 8px;
+    --mao-tk-space-1: 4px;
+    --mao-tk-space-2: 8px;
+    --mao-tk-space-3: 12px;
+    --mao-tk-space-4: 16px;
+    --mao-tk-space-5: 24px;
+    --mao-tk-space-6: 32px;
+    max-width: none;
+    margin: 20px 20px 20px 0;
+    color: var(--mao-tk-text);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.65;
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased;
+}
+.mao-tk-toolkit *,
+.mao-tk-toolkit *::before,
+.mao-tk-toolkit *::after { box-sizing: border-box; }
+.mao-tk-toolkit :is(h1, h2, h3, p) { margin: 0; padding: 0; }
+.mao-tk-toolkit p { font-size: 14px; line-height: 1.7; }
+.mao-tk-toolkit a:not(.button) { color: var(--mao-tk-accent); text-underline-offset: 3px; }
+.mao-tk-toolkit a:not(.button):hover { text-decoration-thickness: 2px; }
+.mao-tk-toolkit a:not(.button):focus-visible { outline: 2px solid var(--mao-tk-accent); outline-offset: 2px; box-shadow: none; }
+.mao-tk-toolkit :is(button, input, select, textarea, .button):focus { outline: none; border-color: var(--mao-tk-accent); box-shadow: none; }
+.mao-tk-toolkit :is(button, input, select, textarea, .button):focus-visible { outline: none; border-color: var(--mao-tk-accent); box-shadow: inset 0 0 0 1px var(--mao-tk-accent); }
+.mao-tk-toolkit .mao-tk-toolkit__header { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+.mao-tk-toolkit .mao-tk-toolkit__identity { display: flex; align-items: center; gap: 16px; min-width: 0; }
+.mao-tk-toolkit .mao-tk-toolkit__brand { display: block; flex: 0 0 48px; width: 48px; height: 48px; object-fit: contain; }
+.mao-tk-toolkit .mao-tk-toolkit__title-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.mao-tk-toolkit h1 { color: var(--mao-tk-text); font-size: clamp(23px, 2.2vw, 29px); font-weight: 650; line-height: 1.3; overflow-wrap: anywhere; }
+.mao-tk-toolkit .mao-tk-toolkit__version { display: inline-flex; align-items: center; border: 1px solid var(--mao-tk-border); border-radius: var(--mao-tk-radius); padding: 1px 7px; color: var(--mao-tk-muted); font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; line-height: 1.6; }
+.mao-tk-toolkit p.mao-tk-toolkit__intro { margin-top: 7px; color: var(--mao-tk-muted); }
+.mao-tk-toolkit .button { display: inline-flex; justify-content: center; align-items: center; gap: 6px; min-height: 36px; padding: 3px 14px; border-radius: var(--mao-tk-radius); font-family: inherit; font-size: 13px; font-weight: 500; line-height: 1.6; white-space: nowrap; transition: opacity 120ms ease; }
+.mao-tk-toolkit .button .dashicons { width: 17px; height: 17px; font-size: 17px; line-height: 1; }
+.mao-tk-toolkit .button[disabled] { cursor: not-allowed; }
+.mao-tk-toolkit .button[aria-busy="true"] { cursor: wait; opacity: .75; }
+.mao-tk-toolkit .mao-tk-toolkit__feedback:empty { display: none; }
+.mao-tk-toolkit .mao-tk-toolkit__message { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; padding: 14px 18px; border: 1px solid var(--mao-tk-border); border-radius: var(--mao-tk-radius); background: var(--mao-tk-surface); }
+.mao-tk-toolkit .mao-tk-toolkit__message .dashicons { flex: 0 0 20px; margin-top: 2px; }
+.mao-tk-toolkit .mao-tk-toolkit__message strong { font-weight: 600; }
+.mao-tk-toolkit .mao-tk-toolkit__message p { margin-top: 3px; color: var(--mao-tk-muted); }
+.mao-tk-toolkit .mao-tk-toolkit__message--success > .dashicons { color: #007017; }
+.mao-tk-toolkit .mao-tk-toolkit__message--warning > .dashicons { color: #8a4b08; }
+.mao-tk-toolkit .mao-tk-toolkit__message--error > .dashicons { color: #b32d2e; }
+.mao-tk-toolkit .mao-tk-toolkit__layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; align-items: start; gap: 28px; }
+.mao-tk-toolkit .mao-tk-toolkit__main { min-width: 0; }
+.mao-tk-toolkit .mao-tk-toolkit__main > .mao-tk-toolkit__panel + .mao-tk-toolkit__panel { margin-top: 20px; }
+.mao-tk-toolkit .mao-tk-disclosure { min-width: 0; border-top: 1px solid var(--mao-tk-border); }
+.mao-tk-toolkit .mao-tk-disclosure__trigger { display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; min-height: 64px; padding: 16px 24px; border: 1px solid transparent; border-radius: 0; background: var(--mao-tk-surface); color: var(--mao-tk-text); text-align: left; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.mao-tk-toolkit .mao-tk-disclosure__trigger:hover { background: #f5f9ff; }
+.mao-tk-toolkit .mao-tk-disclosure__label { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; min-width: 0; }
+.mao-tk-toolkit .mao-tk-disclosure__summary { color: var(--mao-tk-muted); font-size: 12px; font-weight: 400; }
+.mao-tk-toolkit .mao-tk-disclosure__trigger svg { flex: 0 0 18px; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: transform 280ms cubic-bezier(.2,.7,.2,1); transform-origin: center; }
+.mao-tk-toolkit .is-open > .mao-tk-disclosure__heading .mao-tk-disclosure__trigger svg { transform: rotate(180deg); }
+.mao-tk-toolkit .mao-tk-disclosure__panel { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 280ms cubic-bezier(.2,.7,.2,1); }
+.mao-tk-toolkit [data-disclosure-ready="1"]:not(.is-open) > .mao-tk-disclosure__panel { grid-template-rows: 0fr; }
+.mao-tk-toolkit .mao-tk-disclosure__inner { min-height: 0; overflow: hidden; }
+.mao-tk-toolkit .mao-tk-disclosure__inner > .mao-tk-toolkit__module { padding: 16px 24px; }
+.mao-tk-toolkit .mao-tk-disclosure__inner .mao-tk-toolkit__module-actions { min-height: 68px; gap: 10px; }
+.mao-tk-toolkit .mao-tk-disclosure__copy { padding: 0 24px 22px; color: var(--mao-tk-muted); }
+.mao-tk-toolkit .mao-tk-disclosure__copy p + p { margin-top: 10px; }
+.mao-tk-toolkit .mao-tk-top-info__fields .mao-tk-disclosure { border: 1px solid var(--mao-tk-border); border-radius: 8px; overflow: hidden; }
+.mao-tk-toolkit .mao-tk-top-info__fields .mao-tk-disclosure__trigger { padding: 14px 16px; min-height: 56px; }
+.mao-tk-toolkit .mao-tk-disclosure__fields { display: grid; gap: 10px; padding: 0 16px 18px; }
+@media(max-width:480px) { .mao-tk-toolkit .mao-tk-disclosure__trigger { padding: 14px 18px; } .mao-tk-toolkit .mao-tk-disclosure__label { display: grid; gap: 3px; } }
+@media(prefers-reduced-motion:reduce) { .mao-tk-toolkit .mao-tk-disclosure__panel, .mao-tk-toolkit .mao-tk-disclosure__trigger svg { transition: none; } }
+.mao-tk-toolkit h2 { color: var(--mao-tk-text); font-size: 16px; font-weight: 600; line-height: 1.5; }
+.mao-tk-toolkit h3 { color: var(--mao-tk-text); font-size: 14px; font-weight: 600; line-height: 1.5; }
+.mao-tk-toolkit .mao-tk-toolkit__panel { overflow: hidden; border: 1px solid var(--mao-tk-border); border-radius: var(--mao-tk-radius); background: var(--mao-tk-surface); }
+.mao-tk-toolkit .mao-tk-toolkit__section-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 23px 24px 20px; }
+.mao-tk-toolkit .mao-tk-toolkit__section-head p { margin-top: 5px; color: var(--mao-tk-muted); font-size: 13px; }
+.mao-tk-toolkit .mao-tk-toolkit__count { padding-top: 2px; color: var(--mao-tk-muted); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mao-tk-toolkit .mao-tk-toolkit__module { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: stretch; padding: 24px; border-top: 1px solid var(--mao-tk-border); }
+.mao-tk-toolkit .mao-tk-toolkit__module-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-bottom: 7px; }
+.mao-tk-toolkit .mao-tk-toolkit__module-copy > p { color: var(--mao-tk-muted); font-size: 13px; }
+.mao-tk-toolkit p.mao-tk-toolkit__module-note { margin-top: 9px; color: var(--mao-tk-muted); font-size: 12px; }
+.mao-tk-toolkit .mao-tk-toolkit__module-form { margin-top: 1px; }
+.mao-tk-toolkit .mao-tk-toolkit__module-button { min-width: 88px; min-height: 36px; }
+.mao-tk-toolkit .mao-tk-toolkit__badge { display: inline-flex; align-items: center; padding: 1px 7px; border: 1px solid var(--mao-tk-border); border-radius: var(--mao-tk-radius); color: var(--mao-tk-muted); background: transparent; font-size: 12px; font-weight: 500; line-height: 1.8; white-space: nowrap; }
+.mao-tk-toolkit .mao-tk-toolkit__badge--error { color: #a12025; }
+.mao-tk-toolkit .mao-tk-toolkit__badge--success { color: #24633b; background: #eaf7ee; border-color: #c6e5cf; }
+.mao-tk-toolkit .mao-tk-toolkit__badge--warning { color: #8a4b08; background: #fff8eb; }
+.mao-tk-toolkit .mao-tk-toolkit__badge,
+.mao-tk-toolkit .mao-tk-toolkit__version { border-radius: 4px; }
+.mao-tk-toolkit .button { border-radius: 6px; }
+.mao-tk-toolkit .mao-tk-toolkit__module-actions { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 18px; min-height: 86px; }
+.mao-tk-toolkit .mao-tk-toolkit__switch { appearance: none; display: inline-flex; flex: 0 0 56px; align-items: center; justify-content: center; width: 56px; min-width: 56px; max-width: 56px; height: 44px; min-height: 44px; margin: 0; padding: 4px; border: 0; border-radius: 6px; background: transparent; color: var(--mao-tk-muted); font: inherit; line-height: 1; cursor: pointer; }
+.mao-tk-toolkit .mao-tk-toolkit__switch-track { position: relative; display: inline-block; flex: 0 0 48px; width: 48px; height: 26px; border: 1px solid transparent; border-radius: 99px; background: #b8bdc3; transition: background-color 140ms ease; }
+.mao-tk-toolkit .mao-tk-toolkit__switch-track::after { position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%; background: #fff; content: ""; box-shadow: 0 1px 3px rgba(0, 0, 0, .16); transition: transform 140ms ease; }
+.mao-tk-toolkit .mao-tk-toolkit__switch[aria-checked="true"] .mao-tk-toolkit__switch-track { background: var(--mao-tk-accent); }
+.mao-tk-toolkit .mao-tk-toolkit__switch[aria-checked="true"] .mao-tk-toolkit__switch-track::after { transform: translateX(22px); }
+.mao-tk-toolkit .mao-tk-toolkit__switch:disabled { cursor: not-allowed; opacity: .6; }
+.mao-tk-toolkit .mao-tk-toolkit__switch[aria-busy="true"] { cursor: progress; }
+.mao-tk-toolkit .mao-tk-toolkit__switch:disabled[aria-busy="true"] { opacity: 1; }
+.mao-tk-toolkit .mao-tk-toolkit__switch-feedback { position: fixed; right: 24px; bottom: 24px; z-index: 99999; width: max-content; max-width: min(420px, calc(100vw - 32px)); padding: 12px 16px; border: 1px solid var(--mao-tk-border); border-radius: var(--mao-tk-radius); background: var(--mao-tk-surface); color: var(--mao-tk-text); box-shadow: 0 4px 18px rgba(0, 0, 0, .1); font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.mao-tk-toolkit .mao-tk-toolkit__switch-feedback[data-feedback-state="save-failed"] { color: #a12025; }
+.mao-tk-toolkit p.mao-tk-toolkit__runtime-status { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; min-height: 26px; margin-top: 10px; font-size: 12px; }
+.mao-tk-toolkit .mao-tk-toolkit__panel-foot { display: flex; align-items: center; gap: 7px; padding: 12px 24px; border-top: 1px solid var(--mao-tk-border); color: var(--mao-tk-muted); background: var(--mao-tk-subtle); font-size: 12px; }
+.mao-tk-toolkit .mao-tk-toolkit__panel-foot .dashicons { flex: 0 0 16px; width: 16px; height: 16px; font-size: 16px; }
+.mao-tk-toolkit .mao-tk-toolkit__empty { padding: 24px; border-top: 1px solid var(--mao-tk-border); }
+.mao-tk-toolkit .mao-tk-toolkit__welcome { display: flex; align-items: flex-start; gap: 12px; margin-top: 20px; padding: 18px 20px; border: 1px solid var(--mao-tk-border); border-radius: var(--mao-tk-radius); background: var(--mao-tk-surface); }
+.mao-tk-toolkit .mao-tk-toolkit__welcome > .dashicons { margin-top: 2px; color: #116329; }
+.mao-tk-toolkit .mao-tk-toolkit__welcome strong { color: var(--mao-tk-text); font-size: 14px; font-weight: 600; }
+.mao-tk-toolkit .mao-tk-toolkit__welcome p { margin-top: 4px; color: var(--mao-tk-muted); font-size: 13px; }
+.mao-tk-toolkit .mao-tk-toolkit__guide { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--mao-tk-border); }
+.mao-tk-toolkit .mao-tk-toolkit__guide ol { margin: 10px 0 10px 1.3em; padding: 0; color: var(--mao-tk-muted); font-size: 13px; line-height: 1.7; }
+.mao-tk-toolkit .mao-tk-toolkit__guide li { margin-bottom: 4px; }
+.mao-tk-toolkit .mao-tk-toolkit__guide p { font-size: 13px; }
+.mao-tk-toolkit .mao-tk-toolkit__aside { padding: 4px 0 0 4px; }
+.mao-tk-toolkit .mao-tk-toolkit__aside h2 { font-size: 14px; }
+.mao-tk-toolkit .mao-tk-toolkit__theme-state { display: flex; align-items: center; gap: 10px; margin: 20px 0 12px; }
+.mao-tk-toolkit .mao-tk-toolkit__theme-state > .dashicons { color: var(--mao-tk-accent); }
+.mao-tk-toolkit .mao-tk-toolkit__theme-state strong { display: block; font-size: 13px; font-weight: 600; }
+.mao-tk-toolkit .mao-tk-toolkit__theme-state span:not(.dashicons) { display: block; margin-top: 1px; color: var(--mao-tk-muted); font-size: 12px; }
+.mao-tk-toolkit .mao-tk-toolkit__environment-list { margin: 0; }
+.mao-tk-toolkit .mao-tk-toolkit__environment-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--mao-tk-border); font-size: 12px; }
+.mao-tk-toolkit .mao-tk-toolkit__environment-list dt { flex-shrink: 0; color: var(--mao-tk-muted); }
+.mao-tk-toolkit .mao-tk-toolkit__environment-list dd { margin: 0; text-align: right; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.mao-tk-toolkit p.mao-tk-toolkit__environment-note { margin-top: 12px; color: var(--mao-tk-muted); font-size: 12px; }
+.mao-tk-toolkit .mao-tk-toolkit__about { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--mao-tk-border); }
+.mao-tk-toolkit .mao-tk-toolkit__about p { margin: 9px 0 12px; color: var(--mao-tk-muted); font-size: 13px; }
+.mao-tk-toolkit .mao-tk-toolkit__about a { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; }
+.mao-tk-toolkit .mao-tk-toolkit__about .dashicons { width: 13px; height: 13px; font-size: 13px; text-decoration: none; }
+.mao-tk-toolkit .mao-tk-toolkit__footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--mao-tk-border); color: var(--mao-tk-muted); font-size: 12px; }
+/* Toolkit identity only; no global WordPress scheme or frontend selectors. */
+.mao-tk-toolkit .mao-tk-toolkit__header { padding: 20px 22px; border: 1px solid #d8e6fb; border-radius: 10px; background: #edf4ff; }
+.mao-tk-toolkit .mao-tk-toolkit__version { color: #2155a6; border-color: #cfddf4; background: #fff; }
+.mao-tk-toolkit .mao-tk-toolkit__section-head { background: #f7faff; }
+.mao-tk-toolkit .mao-tk-toolkit__count { padding: 4px 10px; border-radius: 6px; color: #2155a6; background: #eaf2ff; }
+.mao-tk-toolkit .mao-tk-toolkit__module { transition: background-color 140ms ease; }
+.mao-tk-toolkit .mao-tk-toolkit__module:hover { background: #f8fbff; }
+.mao-tk-toolkit .mao-tk-toolkit__badge--success { color: #146646; border-color: #bce6d1; background: #eaf9f1; }
+.mao-tk-toolkit .mao-tk-toolkit__badge--warning { color: #8a5708; border-color: #f0deb0; background: #fff7df; }
+.mao-tk-toolkit .button-primary { color: #fff; background: #2563eb; border-color: #2563eb; }
+.mao-tk-toolkit .button-primary:hover { color: #fff; background: #1d4ed8; border-color: #1d4ed8; }
+.mao-tk-toolkit .mao-tk-toolkit__switch[aria-checked="true"] .mao-tk-toolkit__switch-track { background: #2563eb; }
+.mao-tk-toolkit .mao-tk-toolkit__welcome { border-color: #cce9d9; background: #f1fbf5; }
+@media (max-width: 1100px) {
+    .mao-tk-toolkit .mao-tk-toolkit__layout { grid-template-columns: minmax(0, 1fr) 240px; gap: 24px; }
+    .mao-tk-toolkit .mao-tk-toolkit__module { grid-template-columns: minmax(0, 1fr); }
+    .mao-tk-toolkit .mao-tk-toolkit__module-form { grid-column: 1; margin-top: 2px; }
+    .mao-tk-toolkit .mao-tk-toolkit__module-actions { flex-direction: row; align-items: center; min-height: 44px; }
+}
+@media (max-width: 782px) {
+    .mao-tk-toolkit { margin: 20px 10px 16px 0; }
+    .mao-tk-toolkit .mao-tk-toolkit__header { flex-wrap: wrap; align-items: flex-start; gap: 16px; margin-bottom: 22px; }
+    .mao-tk-toolkit .mao-tk-toolkit__identity { align-items: flex-start; gap: 12px; }
+    .mao-tk-toolkit .mao-tk-toolkit__brand { width: 40px; height: 40px; flex-basis: 40px; }
+    .mao-tk-toolkit h1 { font-size: 23px; }
+    .mao-tk-toolkit .mao-tk-toolkit__layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    .mao-tk-toolkit .mao-tk-toolkit__aside { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; padding: 0; }
+    .mao-tk-toolkit .mao-tk-toolkit__guide { margin-top: 0; padding-top: 0; border-top: 0; }
+    .mao-tk-toolkit .button { min-height: 44px; }
+}
+@media (max-width: 480px) {
+    .mao-tk-toolkit .mao-tk-toolkit__switch-feedback { right: 16px; bottom: 16px; }
+    .mao-tk-toolkit .mao-tk-toolkit__section-head { flex-wrap: wrap; gap: 8px; padding: 20px; }
+    .mao-tk-toolkit .mao-tk-toolkit__module { gap: 12px; padding: 20px; }
+    .mao-tk-toolkit .mao-tk-toolkit__module-form { grid-column: 1 / -1; }
+    .mao-tk-toolkit .mao-tk-toolkit__module-button { width: 100%; min-height: 44px; }
+    .mao-tk-toolkit .mao-tk-toolkit__panel-foot { align-items: flex-start; padding: 12px 20px; }
+    .mao-tk-toolkit .mao-tk-toolkit__aside { grid-template-columns: minmax(0, 1fr); }
+    .mao-tk-toolkit .mao-tk-toolkit__guide { margin-top: 0; padding-top: 20px; border-top: 1px solid var(--mao-tk-border); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .mao-tk-toolkit .button { transition: none; }
+    .mao-tk-toolkit .mao-tk-toolkit__module { transition: none; }
+    .mao-tk-toolkit .mao-tk-toolkit__switch-track,
+    .mao-tk-toolkit .mao-tk-toolkit__switch-track::after { transition: none; }
+}
+@media (forced-colors: active) {
+    .mao-tk-toolkit .mao-tk-toolkit__badge { border: 1px solid ButtonText; }
+}

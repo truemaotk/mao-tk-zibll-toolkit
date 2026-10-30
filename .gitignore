@@ -1,0 +1,18 @@
+# Generated packages and local-only data
+/dist/
+/.local/
+/output/
+/backups/
+/node_modules/
+__pycache__/
+*.pyc
+*.log
+*.sqlite*
+*.sql
+.env
+.env.*
+wp-config.php
+*.pem
+*.key
+.DS_Store
+Thumbs.db

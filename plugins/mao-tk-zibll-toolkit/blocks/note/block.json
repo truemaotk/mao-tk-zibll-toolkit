@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "maotk/note",
+  "version": "1.5.0",
+  "title": "MaoTK：提示框",
+  "category": "text",
+  "icon": "info-outline",
+  "description": "用于文章中的说明、提示、推荐、注意和风险内容。",
+  "keywords": [
+    "MaoTK",
+    "提示框",
+    "提醒框"
+  ],
+  "textdomain": "maotk-note-block",
+  "attributes": {
+    "type": {
+      "type": "string",
+      "default": "info"
+    },
+    "badge": {
+      "type": "string",
+      "default": "说明"
+    },
+    "title": {
+      "type": "string",
+      "default": "适合哪些使用场景"
+    },
+    "showBadge": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "className": false
+  },
+  "editorScript": "mao-tk-toolkit-note-provider"
+}

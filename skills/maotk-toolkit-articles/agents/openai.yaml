@@ -1,0 +1,4 @@
+interface:
+  display_name: "MaoTK 文章排版"
+  short_description: "使用 Toolkit 编写子比主题文章，保留原生标题目录与业务逻辑"
+  default_prompt: "使用 $maotk-toolkit-articles 为 maotk.com 撰写或改写文章，复用 Toolkit 样式，保留子比原生标题和目录。"

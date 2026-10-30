@@ -1,0 +1,24 @@
+/* MaoTK TAB v1.0.0: appearance only; Zibll supplies switching and panel states. */
+:where(.maotk-ui-kit[data-mao-tk-ui-tabs="1"]) { --mtk-text: var(--main-color,#4e5358); --mtk-title: var(--key-color,#30343b); --mtk-muted: var(--muted-color,#777); --mtk-accent: var(--focus-color,#fe8d19); --mtk-line: var(--main-border-color,rgba(50,50,50,.09)); }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs { min-width: 0; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top > .tab-nav-theme { display: flex; width: 100%; max-width: 100%; margin: 0; padding: 0; gap: 24px; border: 0; border-bottom: 1px solid var(--mtk-line); border-radius: 0; background: transparent; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .tab-nav-theme > li { flex: 0 0 auto; margin: 0; padding: 0; line-height: 1.5; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .tab-nav-theme > li::before { content: none; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .post-tab-toggle { display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 0; margin: 0; padding: 6px 0; border: 0; border-radius: 0; background: transparent; color: var(--mtk-muted); font: inherit; font-size: 16px; font-weight: 500; line-height: 1.5; text-decoration: none; white-space: nowrap; transition: color .16s ease; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .post-tab-toggle:hover { color: var(--mtk-title); }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .tab-nav-theme > li.active > .post-tab-toggle { background: transparent; color: var(--mtk-accent); font-weight: 600; box-shadow: none; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .mtk-tab-label { position: relative; display: block; width: max-content; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .mtk-tab-label::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 2px; border-radius: 1px; background: var(--mtk-accent); opacity: 0; transform: scaleX(.6); transform-origin: center; transition: opacity .16s ease, transform .16s ease; pointer-events: none; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top li.active .mtk-tab-label::after { opacity: 1; transform: scaleX(1); }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top > .tab-content { min-width: 0; padding: 12px 0 0; color: var(--mtk-text); font-size: 14px; line-height: 1.85; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .tab-pane > :last-child { margin-bottom: 0; }
+.maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .post-tab-toggle:focus-visible { outline: 2px solid var(--mtk-accent); outline-offset: -2px; }
+@media (max-width: 600px) {
+  .maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top > .tab-nav-theme { gap: 20px; }
+  .maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .post-tab-toggle { font-size: 15px; }
+  .maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top > .tab-content { padding-top: 10px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .maotk-ui-kit[data-mao-tk-ui-tabs="1"] .mtk-native-tabs .post-tab.nav-top .mtk-tab-label::after { transition: none; }
+}

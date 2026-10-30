@@ -1,0 +1,227 @@
+/* MaoTK note block: shared editor and front-end styles. */
+.maotk-note-clean,
+.maotk-note-clean * {
+  box-sizing: border-box;
+}
+
+.maotk-note-clean {
+  --maotk-note-accent: #fe8d19;
+  --maotk-note-accent-rgb: 254, 141, 25;
+  --maotk-note-bg: #ffffff;
+  --maotk-note-title-color: #111827;
+  --maotk-note-text-color: #4b5563;
+  --maotk-note-page-bg: #ffffff;
+
+  position: relative;
+  width: 100%;
+  max-width: var(--wp--style--global--content-size, var(--wp--preset--layout--content-size, calc(100% - 40px)));
+  margin: 28px auto 30px;
+  padding: 26px 20px 19px;
+  color: var(--maotk-note-text-color);
+  background: var(--maotk-note-bg);
+  border: 1px solid rgba(var(--maotk-note-accent-rgb), 0.76);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgba(var(--maotk-note-accent-rgb), 0.12);
+}
+
+.maotk-note-clean:not(.has-maotk-note-badge) {
+  padding-top: 20px;
+}
+
+.maotk-note-clean.alignwide {
+  width: 100%;
+  max-width: var(--wp--style--global--wide-size, var(--wp--style--global--content-size, 100%));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.maotk-note-clean.alignfull {
+  width: 100vw;
+  max-width: none;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+}
+
+@media (min-width: 782px) {
+  .editor-styles-wrapper .maotk-note-clean:not(.alignwide):not(.alignfull),
+  .block-editor-block-list__layout.is-root-container > .maotk-note-clean:not(.alignwide):not(.alignfull) {
+    max-width: var(--wp--style--global--content-size, var(--wp--preset--layout--content-size, min(calc(100% - 24px), 900px)));
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.maotk-note-clean .maotk-note-badge {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  min-width: 44px;
+  height: 26px;
+  margin: 0;
+  padding: 0 10px;
+  color: var(--maotk-note-accent);
+  background: var(--maotk-note-page-bg);
+  border: 1px solid var(--maotk-note-accent);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 12px !important;
+  letter-spacing: 0;
+  text-align: center;
+  text-indent: 0;
+  white-space: nowrap;
+}
+
+.maotk-note-clean .maotk-note-badge span {
+  display: block;
+  height: 12px;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: inherit;
+  font: inherit;
+  line-height: 12px !important;
+  letter-spacing: 0;
+  text-align: center;
+  transform: translateY(0.5px);
+}
+
+.maotk-note-clean .maotk-note-title {
+  position: relative;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 16px;
+  padding: 0 0 7px;
+  color: var(--maotk-note-title-color);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.maotk-note-clean .maotk-note-title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--maotk-note-accent);
+  border-radius: 3px;
+}
+
+.maotk-note-clean .maotk-note-content {
+  color: var(--maotk-note-text-color);
+  font-family: inherit;
+  font-size: 15.5px;
+  line-height: 1.9;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.maotk-note-clean .maotk-note-content p,
+.maotk-note-clean .maotk-note-content ul,
+.maotk-note-clean .maotk-note-content ol {
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.maotk-note-clean .maotk-note-content > :last-child,
+.maotk-note-clean .maotk-note-content > .block-editor-inner-blocks > .block-editor-block-list__layout > :last-child {
+  margin-bottom: 0;
+}
+
+.maotk-note-clean .maotk-note-content a {
+  color: var(--maotk-note-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.maotk-note-clean.maotk-note-info {
+  --maotk-note-accent: #fe8d19;
+  --maotk-note-accent-rgb: 254, 141, 25;
+}
+
+.maotk-note-clean.maotk-note-primary {
+  --maotk-note-accent: #3b82f6;
+  --maotk-note-accent-rgb: 59, 130, 246;
+}
+
+.maotk-note-clean.maotk-note-success {
+  --maotk-note-accent: #22c55e;
+  --maotk-note-accent-rgb: 34, 197, 94;
+}
+
+.maotk-note-clean.maotk-note-warning {
+  --maotk-note-accent: #f59e0b;
+  --maotk-note-accent-rgb: 245, 158, 11;
+}
+
+.maotk-note-clean.maotk-note-danger {
+  --maotk-note-accent: #ef4444;
+  --maotk-note-accent-rgb: 239, 68, 68;
+}
+
+html.dark .maotk-note-clean,
+body.dark .maotk-note-clean,
+body.dark-theme .maotk-note-clean,
+.theme-dark .maotk-note-clean,
+body.night .maotk-note-clean,
+html[data-theme="dark"] .maotk-note-clean,
+body[data-theme="dark"] .maotk-note-clean {
+  --maotk-note-bg: transparent;
+  --maotk-note-title-color: #f3f4f6;
+  --maotk-note-text-color: #d1d5db;
+  --maotk-note-page-bg: #2b2d30;
+}
+
+@media (max-width: 768px) {
+  .maotk-note-clean {
+    max-width: var(--wp--style--global--content-size, var(--wp--preset--layout--content-size, calc(100% - 24px)));
+    margin: 26px auto 28px;
+    padding: 25px 15px 16px;
+    border-radius: 8px;
+  }
+
+  .maotk-note-clean:not(.has-maotk-note-badge) {
+    padding-top: 16px;
+  }
+
+  .maotk-note-clean .maotk-note-badge {
+    left: 13px;
+    min-width: 42px;
+    height: 24px;
+    padding: 0 9px;
+    font-size: 12px;
+    line-height: 12px !important;
+  }
+
+  .maotk-note-clean .maotk-note-title {
+    margin-bottom: 13px;
+    padding-bottom: 6px;
+    font-size: 16.5px;
+  }
+
+  .maotk-note-clean .maotk-note-title::after {
+    height: 2px;
+  }
+
+  .maotk-note-clean .maotk-note-content {
+    font-size: 14.5px;
+    line-height: 1.85;
+  }
+
+  .maotk-note-clean .maotk-note-content p,
+  .maotk-note-clean .maotk-note-content ul,
+  .maotk-note-clean .maotk-note-content ol {
+    margin-bottom: 9px;
+  }
+}

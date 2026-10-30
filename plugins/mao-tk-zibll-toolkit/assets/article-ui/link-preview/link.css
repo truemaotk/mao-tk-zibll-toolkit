@@ -1,0 +1,53 @@
+:where(.maotk-ui-kit[data-mao-tk-ui-link-preview="1"]) { --mtk-line: var(--main-border-color,rgba(50,50,50,.09)); --mtk-muted: var(--muted-color,#777); }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-link-demo { margin: 16px 0; padding: 16px 20px; border-left: 2px solid var(--mtk-line); }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-link-demo > p { margin: 6px 0 10px; color: var(--mtk-muted); font-size: 13px; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-link-demo-links { display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 14px; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo a, .mtk-inline-link)[data-mao-tk-ui-link="1"] { position: relative; display: inline-flex; align-items: center; width: fit-content; max-width: 100%; padding-bottom: 1px; border-bottom: 1px dotted currentColor; text-decoration: none; line-height: 1.35; vertical-align: baseline; }
+/* Reserve the enlarged label's actual layout width before hover. The original nodes remain live. */
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo, .mtk-inline-link) .mtk-link-label { display: inline-grid; grid-template-areas: "label"; grid-template-columns: minmax(0,1fr); align-items: center; min-width: 0; line-height: 1.3; transform: none; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-link-label > :is(.mtk-link-text,.mtk-link-reserve) { grid-area: label; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-link-text { justify-self: start; width: max-content; max-width: calc(100% / 1.035); transform-origin: left center; transition: transform .2s ease-out; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-link-reserve { visibility: hidden; pointer-events: none; user-select: none; font-size: 1.05em; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo a, .mtk-inline-link)[data-mao-tk-ui-link="1"]::after { content: ""; position: absolute; right: 0; bottom: -1px; left: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left center; transition: transform .38s linear; pointer-events: none; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo a, .mtk-inline-link)[data-mao-tk-ui-link="1"]:hover .mtk-link-text, .maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo a, .mtk-inline-link)[data-mao-tk-ui-link="1"]:focus-visible .mtk-link-text { transform: scale(1.035); }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo a, .mtk-inline-link)[data-mao-tk-ui-link="1"]:hover::after, .maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo a, .mtk-inline-link)[data-mao-tk-ui-link="1"]:focus-visible::after { transform: scaleX(1); }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo, .mtk-inline-link) .mtk-link-affordance { display: inline-flex; width: 16px; height: 16px; margin-left: 4px; vertical-align: -2px; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo, .mtk-inline-link) .mtk-link-affordance svg { width: 16px; height: 16px; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo, .mtk-inline-link) .mtk-link-affordance svg, .maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo, .mtk-inline-link) .mtk-link-affordance svg * { fill: currentColor !important; stroke: none !important; }
+/* 浮层挂载到 body，单独限定作用域以避免被文章容器裁切。 */
+.maotk-link-preview[data-mao-tk-ui-owned="1"] { position: fixed; z-index: 1050; width: min(360px,calc(100vw - 24px)); margin: 0; overflow: hidden; border: 1px solid var(--main-border-color,rgba(50,50,50,.12)); border-radius: 12px; background: var(--main-bg-color,#fff); color: var(--main-color,#555); box-shadow: 0 8px 28px rgba(20,25,30,.13); font-family: inherit; font-size: 13px; line-height: 1.65; animation: mtk-link-appear .12s ease-out; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"][hidden] { display: none !important; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] *, .maotk-link-preview[data-mao-tk-ui-owned="1"] *::before, .maotk-link-preview[data-mao-tk-ui-owned="1"] *::after { box-sizing: border-box; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 12px; border-bottom: 1px solid var(--main-border-color,rgba(50,50,50,.09)); }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-site { display: flex; align-items: center; gap: 7px; min-width: 0; color: var(--muted-color,#777); font-size: 12px; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] [data-mtk-link-domain], .maotk-link-preview[data-mao-tk-ui-owned="1"] [data-mtk-link-status] { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; flex: 0 0 18px; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-icon svg { display: block; width: 17px; height: 17px; fill: none !important; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-icon svg * { fill: none !important; stroke: currentColor; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-actions { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-actions a, .maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-actions button { display: inline-flex; flex: 0 0 34px; align-items: center; justify-content: center; width: 34px; min-width: 34px; height: 34px; margin: 0; padding: 8px; border: 0; border-radius: 6px; background: transparent; color: var(--key-color,#333); font: inherit; font-size: 12px; line-height: 1; text-decoration: none; box-shadow: none; cursor: pointer; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-actions a:hover, .maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-actions button:hover { background: var(--muted-bg-2-color,#f4f5f6); color: var(--focus-color,#fe8d19); }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-actions :focus-visible { outline: 2px solid var(--focus-color,#fe8d19); outline-offset: -2px; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-check-icon, .maotk-link-preview[data-mao-tk-ui-owned="1"] [data-copied="true"] .mtk-link-copy-icon { display: none; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] [data-copied="true"] .mtk-link-check-icon { display: inline-flex; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-image { display: block; width: 100%; height: 180px; margin: 0; border: 0; border-radius: 0; object-fit: cover; object-position: top; background: var(--muted-bg-2-color,#f4f5f6); }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-image[hidden] { display: none; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-body { padding: 10px 14px; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-title { margin: 0 0 5px; color: var(--key-color,#333); font-size: 14px; font-weight: 600; line-height: 1.6; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-address { display: -webkit-box; margin: 0; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; color: var(--muted-color,#777); font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; user-select: text; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-status { display: none; margin: 0; color: var(--focus-color,#fe8d19); font-size: 12px; line-height: 1.5; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"][data-copy-feedback="true"] [data-mtk-link-domain] { display: none; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"][data-copy-feedback="true"] .mtk-link-card-status { display: inline; }
+@keyframes mtk-link-appear { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
+/* 用户明确要求保留划线过程；减少动态效果时只缩短文字过渡。 */
+@media (prefers-reduced-motion: reduce) { .maotk-link-preview[data-mao-tk-ui-owned="1"] { animation: none; } .maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-link-text { transition-duration: .12s; } }
+
+/* Host adaptation: deterministic accent, no dependency on full demo CSS. */
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] :is(.mtk-link-demo a, .mtk-inline-link)[data-mao-tk-ui-link="1"] { color:var(--focus-color,#fe8d19); }
+
+/* Ordinary text links share the sealed affordance; business/image controls are excluded in JS. */
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] a.mtk-inline-link[data-mao-tk-ui-link="1"] { display: inline-flex; align-items: center; gap: 4px; max-width: 100%; vertical-align: baseline; overflow-wrap: anywhere; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-inline-link .mtk-link-label { min-width: 0; flex: 0 1 auto; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-inline-link .mtk-link-affordance { flex: none; align-self: center; margin-left: 0; }
+.maotk-ui-kit[data-mao-tk-ui-link-preview="1"] .mtk-link-affordance:empty { width: 14px; height: 14px; background: currentColor; -webkit-mask: url("assets/icons/user-link.svg") center / contain no-repeat; mask: url("assets/icons/user-link.svg") center / contain no-repeat; }
+.maotk-link-preview[data-mao-tk-ui-owned="1"] .mtk-link-card-actions :is(a,button) { color: var(--main-color,#555); }

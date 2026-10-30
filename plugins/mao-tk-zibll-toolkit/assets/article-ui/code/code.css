@@ -1,0 +1,39 @@
+/* 原生 Enlighter 外观覆盖：不替换工具节点、图标或事件。
+ * 1.5.7：顶栏与代码区保持可辨色差；语法配色与浅深切换仍由子比原生 Enlighter 负责。 */
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap { min-width: 0; max-width: 100%; margin-block: 14px 20px; border: 1px solid #d9dee4; border-color: color-mix(in srgb,var(--main-color,#4e5358) 22%,var(--main-bg-color,#fff)); border-radius: 9px; overflow: hidden; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap pre.wp-block-zibllblock-enlighter { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; overflow: hidden; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default { margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default::before { content: ""; display: block; height: 50px; background: var(--muted-bg-color,#eee); background: color-mix(in srgb,var(--main-color,#4e5358) 12%,var(--main-bg-color,#fff)); border-bottom: 1px solid #e5e8ec; border-bottom-color: color-mix(in srgb,var(--main-color,#4e5358) 16%,var(--main-bg-color,#fff)); }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default::after { content: ""; position: absolute; top: 18px; left: 15px; width: 14px; height: 14px; border-radius: 50%; background: #ff605c; box-shadow: 20px 0 #ffbd44, 40px 0 #00ca4e; pointer-events: none; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-toolbar { top: 13px; right: 12px; opacity: 1; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-btn { background-color: var(--muted-bg-color,#eee); color: var(--muted-color,#777); }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-btn-raw:hover { background-color: #ff605c; color: #27292d; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-btn-copy:hover { background-color: #ffbd44; color: #27292d; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-btn-window:hover { background-color: #00ca4e; color: #1b2921; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap div.enlighter { padding: 12px 0; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap div.enlighter > div > div { padding-right: 12px; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter > div > div, .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-raw { font: 13px/1.8 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap :is(.enlighter,.enlighter-raw) { max-height: 400px; overflow: auto !important; overscroll-behavior: contain; scrollbar-width: auto; scrollbar-color: auto; }
+/* 轨道尺寸固定，滑块由 4px 加粗至 8px，不挤动正文。 */
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap :is(.enlighter,.enlighter-raw)::-webkit-scrollbar { width: 10px; height: 10px; background: transparent; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap :is(.enlighter,.enlighter-raw)::-webkit-scrollbar-button { display: none; width: 0; height: 0; background: none; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap :is(.enlighter,.enlighter-raw)::-webkit-scrollbar-track { border: 0; background: transparent; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap :is(.enlighter,.enlighter-raw)::-webkit-scrollbar-thumb { min-width: 28px; min-height: 28px; border: 3px solid transparent; border-radius: 999px; background-color: rgba(130,136,143,.55); background-clip: padding-box; transition: border-width .15s ease, background-color .15s ease; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap :is(.enlighter,.enlighter-raw)::-webkit-scrollbar-thumb:hover { border-width: 1px; background-color: rgba(110,116,123,.85); }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap :is(.enlighter,.enlighter-raw)::-webkit-scrollbar-corner { background: transparent; }
+@supports not selector(::-webkit-scrollbar) {
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap :is(.enlighter,.enlighter-raw) { scrollbar-width: thin; scrollbar-color: rgba(130,136,143,.65) transparent; }
+}
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-stress { margin-top: 16px; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-stress > summary { width: fit-content; margin-bottom: 10px; color: var(--mtk-muted); font-size: 13px; cursor: pointer; }
+@media (max-width: 600px) {
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap { margin-block: 12px 18px; border-radius: 7px; }
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default::before { height: 40px; }
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default::after { top: 14px; left: 10px; width: 11px; height: 11px; box-shadow: 16px 0 #ffbd44, 32px 0 #00ca4e; }
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-toolbar { top: 9px; right: 8px; }
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-btn { font-size: 12px; margin-left: 5px; padding: .35em .55em; }
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter > div > div, .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-raw { font-size: 11px; line-height: 1.75; }
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-linenumbers div.enlighter > div::before { width: 26px; min-width: 26px; padding-right: 6px; }
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap div.enlighter > div > div { padding-left: 7px; padding-right: 8px; }
+  .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-show-rawcode .enlighter-raw { padding: 10px !important; }
+}

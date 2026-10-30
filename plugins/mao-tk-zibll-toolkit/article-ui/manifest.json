@@ -1,0 +1,66 @@
+{
+  "host": "mao-tk-zibll-toolkit",
+  "host_version": "1.6.4",
+  "source_version": "1.0.0",
+  "adapter_version": "1.0.2",
+  "default_enabled": true,
+  "requires": {
+    "html_api": "WordPress 6.2+",
+    "theme": "Zibll parent directory zibll or child theme; exact current source/runtime not provided"
+  },
+  "components": {
+    "code": {
+      "module_id": "article-ui-code",
+      "style": "assets/article-ui/code/code.css",
+      "root_attribute": "data-mao-tk-ui-code",
+      "source_baseline": "MaoTK-Code-Component-v1.0.0-20261029",
+      "adapter_version": "1.0.0",
+      "style_revision": "1.0.3",
+      "style_override": "2026-10-30: distinguish neutral header from native code surface; preserve native syntax themes and controls"
+    },
+    "link-preview": {
+      "module_id": "article-ui-link-preview",
+      "style": "assets/article-ui/link-preview/link.css",
+      "root_attribute": "data-mao-tk-ui-link-preview",
+      "source_baseline": "MaoTK-Link-Component-v1.0.0-20261029",
+      "adapter_version": "1.0.0",
+      "style_revision": "1.0.3",
+      "style_override": "2026-10-30: reserve zoom width/height, compact underline baseline, local Tabler action icon pair"
+    },
+    "tabs": {
+      "module_id": "article-ui-tabs",
+      "style": "assets/article-ui/tabs/tabs.css",
+      "root_attribute": "data-mao-tk-ui-tabs",
+      "source_baseline": "MaoTK-Tabs-Component-v1.0.0-20261029",
+      "adapter_version": "1.0.0"
+    },
+    "postsbox": {
+      "module_id": "article-ui-postsbox",
+      "style": "assets/article-ui/postsbox/postsbox.css",
+      "root_attribute": "data-mao-tk-ui-postsbox",
+      "source_baseline": "MaoTK-Postsbox-Component-v1.0.0-20261029",
+      "adapter_version": "1.0.0"
+    },
+    "reading": {
+      "module_id": "article-ui-reading",
+      "style": "assets/article-ui/reading/reading.css",
+      "script": "assets/article-ui/reading/reading.js",
+      "root_attribute": "data-mao-tk-ui-reading",
+      "source_baseline": "post31 approved reading and FAQ 2026-10-29; migrated 2026-10-30",
+      "adapter_version": "1.0.0"
+    }
+  },
+  "shared_script": "assets/article-ui/article-ui.js",
+  "runtime": "inc/article-ui/class-runtime.php",
+  "init_api": "window.MaoTKArticleUI.init(container)",
+  "destroy_api": "window.MaoTKArticleUI.destroy(container)",
+  "not_integrated": [
+    "accordion",
+    "reading-typography",
+    "image-boundaries",
+    "product-width",
+    "paid-content-beautification"
+  ],
+  "site_migration_performed": false,
+  "global_skill_installed": false
+}

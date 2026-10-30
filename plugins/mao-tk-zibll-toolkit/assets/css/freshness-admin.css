@@ -1,0 +1,13 @@
+.mao-tk-toolkit .mao-tk-freshness__status { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 20px; padding: 20px 24px; }
+.mao-tk-toolkit .mao-tk-freshness__status p { margin-top: 5px; color: var(--mao-tk-muted); font-size: 13px; }
+.mao-tk-toolkit .mao-tk-freshness__layout { display: grid; grid-template-columns: minmax(280px, 420px) minmax(0, 1fr); gap: 20px; align-items: start; }
+.mao-tk-toolkit .mao-tk-freshness__fields { display: grid; gap: 10px; padding: 20px 24px 24px; border-top: 1px solid var(--mao-tk-border); }
+.mao-tk-toolkit .mao-tk-freshness__fields label { margin-top: 6px; font-weight: 600; }
+.mao-tk-toolkit .mao-tk-freshness__fields :is(input:not([type="hidden"]), textarea) { width: 100%; max-width: 100%; margin: 0; padding: 7px 9px; border: 1px solid #8c8f94; border-radius: 6px; background: #fff; color: var(--mao-tk-text); font: inherit; }
+.mao-tk-toolkit .mao-tk-freshness__fields textarea { resize: vertical; min-height: 120px; }
+.mao-tk-toolkit .mao-tk-freshness__fields .description { color: var(--mao-tk-muted); font-size: 12px; }
+.mao-tk-toolkit .mao-tk-freshness__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 10px; }
+.mao-tk-toolkit #mao-tk-freshness-preview-form { padding: 0 24px 18px; }
+.mao-tk-toolkit #mao-tk-freshness-preview { display: block; width: 100%; height: 300px; border: 0; border-top: 1px solid var(--mao-tk-border); background: #fff; }
+@media (max-width: 1000px) { .mao-tk-toolkit .mao-tk-freshness__layout { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 782px) { .mao-tk-toolkit .mao-tk-freshness__status { align-items: flex-start; flex-wrap: wrap; padding: 20px; } }

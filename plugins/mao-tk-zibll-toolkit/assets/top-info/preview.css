@@ -1,0 +1,15 @@
+/* These document styles are loaded only inside the authenticated preview iframe. */
+html { font-size: 16px; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif; color: #30343b; background: #f5f6f7; }
+.mao-tk-preview-caption { margin: 0; padding: 12px 20px; font-size: 13px; color: #50575e; background: #fff; }
+.maotk-top-info { margin-top: 0; }
+.maotk-top-info__title { font-size: clamp(2rem, 3.6vw, 3rem); }
+.maotk-top-info a { pointer-events: none; }
+.mao-tk-top-info-preview .maotk-top-info-breadcrumb { position: relative; width: min(1100px, 92%); margin: 0 auto 16px; padding: 0; list-style: none; gap: 8px; }
+.mao-tk-top-info-preview .maotk-top-info-breadcrumb li + li::before { content: "/"; margin-right: 8px; }
+.mao-tk-top-info-preview .container { width: min(1100px, 92%); margin: 0 auto; }
+.mao-tk-top-info-preview .article { position: relative; min-height: 220px; padding: 28px; background: #fff; border: 1px solid #e3e6ea; }
+.mao-tk-top-info-preview .article h2 { margin: 0 0 16px; font-size: 22px; }
+.mao-tk-top-info-preview .article p { font-size: 15px; line-height: 1.9; }
+@media (min-width: 1025px) { body.single-post.mao-tk-top-info-preview > .mao-tk-preview-breadcrumb-mobile { display: none !important; } }
+@media (max-width: 767px) { .mao-tk-top-info-preview .article { padding: 20px; } }

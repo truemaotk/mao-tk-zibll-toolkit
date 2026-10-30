@@ -1,0 +1,170 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "maotk/demo-showcase",
+  "version": "1.6.0",
+  "title": "MaoTK 案例展示",
+  "category": "design",
+  "icon": "screenoptions",
+  "description": "使用浏览器窗口卡片展示独立站案例。",
+  "keywords": [
+    "MaoTK",
+    "案例",
+    "独立站",
+    "Demo Showcase"
+  ],
+  "textdomain": "mao-tk-zibll-toolkit",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "案例展示"
+    },
+    "title": {
+      "type": "string",
+      "default": "独立站建站案例"
+    },
+    "description": {
+      "type": "string",
+      "default": "浏览器式预览，点击查看在线案例站点。喜欢同款风格？可直接咨询建站方案。"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "dark",
+        "light"
+      ],
+      "default": "dark"
+    },
+    "themeMode": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "manual"
+      ],
+      "default": "auto"
+    },
+    "columns": {
+      "type": "number",
+      "enum": [
+        2,
+        3
+      ],
+      "default": 3
+    },
+    "showHeader": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDescription": {
+      "type": "boolean",
+      "default": true
+    },
+    "cards": {
+      "type": "array",
+      "default": []
+    },
+    "buttonOneBg": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonOneText": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonOneBorder": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonOneHoverBg": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonOneHoverText": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonOneHoverBorder": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTwoBg": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTwoText": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTwoBorder": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTwoHoverBg": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTwoHoverText": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTwoHoverBorder": {
+      "type": "string",
+      "default": ""
+    },
+    "titleColor": {
+      "type": "string",
+      "default": ""
+    },
+    "descriptionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "eyebrowColor": {
+      "type": "string",
+      "default": ""
+    },
+    "cardTitleColor": {
+      "type": "string",
+      "default": ""
+    },
+    "cardDescriptionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "titleSize": {
+      "type": "number",
+      "default": 0
+    },
+    "cardTitleSize": {
+      "type": "number",
+      "default": 17
+    },
+    "maxWidth": {
+      "type": "number",
+      "default": 1380
+    },
+    "cardRadius": {
+      "type": "number",
+      "default": 10
+    },
+    "source": {
+      "type": "string",
+      "default": "legacy"
+    },
+    "categoryId": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "className": false
+  },
+  "editorScript": "mao-tk-toolkit-showcase-block",
+  "editorStyle": "mao-tk-toolkit-showcase"
+}

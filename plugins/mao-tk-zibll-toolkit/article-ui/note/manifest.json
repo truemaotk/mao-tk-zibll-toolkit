@@ -1,0 +1,20 @@
+{
+  "host_version": "1.6.4",
+  "component_version": "1.0.0",
+  "adapter_version": "1.0.1",
+  "legacy_provider_version": "1.0.4",
+  "block_name": "maotk/note",
+  "apiVersion": 3,
+  "requires_wordpress": "6.3",
+  "module_id": "article-note",
+  "default_enabled": true,
+  "provider_default": "toolkit",
+  "override_attribute": "maoTkNoteVisual",
+  "settings_option": "mao_tk_zibll_toolkit_settings",
+  "settings_field": "article_note",
+  "provider_field": "article_note_provider",
+  "icon_filter": "mao_tk_zibll_toolkit_note_icons",
+  "implemented_locally": true,
+  "real_wordpress_editor_validated": false,
+  "site_migration_performed": false
+}

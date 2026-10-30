@@ -1,0 +1,8 @@
+.mao-tk-article-freshness { box-sizing: border-box; margin: 0 0 22px; padding: 12px 16px; border: 1px solid rgba(128, 128, 128, .12); border-radius: 8px; background: var(--body-bg-color, #f6f7f7); color: inherit; font-size: 14px; line-height: 1.85; overflow-wrap: anywhere; }
+.mao-tk-article-freshness strong { font-weight: 600; }
+.mao-tk-article-freshness .mao-tk-article-freshness__icon { display: inline-block; width: 1.1em; height: 1.1em; margin-right: .4em; vertical-align: -.14em; background-color: currentColor; -webkit-mask: url("../images/hint.svg") center / contain no-repeat; mask: url("../images/hint.svg") center / contain no-repeat; }
+.mao-tk-article-freshness time { display: inline; padding: 2px 6px; border-radius: 4px; background: rgba(128, 128, 128, .08); font-size: .92em; font-variant-numeric: tabular-nums; }
+.mao-tk-article-freshness .mao-tk-article-freshness__links { display: inline-flex; flex-wrap: wrap; gap: 6px; margin-left: 6px; }
+.mao-tk-article-freshness a { text-decoration: underline; text-underline-offset: 3px; }
+.mao-tk-article-freshness a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+@media (max-width: 767px) { .mao-tk-article-freshness { padding: 10px 12px; font-size: 13px; } }

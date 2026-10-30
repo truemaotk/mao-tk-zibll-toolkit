@@ -1,0 +1,64 @@
+/* Approved article reading/FAQ presentation, moved out of post 31.
+ * Explicit wrapper and runtime switch required. Theme headings and TOC stay native. */
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] {
+  --mtk-reading-ink: var(--main-color,#4e5358);
+  --mtk-reading-title: var(--key-color,#333);
+  --mtk-reading-muted: var(--muted-color,#777);
+  --mtk-reading-accent: var(--focus-color,#fe8d19);
+  --mtk-reading-line: var(--main-border-color,rgba(50,50,50,.08));
+  --mtk-reading-soft: var(--muted-bg-2-color,#f6f7f8);
+  font: inherit;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] > p,
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] > .wp-block-group__inner-container > p { margin: 0 0 12px; text-indent: 0; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] > :is(ul,ol),
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] > .wp-block-group__inner-container > :is(ul,ol) { margin-block: 10px 16px; padding-left: 1.65em; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] > :is(ul,ol) > li,
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] > .wp-block-group__inner-container > :is(ul,ol) > li { margin-bottom: 6px; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .wp-block-image { width: 100%; margin: 18px 0 20px; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .wp-block-image img { display: block; width: 100%; max-width: 100%; height: auto; margin: 0; border: 1px solid #d5dce5; border-radius: 10px; box-shadow: none; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] figcaption { margin: 8px 2px 0; padding: 0; color: var(--mtk-reading-muted); font-size: 13px; line-height: 1.75; text-align: left; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-table { width: 100%; margin: 14px 0 18px; overflow-x: auto; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-table table { width: 100%; margin: 0; border: 0; border-collapse: collapse; font-size: 14px; line-height: 1.8; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-table :is(th,td) { padding: 10px 12px; border: 0; border-bottom: 1px solid var(--mtk-reading-line); text-align: left; vertical-align: top; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-table th { background: var(--mtk-reading-soft); }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-variable-control { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-copy { display: inline-flex; align-items: center; justify-content: center; min-width: 56px; min-height: 32px; margin: 0; padding: 5px 10px; border: 1px solid var(--mtk-reading-line); border-radius: 6px; background: transparent; color: var(--mtk-reading-ink); font: inherit; font-size: 13px; line-height: 1.6; white-space: nowrap; cursor: pointer; transition: color .16s ease,border-color .16s ease; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-copy:is(:hover,[data-copied="true"]) { border-color: var(--mtk-reading-accent); color: var(--mtk-reading-accent); }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-copy:focus-visible { outline: 2px solid var(--mtk-reading-accent); outline-offset: -2px; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-copy-status { min-height: 24px; color: var(--mtk-reading-muted); font-size: 13px; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faqs { margin: 16px 0; border: 1px solid var(--mtk-reading-line); border-radius: 10px; overflow: clip; overflow-anchor: auto; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-item { margin: 0; padding: 0; border: 0; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-item + .mtk-faq-item { border-top: 1px solid var(--mtk-reading-line); }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] h3.mtk-faq-heading { margin: 0; padding: 0; border: 0; background: none; font-size: 17px; line-height: 1.6; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger { display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; margin: 0; padding: 17px 20px; border: 0; border-radius: 0; box-shadow: none; background: transparent; color: var(--mtk-reading-title); font: inherit; font-weight: 600; line-height: inherit; text-align: left; cursor: pointer; transition: color .18s ease,background-color .18s ease; -webkit-tap-highlight-color: transparent; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger:is(:hover,[aria-expanded="true"]) { background: var(--mtk-reading-soft); }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger:focus-visible { outline: 2px solid var(--mtk-reading-accent); outline-offset: -3px; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 24px; width: 24px; height: 24px; margin: 0; padding: 0; color: var(--mtk-reading-muted); transform: rotate(0deg); transform-origin: center; transition: transform .28s cubic-bezier(.37,0,.63,1),color .24s ease; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon::before,.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon::after { content: none; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon svg { display: block; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger[aria-expanded="true"] .mtk-faq-icon { color: var(--mtk-reading-accent); transform: rotate(180deg); }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-panel { margin: 0; padding: 0; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"][data-mtk-reading-ready="1"] .mtk-faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .28s cubic-bezier(.37,0,.63,1); }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"][data-mtk-reading-ready="1"] [data-mtk-open="true"] .mtk-faq-panel { grid-template-rows: 1fr; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"][data-mtk-reading-ready="1"] .mtk-faq-answer { min-height: 0; overflow: hidden; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-instant :is(.mtk-faq-panel,.mtk-faq-icon) { transition: none; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content { padding: 16px 20px 22px; font-size: 15px; line-height: 1.85; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content p { margin: 0 0 10px; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content > :last-child { margin-bottom: 0; }
+@media (max-width:600px) {
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .wp-block-image { margin: 16px 0 18px; }
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] figcaption { font-size: 12px; }
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] h3.mtk-faq-heading { font-size: 16px; }
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger { padding: 16px; gap: 14px; }
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content { padding: 14px 16px 20px; }
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-table :is(th,td) { padding: 9px 8px; }
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-table table { font-size: 13px; }
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-variable-control { align-items: flex-start; flex-direction: column; gap: 6px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] :is(.mtk-faq-icon,.mtk-faq-panel,.mtk-faq-trigger,.mtk-reading-copy) { transition: none !important; }
+}

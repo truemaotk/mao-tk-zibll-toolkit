@@ -1,0 +1,31 @@
+# 开发与验证
+
+先阅读根 README、RIGHTS.md 和各模块 README。当前公开目录只导出 1.6.4 正式生产源码及 1.1.0 写作技能，不含特定开发机器的浏览器夹具、数据库或部署配置。
+
+## 边界
+
+1. 保留命名空间 `MaoTK\ZibllToolkit`、唯一资源句柄和模块作用域。
+2. 不覆盖子比主题文件、全局样式、鉴权、下载与支付行为。
+3. 后台写操作保留权限、nonce、输入清理和输出转义；不得把 nonce 当成权限。
+4. 文章只保存组件结构；标题和目录用主题原生，文章内不添加 CSS / JS。
+5. 已确认的模块样式不能被新模块顺带覆盖。前后台资源按页面和开关加载。
+6. 原生代码语法色归子比 Enlighter，代码主题字段留空；提示颜色默认继承后台，单块覆盖优先。
+7. 案例截图弹窗使用专属属性 `data-mao-tk-showcase-close`，不要改回会被子比全局 AJAX 监听的 `data-action`。
+
+## 本地检查
+
+安装者自行准备 PHP、Node.js、Python 3；本项目不自动安装软件或更改系统环境。
+
+- 对修改的 PHP 执行 `php -l <file.php>`。
+- 对修改的 JavaScript 执行 `node --check <file.js>`。
+- 技能检查器：`python skills/maotk-toolkit-articles/scripts/check_article.py <article.blocks.html>`。
+- 技能检查器回归：在其 scripts 目录运行 `python -m unittest test_check_article.py`。
+- 安装包构建：从仓库根目录运行 `powershell -File tools/build-release.ps1`。
+
+构建工具只生成两个 ZIP 与 SHA256SUMS，不会部署、发布文章、删除文件或连接生产网站。再次构建请换空的输出目录，避免覆盖历史产物。
+
+## 真实环境回归
+
+在隔离 WordPress + 已授权 Zibll 环境验证启停、保存读回、主题依赖缺失、明确关闭保留、浅深模式、窄屏溢出、原生工具与页面作用域。浏览器静态页面或语法检查不等于 WordPress 兼容测试。
+
+案例模块重点验证：长图自然高度、连续多次打开关闭、Esc / 遮罩 / 关闭按钮、0px 留白、上下独立保存、分类模板和旧区块兼容。不要为了测试实际付款、改变用户权限或覆盖生产案例。

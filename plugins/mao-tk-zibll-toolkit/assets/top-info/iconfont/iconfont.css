@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "maotkTopInfoIcons";
+    src: url("iconfont.woff?v=1.3.0") format("woff");
+    font-display: block;
+}
+
+.maotk-top-info .maotk-top-info-icon {
+    display: inline-block;
+    font-family: "maotkTopInfoIcons" !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    speak: never;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.maotk-top-info .icon-chat-1-fill::before {
+    content: "\e018";
+}
+
+.maotk-top-info .icon-folder-5-fill::before {
+    content: "\e027";
+}
+
+.maotk-top-info .icon-calendar-todo-fill::before {
+    content: "\e032";
+}
+
+.maotk-top-info .icon-shield-user-fill::before {
+    content: "\e035";
+}
+
+.maotk-top-info .icon-file-word-fill::before {
+    content: "\e03d";
+}
+
+.maotk-top-info .icon-fire-fill::before {
+    content: "\e03f";
+}
+
+.maotk-top-info .icon-time-fill::before {
+    content: "\e041";
+}
+
+.maotk-top-info .icon-book-mark-fill::before {
+    content: "\e051";
+}

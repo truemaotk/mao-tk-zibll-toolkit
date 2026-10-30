@@ -1,0 +1,23 @@
+.editor-styles-wrapper .maotk-note-clean {
+  clear: both;
+}
+
+.editor-styles-wrapper .maotk-note-clean .maotk-note-badge [data-rich-text-placeholder]::after,
+.editor-styles-wrapper .maotk-note-clean .maotk-note-title[data-rich-text-placeholder]::after {
+  color: currentColor;
+  opacity: 0.55;
+}
+
+.editor-styles-wrapper .maotk-note-clean .maotk-note-title[data-rich-text-placeholder] {
+  min-width: 10em;
+}
+
+.editor-styles-wrapper .maotk-note-clean .maotk-note-content .block-list-appender {
+  margin-top: 8px;
+}
+
+.editor-styles-wrapper .maotk-note-clean .maotk-note-content .block-editor-button-block-appender {
+  color: var(--maotk-note-accent);
+  box-shadow: inset 0 0 0 1px rgba(var(--maotk-note-accent-rgb), 0.35);
+}
+

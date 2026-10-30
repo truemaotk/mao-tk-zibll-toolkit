@@ -1,0 +1,44 @@
+[
+  {
+    "id": "MTK-001",
+    "imageUrl": "https://media.maotk.com/blog/225544_www.bagladt.com_-scaled-1.jpeg",
+    "siteUrl": "https://www.bagladt.com/",
+    "name": "Bagladt 包包独立站",
+    "description": "专注欧美女包的跨境电商独立站首页。"
+  },
+  {
+    "id": "MTK-002",
+    "imageUrl": "https://media.maotk.com/blog/rosybrown-rat-534063.hostingersite.com_-scaled-1.jpeg",
+    "siteUrl": "https://rosybrown-rat-534063.hostingersite.com/",
+    "name": "跨境服饰独立站案例",
+    "description": "适合服装、穿搭和快时尚卖家的首页设计参考。"
+  },
+  {
+    "id": "MTK-003",
+    "imageUrl": "https://media.maotk.com/blog/23045_tifae.com_-scaled-1.jpeg",
+    "siteUrl": "https://tifae.com/",
+    "name": "轻奢品牌官网式独立站",
+    "description": "适合饰品、美妆、轻奢品牌展示与转化。"
+  },
+  {
+    "id": "MTK-004",
+    "imageUrl": "https://media.maotk.com/blog/mediumslateblue-raven-575974.hostingersite.com_-scaled-1.jpeg",
+    "siteUrl": "https://mediumslateblue-raven-575974.hostingersite.com/",
+    "name": "综合类独立站布局案例",
+    "description": "适合多类目产品展示，兼顾 PC 与移动端体验。"
+  },
+  {
+    "id": "MTK-005",
+    "imageUrl": "https://media.maotk.com/blog/orangered-dolphin-641902.hostingersite.com_-scaled-1.jpeg",
+    "siteUrl": "https://orangered-dolphin-641902.hostingersite.com/?v=0b3b97fa6688",
+    "name": "多品类跨境商城独立站",
+    "description": "适合综合类目、多个系列和活动页组合展示。"
+  },
+  {
+    "id": "MTK-006",
+    "imageUrl": "https://media.maotk.com/blog/watchforbag.com_-scaled-1.jpeg",
+    "siteUrl": "https://watchforbag.com/",
+    "name": "Watchforbag 箱包独立站",
+    "description": "面向箱包垂直品类的跨境独立站首页。"
+  }
+]
