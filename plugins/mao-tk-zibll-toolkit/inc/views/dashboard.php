@@ -55,7 +55,7 @@ defined('ABSPATH') || exit;
                     <?php
                     $groups = array(
                         'display' => array('文章展示', array('top-info', 'article-freshness')),
-                        'content' => array('正文组件', array('article-ui-code', 'article-ui-link-preview', 'article-ui-tabs', 'article-ui-postsbox', 'article-ui-reading', 'article-note')),
+                        'content' => array('正文组件', array('article-ui-code', 'article-ui-link-preview', 'article-ui-tabs', 'article-ui-postsbox', 'article-ui-reading', 'article-ui-resources', 'article-note')),
                         'pages' => array('页面组件', array('page-showcase')),
                         'workspace' => array('工作台与扩展', array()),
                     );

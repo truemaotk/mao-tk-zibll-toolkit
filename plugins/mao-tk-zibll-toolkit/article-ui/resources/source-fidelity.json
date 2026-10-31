@@ -1,0 +1,11 @@
+{
+  "source": "https://m.maotk.com/blog/tiktok-node/",
+  "date": "2026-10-31",
+  "originalDeclarationRules": 73,
+  "liveComparisonHash": "eda2d09f",
+  "localComparisonHash": "eda2d09f",
+  "allDeclarationValuesMatchLiveSource": true,
+  "scopeAdapterPreservesDeclarations": true,
+  "note": "FNV-1a signature compares ordered normalized CSS declaration blocks; SHA-256 file manifest is separate.",
+  "appliesTo": "components.css only; adapters.css contains the three user-approved v1.1.0 exceptions"
+}

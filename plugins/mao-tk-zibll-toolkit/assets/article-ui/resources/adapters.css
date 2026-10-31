@@ -1,0 +1,27 @@
+/* v1.1.1 exceptions requested by the user. Original declarations stay in components.css. */
+.mtk-legacy-resources .mtk-native-resource-link { display:inline-flex; align-items:center; gap:4px; font-weight:400; line-height:1.35; }
+.mtk-legacy-resources .mtk-native-resource-link .mtk-link-affordance { display:inline-flex; align-items:center; flex:none; width:16px; height:16px; }
+.mtk-legacy-resources .mtk-native-resource-link .mtk-link-affordance svg { display:block; width:16px; height:16px; fill:currentColor; }
+.mtk-legacy-resources .maotkcb2-card .mtk-native-resource-link .mtk-link-affordance { margin-left:0; }
+.mtk-legacy-resources a.maotkcb2-card:focus-visible .mtk-native-resource-link[data-mao-tk-ui-link="1"]::after { transform:scaleX(1); }
+.mtk-legacy-resources a.maotkcb2-card:focus-visible .mtk-native-resource-link .mtk-link-text { transform:scale(1.035); }
+.mtk-legacy-resources .maotkcb2-download-icon { --maotkcb2-download-icon-size:34px; display:inline-flex; align-items:center; justify-content:center; }
+/* Center oversized transparent-padded artwork inside the fixed frame; do not let an implicit grid track grow. */
+.mtk-legacy-resources .maotkcb2-download-icon img { flex:0 0 auto; margin:0!important; }
+/* The original raster has large transparent margins; enlarge its box, not the frame. */
+.mtk-legacy-resources .mtk-download-icon-padded { --maotkcb2-download-icon-size:64px; }
+.mtk-legacy-resources .mtk-resource-extra { margin:16px 0 0!important; }
+@media(max-width:768px) {
+  .mtk-legacy-resources .maotkcb2-vps-grid { --maotkcb2-card-gap-row:12px; margin:12px 0; }
+  .mtk-legacy-resources .maotkcb2-vps-card { padding:12px 15px; }
+  .mtk-legacy-resources .maotkcb2-vps-card.maotkcb2-vps-has-badge { padding-top:16px; }
+  .mtk-legacy-resources .maotkcb2-vps-head { margin-bottom:4px; }
+  .mtk-legacy-resources .maotkcb2-download-grid { margin:12px 0; }
+  .mtk-legacy-resources .maotkcb2-download-card { min-height:0; padding:14px 16px; }
+  .mtk-legacy-resources .maotkcb2-download-head { margin-bottom:10px; }
+  .mtk-legacy-resources .maotkcb2-download-desc { line-height:1.65; }
+  .mtk-legacy-resources .maotkcb2-download-foot { padding-top:12px; }
+  .mtk-legacy-resources .maotkcb2-download-icon { --maotkcb2-download-icon-size:32px; }
+  .mtk-legacy-resources .mtk-download-icon-padded { --maotkcb2-download-icon-size:60px; }
+  .mtk-legacy-resources .mtk-resource-extra { margin:12px 0 0!important; }
+}

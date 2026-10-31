@@ -15,7 +15,7 @@ final class Content
             $tag = $tags->get_tag();
             $classes = preg_split('/\s+/', (string) $tags->get_attribute('class'), -1, PREG_SPLIT_NO_EMPTY);
             if (in_array($tag, array('DIV', 'SECTION', 'ARTICLE'), true) && in_array('maotk-ui-kit', $classes, true)) { $result['roots']++; }
-            foreach (array('mtk-code-wrap' => 'code', 'mtk-native-tabs' => 'tabs', 'mtk-native-postsbox' => 'postsbox', 'mtk-article-reading' => 'reading') as $class => $key) {
+            foreach (array('mtk-code-wrap' => 'code', 'mtk-native-tabs' => 'tabs', 'mtk-native-postsbox' => 'postsbox', 'mtk-article-reading' => 'reading', 'mtk-legacy-resources' => 'resources') as $class => $key) {
                 if (in_array($class, $classes, true)) { $result['components'][$key] = true; }
             }
             if ($tag === 'A') {

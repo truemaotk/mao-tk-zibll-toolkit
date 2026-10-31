@@ -19,6 +19,7 @@ final class ModuleManager
             'article-ui-postsbox' => true,
             'article-note' => true,
             'article-ui-reading' => true,
+            'article-ui-resources' => true,
             'page-showcase' => true,
         ));
     }

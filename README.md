@@ -2,7 +2,7 @@
 
 适用于 WordPress + Zibll 子比主题的模块化工具箱，同时提供文章写作技能 `maotk-toolkit-articles`。
 
-**当前插件：1.6.5 · SKILL：1.1.0**
+**当前插件：1.7.0 · SKILL：1.1.0**
 
 > 本仓库按作者决定公开展示源码，**暂未授予开源许可**。公开可见不等于允许任意使用、修改或再分发。第三方组件继续适用各自随附许可，详见 [权利说明](RIGHTS.md) 与 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
@@ -12,7 +12,7 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| `mao-tk-zibll-toolkit-1.6.5.zip` | WordPress 后台 → 插件 → 安装插件 → 上传插件 |
+| `mao-tk-zibll-toolkit-1.7.0.zip` | WordPress 后台 → 插件 → 安装插件 → 上传插件 |
 | `maotk-toolkit-articles-1.1.0.zip` | 本地 Codex 写作技能；保持整个技能文件夹完整 |
 | `SHA256SUMS.txt` | 两个下载文件的 SHA-256 校验值 |
 
@@ -42,7 +42,7 @@ GitHub 自动生成的 **Source code / Download ZIP 是整仓库源码，不是 
 - 原生代码框外观、链接预览、TAB B 极简线条、文章卡片、阅读与折叠。
 - 五类正文提示框，支持颜色继承、位置、本地图标和尺寸。
 - 页面案例展示：后台统一维护案例和分类，页面选择模板与分类，保留主题容器。
-- 1.6.5：给子比原生导航 Logo 补尺寸并保留自动宽度，为指定原生表单补自动填充语义和评论辅助框唯一 ID；不修改主题核心、文章正文或表单提交逻辑。
+- 1.7.0：给子比原生导航 Logo 补尺寸并保留自动宽度，为指定原生表单补自动填充语义和评论辅助框唯一 ID；不修改主题核心、文章正文或表单提交逻辑。
 - 1.6.4：案例区域上下留白分别调整，默认各 10px，范围 0–200px；兼容旧配置与合法的 0。
 
 完整组件边界见 [插件说明](plugins/mao-tk-zibll-toolkit/README.md)、[文章组件](plugins/mao-tk-zibll-toolkit/article-ui/README.md)、[案例展示](plugins/mao-tk-zibll-toolkit/showcase/README.md)。其中较早版本的“待测试”文字是当时记录；本次验收范围见 [发行说明](docs/RELEASE_NOTES.md)。

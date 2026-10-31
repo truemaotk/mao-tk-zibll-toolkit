@@ -55,6 +55,12 @@ final class Runtime
             // Theme scripts keep their own handles/order. No guessed theme dependency or copied loader.
             wp_enqueue_script('mao-tk-toolkit-article-ui', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/article-ui/article-ui.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
         }
+        if (isset($this->prepared['resources'])) {
+            wp_enqueue_style('mao-tk-toolkit-article-ui-resource-adapters', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/article-ui/resources/adapters.css', array('mao-tk-toolkit-article-ui-resources'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
+            if (isset($this->prepared['link-preview'])) {
+                wp_enqueue_script('mao-tk-toolkit-article-resources', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/article-ui/resources/link-bridge.js', array('mao-tk-toolkit-article-ui'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+            }
+        }
         if (isset($this->prepared['reading'])) {
             wp_enqueue_script('mao-tk-toolkit-article-reading', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/article-ui/reading/reading.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
         }

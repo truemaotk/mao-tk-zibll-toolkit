@@ -1,6 +1,6 @@
 {
   "host": "mao-tk-zibll-toolkit",
-  "host_version": "1.6.5",
+  "host_version": "1.7.0",
   "source_version": "1.0.0",
   "adapter_version": "1.0.2",
   "default_enabled": true,
@@ -48,6 +48,16 @@
       "root_attribute": "data-mao-tk-ui-reading",
       "source_baseline": "post31 approved reading and FAQ 2026-10-29; migrated 2026-10-30",
       "adapter_version": "1.0.0"
+    },
+    "resources": {
+      "module_id": "article-ui-resources",
+      "style": "assets/article-ui/resources/components.css",
+      "adapter_style": "assets/article-ui/resources/adapters.css",
+      "script": "assets/article-ui/resources/link-bridge.js",
+      "root_attribute": "data-mao-tk-ui-resources",
+      "source_baseline": "MaoTK-Recommendation-Components-v1.1.1",
+      "baseline_version": "1.1.1",
+      "automatic_cover_fetch": false
     }
   },
   "shared_script": "assets/article-ui/article-ui.js",

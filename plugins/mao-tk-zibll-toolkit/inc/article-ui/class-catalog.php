@@ -15,6 +15,7 @@ final class Catalog
             'link-preview' => array('name' => '文章 UI · 链接预览', 'description' => '正文普通链接的悬浮卡、原网址复制与键盘操作；不接管原链接点击。', 'file' => 'link-preview/link.css'),
             'tabs' => array('name' => '文章 UI · TAB 极简线条', 'description' => '仅适配顶部横向 TAB B，切换、状态和面板仍由主题负责。', 'file' => 'tabs/tabs.css'),
             'postsbox' => array('name' => '文章 UI · 文章卡片', 'description' => '原生 postsbox 的局部外观，保留真实文章数据、全部入口和主题图标。', 'file' => 'postsbox/postsbox.css'),
+            'resources' => array('name' => '文章 UI · 推荐与工具入口', 'description' => '复用已确认的推荐卡与外部工具入口、手机间距和居中图标；不接管原生文件下载或支付。', 'file' => 'resources/components.css'),
             'reading' => array('name' => '文章 UI · 阅读与折叠', 'description' => '仅在明确标记的正文内应用紧凑间距、图片边界和已确认的折叠交互；标题与目录沿用主题。', 'file' => 'reading/reading.css'),
         );
     }

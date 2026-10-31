@@ -1,6 +1,6 @@
 # 开发与验证
 
-先阅读根 README、RIGHTS.md 和各模块 README。当前公开目录只导出 1.6.5 正式生产源码及 1.1.0 写作技能，不含特定开发机器的浏览器夹具、数据库或部署配置。
+先阅读根 README、RIGHTS.md 和各模块 README。当前公开目录只导出 1.7.0 正式生产源码及 1.1.0 写作技能，不含特定开发机器的浏览器夹具、数据库或部署配置。
 
 ## 边界
 
@@ -31,4 +31,4 @@
 
 案例模块重点验证：长图自然高度、连续多次打开关闭、Esc / 遮罩 / 关闭按钮、0px 留白、上下独立保存、分类模板和旧区块兼容。不要为了测试实际付款、改变用户权限或覆盖生产案例。
 
-1.6.5 原生标记层重点验证：主题升级后的输出结构、桌面/手机 Logo 几何尺寸、六类认证字段语义、辅助框 ID 冲突、既有 name/type/value/action 保留、重复处理幂等，以及后台、REST/AJAX、非 HTML、流式响应隔离。缺少 WordPress HTML API 时安全跳过。开发者可通过 `mao_tk_toolkit_native_markup_compat_enabled` 过滤器单独停用这一兼容层。
+1.7.0 原生标记层重点验证：主题升级后的输出结构、桌面/手机 Logo 几何尺寸、六类认证字段语义、辅助框 ID 冲突、既有 name/type/value/action 保留、重复处理幂等，以及后台、REST/AJAX、非 HTML、流式响应隔离。缺少 WordPress HTML API 时安全跳过。开发者可通过 `mao_tk_toolkit_native_markup_compat_enabled` 过滤器单独停用这一兼容层。
