@@ -27,6 +27,7 @@ final class Plugin
         }
         self::$booted = true;
         $theme = (new ThemeCompatibility())->inspect();
+        if ($theme['is_zibll']) { NativeMarkupCompatibility::register(); }
         $manager = new ModuleManager();
         $manager->register(new Modules\WelcomeModule());
         $manager->register(new Modules\TopInfoModule());
