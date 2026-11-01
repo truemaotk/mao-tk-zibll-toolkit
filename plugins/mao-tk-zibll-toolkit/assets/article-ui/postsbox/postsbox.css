@@ -1,8 +1,8 @@
 /* Article card appearance only: preserve native shortcode output and links. */
 :where(.maotk-ui-kit[data-mao-tk-ui-postsbox="1"]) { --mtk-title: var(--key-color,#30343b); --mtk-text: var(--main-color,#4e5358); --mtk-muted: var(--muted-color,#777); --mtk-line: var(--main-border-color,rgba(50,50,50,.09)); --mtk-bg: var(--main-bg-color,#fff); --mtk-accent: var(--focus-color,#fe8d19); }
-.maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox { min-width: 0; }
+.maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox { min-width: 0; margin-block: 20px; }
 .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .article-postsbox { width: 100%; max-width: none; margin: 0; border-radius: 10px; background: transparent; box-shadow: none; transform: none; }
-.maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .article-postsbox .posts-mini { display: flex; align-items: stretch; gap: 16px; width: 100%; margin: 0; padding: 16px; border: 1px solid var(--mtk-line); border-radius: 10px; background: var(--mtk-bg) !important; background-image: none !important; box-shadow: none; transform: none; transition: border-color .16s ease; }
+.maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .article-postsbox .posts-mini { display: flex; align-items: center; gap: 16px; width: 100%; margin: 0; padding: 16px; border: 1px solid var(--mtk-line); border-radius: 10px; background: var(--mtk-bg) !important; background-image: none !important; box-shadow: none; transform: none; transition: border-color .16s ease; }
 .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .article-postsbox:hover .posts-mini, .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .article-postsbox:focus-within .posts-mini { border-color: var(--mtk-accent); border-color: color-mix(in srgb,var(--mtk-accent) 45%,var(--mtk-line)); }
 .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .posts-mini > .mr10 { flex: 0 0 auto; margin-right: 0 !important; }
 .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .item-thumbnail { width: 120px; height: 90px; margin: 0; padding: 0 !important; overflow: hidden; border-radius: 6px; }
@@ -25,6 +25,7 @@
 .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .item-meta .icon { flex-shrink: 0; width: 14px; height: 14px; margin: 0; }
 .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox a:focus-visible { outline: 2px solid var(--mtk-accent); outline-offset: -2px; }
 @media (max-width: 600px) {
+  .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox { margin-block: 18px; }
   .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .article-postsbox .posts-mini { gap: 12px; padding: 12px; }
   .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .item-thumbnail { width: 88px; height: 66px; }
   .maotk-ui-kit[data-mao-tk-ui-postsbox="1"] .mtk-native-postsbox .posts-mini-con { gap: 8px; }

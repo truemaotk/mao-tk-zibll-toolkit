@@ -37,16 +37,16 @@
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger { display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; margin: 0; padding: 17px 20px; border: 0; border-radius: 0; box-shadow: none; background: transparent; color: var(--mtk-reading-title); font: inherit; font-weight: 600; line-height: inherit; text-align: left; cursor: pointer; transition: color .18s ease,background-color .18s ease; -webkit-tap-highlight-color: transparent; }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger:is(:hover,[aria-expanded="true"]) { background: var(--mtk-reading-soft); }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger:focus-visible { outline: 2px solid var(--mtk-reading-accent); outline-offset: -3px; }
-.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 24px; width: 24px; height: 24px; margin: 0; padding: 0; color: var(--mtk-reading-muted); transform: rotate(0deg); transform-origin: center; transition: transform .28s cubic-bezier(.37,0,.63,1),color .24s ease; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 24px; width: 24px; height: 24px; margin: 0; padding: 0; color: var(--mtk-reading-muted); transform: rotate(0deg); transform-origin: center; transition: transform .28s cubic-bezier(.2,.7,.2,1),color .24s ease; }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon::before,.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon::after { content: none; }
-.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon svg { display: block; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon svg { display: block; width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger[aria-expanded="true"] .mtk-faq-icon { color: var(--mtk-reading-accent); transform: rotate(180deg); }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-panel { margin: 0; padding: 0; }
-.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"][data-mtk-reading-ready="1"] .mtk-faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .28s cubic-bezier(.37,0,.63,1); }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"][data-mtk-reading-ready="1"] .mtk-faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .28s cubic-bezier(.2,.7,.2,1); }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"][data-mtk-reading-ready="1"] [data-mtk-open="true"] .mtk-faq-panel { grid-template-rows: 1fr; }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"][data-mtk-reading-ready="1"] .mtk-faq-answer { min-height: 0; overflow: hidden; }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-instant :is(.mtk-faq-panel,.mtk-faq-icon) { transition: none; }
-.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content { padding: 16px 20px 22px; font-size: 15px; line-height: 1.85; }
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content { padding: 20px; font-size: 15px; line-height: 1.85; }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content p { margin: 0 0 10px; }
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content > :last-child { margin-bottom: 0; }
 @media (max-width:600px) {
@@ -54,7 +54,7 @@
   .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] figcaption { font-size: 12px; }
   .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] h3.mtk-faq-heading { font-size: 16px; }
   .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger { padding: 16px; gap: 14px; }
-  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content { padding: 14px 16px 20px; }
+  .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-content { padding: 16px; }
   .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-table :is(th,td) { padding: 9px 8px; }
   .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-reading-table table { font-size: 13px; }
   .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-variable-control { align-items: flex-start; flex-direction: column; gap: 6px; }
