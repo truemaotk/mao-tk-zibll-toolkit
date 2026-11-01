@@ -174,7 +174,7 @@ function inspectorMarkup() {
   const c = selected();
   return `<aside class="inspector" aria-label="组件设置"><div class="inspector-title"><strong>案例展示</strong><p>${c?'正在编辑：'+esc(c.name||'未命名案例'):'选择案例，或添加第一个案例。'}</p></div><div class="inspector-tabs" role="tablist" aria-label="设置分类">${[['content','内容'],['style','样式'],['interaction','交互']].map(([k,t])=>`<button class="inspector-tab" role="tab" data-action="inspector-tab" data-tab="${k}" aria-selected="${inspectorTab===k}" aria-controls="inspector-panel" id="tab-${k}">${t}</button>`).join('')}</div><div class="inspector-content" id="inspector-panel" role="tabpanel" aria-labelledby="tab-${inspectorTab}">${inspectorTab==='content'?(c?contentSettings(c):'<div class="panel-empty">添加一个案例，开始编辑图片、文字和链接。</div>'):inspectorTab==='style'?styleSettings():interactionSettings(c)}</div></aside>`;
 }
-function renderEditor(){return `<div class="editor-shell"><header class="editor-toolbar"><div class="editor-title"><button class="icon-button mobile-panel-toggle" data-action="toggle-manager" aria-label="切换案例列表与设置面板">${icon('panel-left')}</button><div><h1>案例展示</h1><p>页面组件 / 中央案例库</p></div></div><div class="editor-toolbar-actions"><span class="save-state"></span><button class="icon-button" data-action="undo" aria-label="撤销最近修改" title="撤销">${icon('undo-2')}</button><button class="button export-button" data-action="export">${icon('download')}导出</button><a class="button toolbar-page-link" href="${esc(boot.newPageUrl)}">新建展示页面</a><button class="button primary" data-action="save">保存案例库</button></div></header><div class="editor-workspace ${managerOpen?'show-manager':''}">${managerMarkup()}${canvasMarkup()}${inspectorMarkup()}</div><footer class="editor-footer"><span>创建页面 → 选择“MaoTK 案例展示”模板 → 选择案例分类</span><span>保存后更新所有关联页面</span></footer></div>`;}
+function renderEditor(){return `<div class="editor-shell"><header class="editor-toolbar"><div class="editor-title"><button class="icon-button mobile-panel-toggle" data-action="toggle-manager" aria-label="切换案例列表与设置面板">${icon('panel-left')}</button><div><h2>案例展示</h2><p>页面组件 / 中央案例库</p></div></div><div class="editor-toolbar-actions"><span class="save-state"></span><button class="icon-button" data-action="undo" aria-label="撤销最近修改" title="撤销">${icon('undo-2')}</button><button class="button export-button" data-action="export">${icon('download')}导出</button><a class="button toolbar-page-link" href="${esc(boot.newPageUrl)}">新建展示页面</a><button class="button primary" data-action="save">保存案例库</button></div></header><div class="editor-workspace ${managerOpen?'show-manager':''}">${managerMarkup()}${canvasMarkup()}${inspectorMarkup()}</div><footer class="editor-footer"><span>创建页面 → 选择“MaoTK 案例展示”模板 → 选择案例分类</span><span>保存后更新所有关联页面</span></footer></div>`;}
 
 function render() {
   app.innerHTML=renderEditor();
@@ -189,7 +189,20 @@ function refreshPreview() {
   const themeButton=ui.querySelector('[data-action="preview-theme"]');if(themeButton){themeButton.innerHTML=icon(previewTheme==='light'?'moon':'sun');iconHydrate(themeButton);}
 }
 function refreshManager() {const old=ui.querySelector('.case-manager');if(old){old.outerHTML=managerMarkup();iconHydrate(ui.querySelector('.case-manager'));}}
-function refreshInspector() {const old=ui.querySelector('.inspector');if(old){const openPanels=Array.from(old.querySelectorAll('.setting-section[open] summary')).map(x=>x.textContent.trim());old.outerHTML=inspectorMarkup();const panel=ui.querySelector('.inspector');panel.querySelectorAll('.setting-section').forEach(x=>{if(openPanels.includes(x.querySelector('summary').textContent.trim()))x.open=true;});iconHydrate(panel);}}
+function refreshInspector() {
+  const old=ui.querySelector('.inspector');if(!old)return;
+  const sameTab=old.querySelector('[role="tabpanel"]')?.getAttribute('aria-labelledby')==='tab-'+inspectorTab;
+  const sections=new Map(sameTab?Array.from(old.querySelectorAll('.setting-section')).map(x=>[x.querySelector('summary').textContent.trim(),x.open]):[]);
+  const active=ui.activeElement?.closest('[data-scope][data-key]');
+  const focusKey=active&&old.contains(active)?{scope:active.dataset.scope,key:active.dataset.key}:null;
+  const scroll=old.scrollTop;
+  old.outerHTML=inspectorMarkup();
+  const panel=ui.querySelector('.inspector');
+  panel.querySelectorAll('.setting-section').forEach(x=>{const title=x.querySelector('summary').textContent.trim();if(sections.has(title))x.open=sections.get(title);});
+  iconHydrate(panel);
+  if(sameTab)panel.scrollTop=scroll;
+  if(focusKey){const replacement=Array.from(panel.querySelectorAll('[data-scope][data-key]')).find(x=>x.dataset.scope===focusKey.scope&&x.dataset.key===focusKey.key);replacement?.focus({preventScroll:true});}
+}
 function wireShots(root=app) {
   root.querySelectorAll('.case-shot').forEach(shot=>{
     const card=state.cards.find(c=>c.id===shot.dataset.shot);

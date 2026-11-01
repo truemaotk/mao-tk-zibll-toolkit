@@ -1,0 +1,84 @@
+/* Only the verified Zibll shipping notice. Never hide alerts or style all WP notices. */
+#wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 3px 20px;
+    position: relative;
+    margin: 16px 0;
+    padding: 12px 48px 12px 16px;
+    border: 1px solid #dce7f5;
+    border-left: 3px solid #3b82f6;
+    border-radius: 8px;
+    background: #f4f8ff;
+    box-shadow: none;
+    color: #20314b;
+}
+#wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > h3 {
+    grid-column: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.65;
+    color: inherit;
+}
+#wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > p {
+    grid-column: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.65;
+    color: #5d6e85;
+}
+#wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > p:has(> a.button) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+#wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > p > a.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    padding: 4px 12px;
+    margin: 0 !important; /* Native markup contains an inline right margin. */
+    border: 1px solid #bfd2ee;
+    border-radius: 6px;
+    background: #fff;
+    color: #2155a6;
+    font-size: 12px;
+    line-height: 1.6;
+    text-decoration: none;
+}
+#wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > p > a.button:hover {
+    border-color: #7aa4e3;
+    background: #edf4ff;
+}
+#wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > p > a.button:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+#wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > .notice-dismiss {
+    top: 50%;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    border-radius: 6px;
+    transform: translateY(-50%);
+}
+#wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > .notice-dismiss:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 0;
+    box-shadow: none;
+}
+@media(max-width:600px) {
+    #wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) { gap: 6px 10px; padding-right: 40px; }
+    #wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > p:has(> a.button) { grid-column: 1; grid-row: auto; justify-self: start; margin-top: 2px; }
+    #wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) > .notice-dismiss { top: 8px; right: 4px; transform: none; }
+}
+@media(forced-colors:active) {
+    #wpbody-content .notice.notice-info:has(> p > a[href*="page=zibpay_page"][href*="#/shipping"]) { border-color: CanvasText; }
+}

@@ -27,7 +27,11 @@ final class Plugin
         }
         self::$booted = true;
         $theme = (new ThemeCompatibility())->inspect();
-        if ($theme['is_zibll']) { NativeMarkupCompatibility::register(); }
+        if ($theme['is_zibll']) {
+            NativeMarkupCompatibility::register();
+            DocumentTitleCompatibility::register();
+            if (is_admin()) { AdminNoticeCompatibility::register(); }
+        }
         $manager = new ModuleManager();
         $manager->register(new Modules\WelcomeModule());
         $manager->register(new Modules\TopInfoModule());
@@ -35,7 +39,14 @@ final class Plugin
         foreach (ArticleUI\Catalog::all() as $key => $component) { $manager->register(new Modules\ArticleUIModule($key)); }
         $manager->register(new Modules\ArticleNoteModule());
         $manager->register(new Modules\ShowcaseModule());
+        $manager->register(new Modules\PrivateLinksModule());
+        $manager->register(new Modules\MaintenanceModule());
+        $manager->register(new Modules\ProfilePresetsModule());
+        $manager->register(new Modules\OrderQueryModule());
+        $manager->register(new Modules\NotFoundModule());
         Showcase\Integration::register();
+        OrderQuery\Runtime::register();
+        NotFound\Runtime::register();
         $extension_failed = false;
         try {
             /** Register modules here. Callback receives ModuleManager. */
@@ -53,6 +64,11 @@ final class Plugin
             (new ArticleUI\AdminPage($manager, $admin))->register();
             (new ArticleNote\AdminPage($manager, $admin))->register();
             (new Showcase\AdminPage($manager, $admin))->register();
+            (new PrivateLinks\AdminPage($manager, $admin))->register();
+            (new Maintenance\AdminPage($manager, $admin))->register();
+            (new ProfilePresets\AdminPage($manager, $admin))->register();
+            (new OrderQuery\AdminPage($manager, $admin))->register();
+            (new NotFound\AdminPage($manager, $admin))->register();
             if (!TopInfo\Runtime::conflict()) { (new TopInfo\Editor())->register(); }
         }
     }

@@ -27,7 +27,7 @@ final class AdminPage
     public function render(): void
     {
         if (!current_user_can('manage_options')) { wp_die('你没有管理案例库的权限。', '', array('response' => 403)); }
-        echo '<div class="wrap mao-tk-toolkit" id="mao-tk-showcase-settings">';
+        echo '<div class="wrap mao-tk-toolkit" id="mao-tk-showcase-settings"><h1 class="screen-reader-text">案例展示</h1>';
         if (!(new Settings())->read()['valid']) { echo '<div class="notice notice-error"><p>案例库格式异常，原始数据仍保留，已暂停保存。请先检查或恢复案例库备份。</p></div>'; }
         if (!Runtime::enabled()) { echo '<div class="notice notice-warning"><p>案例库可以编辑保存；请在 Toolkit 工作台启用“页面组件 · 案例展示”，前台才会显示。</p></div>'; }
         if (!Integration::supported()) { echo '<div class="notice notice-warning"><p>案例展示前台模块需要WordPress 6.3或更新版本。案例资料保留，其他Toolkit模块不受影响。</p></div>'; }

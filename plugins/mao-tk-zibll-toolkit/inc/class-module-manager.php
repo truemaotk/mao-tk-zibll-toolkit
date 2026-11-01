@@ -21,6 +21,11 @@ final class ModuleManager
             'article-ui-reading' => true,
             'article-ui-resources' => true,
             'page-showcase' => true,
+            'private-links' => true,
+            'site-maintenance' => false,
+            'user-profile-presets' => true,
+            'page-order-query' => true,
+            'site-not-found' => true,
         ));
     }
 

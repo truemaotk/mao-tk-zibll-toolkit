@@ -1,0 +1,105 @@
+/* Private-link settings only. Native forms and server permission decisions stay unchanged. */
+.mao-tk-private-links {
+    --private-divider: #e2e8f0;
+    --private-selected: #eff5ff;
+    --private-accent: var(--wp-admin-theme-color, #2563eb);
+}
+.mao-tk-private-links .mao-tk-toolkit__header {
+    padding: 4px 0 22px;
+    margin: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+.mao-tk-private-links .mao-tk-toolkit__header h1 { font-size: 24px; line-height: 1.4; }
+.mao-tk-private-links .mao-tk-toolkit__intro { margin-top: 7px; }
+.mao-tk-private-links__page-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.mao-tk-private-links__page-actions > a:not(.button) { text-decoration: none; }
+.mao-tk-private-links__status {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    padding: 18px 22px; margin: 0 0 20px;
+}
+.mao-tk-private-links__status-title { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.mao-tk-private-links__status-title h2 { margin: 0; font-size: 14px; line-height: 1.6; }
+.mao-tk-private-links__status p { margin: 6px 0 0; color: var(--mao-tk-muted); font-size: 12px; line-height: 1.7; }
+.mao-tk-private-links__workspace { display: grid; grid-template-columns: 272px minmax(0,1fr); gap: 20px; align-items: start; }
+.mao-tk-private-links__workspace--roles-only { grid-template-columns: minmax(0,560px); }
+.mao-tk-private-links__section { min-width: 0; margin: 0; overflow: hidden; }
+.mao-tk-private-links__section-head { padding: 20px 22px 16px; border-bottom: 1px solid var(--private-divider); }
+.mao-tk-private-links__heading-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mao-tk-private-links__heading-row h2 { font-size: 15px; line-height: 1.6; margin: 0; }
+.mao-tk-private-links__section-head p { margin: 6px 0 0; color: var(--mao-tk-muted); font-size: 12px; line-height: 1.8; }
+.mao-tk-private-links__meta { color: var(--mao-tk-muted); font-size: 12px; line-height: 1.6; }
+.mao-tk-private-links__roles { border: 0; padding: 8px 12px; margin: 0; min-width: 0; }
+.mao-tk-private-links__role {
+    display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px;
+    margin: 2px 0; border-radius: 5px; font-size: 13px; cursor: pointer;
+    transition: background-color 140ms ease;
+}
+.mao-tk-private-links__role:hover { background: #f5f7fa; }
+.mao-tk-private-links__role:has(input:checked) { background: var(--private-selected); color: var(--private-accent); }
+.mao-tk-private-links__role input { width: 16px; height: 16px; margin: 0; flex: 0 0 16px; }
+.mao-tk-private-links__role input:focus-visible { outline: 2px solid var(--private-accent); outline-offset: 3px; box-shadow: none; }
+.mao-tk-private-links__role span { overflow-wrap: anywhere; }
+.mao-tk-private-links__role-summary { display: flex; flex-direction: column; gap: 4px; padding: 10px 24px 18px; font-size: 12px; color: var(--mao-tk-muted); }
+.mao-tk-private-links__actions { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding: 16px 22px; border-top: 1px solid var(--private-divider); }
+.mao-tk-private-links__actions--roles { align-items: flex-start; flex-direction: column; gap: 8px; }
+.mao-tk-private-links__save-group { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.mao-tk-private-links__save-state { font-size: 12px; line-height: 1.6; color: var(--mao-tk-muted); }
+.mao-tk-private-links__save-state[data-dirty="true"] { color: #945b08; }
+.mao-tk-private-links__search { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 18px 22px; }
+.mao-tk-private-links__search input[type=search] { width: min(100%,300px); min-height: 34px; margin: 0; }
+.mao-tk-private-links__table { padding: 0 22px 16px; }
+.mao-tk-private-links__table table { width: 100%; table-layout: fixed; border: 0; box-shadow: none; }
+.mao-tk-private-links__table th { font-size: 12px; color: var(--mao-tk-muted); font-weight: 400; padding: 10px 12px; background: #f7f9fc; border: 0; }
+.mao-tk-private-links__table td { padding: 16px 12px; border-bottom: 1px solid var(--private-divider); vertical-align: middle; font-size: 13px; overflow-wrap: anywhere; }
+.mao-tk-private-links__table th:nth-child(1) { width: 29%; }
+.mao-tk-private-links__table th:nth-child(2) { width: 19%; }
+.mao-tk-private-links__table th:nth-child(3) { width: 30%; }
+.mao-tk-private-links__table th:nth-child(4) { width: 22%; }
+.mao-tk-private-links__table tbody tr:last-child td { border-bottom: 0; }
+.mao-tk-private-links__user strong { font-size: 13px; font-weight: 600; }
+.mao-tk-private-links__user small { display: block; color: var(--mao-tk-muted); font-size: 11px; line-height: 1.7; margin-top: 3px; }
+.mao-tk-private-links__table select { width: 100%; max-width: 156px; min-height: 34px; font-size: 12px; }
+.mao-tk-private-links__table .mao-tk-toolkit__badge { white-space: nowrap; }
+.mao-tk-private-links__pagination { display: flex; gap: 6px; flex-wrap: wrap; padding: 0 22px 18px; }
+.mao-tk-private-links__pagination .page-numbers { padding: 5px 10px; border: 1px solid var(--private-divider); border-radius: 4px; text-decoration: none; }
+.mao-tk-private-links__pagination .current { background: var(--private-selected); color: var(--private-accent); }
+.mao-tk-private-links__help { margin-top: 20px; }
+.mao-tk-private-links__help .mao-tk-disclosure { border: 1px solid var(--mao-tk-border); border-radius: 8px; background: #fff; overflow: hidden; }
+.mao-tk-private-links__help-copy { padding: 0 22px 18px; }
+.mao-tk-private-links__help p { max-width: 90ch; font-size: 12px; line-height: 1.9; color: var(--mao-tk-muted); margin: 10px 0 0; }
+.mao-tk-private-links__empty td { color: var(--mao-tk-muted); text-align: center; padding: 30px 12px; }
+@media (max-width: 1100px) {
+    .mao-tk-private-links__workspace { grid-template-columns: minmax(0,1fr); }
+    .mao-tk-private-links__roles { display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 12px 22px; }
+    .mao-tk-private-links__role { min-width: 100px; padding: 0 10px; }
+    .mao-tk-private-links__role-summary { flex-direction: row; flex-wrap: wrap; gap: 8px 16px; padding: 0 22px 16px; }
+    .mao-tk-private-links__actions--roles { flex-direction: row; align-items: center; }
+}
+@media (max-width: 700px) {
+    .mao-tk-private-links .mao-tk-toolkit__header { padding-bottom: 18px; gap: 14px; }
+    .mao-tk-private-links .mao-tk-toolkit__header h1 { font-size: 22px; }
+    .mao-tk-private-links__page-actions { gap: 16px; }
+    .mao-tk-private-links__status { padding: 16px; gap: 16px; margin-bottom: 16px; }
+    .mao-tk-private-links__workspace { gap: 16px; }
+    .mao-tk-private-links__section-head { padding: 16px; }
+    .mao-tk-private-links__roles { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4px 8px; padding: 10px; }
+    .mao-tk-private-links__role { min-width: 0; margin: 0; min-height: 42px; }
+    .mao-tk-private-links__role-summary { padding: 6px 16px 14px; }
+    .mao-tk-private-links__search { padding: 16px; gap: 8px; }
+    .mao-tk-private-links__search input[type=search] { width: 0; flex: 1 1 160px; }
+    .mao-tk-private-links__actions { padding: 14px 16px; gap: 10px; }
+    .mao-tk-private-links__table { padding: 0 16px; }
+    .mao-tk-private-links__table thead { display: none; }
+    .mao-tk-private-links__table table, .mao-tk-private-links__table tbody { display: block; }
+    .mao-tk-private-links__table tr { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px 20px; border-top: 1px solid var(--private-divider); padding: 16px 0; }
+    .mao-tk-private-links__table td { display: block; width: auto; border: 0; padding: 0; }
+    .mao-tk-private-links__table td::before { content: attr(data-label); display: block; color: var(--mao-tk-muted); font-size: 11px; line-height: 1.5; margin-bottom: 6px; }
+    .mao-tk-private-links__table select { min-height: 38px; max-width: 100%; }
+    .mao-tk-private-links__empty { display: block; }
+    .mao-tk-private-links__empty td { padding: 16px 0; }
+    .mao-tk-private-links__pagination { padding: 0 16px 16px; }
+    .mao-tk-private-links__help { margin-top: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .mao-tk-private-links__role { transition: none; } }

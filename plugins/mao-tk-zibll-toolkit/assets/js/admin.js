@@ -21,9 +21,10 @@
             section.setAttribute('data-disclosure-ready', '1');
             trigger.addEventListener('click', function () {
                 var open = trigger.getAttribute('aria-expanded') !== 'true';
-                if (open) {
+                var group = section.getAttribute('data-accordion-group');
+                if (open && group) {
                     disclosures.forEach(function (other) {
-                        if (other !== section && other.getAttribute('data-accordion-group') === section.getAttribute('data-accordion-group')) { expand(other, false); }
+                        if (other !== section && other.getAttribute('data-accordion-group') === group) { expand(other, false); }
                     });
                 }
                 expand(section, open);

@@ -1,0 +1,307 @@
+/* Toolkit admin only, enqueued after page styles. Focus uses each control's own shape. */
+.wrap.mao-tk-toolkit {
+    --mao-tk-control-radius: 6px;
+    --mao-tk-disclosure-radius: 8px;
+    --mao-tk-check-radius: 4px;
+    --mao-tk-focus-color: var(--mao-tk-accent, #2563eb);
+}
+.wrap.mao-tk-toolkit :is(
+    button:not(.case-shot), .button, select, textarea,
+    input:not([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="hidden"], .mao-tk-note-color, .browser-address-input)
+) { border-radius: var(--mao-tk-control-radius); }
+.wrap.mao-tk-toolkit button.mao-tk-disclosure__trigger {
+    border-radius: var(--mao-tk-disclosure-radius);
+}
+.wrap.mao-tk-toolkit .is-open > .mao-tk-disclosure__heading > .mao-tk-disclosure__trigger {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.wrap.mao-tk-toolkit .mao-tk-toolkit__module-list .mao-tk-disclosure__trigger {
+    border-radius: 0;
+}
+.wrap.mao-tk-toolkit button.mao-tk-disclosure__trigger:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+.wrap.mao-tk-toolkit button.mao-tk-disclosure__trigger:focus-visible {
+    border-color: transparent;
+    box-shadow: inset 3px 0 0 var(--mao-tk-focus-color);
+    background: #eef5ff;
+}
+.wrap.mao-tk-toolkit input[type="checkbox"] { border-radius: var(--mao-tk-check-radius); }
+.wrap.mao-tk-toolkit input[type="radio"] { border-radius: 50%; }
+.wrap.mao-tk-toolkit input:is([type="checkbox"], [type="radio"]):focus-visible {
+    outline: none;
+    border-color: var(--mao-tk-focus-color);
+    box-shadow: inset 0 0 0 1px var(--mao-tk-focus-color);
+}
+.wrap.mao-tk-toolkit input[type="checkbox"]:checked:focus-visible,
+.wrap.mao-tk-toolkit .button-primary:focus-visible {
+    box-shadow: inset 0 0 0 2px #fff;
+}
+.wrap.mao-tk-toolkit a:not(.button):focus-visible { border-radius: var(--mao-tk-check-radius); }
+
+/* These page selectors previously forced a zero radius after the shared admin CSS. */
+.wrap.mao-tk-toolkit .mao-tk-top-info__preview-controls select,
+.wrap.mao-tk-toolkit .mao-tk-top-info__color-panel,
+.wrap.mao-tk-toolkit .mao-tk-top-info__sv,
+.wrap.mao-tk-toolkit .mao-tk-top-info__hue,
+.wrap.mao-tk-toolkit .mao-tk-top-info__alpha,
+.wrap.mao-tk-toolkit .mao-tk-top-info__results,
+.wrap.mao-tk-toolkit .mao-tk-top-info__results li {
+    border-radius: var(--mao-tk-control-radius);
+}
+.wrap.mao-tk-toolkit .mao-tk-top-info__hue::-webkit-slider-thumb,
+.wrap.mao-tk-toolkit .mao-tk-top-info__alpha::-webkit-slider-thumb { border-radius: var(--mao-tk-check-radius); }
+.wrap.mao-tk-toolkit .mao-tk-top-info__hue::-moz-range-thumb,
+.wrap.mao-tk-toolkit .mao-tk-top-info__alpha::-moz-range-thumb { border-radius: var(--mao-tk-check-radius); }
+.wrap.mao-tk-toolkit .mao-tk-top-info__sv-handle { border-radius: 50%; }
+.wrap.mao-tk-toolkit[data-mao-tk-note-settings] .mao-tk-note-tabs button { border-radius: 0; }
+.wrap.mao-tk-toolkit[data-mao-tk-note-settings] .mao-tk-note-tabs button:focus { border-color: transparent; box-shadow: none; }
+.wrap.mao-tk-toolkit[data-mao-tk-note-settings] .mao-tk-note-tabs button:focus-visible .mao-tk-note-tab-label { outline: 2px solid var(--mao-tk-focus-color); outline-offset: 4px; border-radius: 3px; }
+
+/* Showcase has an independent, ID-scoped editor. Keep preview/image geometry intact. */
+#mao-tk-showcase-settings .mtk-showcase-admin :is(
+    button:not(.case-shot), .button, select, textarea,
+    input:not([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="hidden"], .browser-address-input)
+) { border-radius: var(--mao-tk-control-radius); }
+#mao-tk-showcase-settings .mtk-showcase-admin input[type="checkbox"] { border-radius: var(--mao-tk-check-radius); }
+#mao-tk-showcase-settings .mtk-showcase-admin input[type="radio"] { border-radius: 50%; }
+#mao-tk-showcase-settings .mtk-showcase-admin :is(button:not(.case-shot), input:not(.browser-address-input), select, textarea, summary):focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--mao-tk-focus-color);
+}
+#mao-tk-showcase-settings .mtk-showcase-admin .button.primary:focus-visible,
+#mao-tk-showcase-settings .mtk-showcase-admin input[type="checkbox"]:checked:focus-visible { box-shadow: inset 0 0 0 2px #fff; }
+#mao-tk-showcase-settings .mtk-showcase-admin summary { border-radius: var(--mao-tk-control-radius); }
+#mao-tk-showcase-settings .mtk-showcase-admin .browser-domain:focus-within {
+    border-radius: var(--mao-tk-control-radius);
+    border-color: var(--mao-tk-focus-color);
+    box-shadow: inset 0 0 0 1px var(--mao-tk-focus-color);
+}
+#mao-tk-showcase-settings .mtk-showcase-admin .case-shot:focus-visible { outline: none; box-shadow: none; }
+#mao-tk-showcase-settings .mtk-showcase-admin .case-card:has(.case-shot:focus-visible) {
+    outline: 2px solid var(--mao-tk-focus-color);
+    outline-offset: -2px;
+}
+
+/* Quiet feedback for admin actions. Preview content keeps its own sealed interaction.
+ * Individual translate preserves existing transforms and never changes text sizing. */
+:is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit :is(
+    a[href], button:not(.notice-dismiss, .case-shot), summary, input[type="submit"],
+    input[type="checkbox"], input[type="radio"]
+):not(:where(.preview-paper *, .mao-tk-note-canvas *, .mao-tk-top-info__preview *)) {
+    transition: color 150ms ease, text-decoration-color 150ms ease, background-color 150ms ease, border-color 150ms ease,
+        box-shadow 150ms ease, opacity 150ms ease, translate 150ms cubic-bezier(.2,.7,.2,1);
+}
+:is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit :is(
+    .mao-tk-disclosure__label, .mao-tk-note-tab-label,
+    .mao-tk-toolkit__switch-track
+) { transition: color 150ms ease, background-color 150ms ease, box-shadow 150ms ease, translate 150ms cubic-bezier(.2,.7,.2,1); }
+:is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit .mao-tk-note-swatch::before { transition: box-shadow 150ms ease, translate 150ms cubic-bezier(.2,.7,.2,1); }
+:is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit :is(.mao-tk-note-text-button, .mao-tk-note-inherit) {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit :is(.button, .icon-button, input[type="submit"]):not(
+        :disabled, [aria-disabled="true"], [aria-busy="true"], .disabled, .notice-dismiss,
+        .preview-paper *, .mao-tk-note-canvas *, .mao-tk-top-info__preview *
+    ):hover {
+        translate: 0 -1px;
+    }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit :is(.button, .icon-button, input[type="submit"]):not(
+        :disabled, [aria-disabled="true"], [aria-busy="true"], .disabled, .notice-dismiss,
+        .preview-paper *, .mao-tk-note-canvas *, .mao-tk-top-info__preview *
+    ):hover:not(:focus-visible) { box-shadow: 0 2px 6px rgb(32 49 75 / 10%); }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit :is(.button, .icon-button, input[type="submit"]):not(
+        :disabled, [aria-disabled="true"], [aria-busy="true"], .disabled,
+        .preview-paper *, .mao-tk-note-canvas *, .mao-tk-top-info__preview *
+    ):active { translate: 0 0; }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit a[href]:not(
+        .button, .case-button, [aria-disabled="true"], .disabled,
+        .preview-paper *, .mao-tk-note-canvas *, .mao-tk-top-info__preview *
+    ) {
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+        text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+        transition: color 150ms ease, text-decoration-color 150ms ease;
+    }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit a[href]:not(
+        .button, .case-button, [aria-disabled="true"], .disabled,
+        .preview-paper *, .mao-tk-note-canvas *, .mao-tk-top-info__preview *
+    ):hover { text-decoration-color: currentColor; }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit .mao-tk-disclosure__trigger:not(:disabled):hover .mao-tk-disclosure__label { translate: 2px 0; }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit .mao-tk-note-tabs button:not(:disabled):hover .mao-tk-note-tab-label { translate: 0 -1px; }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit :is(
+        .mao-tk-note-text-button, .mao-tk-note-inherit
+    ):not(:disabled, [aria-disabled="true"], [aria-busy="true"]):hover {
+        color: var(--mao-tk-accent);
+        text-decoration-color: currentColor;
+    }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit .mao-tk-note-swatch:not(:disabled):hover::before { box-shadow: 0 0 0 2px var(--mao-tk-surface); translate: 0 -1px; }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit :is(
+        .mao-tk-note-segment button, .inspector-tab, .device-switch button,
+        .setting-section > summary
+    ):not(:disabled, [aria-disabled="true"], [aria-busy="true"], [aria-selected="true"], [aria-pressed="true"]):hover {
+        background-color: var(--mao-tk-subtle);
+        color: var(--mao-tk-accent);
+    }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit .mao-tk-toolkit__switch:not(:disabled, [aria-busy="true"]):hover .mao-tk-toolkit__switch-track { translate: 0 -1px; box-shadow: 0 2px 5px rgb(32 49 75 / 15%); }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit .mao-tk-toolkit__switch:not(:disabled, [aria-busy="true"]):active .mao-tk-toolkit__switch-track { translate: 0 0; }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not(:disabled, :open):hover { border-color: var(--mao-tk-select-accent); }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit input:is([type="checkbox"], [type="radio"]):not(:disabled):hover { border-color: var(--mao-tk-accent); }
+}
+
+/* Keep real selects and form values. Reserve an arrow lane even in the native fallback. */
+:is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) {
+    --mao-tk-select-accent: var(--accent, var(--mao-tk-accent, #2563eb));
+    min-width: 0;
+    max-width: 100%;
+    appearance: none;
+    padding-inline-end: 34px;
+    background-image: url('../showcase/icons/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px;
+    cursor: pointer;
+    transition: border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+}
+:is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]):disabled { cursor: not-allowed; }
+#mao-tk-showcase-settings .mtk-showcase-admin .select-wrap::after { content: none; }
+
+/* Progressive enhancement: the browser still owns selection, focus, dismissal and submission.
+ * Touch devices retain their operating-system picker. Unsupported browsers retain the fallback. */
+@supports (appearance: base-select) and selector(select::picker(select)) {
+    @media (hover: hover) and (pointer: fine) {
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) {
+            appearance: base-select;
+            display: inline-flex;
+            align-items: center;
+            background-image: none;
+            padding-inline-end: 10px;
+            gap: 10px;
+            white-space: normal;
+            overflow-wrap: anywhere;
+        }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size])::picker-icon {
+            content: '';
+            flex: 0 0 14px;
+            width: 14px;
+            height: 14px;
+            align-self: center;
+            margin-block: 0;
+            margin-inline-start: auto;
+            background: currentColor;
+            mask: url('../showcase/icons/chevron-down.svg') center / contain no-repeat;
+            transform-origin: center;
+            transition: rotate 160ms cubic-bezier(.2,.7,.2,1);
+        }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]):open {
+            border-color: var(--mao-tk-select-accent);
+        }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]):open::picker-icon { rotate: 180deg; }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size])::picker(select) {
+            appearance: base-select;
+            box-sizing: border-box;
+            min-inline-size: anchor-size(width);
+            max-inline-size: calc(100vw - 24px);
+            max-block-size: min(320px, 60vh);
+            margin-block: 6px;
+            padding: 4px;
+            border: 1px solid #d6dfeb;
+            border-radius: 8px;
+            background: #fff;
+            color: #20314b;
+            box-shadow: 0 8px 24px rgb(32 49 75 / 12%);
+            font: inherit;
+            text-align: start;
+            overflow: auto;
+            overscroll-behavior: contain;
+            opacity: 0;
+            transform: translateY(-4px);
+            transition: opacity 160ms ease, transform 160ms cubic-bezier(.2,.7,.2,1), display 160ms allow-discrete, overlay 160ms allow-discrete;
+        }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]):open::picker(select) { opacity: 1; transform: translateY(0); }
+        @starting-style {
+            :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]):open::picker(select) { opacity: 0; transform: translateY(-4px); }
+        }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 34px;
+            padding: 7px 10px;
+            border: 0;
+            border-radius: 4px;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: normal;
+            overflow-wrap: anywhere;
+            cursor: pointer;
+            transition: background-color 100ms ease, color 100ms ease;
+        }
+        /* One quiet hover surface; selection is conveyed by a geometric, local icon.
+         * Keep text at the same start edge and avoid two competing highlighted rows. */
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) option:checked { color: var(--mao-tk-select-accent); }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) option:is(:hover, :focus-visible) { background: #f4f6f9; outline: none; }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) option:focus-visible { outline: 1px solid var(--mao-tk-select-accent); outline-offset: -1px; }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) option:disabled { color: #8793a3; cursor: not-allowed; }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) option::checkmark {
+            content: '';
+            order: 1;
+            display: block;
+            flex: 0 0 14px;
+            width: 14px;
+            height: 14px;
+            align-self: center;
+            margin: 0 0 0 auto;
+            background: currentColor;
+            mask: url('../showcase/icons/check.svg') center / contain no-repeat;
+            visibility: hidden;
+        }
+        :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) option:checked::checkmark { visibility: visible; }
+    }
+}
+@media (hover: none), (pointer: coarse) {
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) { min-height: 44px; }
+}
+@supports (interpolate-size: allow-keywords) and selector(details::details-content) {
+    #mao-tk-showcase-settings .mtk-showcase-admin .setting-section { interpolate-size: allow-keywords; }
+    #mao-tk-showcase-settings .mtk-showcase-admin .setting-section::details-content {
+        block-size: 0;
+        overflow: clip;
+        opacity: 0;
+        transition: block-size 200ms cubic-bezier(.2,.7,.2,1), opacity 160ms ease, content-visibility 200ms allow-discrete;
+    }
+    #mao-tk-showcase-settings .mtk-showcase-admin .setting-section[open]::details-content { block-size: auto; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit :is(
+        a[href], button, summary, input[type="submit"], input[type="checkbox"], input[type="radio"],
+        .mao-tk-disclosure__label, .mao-tk-note-tab-label,
+        .mao-tk-toolkit__switch-track
+    ):not(:where(.preview-paper *, .mao-tk-note-canvas *, .mao-tk-top-info__preview *)) { transition: none !important; translate: none !important; }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit .mao-tk-note-swatch::before { transition: none !important; translate: none !important; }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) { transition: none; }
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size])::picker-icon,
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size])::picker(select),
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) option { transition: none; }
+    #mao-tk-showcase-settings .mtk-showcase-admin .setting-section::details-content,
+    #mao-tk-showcase-settings .mtk-showcase-admin .setting-section summary .icon { transition: none; }
+}
+@media (forced-colors: active) {
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size])::picker-icon,
+    :is(#mao-tk-toolkit, #mao-tk-showcase-settings).mao-tk-toolkit select:not([multiple]):not([size]) option::checkmark { forced-color-adjust: none; background-color: CanvasText; }
+    .wrap.mao-tk-toolkit { --mao-tk-focus-color: Highlight; }
+    .wrap.mao-tk-toolkit :is(a, button, input, select, textarea, [tabindex]):focus-visible {
+        outline: 2px solid Highlight;
+        outline-offset: -2px;
+    }
+}

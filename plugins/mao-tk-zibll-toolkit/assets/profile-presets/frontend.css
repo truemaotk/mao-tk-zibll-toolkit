@@ -1,0 +1,32 @@
+.mao-tk-profile-entries { display:inline-flex; flex-wrap:wrap; gap:6px; }
+.mao-tk-profile-entry { font:inherit; font-size:12px; color:var(--muted-color,#646b76); padding:5px 9px; border:1px solid var(--muted-border-color,#e7e9ee); border-radius:6px; background:var(--muted-bg-color,#f6f7f9); cursor:pointer; }
+.dropdown-menu .mao-tk-profile-entry { display:block; width:100%; text-align:left; border:0; border-radius:0; padding:8px 18px; background:transparent; color:inherit; font-size:13px; }
+.mao-tk-profile-entry:hover { color:var(--theme-color,#ff8b0d); background:var(--muted-bg-color,#f6f7f9); }
+dialog.mao-tk-profile-dialog { color:var(--main-color,#32363d); background:var(--main-bg-color,#fff); border:1px solid var(--muted-border-color,#e6e8ed); border-radius:12px; padding:0; width:min(760px,calc(100% - 32px)); max-width:none; max-height:calc(100vh - 40px); max-height:calc(100svh - 40px); margin:auto; box-shadow:0 16px 60px rgb(0 0 0 / .16); overflow:hidden; font-family:inherit; }
+dialog.mao-tk-profile-dialog[open] { display:flex; flex-direction:column; animation:mao-tk-profile-enter .18s ease-out; }
+.mao-tk-profile-dialog::backdrop { background:rgb(15 20 30 / .45); }
+.mao-tk-profile-dialog button { font:inherit; font-size:13px; cursor:pointer; color:inherit; background:var(--muted-bg-color,#f6f7f9); border:1px solid var(--muted-border-color,#e6e8ed); border-radius:6px; padding:7px 12px; line-height:1.5; }
+.mao-tk-profile-dialog button:focus-visible,.mao-tk-profile-entry:focus-visible { outline:2px solid var(--theme-color,#ff8b0d); outline-offset:2px; }
+.mao-tk-profile-dialog button:disabled { cursor:default; opacity:.45; }
+.mao-tk-profile-dialog__header { display:flex; align-items:center; justify-content:space-between; padding:20px 24px 12px; gap:16px; flex-shrink:0; }
+.mao-tk-profile-dialog .mao-tk-profile-dialog__header h2 { font-size:20px; line-height:1.4; font-weight:650; margin:0; padding:0; border:0; }
+.mao-tk-profile-dialog .mao-tk-profile-dialog__close { display:grid; place-items:center; padding:6px; border:0; background:transparent; }
+.mao-tk-profile-dialog__tabs { display:flex; gap:22px; padding:0 24px; border-bottom:1px solid var(--muted-border-color,#e6e8ed); flex-shrink:0; }
+.mao-tk-profile-dialog .mao-tk-profile-dialog__tabs button { border:0; border-bottom:2px solid transparent; border-radius:0; background:transparent; padding:10px 0; }
+.mao-tk-profile-dialog__tabs button[aria-selected=true] { color:var(--theme-color,#ff8b0d); border-bottom-color:currentColor; }
+.mao-tk-profile-dialog__body { padding:18px 24px; overflow:auto; min-height:180px; overscroll-behavior:contain; }
+.mao-tk-profile-dialog__hint,.mao-tk-profile-dialog__status { font-size:13px; line-height:1.7; color:var(--muted-color,#79808b); margin:0 0 14px; }
+.mao-tk-profile-dialog__status:empty { display:none; }
+.mao-tk-profile-dialog__grid { display:grid; grid-template-columns:repeat(8,minmax(0,1fr)); gap:12px; }
+.mao-tk-profile-dialog .mao-tk-profile-dialog__item { aspect-ratio:1; min-width:0; display:grid; place-items:center; padding:3px; border-radius:50%; border:2px solid transparent; background:var(--muted-bg-color,#f6f7f9); transition:border-color .15s,background .15s; overflow:hidden; }
+.mao-tk-profile-dialog__item img { display:block; width:100%; height:100%; object-fit:cover; border-radius:inherit; max-height:none; }
+.mao-tk-profile-dialog .mao-tk-profile-dialog__item[aria-pressed=true],.mao-tk-profile-dialog .mao-tk-profile-dialog__item:hover { border-color:var(--theme-color,#ff8b0d); }
+.mao-tk-profile-dialog__grid[data-kind=cover] { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.mao-tk-profile-dialog .mao-tk-profile-dialog__grid[data-kind=cover] .mao-tk-profile-dialog__item { aspect-ratio:2; border-radius:8px; }
+.mao-tk-profile-dialog__pages { display:flex; justify-content:center; gap:16px; align-items:center; margin-top:20px; font-size:12px; color:var(--muted-color,#79808b); }
+.mao-tk-profile-dialog__footer { padding:16px 24px; border-top:1px solid var(--muted-border-color,#e6e8ed); display:flex; align-items:center; gap:10px; flex-shrink:0; }
+.mao-tk-profile-dialog__feedback { flex:1; min-width:0; font-size:12px; line-height:1.5; color:var(--muted-color,#79808b); }
+.mao-tk-profile-dialog .mao-tk-profile-dialog__save { background:var(--theme-color,#ff8b0d); border-color:transparent; color:#fff; }
+@keyframes mao-tk-profile-enter { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@media(max-width:600px) { .mao-tk-profile-dialog__header { padding:16px 16px 8px; } .mao-tk-profile-dialog__body { padding:14px 16px; } .mao-tk-profile-dialog__tabs { padding:0 16px; } .mao-tk-profile-dialog__grid { grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; } .mao-tk-profile-dialog__grid[data-kind=cover] { grid-template-columns:repeat(2,minmax(0,1fr)); } .mao-tk-profile-dialog__footer { padding:14px 16px; flex-wrap:wrap; gap:8px; } .mao-tk-profile-dialog__feedback { flex-basis:100%; order:4; } }
+@media(prefers-reduced-motion:reduce) { .mao-tk-profile-dialog,.mao-tk-profile-dialog * { animation:none!important; transition:none!important; } }

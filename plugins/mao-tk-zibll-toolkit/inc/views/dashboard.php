@@ -5,6 +5,7 @@ defined('ABSPATH') || exit;
 /** @var Admin $this View variables are created by Admin::render(). */
 ?>
 <div class="wrap mao-tk-toolkit" id="mao-tk-toolkit">
+    <h1 class="screen-reader-text">Mao TK Zibll Toolkit</h1>
     <header class="mao-tk-toolkit__header">
         <div class="mao-tk-toolkit__identity">
             <?php if ($icon_exists) : ?>
@@ -12,7 +13,7 @@ defined('ABSPATH') || exit;
             <?php endif; ?>
             <div>
                 <div class="mao-tk-toolkit__title-line">
-                    <h1>Mao TK Zibll Toolkit</h1>
+                    <h2>Mao TK Zibll Toolkit</h2>
                     <span class="mao-tk-toolkit__version">v<?php echo esc_html(MAO_TK_ZIBLL_TOOLKIT_VERSION); ?></span>
                 </div>
                 <p class="mao-tk-toolkit__intro"><?php esc_html_e('集中管理你的主题扩展，按需启用每一项能力。', 'mao-tk-zibll-toolkit'); ?></p>
@@ -56,10 +57,11 @@ defined('ABSPATH') || exit;
                     $groups = array(
                         'display' => array('文章展示', array('top-info', 'article-freshness')),
                         'content' => array('正文组件', array('article-ui-code', 'article-ui-link-preview', 'article-ui-tabs', 'article-ui-postsbox', 'article-ui-reading', 'article-ui-resources', 'article-note')),
-                        'pages' => array('页面组件', array('page-showcase')),
+                        'pages' => array('页面与链接', array('page-showcase', 'private-links', 'user-profile-presets', 'page-order-query')),
+                        'site' => array('站点功能', array('site-maintenance', 'site-not-found')),
                         'workspace' => array('工作台与扩展', array()),
                     );
-                    $known = array_merge($groups['display'][1], $groups['content'][1], $groups['pages'][1]);
+                    $known = array_merge($groups['display'][1], $groups['content'][1], $groups['pages'][1], $groups['site'][1]);
                     foreach ($groups as $group_id => $group) :
                         $group_modules = array_filter($modules, static function (array $module) use ($group, $group_id, $known): bool {
                             return $group_id === 'workspace' ? !in_array($module['id'], $known, true) : in_array($module['id'], $group[1], true);
@@ -81,6 +83,11 @@ defined('ABSPATH') || exit;
                                 <?php if (strpos($module['id'], 'article-ui-') === 0) : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ArticleUI\AdminPage::SLUG)); ?>">组件与使用说明</a></p><?php endif; ?>
                                 <?php if ($module['id'] === 'article-note') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ArticleNote\AdminPage::SLUG)); ?>">设置与预览</a></p><?php endif; ?>
                                 <?php if ($module['id'] === 'page-showcase') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . Showcase\AdminPage::SLUG)); ?>">管理案例、分类与外观</a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'private-links') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . PrivateLinks\AdminPage::SLUG)); ?>">管理角色与账号可见范围</a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'site-maintenance') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . Maintenance\AdminPage::SLUG)); ?>">编辑维护页面与预览</a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'user-profile-presets') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ProfilePresets\AdminPage::SLUG)); ?>">管理头像、背景与注册规则</a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'page-order-query') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . OrderQuery\AdminPage::SLUG)); ?>">设置与创建查询页面</a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'site-not-found') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . NotFound\AdminPage::SLUG)); ?>">设置与预览 404 公益页面</a></p><?php endif; ?>
                             </div>
                             <div class="mao-tk-toolkit__module-actions">
                                 <?php $switch_module = $module; $switch_valid = $storage_valid; $switch_return_page = self::SLUG; require MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/views/module-switch.php'; ?>

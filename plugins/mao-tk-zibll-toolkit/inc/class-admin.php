@@ -24,6 +24,7 @@ final class Admin
     {
         add_action('admin_menu', array($this, 'menu'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue'));
+        add_action('admin_enqueue_scripts', array($this, 'enqueue_controls'), 100);
         add_action('admin_post_' . self::ACTION, array($this, 'save'));
         add_filter('plugin_action_links_' . plugin_basename(MAO_TK_ZIBLL_TOOLKIT_FILE), array($this, 'action_links'));
     }
@@ -73,6 +74,15 @@ final class Admin
         wp_enqueue_script('mao-tk-zibll-toolkit-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/admin.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
     }
 
+    public function enqueue_controls(string $hook_suffix): void
+    {
+        if (($this->screen_hook === '' || ($hook_suffix !== $this->screen_hook && !in_array($hook_suffix, $this->extra_screen_hooks, true))) || !current_user_can('manage_options')) {
+            return;
+        }
+        // Last layer of the admin cascade, after the registered module-specific styles.
+        wp_enqueue_style('mao-tk-toolkit-admin-controls', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/css/admin-controls.css', array('mao-tk-zibll-toolkit-admin'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
+    }
+
     public function allow_screen(string $hook): void
     {
         if ($hook !== '' && !in_array($hook, $this->extra_screen_hooks, true)) { $this->extra_screen_hooks[] = $hook; }
@@ -109,8 +119,11 @@ final class Admin
         if (!preg_match('/^[a-z][a-z0-9-]{0,63}$/D', $id) || !$this->manager->has($id) || !in_array($enabled, array('0', '1'), true)) {
             wp_die(esc_html__('模块或目标状态无效，请返回工作台重试。', 'mao-tk-zibll-toolkit'), '', array('response' => 400));
         }
+        if ($id === Maintenance\Settings::MODULE && $enabled === '1' && (Maintenance\Runtime::conflict() || !(new Maintenance\Settings())->read()['valid'])) {
+            wp_die('维护页配置异常或旧维护模式仍在运行，未开启维护。', '', array('response' => 400));
+        }
         $saved = $this->manager->set_enabled($id, $enabled === '1');
-        $return_page = isset($_POST['return_page']) && is_string($_POST['return_page']) && in_array($_POST['return_page'], array(TopInfo\AdminPage::SLUG, Freshness\AdminPage::SLUG, ArticleUI\AdminPage::SLUG, ArticleNote\AdminPage::SLUG, Showcase\AdminPage::SLUG), true)
+        $return_page = isset($_POST['return_page']) && is_string($_POST['return_page']) && in_array($_POST['return_page'], array(TopInfo\AdminPage::SLUG, Freshness\AdminPage::SLUG, ArticleUI\AdminPage::SLUG, ArticleNote\AdminPage::SLUG, Showcase\AdminPage::SLUG, PrivateLinks\AdminPage::SLUG, Maintenance\AdminPage::SLUG, ProfilePresets\AdminPage::SLUG, OrderQuery\AdminPage::SLUG, NotFound\AdminPage::SLUG), true)
             ? $_POST['return_page'] : self::SLUG;
         wp_safe_redirect(add_query_arg(
             array('page' => $return_page, 'mao_tk_notice' => $saved ? 'saved' : 'save-failed'),

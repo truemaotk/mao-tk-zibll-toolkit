@@ -116,7 +116,7 @@
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar{height:65px;min-height:65px;background:#fff;border-bottom:1px solid var(--ui-line);padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-title{display:flex;align-items:center;gap:13px;min-width:0}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-title .block-symbol{height:34px;width:34px;border:1px solid var(--ui-line);border-radius:8px;display:grid;place-items:center;color:var(--accent)}
-#mao-tk-showcase-settings .mtk-showcase-admin .editor-title h1{font-size:16px;font-weight:650;line-height:1.4}
+#mao-tk-showcase-settings .mtk-showcase-admin .editor-title h2{font-size:16px;font-weight:650;line-height:1.4}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-title p{font-size:10px;color:var(--ui-muted);margin-top:2px}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar-actions{display:flex;align-items:center;gap:8px}
 #mao-tk-showcase-settings .mtk-showcase-admin .save-state{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ui-muted);margin-right:8px}
@@ -290,7 +290,7 @@
 #mao-tk-showcase-settings .mtk-showcase-admin .front-footer{font-size:10px;padding:20px 19px}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar{padding:0 12px;gap:8px;height:58px;min-height:58px}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-title .block-symbol{display:none}
-#mao-tk-showcase-settings .mtk-showcase-admin .editor-title h1{font-size:13px}
+#mao-tk-showcase-settings .mtk-showcase-admin .editor-title h2{font-size:13px}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar-actions .button{padding:6px 9px;font-size:10px;min-height:32px}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar-actions .export-button{display:none}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace{grid-template-columns:1fr}
@@ -420,7 +420,7 @@
 #mao-tk-showcase-settings .mtk-showcase-admin{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;--font:inherit;isolation:isolate;border:1px solid var(--ui-line);border-radius:8px;overflow:hidden;background:#fff}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-shell{height:calc(100dvh - 112px);min-height:620px}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-title .block-symbol{display:none}
-#mao-tk-showcase-settings .mtk-showcase-admin .editor-title h1{padding:0;margin:0;font-size:18px}
+#mao-tk-showcase-settings .mtk-showcase-admin .editor-title h2{padding:0;margin:0;font-size:18px}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar-actions .button{margin:0;box-shadow:none;line-height:1.4}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar-actions .button.primary{color:#fff;background:var(--accent);border-color:var(--accent)}
 #mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar-actions .button.primary:hover{background:var(--accent);filter:brightness(.96)}
@@ -441,4 +441,4 @@
 #mao-tk-showcase-settings .mtk-showcase-admin .showcase{padding-top:var(--mtk-showcase-padding-top,10px);padding-bottom:var(--mtk-showcase-padding-bottom,10px)}
 @media(max-width:1200px){#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace{grid-template-columns:190px minmax(0,1fr) 290px}#mao-tk-showcase-settings .mtk-showcase-admin .save-state{display:none}}
 @media(max-width:1050px){#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace{grid-template-columns:minmax(0,1fr) 290px}#mao-tk-showcase-settings .mtk-showcase-admin .case-manager{display:none}#mao-tk-showcase-settings .mtk-showcase-admin .mobile-panel-toggle{display:inline-flex}#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace.show-manager{grid-template-columns:205px minmax(0,1fr)}#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace.show-manager .case-manager{display:block}#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace.show-manager .inspector{display:none}}
-@media(max-width:600px){#mao-tk-showcase-settings .mtk-showcase-admin .editor-shell{height:calc(100dvh - 130px);min-height:600px}#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace,#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace.show-manager{grid-template-columns:1fr}#mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar{padding-inline:8px;gap:4px}#mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar-actions{gap:4px}#mao-tk-showcase-settings .mtk-showcase-admin .editor-title h1{font-size:14px}#mao-tk-showcase-settings .mtk-showcase-admin .toolbar-page-link{font-size:10px}}
+@media(max-width:600px){#mao-tk-showcase-settings .mtk-showcase-admin .editor-shell{height:calc(100dvh - 130px);min-height:600px}#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace,#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace.show-manager{grid-template-columns:1fr}#mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar{padding-inline:8px;gap:4px}#mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar-actions{gap:4px}#mao-tk-showcase-settings .mtk-showcase-admin .editor-title h2{font-size:14px}#mao-tk-showcase-settings .mtk-showcase-admin .toolbar-page-link{font-size:10px}}

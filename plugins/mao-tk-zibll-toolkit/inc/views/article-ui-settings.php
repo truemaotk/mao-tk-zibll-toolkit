@@ -4,7 +4,8 @@ namespace MaoTK\ZibllToolkit;
 defined('ABSPATH') || exit;
 ?>
 <div class="wrap mao-tk-toolkit" id="mao-tk-toolkit">
-    <header class="mao-tk-toolkit__header"><div><div class="mao-tk-toolkit__title-line"><h1>文章 UI 组件</h1><span class="mao-tk-toolkit__version">v<?php echo esc_html(MAO_TK_ZIBLL_TOOLKIT_VERSION); ?></span></div><p class="mao-tk-toolkit__intro">已确认的文章组件与阅读折叠独立启停，仅作用于明确包装的文章正文。关闭后保留正文和原生功能。</p></div><a class="button" href="<?php echo esc_url(admin_url('admin.php?page=' . Admin::SLUG)); ?>">返回工作台</a></header>
+    <h1 class="screen-reader-text">文章 UI 组件</h1>
+    <header class="mao-tk-toolkit__header"><div><div class="mao-tk-toolkit__title-line"><h2>文章 UI 组件</h2><span class="mao-tk-toolkit__version">v<?php echo esc_html(MAO_TK_ZIBLL_TOOLKIT_VERSION); ?></span></div><p class="mao-tk-toolkit__intro">已确认的文章组件与阅读折叠独立启停，仅作用于明确包装的文章正文。关闭后保留正文和原生功能。</p></div><a class="button" href="<?php echo esc_url(admin_url('admin.php?page=' . Admin::SLUG)); ?>">返回工作台</a></header>
     <?php $switch_notice = $notice; require MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/views/switch-feedback.php'; ?>
     <?php if (!class_exists('WP_HTML_Tag_Processor')) : ?><p class="mao-tk-toolkit__message" role="alert">文章 UI 组件需要 WordPress 6.2 或更新版本的 HTML API，当前增强暂停；原有模块不受影响。</p><?php endif; ?>
     <?php if (!$valid) : ?><p class="mao-tk-toolkit__message" role="alert">模块配置格式异常，开关写入暂停，原有配置未覆盖。</p><?php endif; ?>

@@ -5,6 +5,7 @@
     var model = window.MaoTKNoteModel, payload = window.MaoTKNoteSettings;
     if (!root || !model || !payload) { return; }
     var form = root.querySelector('.mao-tk-note-form'), tabs = Array.from(root.querySelectorAll('[data-note-tab]'));
+    var tabList = root.querySelector('[data-note-tablist]'), tabIndicator = root.querySelector('[data-note-tab-indicator]');
     var currentTab = form.elements.note_ui_tab.value, previewType = payload.types[currentTab] ? currentTab : 'info';
     var allTypes = false, device = 'desktop', theme = 'light';
     var palette = root.querySelector('#mao-tk-note-palette'), board = palette.querySelector('[data-note-sv]');
@@ -48,13 +49,32 @@
       dirty.textContent = changed ? '未保存' : '已同步'; dirty.dataset.changed = String(changed);
       if (activeColor && !colorLock) { syncPalette(); }
     }
+    function positionTabIndicator() {
+      if (!tabIndicator) { return; }
+      var selected = tabs.find(function (tab) { return tab.getAttribute('aria-selected') === 'true'; });
+      var label = selected && selected.querySelector('.mao-tk-note-tab-label');
+      if (!label || !tabList.clientWidth) { return; }
+      var rect = label.getBoundingClientRect(), listRect = tabList.getBoundingClientRect();
+      tabIndicator.style.width = rect.width + 'px';
+      tabIndicator.style.transform = 'translateX(' + (rect.left - listRect.left + tabList.scrollLeft - tabList.clientLeft) + 'px)';
+      tabList.dataset.noteIndicatorReady = '1';
+    }
     function activate(key, focus) {
       if (!tabs.some(function (tab) { return tab.dataset.noteTab === key; })) { return; }
       closePalette(false); currentTab = key; form.elements.note_ui_tab.value = key;
       if (payload.types[key]) { previewType = key; }
       root.querySelectorAll('[data-note-panel]').forEach(function (panel) { panel.hidden = panel.dataset.notePanel !== key; });
-      tabs.forEach(function (tab) { var selected = tab.dataset.noteTab === key; tab.setAttribute('aria-selected', String(selected)); tab.tabIndex = selected ? 0 : -1; if (selected && focus) { tab.focus(); } });
+      tabs.forEach(function (tab) {
+        var selected = tab.dataset.noteTab === key; tab.setAttribute('aria-selected', String(selected)); tab.tabIndex = selected ? 0 : -1;
+        if (selected && focus) { tab.focus({preventScroll:true}); }
+        if (selected) {
+          var rect = tab.getBoundingClientRect(), listRect = tabList.getBoundingClientRect();
+          if (rect.left < listRect.left + 12) { tabList.scrollLeft += rect.left - listRect.left - 12; }
+          else if (rect.right > listRect.right - 12) { tabList.scrollLeft += rect.right - listRect.right + 12; }
+        }
+      });
       update();
+      positionTabIndicator();
     }
     function press(group, key, value) {
       root.querySelectorAll('button[' + group + ']').forEach(function (button) { button.setAttribute('aria-pressed', String(button.getAttribute(key) === value)); });
@@ -171,8 +191,20 @@
     document.addEventListener('pointerdown',function (event) { if (!palette.hidden && !palette.contains(event.target) && !event.target.closest('[data-note-color-trigger]')) { closePalette(false); } });
     function reposition() { if (!palette.hidden && !positionFrame) { positionFrame = requestAnimationFrame(positionPalette); } }
     window.addEventListener('resize',reposition); window.addEventListener('scroll',reposition,{passive:true,capture:true});
-    form.addEventListener('invalid',function (event) { var panel = event.target.closest('[data-note-panel]'); if (panel) { activate(panel.dataset.notePanel,false); } },true);
+    // Native validation emits invalid synchronously for every failing field. Keep
+    // the first error visible so later hidden tabs cannot steal its focus.
+    var validating = false;
+    form.addEventListener('invalid',function (event) {
+      if (validating) { return; }
+      validating = true;
+      var panel = event.target.closest('[data-note-panel]');
+      if (panel) { activate(panel.dataset.notePanel,false); }
+      window.setTimeout(function () { validating = false; }, 0);
+    },true);
     root.dataset.noteUiReady = '1'; root.querySelector('[data-note-canvas]').dataset.noteDevice = device; activate(currentTab,false);
+    window.addEventListener('resize', positionTabIndicator);
+    if (typeof ResizeObserver === 'function') { new ResizeObserver(positionTabIndicator).observe(tabList); }
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(positionTabIndicator); }
   }
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded',init,{once:true}); } else { init(); }
 }());
