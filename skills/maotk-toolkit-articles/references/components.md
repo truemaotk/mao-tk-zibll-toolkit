@@ -20,6 +20,7 @@
 
 - 模板：[code.blocks.html](../assets/code.blocks.html)。外层原生组额外类 `mtk-code-wrap`，内部原生 `zibllblock/enlighter`。
 - `{{ESCAPED_CODE}}`先进行HTML文本转义；不要把真实 `<script>` 当成代码演示直接插入。提示词、路径、邮件、目录树等纯文本使用原生 `raw`（模板默认值），避免 `generic` 将 `#` 后的正文当注释。程序代码按真实语言设为 `javascript`、`json`、`powershell`、`html` 等，不把所有内容都设为generic。
+- 生成区块源码时，语言需同时写入开头的区块 JSON（例如 `<!-- wp:zibllblock/enlighter {"c_language":"raw"} -->`）和 `<code data-enlighter-language="raw">`；修改语言时两处一致。只改 HTML 可能被编辑器按默认值覆盖，保存后回读验证。
 - 外壳跟随主题中性色，顶栏与代码区保留明显色差；保留红黄绿圆点、三个原生工具和红/黄/绿悬停色。代码框后正文桌面20px、手机18px，由插件提供；不要在文章里再补边距。
 - `data-enlighter-theme=""` 保持继承，语法颜色与浅深模式切换完全跟随子比原生Enlighter，不写死主题名、不重绘token。语法主题不是网站品牌主色；感觉不符时核对原生全局设置、区块主题字段和语言类型，而不是把全部代码涂成品牌色。
 - 宽代码在框内横向滚动，长代码在框内纵向滚动；滚动条细、无三角，滑块悬停加粗。手机比例已由插件处理。
@@ -70,6 +71,14 @@
 | `titleColor` | `type` / `neutral`；当前统一风格优先type |
 
 普通文章省略单块颜色，直接跟随后台。示例只覆盖图标：`"maoTkNoteVisual":{"iconKey":"bell","iconSize":20}`。只有用户明确要求独立配色时才增加 `light`／`dark`；它们优先于后台通用和类型颜色，不能为改善对比度自行冻结。恢复后台配色时只删除这两个键，保留其他单块配置，对象为空再删除对象。这是插件配置，不是文章CSS。图标扩展注册属于插件开发，不在文章临时插入远程SVG或脚本。
+
+## 推荐与外部工具入口（Toolkit 1.7.0+）
+
+- 先核对 `article-ui-resources` 已启用，并在原有文章根组追加 `mtk-legacy-resources`。不再嵌套第二个文章根组。
+- 使用 [推荐卡片](../assets/recommendations.blocks.html)、[外部工具卡片](../assets/tools.blocks.html) 和 [工具补充折叠](../assets/tools-extra.blocks.html)。来自已封板v1.1.1及Toolkit1.7.0的真实结构，只改本篇文案与数据；示例项目、推荐关系和推广参数不能当作所有新文章的默认值。
+- 替换工具模板的 `{{TOOL_ICON_BASE_URL}}` 为目标站点插件的 `assets/article-ui/resources/assets/` 完整URL，包含末尾斜杠；替换补充折叠中的全部 `{{INSTANCE_ID}}` 为本篇唯一ID。不引入另一套图标、CSS或JS。
+- 保留旧卡布局、整卡链接和居中的图标底座；外部工具下载下方可保留补充折叠。链接模块负责预览、打开/复制及底线动效，预览封面仅使用明确配置的真实图片，不宣称自动抓取。
+- 这是推荐与外部入口，不接管原生文件下载、视频播放、付费或商品。普通视频教程网盘仍用原生下载入口，清楚标成“视频教程”，不能换成假播放器。
 
 ## 图片、表格与变量复制
 

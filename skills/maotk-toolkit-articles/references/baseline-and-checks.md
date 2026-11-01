@@ -12,6 +12,7 @@
 | 文章卡片 | `article-ui-postsbox`，根组＋`mtk-native-postsbox` |
 | 阅读/图片/FAQ/变量复制 | `article-ui-reading`，根组＋`mtk-article-reading` |
 | 正文提示框 | `article-note`，可用 `maotk/note` 提供者；不要求第一批根组 |
+| 推荐/外部工具入口 | Toolkit1.7.0+ 的 `article-ui-resources`；原根组追加 `mtk-legacy-resources` |
 
 前五项接入需要WordPress6.2+ HTML API，提示框新能力需要6.3+。Toolkit通过父主题目录 `zibll` 识别依赖，支持子主题。原生业务能力还需按具体模块核对。
 
@@ -47,6 +48,7 @@
 
 ## 新文章/改文验收
 
+- 改写旧文先按 [完整保留规则](rewriting-existing-articles.md) 完成逐项对应表；检查真实步骤、全部教学图片、完整代码、推荐及推广参数，不能以摘要代替实操。下载用途同步核对正文、原生块与SEO。
 - 保留当次要求保留的标题、下载、封面、SEO、图片和已完成章节；真实ID与地址已核对。
 - 源码检查器通过；不带前台运行时属性，不把模板占位符发布出去。HTML代码演示先转义。
 - 确认主题标题/目录仍原生；FAQ按钮与面板唯一关联、互斥展开、答案无截断，目录能定位所用内容。

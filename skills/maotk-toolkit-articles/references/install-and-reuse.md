@@ -2,7 +2,7 @@
 
 本包是本地写作技能，不是WordPress插件。技能保存编排和调用规则；网站实际显示依赖Zibll、Mao TK Toolkit及对应模块。当前样式基线1.5.7，其他主题不保证兼容。
 
-解压后保持整个 `maotk-toolkit-articles/`：SKILL.md、agents、references、assets、scripts在同一层级。十份区块模板和源码检查器缺失会影响使用。
+解压后保持整个 `maotk-toolkit-articles/`：SKILL.md、agents、references、assets、scripts在同一层级。随附区块模板、引用文档和源码检查器缺失会影响使用。
 
 先核对当前Codex能发现的技能目录。当前官方说明支持项目 `.agents/skills/` 与个人 `~/.agents/skills/`；部分既有桌面安装（包括本技能原机器）已从 `~/.codex/skills/` 识别。保留一个实际可识别的副本，别在两个目录重复安装同名技能。用“请检查本机可识别的技能目录，再安装这个下载包”让接手者核对，不为技能安装擅自改全局配置。发现更新未刷新时重新打开会话，必要时重启客户端。
 
