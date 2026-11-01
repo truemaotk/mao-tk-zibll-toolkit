@@ -2,7 +2,7 @@
 
 适用于 WordPress + Zibll 子比主题的模块化工具箱，同时提供文章写作技能 `maotk-toolkit-articles`。
 
-**当前插件：1.7.0 · SKILL：1.2.0**
+**当前插件：1.7.0 · SKILL：1.3.0**
 
 > 本仓库按作者决定公开展示源码，**暂未授予开源许可**。公开可见不等于允许任意使用、修改或再分发。第三方组件继续适用各自随附许可，详见 [权利说明](RIGHTS.md) 与 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
@@ -13,10 +13,10 @@
 | 文件 | 用途 |
 | --- | --- |
 | `mao-tk-zibll-toolkit-1.7.0.zip` | WordPress 后台 → 插件 → 安装插件 → 上传插件 |
-| `maotk-toolkit-articles-1.2.0.zip` | 本地 Codex 写作技能；保持整个技能文件夹完整 |
+| `maotk-toolkit-articles-1.3.0.zip` | 本地 Codex 写作技能；保持整个技能文件夹完整 |
 | `SHA256SUMS.txt` | 对应发行包的 SHA-256 校验值 |
 
-SKILL 1.2.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.2.0)，插件仍为 1.7.0。技能增加 WebP 80%／真正无损的分流、新文章封面和 Rank Math 字段流程；旧文章的步骤、图片、代码与推荐链接先核对再优化。
+SKILL 1.3.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.3.0)，插件仍为 1.7.0。技能包含 WebP／无损图片、新文章封面、Rank Math 与旧文完整保留流程；1.3.0 增加资源迁入新站、旧站引用扫描、附件与免费／付费权限验收。
 
 GitHub 自动生成的 **Source code / Download ZIP 是整仓库源码，不是 WordPress 安装包**。请使用 Releases 中的插件 ZIP。升级前备份；已有明确关闭的模块不会被强制开启。使用与再分发权限以本仓库权利说明为准。
 

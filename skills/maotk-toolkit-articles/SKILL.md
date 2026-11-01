@@ -2,12 +2,12 @@
 name: maotk-toolkit-articles
 description: "为 maotk.com 或用户指定的 Zibll＋Mao TK Toolkit 站点撰写、改写和排版文章时使用。复用 Toolkit 组件与已确认的阅读风格，保留子比原生标题、目录和业务逻辑，文章源码不嵌入 CSS 或 JS。不用于开发、升级插件或修改主题。"
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # MaoTK 文章排版与 Toolkit 调用
 
-把内容写清楚，并通过原生区块、短代码和组件包装调用插件。不要为每篇文章重新设计一套样式。基础组件以 Toolkit 1.5.7、子比9.1及教程31为历史基线；推荐与外部工具卡已在1.7.0接入。版本和站点开关须按当前任务核对。当前技能包版本为 1.2.0。
+把内容写清楚，并通过原生区块、短代码和组件包装调用插件。不要为每篇文章重新设计一套样式。基础组件以 Toolkit 1.5.7、子比9.1及教程31为历史基线；推荐与外部工具卡已在1.7.0接入。版本和站点开关须按当前任务核对。当前技能包版本为 1.3.0。
 
 ## 不变的边界
 
@@ -15,13 +15,14 @@ metadata:
 - **标题与目录保留子比原生。** 文章标题填在编辑器标题栏；正文H2优先用 `zibllblock/biaoti`，H3用原生标题块。不重复放H1，不另造装饰性编号、字号、分隔线或自建目录，不手写主题生成的 `wznav_*` ID；保留原文的实操步骤编号与顺序。
 - **只保存组件结构和支持的配置。** 不从前台复制 `data-mao-tk-ui-*`、`data-mao-tk-note-visual`、ready/open/inert状态或提示框运行时CSS变量。使用区块原名与序列化，不能将前台HTML伪装成可编辑原生块。
 - **保留原生业务。** 下载、隐藏/付费内容、商品、账户权限、文章联动、视频与媒体继续走子比原生功能。CSS不做鉴权，静态按钮不代替购买、下载或实际商品资料。
+- **迁移资源保存到新站。** 图片、封面和可取得的下载文件使用目标站真实附件；隐藏区、封面覆盖字段及旧站阅读引用同样检查。先保留原业务权限，再验证文件和公开页；不只换域名或照搬旧附件编号。
 - 不为写文章顺带改封板资源、全站配色、收录设置、主题文件或升级插件。缺少能力时说明具体缺项，用当前可用的原生呈现或交付草稿；不要在正文补CSS/JS绕过。
 
 ## 开始写之前
 
 1. 识别目标站点与文章，先读当前正文和现有标题、下载、图片、封面、SEO、分类标签。修改已有文章先备份原始区块源码与必要元数据，避免重复章节或覆盖别人刚完成的内容。
 2. 核对实际 Toolkit 版本、相关模块开关与区块提供者。连接器必须对应目标站点；能力不足再用浏览器。版本/运行情况不明时，不能把本技能的历史验收当作当前已通过。
-3. 读取 [组件调用表](references/components.md)。需要原生媒体、下载或商业组件时，再读 [原生功能边界](references/native-boundaries.md)。改写或迁移旧文章时，先读 [旧文完整保留与逐项核对](references/rewriting-existing-articles.md)；排查样式时，读 [基线与排查](references/baseline-and-checks.md)。
+3. 读取 [组件调用表](references/components.md)。需要原生媒体、下载或商业组件时，再读 [原生功能边界](references/native-boundaries.md)。改写或迁移旧文章时，先读 [旧文完整保留与逐项核对](references/rewriting-existing-articles.md)；迁移资源时，另读 [资源本地化与验收](references/resource-localization.md)；排查样式时，读 [基线与排查](references/baseline-and-checks.md)。
 4. 涉及 Toolkit、文章 SKILL 或 Order Email Manager 的教程，读取 [项目仓库与下载更新](references/repositories-and-downloads.md)，引用对应仓库。文章已有或需要新增下载区时，本次撰写／更新都先核对当前正式发行与实际安装包，再替换过时入口；历史版本号、旧附件编号和整仓库源码 ZIP 不能当成最新安装包。
 
 5. 本次涉及图片、封面或 SEO 时，读取 [图片、封面与 Rank Math 默认流程](references/images-covers-and-seo.md)。新文章默认生成专属封面；封面和照片优先在 towebp.io 以 Quality 80% / Size x1 转 WebP，文字密集截图优先真正无损。逐项填写并保存回读 Rank Math 字段；明确的用户要求优先。
