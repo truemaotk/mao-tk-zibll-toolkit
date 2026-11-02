@@ -1,0 +1,19 @@
+/* Applied only to panels explicitly owned by the Toolkit motion adapter. */
+[data-mao-tk-motion-panel="1"]{display:block!important;overflow:hidden;transition:none!important}
+.mao-tk-details-content{display:flow-root}
+.mao-tk-toolkit .mao-tk-disclosure__trigger svg{display:block;transform:rotate(0deg);transition:transform 380ms cubic-bezier(.32,0,.18,1);transform-origin:50% 50%}
+.mao-tk-toolkit .is-open>.mao-tk-disclosure__heading .mao-tk-disclosure__trigger svg{transform:rotate(90deg)}
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon{transition:transform 380ms cubic-bezier(.32,0,.18,1),color .2s ease;transform:rotate(0deg)}
+.maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger[aria-expanded="true"] .mtk-faq-icon{transform:rotate(90deg)}
+html[data-mao-tk-motion="off"] :is(.mao-tk-disclosure__trigger svg,.mtk-faq-icon){transition:none!important}
+.mao-tk-motion-preference{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px;margin:0 0 18px;color:var(--mao-tk-muted,#65758c);font-size:12px}
+.mao-tk-motion-preference select{min-height:32px;max-width:150px}.mao-tk-motion-preference__note{font-size:11px}
+html[data-mao-tk-motion="on"] .mao-tk-toolkit .mao-tk-disclosure__trigger svg,
+html[data-mao-tk-motion="on"] .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon{transition:transform 380ms cubic-bezier(.32,0,.18,1),color .2s ease!important}
+#mao-tk-showcase-settings .mtk-showcase-admin :is(.setting-section,.category-editor)>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none}
+#mao-tk-showcase-settings .mtk-showcase-admin .category-editor>summary{margin-bottom:0}
+#mao-tk-showcase-settings .mtk-showcase-admin .category-editor>summary::-webkit-details-marker{display:none}
+#mao-tk-showcase-settings .mtk-showcase-admin :is(.setting-section,.category-editor)>summary .icon{width:18px;height:18px;flex:0 0 18px;transform:rotate(0deg)!important;transform-origin:50% 50%;transition:transform 380ms cubic-bezier(.32,0,.18,1)}
+#mao-tk-showcase-settings .mtk-showcase-admin :is(.setting-section,.category-editor)>summary[aria-expanded="true"] .icon{transform:rotate(90deg)!important}
+html[data-mao-tk-motion="on"] #mao-tk-showcase-settings .mtk-showcase-admin :is(.setting-section,.category-editor)>summary .icon{transition:transform 380ms cubic-bezier(.32,0,.18,1)!important}
+html[data-mao-tk-motion="off"] #mao-tk-showcase-settings .mtk-showcase-admin :is(.setting-section,.category-editor)>summary .icon{transition:none!important}

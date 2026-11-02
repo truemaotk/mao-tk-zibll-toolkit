@@ -62,7 +62,9 @@ final class Runtime
             }
         }
         if (isset($this->prepared['reading'])) {
-            wp_enqueue_script('mao-tk-toolkit-article-reading', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/article-ui/reading/reading.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+            wp_enqueue_style('mao-tk-toolkit-disclosure-motion', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/css/disclosure-motion.css', array('mao-tk-toolkit-article-ui-reading'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
+            wp_enqueue_script('mao-tk-toolkit-disclosure-motion', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/disclosure-motion.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+            wp_enqueue_script('mao-tk-toolkit-article-reading', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/article-ui/reading/reading.js', array('mao-tk-toolkit-disclosure-motion'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
         }
     }
 

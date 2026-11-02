@@ -71,7 +71,9 @@ final class Admin
         }
         wp_enqueue_style('mao-tk-zibll-toolkit-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/css/admin.css', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION);
         wp_add_inline_style('mao-tk-zibll-toolkit-admin', $this->scheme_css());
-        wp_enqueue_script('mao-tk-zibll-toolkit-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/admin.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+        wp_enqueue_style('mao-tk-toolkit-disclosure-motion', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/css/disclosure-motion.css', array('mao-tk-zibll-toolkit-admin'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
+        wp_enqueue_script('mao-tk-toolkit-disclosure-motion', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/disclosure-motion.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+        wp_enqueue_script('mao-tk-zibll-toolkit-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/admin.js', array('mao-tk-toolkit-disclosure-motion'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
     }
 
     public function enqueue_controls(string $hook_suffix): void
@@ -139,7 +141,7 @@ final class Admin
         echo '<h3 class="mao-tk-disclosure__heading"><button type="button" class="mao-tk-disclosure__trigger" id="' . esc_attr($id . '-trigger') . '" aria-expanded="true" aria-controls="' . esc_attr($id . '-panel') . '">';
         echo '<span class="mao-tk-disclosure__label"><span>' . esc_html($title) . '</span>';
         if ($summary !== '') { echo '<span class="mao-tk-disclosure__summary">' . esc_html($summary) . '</span>'; }
-        echo '</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>';
+        echo '</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></h3>';
         echo '<div class="mao-tk-disclosure__panel" id="' . esc_attr($id . '-panel') . '" role="region" aria-labelledby="' . esc_attr($id . '-trigger') . '"><div class="mao-tk-disclosure__inner">';
     }
 

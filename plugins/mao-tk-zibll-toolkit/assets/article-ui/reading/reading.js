@@ -14,6 +14,7 @@
     panel.hidden = false;
     panel.inert = !open;
     panel.setAttribute('aria-hidden', String(!open));
+    if (window.MaoTKDisclosureMotion) window.MaoTKDisclosureMotion.set(panel, panel.querySelector('.mtk-faq-answer'), open, { instant: !!instant });
     if (instant) { void panel.offsetHeight; item.classList.remove('mtk-faq-instant'); }
   }
   function openItem(item, instant) {
@@ -38,7 +39,10 @@
     roots.forEach(function (root) {
       if (root.dataset.mtkReadingReady === '1') return;
       root.dataset.mtkReadingReady = '1';
-      root.querySelectorAll('[data-mtk-faq]').forEach(function (item) { setOpen(item, false, true); });
+      root.querySelectorAll('[data-mtk-faq]').forEach(function (item) {
+        if (window.MaoTKDisclosureMotion) window.MaoTKDisclosureMotion.rightArrow(item.querySelector('.mtk-faq-trigger'));
+        setOpen(item, false, true);
+      });
     });
     openHash(location.hash);
   }
@@ -51,6 +55,7 @@
     roots.forEach(function (root) {
       delete root.dataset.mtkReadingReady;
       root.querySelectorAll('[data-mtk-faq]').forEach(function (item) { setOpen(item, true, true); });
+      if (window.MaoTKDisclosureMotion) window.MaoTKDisclosureMotion.destroy(root);
     });
   }
   document.addEventListener('click', async function (event) {

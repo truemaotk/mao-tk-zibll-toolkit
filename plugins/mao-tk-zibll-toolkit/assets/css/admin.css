@@ -60,9 +60,9 @@
 .mao-tk-toolkit .mao-tk-disclosure__trigger:hover { background: #f5f9ff; }
 .mao-tk-toolkit .mao-tk-disclosure__label { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; min-width: 0; }
 .mao-tk-toolkit .mao-tk-disclosure__summary { color: var(--mao-tk-muted); font-size: 12px; font-weight: 400; }
-.mao-tk-toolkit .mao-tk-disclosure__trigger svg { flex: 0 0 18px; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: transform 280ms cubic-bezier(.2,.7,.2,1); transform-origin: center; }
-.mao-tk-toolkit .is-open > .mao-tk-disclosure__heading .mao-tk-disclosure__trigger svg { transform: rotate(180deg); }
-.mao-tk-toolkit .mao-tk-disclosure__panel { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 280ms cubic-bezier(.2,.7,.2,1); }
+.mao-tk-toolkit .mao-tk-disclosure__trigger svg { flex: 0 0 18px; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: transform 380ms cubic-bezier(.32,0,.18,1); transform-origin: center; }
+.mao-tk-toolkit .is-open > .mao-tk-disclosure__heading .mao-tk-disclosure__trigger svg { transform: rotate(90deg); }
+.mao-tk-toolkit .mao-tk-disclosure__panel { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 380ms cubic-bezier(.32,0,.18,1); }
 .mao-tk-toolkit [data-disclosure-ready="1"]:not(.is-open) > .mao-tk-disclosure__panel { grid-template-rows: 0fr; }
 .mao-tk-toolkit .mao-tk-disclosure__inner { min-height: 0; overflow: hidden; }
 .mao-tk-toolkit .mao-tk-disclosure__inner > .mao-tk-toolkit__module { padding: 16px 24px; }

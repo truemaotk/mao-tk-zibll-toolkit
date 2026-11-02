@@ -111,7 +111,7 @@ function field(label, key, value, options = {}) {
 function toggle(label,key,value,scope='card') {return `<label class="toggle-row"><span>${esc(label)}</span><span class="switch"><input type="checkbox" data-scope="${scope}" data-key="${key}" aria-label="${esc(label)}" ${value?'checked':''}><i></i></span></label>`;}
 function range(label,key,value,min,max,unit='px') {return `<label class="field"><span class="range-heading">${esc(label)}</span><span class="range-inputs"><input type="range" min="${min}" max="${max}" value="${value}" data-scope="settings" data-key="${key}" data-unit="${unit}" aria-label="${esc(label)}"><output>${value}${unit}</output></span></label>`;}
 function colorField(label,key,value) {return `<div class="color-field"><span>${esc(label)}</span><span class="color-control"><input class="color-hex" type="text" value="${esc(value)}" data-key="${key}" data-scope="settings" aria-label="${esc(label)}色值" spellcheck="false" maxlength="7"><input type="color" value="${esc(value)}" data-key="${key}" data-scope="settings" aria-label="${esc(label)}"></span></div>`;}
-function section(title,body,open=false) {return `<details class="setting-section" ${open?'open':''}><summary>${esc(title)}${icon('chevron-down')}</summary><div class="setting-body">${body}</div></details>`;}
+function section(title,body,open=false) {return `<details class="setting-section" ${open?'open':''}><summary>${esc(title)}${icon('chevron-right')}</summary><div class="setting-body">${body}</div></details>`;}
 function contentSettings(c) {
   return section('案例内容',field('案例名称','name',c.name)+field('展示标签（可选）','category',c.category)+categoryFields(c)+toggle('在前台展示此案例','enabled',c.enabled)+field('简要说明','description',c.description,{textarea:true})+field('案例网址','siteUrl',c.siteUrl,{type:'url',placeholder:'https://'})+field('地址栏显示文字','addressText',c.addressText,{help:'留空时显示完整案例网址。'}),true)
     +section('预览图片',`${c.imageUrl&&c.imageState==='normal'?`<img class="inspector-image" src="${esc(safeImage(c.imageUrl))}" alt="当前案例预览图片">`:fallbackMarkup(c.imageState==='error')}<div class="image-field-tools"><button class="button" data-action="choose-image">${icon('upload')}${c.imageUrl?'替换图片':'选择图片'}</button><button class="button subtle" data-action="remove-image">移除图片</button></div>${field('图片 ALT','imageAlt',c.imageAlt,{help:'用一句话说明截图内容，帮助读屏与图片检索。'})}`,false)
@@ -177,9 +177,10 @@ function inspectorMarkup() {
 function renderEditor(){return `<div class="editor-shell"><header class="editor-toolbar"><div class="editor-title"><button class="icon-button mobile-panel-toggle" data-action="toggle-manager" aria-label="切换案例列表与设置面板">${icon('panel-left')}</button><div><h2>案例展示</h2><p>页面组件 / 中央案例库</p></div></div><div class="editor-toolbar-actions"><span class="save-state"></span><button class="icon-button" data-action="undo" aria-label="撤销最近修改" title="撤销">${icon('undo-2')}</button><button class="button export-button" data-action="export">${icon('download')}导出</button><a class="button toolbar-page-link" href="${esc(boot.newPageUrl)}">新建展示页面</a><button class="button primary" data-action="save">保存案例库</button></div></header><div class="editor-workspace ${managerOpen?'show-manager':''}">${managerMarkup()}${canvasMarkup()}${inspectorMarkup()}</div><footer class="editor-footer"><span>创建页面 → 选择“MaoTK 案例展示”模板 → 选择案例分类</span><span>保存后更新所有关联页面</span></footer></div>`;}
 
 function render() {
+  if(window.MaoTKDisclosureMotion)window.MaoTKDisclosureMotion.destroy(app);
   app.innerHTML=renderEditor();
   
-  iconHydrate(app); wireShots(); updateSaveState();
+  iconHydrate(app); wireShots(); updateSaveState(); if(window.MaoTKDisclosureMotion)window.MaoTKDisclosureMotion.bindDetails(app);
 }
 function refreshPreview() {
   
@@ -188,18 +189,19 @@ function refreshPreview() {
   const badge = ui.querySelector('.editor-theme-badge');if(badge) badge.textContent=themeFor(true)==='dark'?'深色':'浅色';
   const themeButton=ui.querySelector('[data-action="preview-theme"]');if(themeButton){themeButton.innerHTML=icon(previewTheme==='light'?'moon':'sun');iconHydrate(themeButton);}
 }
-function refreshManager() {const old=ui.querySelector('.case-manager');if(old){old.outerHTML=managerMarkup();iconHydrate(ui.querySelector('.case-manager'));}}
+function refreshManager() {const old=ui.querySelector('.case-manager');if(old){if(window.MaoTKDisclosureMotion)window.MaoTKDisclosureMotion.destroy(old);old.outerHTML=managerMarkup();iconHydrate(ui.querySelector('.case-manager'));if(window.MaoTKDisclosureMotion)window.MaoTKDisclosureMotion.bindDetails(ui.querySelector('.case-manager'));}}
 function refreshInspector() {
   const old=ui.querySelector('.inspector');if(!old)return;
   const sameTab=old.querySelector('[role="tabpanel"]')?.getAttribute('aria-labelledby')==='tab-'+inspectorTab;
-  const sections=new Map(sameTab?Array.from(old.querySelectorAll('.setting-section')).map(x=>[x.querySelector('summary').textContent.trim(),x.open]):[]);
+  const sections=new Map(sameTab?Array.from(old.querySelectorAll('.setting-section')).map(x=>[x.querySelector('summary').textContent.trim(),x.querySelector('summary').hasAttribute('aria-expanded')?x.querySelector('summary').getAttribute('aria-expanded')==='true':x.open]):[]);
   const active=ui.activeElement?.closest('[data-scope][data-key]');
   const focusKey=active&&old.contains(active)?{scope:active.dataset.scope,key:active.dataset.key}:null;
   const scroll=old.scrollTop;
+  if(window.MaoTKDisclosureMotion)window.MaoTKDisclosureMotion.destroy(old);
   old.outerHTML=inspectorMarkup();
   const panel=ui.querySelector('.inspector');
   panel.querySelectorAll('.setting-section').forEach(x=>{const title=x.querySelector('summary').textContent.trim();if(sections.has(title))x.open=sections.get(title);});
-  iconHydrate(panel);
+  iconHydrate(panel); if(window.MaoTKDisclosureMotion)window.MaoTKDisclosureMotion.bindDetails(panel);
   if(sameTab)panel.scrollTop=scroll;
   if(focusKey){const replacement=Array.from(panel.querySelectorAll('[data-scope][data-key]')).find(x=>x.dataset.scope===focusKey.scope&&x.dataset.key===focusKey.key);replacement?.focus({preventScroll:true});}
 }
@@ -331,7 +333,7 @@ ui.addEventListener('pointerup',e=>endPointerDrag(e));
 ui.addEventListener('pointercancel',e=>endPointerDrag(e,true));
 ui.getElementById('mtk-showcase-image-dialog').addEventListener('click',e=>{if(e.target.id==='mtk-showcase-image-dialog')e.target.close();});
 function categoryManager(){
- return `<details class="category-editor"><summary>管理案例分类 · ${state.categories.length}</summary>${state.categories.map(group=>`<div class="category-editor-row"><input type="text" value="${esc(group.name)}" data-category-name="${esc(group.id)}" aria-label="分类名称 ${esc(group.name)}" maxlength="80"><button type="button" class="icon-button danger" data-category-remove="${esc(group.id)}" aria-label="移除分类 ${esc(group.name)}">${icon('trash-2')}</button></div>`).join('')}<button type="button" class="button" data-category-add>添加分类</button><p>分类供页面选择。移除分类后，原来引用该分类的页面显示空状态，不会自动切换为全部案例。</p></details>`;
+ return `<details class="category-editor"><summary>管理案例分类 · ${state.categories.length}${icon('chevron-right')}</summary>${state.categories.map(group=>`<div class="category-editor-row"><input type="text" value="${esc(group.name)}" data-category-name="${esc(group.id)}" aria-label="分类名称 ${esc(group.name)}" maxlength="80"><button type="button" class="icon-button danger" data-category-remove="${esc(group.id)}" aria-label="移除分类 ${esc(group.name)}">${icon('trash-2')}</button></div>`).join('')}<button type="button" class="button" data-category-add>添加分类</button><p>分类供页面选择。移除分类后，原来引用该分类的页面显示空状态，不会自动切换为全部案例。</p></details>`;
 }
 function categoryFields(card){
  return `<div class="field"><span>案例分类</span><div class="category-checks">${state.categories.length?state.categories.map(group=>`<label><input type="checkbox" data-case-category="${esc(group.id)}" ${(card.categoryIds||[]).includes(group.id)?'checked':''}>${esc(group.name)}</label>`).join(''):'<small>先在左侧“管理案例分类”中添加分类。</small>'}</div></div>`;
@@ -344,8 +346,8 @@ function chooseMedia(){
 }
 ui.addEventListener('click',e=>{
  const add=e.target.closest('[data-category-add]'),remove=e.target.closest('[data-category-remove]');
- if(add){snapshot();state.categories.push({id:'cat-'+Date.now().toString(36),name:'新分类'});render();ui.querySelector('.category-editor').open=true;ui.querySelector('.category-editor-row:last-of-type input')?.focus();rememberDraft();}
- if(remove){const id=remove.dataset.categoryRemove;snapshot();state.categories=state.categories.filter(c=>c.id!==id);state.cards.forEach(c=>c.categoryIds=(c.categoryIds||[]).filter(v=>v!==id));render();ui.querySelector('.category-editor').open=true;rememberDraft();notify('分类已从草稿中移除，保存后生效',true);}
+ if(add){snapshot();state.categories.push({id:'cat-'+Date.now().toString(36),name:'新分类'});render();if(window.MaoTKDisclosureMotion)window.MaoTKDisclosureMotion.setDetails(ui.querySelector('.category-editor'),true,true);else ui.querySelector('.category-editor').open=true;ui.querySelector('.category-editor-row:last-of-type input')?.focus();rememberDraft();}
+ if(remove){const id=remove.dataset.categoryRemove;snapshot();state.categories=state.categories.filter(c=>c.id!==id);state.cards.forEach(c=>c.categoryIds=(c.categoryIds||[]).filter(v=>v!==id));render();if(window.MaoTKDisclosureMotion)window.MaoTKDisclosureMotion.setDetails(ui.querySelector('.category-editor'),true,true);else ui.querySelector('.category-editor').open=true;rememberDraft();notify('分类已从草稿中移除，保存后生效',true);}
 });
 ui.addEventListener('input',e=>{
  if(e.target.matches('[data-category-name]')){const group=state.categories.find(c=>c.id===e.target.dataset.categoryName);if(group){snapshot('category:'+group.id);group.name=e.target.value;refreshInspector();rememberDraft();}}

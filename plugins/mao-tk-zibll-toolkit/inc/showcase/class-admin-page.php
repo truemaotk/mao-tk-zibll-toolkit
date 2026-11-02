@@ -20,7 +20,7 @@ final class AdminPage
         if (!$this->screen || $hook !== $this->screen || !current_user_can('manage_options')) { return; }
         wp_enqueue_media();
         wp_enqueue_style('mao-tk-toolkit-showcase-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/admin.css', array('mao-tk-zibll-toolkit-admin'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
-        wp_enqueue_script('mao-tk-toolkit-showcase-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/admin.js', array('media-views'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+        wp_enqueue_script('mao-tk-toolkit-showcase-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/admin.js', array('media-views', 'mao-tk-toolkit-disclosure-motion'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
         $read = (new Settings())->read();
         wp_add_inline_script('mao-tk-toolkit-showcase-admin', 'window.MaoTKShowcaseAdmin=' . wp_json_encode(array('value' => $read['value'], 'revision' => $read['revision'], 'valid' => $read['valid'], 'defaultValue' => Settings::defaults(), 'cardDefaults' => Settings::card_defaults(), 'baseUrl' => MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/', 'restUrl' => rest_url(Integration::REST . '/showcase'), 'nonce' => wp_create_nonce('wp_rest'), 'newPageUrl' => admin_url('post-new.php?post_type=page'), 'enabled' => Runtime::enabled()), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ';', 'before');
     }

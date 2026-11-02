@@ -4,8 +4,10 @@
     function initialize() {
         var root = document.getElementById('mao-tk-toolkit');
         if (!root) { return; }
+        var motion = window.MaoTKDisclosureMotion;
+        if (motion) motion.mountPreference(root);
         var disclosures = Array.from(root.querySelectorAll('[data-mao-tk-disclosure]'));
-        function expand(section, open) {
+        function expand(section, open, instant) {
             var trigger = section.querySelector('.mao-tk-disclosure__trigger');
             var panel = section.querySelector('.mao-tk-disclosure__panel');
             if (!trigger || !panel) { return; }
@@ -13,11 +15,13 @@
             panel.setAttribute('aria-hidden', String(!open));
             panel.inert = !open;
             section.classList.toggle('is-open', open);
+            if (motion) motion.set(panel, section.querySelector('.mao-tk-disclosure__inner'), open, { instant: !!instant });
         }
         disclosures.forEach(function (section) {
             var trigger = section.querySelector('.mao-tk-disclosure__trigger');
             if (!trigger || !section.querySelector('.mao-tk-disclosure__panel')) { return; }
-            expand(section, section.getAttribute('data-initial-open') === 'true');
+            if (motion) motion.rightArrow(trigger);
+            expand(section, section.getAttribute('data-initial-open') === 'true', true);
             section.setAttribute('data-disclosure-ready', '1');
             trigger.addEventListener('click', function () {
                 var open = trigger.getAttribute('aria-expanded') !== 'true';
@@ -33,7 +37,7 @@
         // Invalid required controls must be visible before the browser focuses them.
         root.addEventListener('invalid', function (event) {
             var section = event.target.closest('[data-mao-tk-disclosure]');
-            if (section) { expand(section, true); }
+            if (section) { expand(section, true, true); }
         }, true);
         var feedback = root.querySelector('[data-mao-tk-switch-feedback]');
         var feedbackTimer;
