@@ -182,3 +182,5 @@
 @media (forced-colors: active) {
     .mao-tk-toolkit .mao-tk-toolkit__badge { border: 1px solid ButtonText; }
 }
+
+@supports selector(html:has(.mao-tk-toolkit)){html:has(.mao-tk-toolkit){scrollbar-gutter:stable}}

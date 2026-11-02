@@ -13,6 +13,7 @@
                 var controls = Array.from(form.querySelectorAll('button')).concat(Array.from(results.querySelectorAll('button')));
                 controls.forEach(function (b) { b.disabled = true; });
                 results.setAttribute('aria-busy', 'true'); feedback.textContent = '正在查询…'; feedback.dataset.state = 'loading';
+                var loadingTicket = window.MaoTKLoadingUI && window.MaoTKLoadingUI.begin(results, 'list');
                 var body = new FormData(form), controller = new AbortController(), timer = setTimeout(function () { controller.abort(); }, 18000);
                 body.set('mode', mode); body.set('result_page', String(page || 1));
                 if (mode === 'search') { if (page === 1) lastKeyword = form.elements.keyword.value.trim(); body.set('keyword', lastKeyword); }
@@ -24,7 +25,7 @@
                     if (!response.ok || !json.success) throw new Error(json.data && json.data.message ? json.data.message : '查询失败，请稍后再试。');
                     results.innerHTML = json.data.html; feedback.textContent = json.data.message; feedback.dataset.state = 'ready';
                 } catch (error) { feedback.textContent = error.name === 'AbortError' ? '请求超时，请重试。' : (error.message || '网络异常，请稍后重试。'); feedback.dataset.state = 'error'; }
-                finally { clearTimeout(timer); busy = false; results.setAttribute('aria-busy', 'false'); controls.forEach(function (b) { b.disabled = false; }); }
+                finally { if (window.MaoTKLoadingUI) window.MaoTKLoadingUI.finish(loadingTicket); clearTimeout(timer); busy = false; results.setAttribute('aria-busy', 'false'); controls.forEach(function (b) { b.disabled = false; }); }
             }
             form.addEventListener('submit', function (event) { event.preventDefault(); run('search', 1); });
             form.addEventListener('click', function (event) { var b = event.target.closest('[data-order-mode]'); if (b) run(b.dataset.orderMode, 1); });

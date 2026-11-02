@@ -38,10 +38,12 @@
         controller?.abort(); controller = new AbortController(); busy = true; controls(); feedback('');
         el('status').textContent = '正在加载预设图片…';
         el('grid').replaceChildren();
+        const loadingTicket = window.MaoTKLoadingUI?.begin(el('grid'), 'grid');
         try {
             const result = await request('list', {page:String(targetPage)});
             if (generation !== loadGeneration) return;
             page = result.page; pages = result.pages; total = result.total;
+            window.MaoTKLoadingUI?.finish(loadingTicket);
             el('grid').dataset.kind = kind;
             result.items.forEach(item => {
                 const b = document.createElement('button'); b.type = 'button'; b.className = 'mao-tk-profile-dialog__item'; b.dataset.presetId = item.id;
@@ -55,11 +57,11 @@
         } catch (error) {
             if (generation !== loadGeneration) return;
             el('status').textContent = error.name === 'AbortError' ? '加载超时，请关闭后重试。' : error.message; el('page').textContent = ''; total = 0;
-        } finally { if (generation === loadGeneration) { busy = false; controls(); } }
+        } finally { window.MaoTKLoadingUI?.finish(loadingTicket); if (generation === loadGeneration) { busy = false; controls(); } }
     }
     function close() {
         if (saving) return;
-        ++loadGeneration; controller?.abort(); busy = false; dialog()?.close(); opener?.focus();
+        ++loadGeneration; controller?.abort(); busy = false; window.MaoTKLoadingUI?.clear(el('grid')); if (el('grid')) el('grid').replaceChildren(); controls(); dialog()?.close(); opener?.focus();
     }
     function bind(d) {
         if (d.dataset.maoTkProfileReady) return;

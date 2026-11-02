@@ -71,6 +71,7 @@ final class Admin
         }
         wp_enqueue_style('mao-tk-zibll-toolkit-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/css/admin.css', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION);
         wp_add_inline_style('mao-tk-zibll-toolkit-admin', $this->scheme_css());
+        LoadingUI::enqueue();
         wp_enqueue_style('mao-tk-toolkit-disclosure-motion', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/css/disclosure-motion.css', array('mao-tk-zibll-toolkit-admin'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
         wp_enqueue_script('mao-tk-toolkit-disclosure-motion', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/disclosure-motion.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
         wp_enqueue_script('mao-tk-zibll-toolkit-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/admin.js', array('mao-tk-toolkit-disclosure-motion'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);

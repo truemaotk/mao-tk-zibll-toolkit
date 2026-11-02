@@ -62,8 +62,9 @@ final class Runtime
     public static function enqueue(): void
     {
         if (!self::$used || !get_current_user_id()) { return; }
+        \MaoTK\ZibllToolkit\LoadingUI::enqueue();
         wp_enqueue_style('mao-tk-profile-presets', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/profile-presets/frontend.css', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION);
-        wp_enqueue_script('mao-tk-profile-presets', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/profile-presets/frontend.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+        wp_enqueue_script('mao-tk-profile-presets', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/profile-presets/frontend.js', array('mao-tk-toolkit-loading'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
     }
 
     public static function dialog(): void

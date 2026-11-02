@@ -37,8 +37,9 @@ final class Runtime
     public static function enqueue(): void
     {
         if (!is_page() || !self::selected((int) get_queried_object_id()) || get_template() !== 'zibll') { return; }
+        \MaoTK\ZibllToolkit\LoadingUI::enqueue();
         wp_enqueue_style('mao-tk-order-query', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/order-query/view.css', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION);
-        if (self::enabled() && Orders::available() && !post_password_required()) { wp_enqueue_script('mao-tk-order-query', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/order-query/view.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true); }
+        if (self::enabled() && Orders::available() && !post_password_required()) { wp_enqueue_script('mao-tk-order-query', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/order-query/view.js', array('mao-tk-toolkit-loading'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true); }
     }
     public static function ajax(): void
     {

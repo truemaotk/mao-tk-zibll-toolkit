@@ -18,8 +18,9 @@ final class Runtime
     public static function selected(int $id): bool { return $id > 0 && get_post_type($id) === 'page' && get_page_template_slug($id) === Settings::TEMPLATE; }
     public static function enqueue(): void
     {
+        \MaoTK\ZibllToolkit\LoadingUI::enqueue();
         wp_enqueue_style('mao-tk-toolkit-showcase', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/showcase.css', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION);
-        wp_enqueue_script('mao-tk-toolkit-showcase', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/view.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+        wp_enqueue_script('mao-tk-toolkit-showcase', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/view.js', array('mao-tk-toolkit-loading'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
     }
     public static function maybe_enqueue(): void
     {

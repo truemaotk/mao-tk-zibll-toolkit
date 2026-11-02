@@ -442,3 +442,17 @@
 @media(max-width:1200px){#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace{grid-template-columns:190px minmax(0,1fr) 290px}#mao-tk-showcase-settings .mtk-showcase-admin .save-state{display:none}}
 @media(max-width:1050px){#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace{grid-template-columns:minmax(0,1fr) 290px}#mao-tk-showcase-settings .mtk-showcase-admin .case-manager{display:none}#mao-tk-showcase-settings .mtk-showcase-admin .mobile-panel-toggle{display:inline-flex}#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace.show-manager{grid-template-columns:205px minmax(0,1fr)}#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace.show-manager .case-manager{display:block}#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace.show-manager .inspector{display:none}}
 @media(max-width:600px){#mao-tk-showcase-settings .mtk-showcase-admin .editor-shell{height:calc(100dvh - 130px);min-height:600px}#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace,#mao-tk-showcase-settings .mtk-showcase-admin .editor-workspace.show-manager{grid-template-columns:1fr}#mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar{padding-inline:8px;gap:4px}#mao-tk-showcase-settings .mtk-showcase-admin .editor-toolbar-actions{gap:4px}#mao-tk-showcase-settings .mtk-showcase-admin .editor-title h2{font-size:14px}#mao-tk-showcase-settings .mtk-showcase-admin .toolbar-page-link{font-size:10px}}
+
+/* 1.15: stable rails and full-row fold hit areas; no width change on hover. */
+#mao-tk-showcase-settings .mtk-showcase-admin :is(.case-manager,.inspector,.canvas-scroll,.image-dialog-scroll){overflow-y:scroll;scrollbar-width:auto;scrollbar-gutter:stable}
+@supports(scrollbar-gutter:stable){#mao-tk-showcase-settings .mtk-showcase-admin :is(.case-manager,.inspector,.canvas-scroll,.image-dialog-scroll){overflow-y:auto}}
+#mao-tk-showcase-settings .mtk-showcase-admin :is(.case-manager,.inspector,.canvas-scroll,.image-dialog-scroll)::-webkit-scrollbar{width:10px;height:10px}
+#mao-tk-showcase-settings .mtk-showcase-admin :is(.case-manager,.inspector,.canvas-scroll,.image-dialog-scroll):hover::-webkit-scrollbar{width:10px;height:10px}
+#mao-tk-showcase-settings .mtk-showcase-admin :is(.case-manager,.inspector,.canvas-scroll,.image-dialog-scroll)::-webkit-scrollbar-thumb{background:#cbd1d9;border:3px solid transparent;background-clip:padding-box;border-radius:10px}
+#mao-tk-showcase-settings .mtk-showcase-admin :is(.case-manager,.inspector,.canvas-scroll,.image-dialog-scroll)::-webkit-scrollbar-thumb:hover{border-width:2px;background-color:#aab4c2}
+#mao-tk-showcase-settings .mtk-showcase-admin .setting-section{padding:0}
+#mao-tk-showcase-settings .mtk-showcase-admin :is(.setting-section,.category-editor)>summary{min-height:48px;padding:12px 8px;box-sizing:border-box;border-radius:6px;cursor:pointer;transition:background-color .15s ease,color .15s ease}
+#mao-tk-showcase-settings .mtk-showcase-admin .category-editor{padding-block:0}
+#mao-tk-showcase-settings .mtk-showcase-admin .setting-body{padding:8px 0 18px}
+@media(hover:hover){#mao-tk-showcase-settings .mtk-showcase-admin :is(.setting-section,.category-editor)>summary:hover{background:#f5f7fa;color:var(--ui-text)}}
+@media(prefers-reduced-motion:reduce){#mao-tk-showcase-settings .mtk-showcase-admin :is(.setting-section,.category-editor)>summary{transition:none}}
