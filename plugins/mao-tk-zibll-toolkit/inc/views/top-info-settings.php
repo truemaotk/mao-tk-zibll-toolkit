@@ -11,7 +11,6 @@ $tones = array('loaded' => 'success', 'disabled' => 'neutral', 'blocked' => 'war
     <h1 class="screen-reader-text">文章顶部信息</h1>
     <header class="mao-tk-toolkit__header">
         <div><div class="mao-tk-toolkit__title-line"><h2>文章顶部信息</h2><span class="mao-tk-toolkit__version">v<?php echo esc_html(MAO_TK_ZIBLL_TOOLKIT_VERSION); ?></span></div><p class="mao-tk-toolkit__intro">沿用原版前台横幅；关闭模块后仍能设置和预览。</p></div>
-        <a class="button" href="<?php echo esc_url(admin_url('admin.php?page=' . Admin::SLUG)); ?>">返回工作台</a>
     </header>
     <?php $switch_notice = $module_notice; require MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/views/switch-feedback.php'; ?>
     <?php if ($notice === 'saved') : ?><div class="mao-tk-toolkit__message" role="status">设置已保存。旧配置和原文章属性保持不变。</div><?php elseif ($notice === 'save-failed') : ?><div class="mao-tk-toolkit__message" role="alert">保存失败。原有配置保持不变，请检查数据格式及数据库连接。</div><?php endif; ?>

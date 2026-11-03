@@ -2,15 +2,12 @@
 (function () {
     'use strict';
     if (window.MaoTKDisclosureMotion) return;
-    var key = 'mao-tk-toolkit-motion-mode';
-    var mode = 'system';
     var panels = new Map();
     var details = new Map();
     var media = typeof window.matchMedia === 'function' ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
     var duration = 380;
     var easing = 'cubic-bezier(.32,0,.18,1)';
-    try { var saved = window.localStorage.getItem(key); if (['system', 'on', 'off'].indexOf(saved) !== -1) mode = saved; } catch (error) {}
-    function enabled() { return mode === 'on' || (mode === 'system' && !(media && media.matches)); }
+    function enabled() { return !(media && media.matches); }
     function cancel(state) {
         if (state.animation) { state.animation.cancel(); state.animation = null; }
     }
@@ -130,37 +127,16 @@
     }
     function applyPreference() {
         document.documentElement.setAttribute('data-mao-tk-motion', enabled() ? 'on' : 'off');
-        document.querySelectorAll('[data-mao-tk-motion-preference]').forEach(function (control) { control.value = mode; });
         if (!enabled()) panels.forEach(finish);
     }
-    function setPreference(value) {
-        if (['system', 'on', 'off'].indexOf(value) === -1) return;
-        mode = value;
-        try { window.localStorage.setItem(key, mode); } catch (error) {}
-        applyPreference();
-    }
-    function mountPreference(root) {
-        var header = root && root.querySelector('.mao-tk-toolkit__header');
-        if (!header || root.querySelector('[data-mao-tk-motion-preference]')) return;
-        var label = document.createElement('label'); label.className = 'mao-tk-motion-preference';
-        var caption = document.createElement('span'); caption.textContent = '折叠动效';
-        var control = document.createElement('select'); control.setAttribute('data-mao-tk-motion-preference', '1'); control.setAttribute('aria-label', '折叠动效偏好');
-        [['system', '跟随系统'], ['on', '开启动效'], ['off', '关闭动效']].forEach(function (pair) {
-            var option = document.createElement('option'); option.value = pair[0]; option.textContent = pair[1]; control.appendChild(option);
-        });
-        control.value = mode;
-        var note = document.createElement('span'); note.textContent = '仅本浏览器，前后台同步'; note.className = 'mao-tk-motion-preference__note';
-        control.addEventListener('change', function () { setPreference(control.value); });
-        label.append(caption, control, note); header.after(label);
-    }
+    // Compatibility with older adapters; preference is now exclusively the OS setting.
+    function setPreference() { applyPreference(); }
+    function mountPreference() {}
     if (media && media.addEventListener) media.addEventListener('change', applyPreference);
     else if (media && media.addListener) media.addListener(applyPreference);
-    window.addEventListener('storage', function (event) {
-        if (event.key === key) { mode = ['on', 'off'].indexOf(event.newValue) !== -1 ? event.newValue : 'system'; applyPreference(); }
-    });
     window.addEventListener('pageshow', function (event) {
         if (event.persisted) { applyPreference(); panels.forEach(finish); }
     });
-    window.MaoTKDisclosureMotion = { set: set, destroy: destroy, rightArrow: rightArrow, bindDetails: bindDetails, setDetails: setDetails, mountPreference: mountPreference, preference: function () { return mode; }, setPreference: setPreference };
+    window.MaoTKDisclosureMotion = { set: set, destroy: destroy, rightArrow: rightArrow, bindDetails: bindDetails, setDetails: setDetails, mountPreference: mountPreference, preference: function () { return 'system'; }, setPreference: setPreference };
     applyPreference();
 })();

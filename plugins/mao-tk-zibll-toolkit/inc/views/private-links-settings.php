@@ -19,7 +19,6 @@ $can_list_users = current_user_can('list_users');
         </div>
         <div class="mao-tk-private-links__page-actions">
             <a href="<?php echo esc_url(admin_url('link-manager.php')); ?>">管理网站链接</a>
-            <a class="button" href="<?php echo esc_url(admin_url('admin.php?page=' . Admin::SLUG)); ?>">返回工作台</a>
         </div>
     </header>
 

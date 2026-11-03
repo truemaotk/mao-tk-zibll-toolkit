@@ -5,10 +5,7 @@
     var active = new Map(), images = new WeakMap(), frames = new Map(), pendingImages = new Map();
     var scope = '.mao-tk-toolkit,.maotk-ui-kit,[data-mao-tk-showcase],#mao-tk-profile-dialog,.mao-tk-oq';
     var media = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
-    function motion() {
-        var mode; try { mode = window.localStorage.getItem('mao-tk-toolkit-motion-mode'); } catch (error) {}
-        return mode === 'on' || mode !== 'off' && !(media && media.matches);
-    }
+    function motion() { return !(media && media.matches); }
     function finish(ticket) {
         if (!ticket || active.get(ticket.host) !== ticket) return;
         clearTimeout(ticket.timer); ticket.layer.remove(); active.delete(ticket.host);
@@ -94,7 +91,6 @@
         }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['src', 'srcset'] });
     }
     if (media && media.addEventListener) media.addEventListener('change', refreshMotion);
-    window.addEventListener('storage', refreshMotion);
     window.addEventListener('pageshow', function (event) { if (event.persisted) { active.forEach(finish); scan(document); } });
     window.MaoTKLoadingUI = { begin: begin, finish: finish, clear: function (host) { finish(active.get(host)); }, scan: scan };
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true }); else init();

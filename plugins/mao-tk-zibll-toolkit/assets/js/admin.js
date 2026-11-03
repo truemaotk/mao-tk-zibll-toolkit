@@ -5,7 +5,6 @@
         var root = document.getElementById('mao-tk-toolkit');
         if (!root) { return; }
         var motion = window.MaoTKDisclosureMotion;
-        if (motion) motion.mountPreference(root);
         var disclosures = Array.from(root.querySelectorAll('[data-mao-tk-disclosure]'));
         function expand(section, open, instant) {
             var trigger = section.querySelector('.mao-tk-disclosure__trigger');

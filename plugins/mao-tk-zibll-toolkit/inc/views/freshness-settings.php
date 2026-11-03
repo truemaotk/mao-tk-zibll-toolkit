@@ -9,7 +9,7 @@ $tones = array('loaded' => 'success', 'disabled' => 'neutral', 'blocked' => 'war
 ?>
 <div class="wrap mao-tk-toolkit" id="mao-tk-toolkit">
     <h1 class="screen-reader-text">文章时效提示</h1>
-    <header class="mao-tk-toolkit__header"><div><div class="mao-tk-toolkit__title-line"><h2>文章时效提示</h2><span class="mao-tk-toolkit__version">v<?php echo esc_html(MAO_TK_ZIBLL_TOOLKIT_VERSION); ?></span></div><p class="mao-tk-toolkit__intro">超过设定更新天数后，在文章正文前提醒读者。</p></div><a class="button" href="<?php echo esc_url(admin_url('admin.php?page=' . Admin::SLUG)); ?>">返回工作台</a></header>
+    <header class="mao-tk-toolkit__header"><div><div class="mao-tk-toolkit__title-line"><h2>文章时效提示</h2><span class="mao-tk-toolkit__version">v<?php echo esc_html(MAO_TK_ZIBLL_TOOLKIT_VERSION); ?></span></div><p class="mao-tk-toolkit__intro">超过设定更新天数后，在文章正文前提醒读者。</p></div></header>
     <?php $switch_notice = $module_notice; require MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/views/switch-feedback.php'; ?>
     <?php if ($notice === 'saved') : ?><div class="mao-tk-toolkit__message" role="status">时效提示设置已保存。</div><?php elseif ($notice === 'failed') : ?><div class="mao-tk-toolkit__message" role="alert">设置未能保存，原有配置保持不变。</div><?php endif; ?>
     <?php if ($conflict) : ?><div class="mao-tk-toolkit__message" role="alert">检测到旧的 article_time_update 提示仍在运行。请先自行移除旧提示的挂钩，避免重复；本插件不会修改主题文件。</div><?php endif; ?>

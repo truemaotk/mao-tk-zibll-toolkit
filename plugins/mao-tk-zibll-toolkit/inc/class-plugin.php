@@ -44,6 +44,10 @@ final class Plugin
         $manager->register(new Modules\ProfilePresetsModule());
         $manager->register(new Modules\OrderQueryModule());
         $manager->register(new Modules\NotFoundModule());
+        $manager->register(new Modules\LinksMigrationModule());
+        $manager->register(new Modules\PostsMigrationModule());
+        $manager->register(new Modules\ProductsMigrationModule());
+        $manager->register(new Modules\SystemMailModule());
         Showcase\Integration::register();
         OrderQuery\Runtime::register();
         NotFound\Runtime::register();
@@ -69,6 +73,11 @@ final class Plugin
             (new ProfilePresets\AdminPage($manager, $admin))->register();
             (new OrderQuery\AdminPage($manager, $admin))->register();
             (new NotFound\AdminPage($manager, $admin))->register();
+            (new Migration\AdminPage($manager, $admin))->register();
+            (new PostMigration\AdminPage($manager, $admin))->register();
+            (new ProductMigration\AdminPage($manager, $admin))->register();
+            (new SystemMail\AdminPage($manager, $admin))->register();
+            (new ConfigBackup\AdminPage($admin))->register();
             if (!TopInfo\Runtime::conflict()) { (new TopInfo\Editor())->register(); }
         }
     }

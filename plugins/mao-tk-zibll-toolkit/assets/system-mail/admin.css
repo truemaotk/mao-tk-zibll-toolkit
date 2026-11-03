@@ -1,0 +1,60 @@
+.mtk-mail [hidden] { display:none !important; }
+.mtk-mail .mtk-mail-status { display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 24px;margin-bottom:22px; }
+.mtk-mail .mtk-mail-status p { margin:6px 0 0;color:var(--mao-tk-muted);font-size:12px; }
+.mtk-mail-layout { display:grid;grid-template-columns:minmax(340px,420px) minmax(0,1fr);gap:24px;align-items:start; }
+.mtk-mail-controls,.mtk-mail-preview { min-width:0; }
+.mtk-mail-control-head { padding:22px 24px 16px; }
+.mtk-mail-control-head label { display:block;margin:0 0 8px;font-size:13px;font-weight:600; }
+.mtk-mail :is(select,input[type=text],input[type=number],input[type=email],textarea) { width:100%;max-width:none;min-height:40px;margin:0;font:inherit;border-radius:7px; }
+.mtk-mail [data-mail-mode-wrap] { margin-top:18px; }
+.mtk-mail .description,.mtk-mail-scope-hint { color:var(--mao-tk-muted);font-size:12px;line-height:1.7;margin:12px 0 0; }
+.mtk-mail-settings-groups { border-top:1px solid var(--mao-tk-border); }
+.mtk-mail .mtk-mail-settings-groups .mao-tk-disclosure { margin:0;border:0;border-bottom:1px solid var(--mao-tk-border);border-radius:0; }
+.mtk-mail .mtk-mail-settings-groups .mao-tk-disclosure__trigger { padding:16px 24px;min-height:52px; }
+.mtk-mail-fields { padding:2px 24px 20px; }
+.mtk-mail-field { margin-bottom:18px;min-width:0; }
+.mtk-mail-field:last-child { margin-bottom:0; }
+.mtk-mail-field-head { display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px; }
+.mtk-mail-field-head>label:first-child { font-weight:500;font-size:13px; }
+.mtk-mail-inherit { display:flex;align-items:center;gap:5px;font-size:11px;color:var(--mao-tk-muted);white-space:nowrap; }
+.mtk-mail-inherit input { margin:0; }
+.mtk-mail-field p,.mtk-mail-fields>p { margin:8px 0 0;font-size:11px;line-height:1.65;color:var(--mao-tk-muted); }
+.mtk-mail-color { display:flex;gap:12px;align-items:center;border:1px solid var(--mao-tk-border);border-radius:7px;padding:7px 10px;min-height:40px;box-sizing:border-box; }
+.mtk-mail-color input { width:30px;height:26px;padding:0;min-height:0;border:0;box-shadow:none; }
+.mtk-mail-color code { padding:0;background:none;font-size:12px;color:var(--mao-tk-muted); }
+.mtk-mail-logo-row { display:flex;gap:8px;align-items:center; }
+.mtk-mail-logo-row input { min-width:0;flex:1; }
+.mtk-mail-logo-row .button { flex-shrink:0; }
+.mtk-mail-tokens { display:flex;gap:6px;flex-wrap:wrap;margin-top:10px; }
+.mtk-mail-tokens button { padding:4px 6px;border:1px solid var(--mao-tk-border);border-radius:5px;background:#f7f9fc;color:var(--mao-tk-muted);font:11px/1.5 monospace;cursor:pointer; }
+.mtk-mail-tokens button:hover:not(:disabled) { border-color:var(--mao-tk-accent);color:var(--mao-tk-accent); }
+.mtk-mail-tokens button:disabled { opacity:.55;cursor:default; }
+.mtk-mail-save { display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px; }
+.mtk-mail-save span { color:var(--mao-tk-muted);font-size:12px; }
+.mtk-mail-preview { position:sticky;top:50px; }
+.mtk-mail-preview-head { padding:20px 24px;display:flex;gap:18px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--mao-tk-border); }
+.mtk-mail-preview-head p,.mtk-mail-test p { color:var(--mao-tk-muted);font-size:12px;margin:6px 0 0;line-height:1.7; }
+.mtk-mail-device { display:flex;background:#f2f5f9;padding:4px;border-radius:7px;flex-shrink:0; }
+.mtk-mail-device button { padding:6px 10px;border:1px solid transparent;background:transparent;border-radius:5px;color:var(--mao-tk-muted);font:inherit;font-size:12px;cursor:pointer; }
+.mtk-mail-device button[aria-pressed=true] { border-color:var(--mao-tk-border);background:#fff;color:var(--mao-tk-text); }
+.mtk-mail-preview-toolbar { display:flex;align-items:end;gap:14px;justify-content:space-between;padding:14px 24px; }
+.mtk-mail-preview-toolbar label { display:grid;gap:7px;min-width:0;font-size:12px; }
+.mtk-mail-preview-toolbar select { min-height:34px;font-size:12px; }
+.mtk-mail-preview-toolbar>span { color:var(--mao-tk-muted);font-size:11px;max-width:45%; }
+.mtk-mail-subject { padding:10px 24px;border-top:1px solid var(--mao-tk-border);font-size:12px;overflow-wrap:anywhere; }
+.mtk-mail-preview-stage { padding:16px;background:#edf1f6;border-top:1px solid var(--mao-tk-border);overflow:hidden; }
+.mtk-mail-preview-stage iframe { width:100%;min-height:440px;height:680px;border:0;background:#fff;display:block;margin:auto; }
+.mtk-mail-preview-stage[data-device=mobile] iframe { width:375px;max-width:100%; }
+.mtk-mail-test { padding:18px 24px;border-top:1px solid var(--mao-tk-border); }
+.mtk-mail-test h3 { margin:0;font-size:13px; }
+.mtk-mail-test-row { display:flex;gap:10px;margin-top:14px; }
+.mtk-mail-test-row input { min-width:0;flex:1; }
+.mtk-mail-test-row .button { flex-shrink:0; }
+.mtk-mail .mtk-mail-notice { background:#f4f8ff;border:1px solid #d5e2f7;border-radius:8px;padding:12px 16px;margin-bottom:18px; }
+.mtk-mail .mtk-mail-notice[data-error=true] { color:#a52e3a;background:#fff8f8;border-color:#efcdd1; }
+.mtk-mail-inventory { margin-top:24px; }
+.mtk-mail .mtk-mail-inventory .mao-tk-disclosure { margin:0;border:0; }
+.mtk-mail-inventory .mao-tk-disclosure__copy { padding:0 24px 18px; }
+@media(max-width:1250px) { .mtk-mail-layout { grid-template-columns:minmax(320px,380px) minmax(0,1fr);gap:18px; } .mtk-mail-preview-head { flex-wrap:wrap; } }
+@media(max-width:1000px) { .mtk-mail-layout { grid-template-columns:minmax(0,1fr); } .mtk-mail-preview { position:static; } }
+@media(max-width:600px) { .mtk-mail { margin-right:10px; } .mtk-mail .mtk-mail-status,.mtk-mail-control-head,.mtk-mail-save,.mtk-mail-preview-head,.mtk-mail-test { padding:18px 16px; } .mtk-mail-fields { padding-left:16px;padding-right:16px; } .mtk-mail .mtk-mail-settings-groups .mao-tk-disclosure__trigger { padding-left:16px;padding-right:16px; } .mtk-mail-preview-toolbar,.mtk-mail-subject { padding-left:16px;padding-right:16px; } .mtk-mail-preview-stage { padding:8px; } .mtk-mail-test-row { flex-wrap:wrap; } .mtk-mail-test-row input { flex-basis:100%; } }

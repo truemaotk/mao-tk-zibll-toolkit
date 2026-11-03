@@ -6,8 +6,6 @@
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon{transition:transform 380ms cubic-bezier(.32,0,.18,1),color .2s ease;transform:rotate(0deg)}
 .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-trigger[aria-expanded="true"] .mtk-faq-icon{transform:rotate(90deg)}
 html[data-mao-tk-motion="off"] :is(.mao-tk-disclosure__trigger svg,.mtk-faq-icon){transition:none!important}
-.mao-tk-motion-preference{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px;margin:0 0 18px;color:var(--mao-tk-muted,#65758c);font-size:12px}
-.mao-tk-motion-preference select{min-height:32px;max-width:150px}.mao-tk-motion-preference__note{font-size:11px}
 html[data-mao-tk-motion="on"] .mao-tk-toolkit .mao-tk-disclosure__trigger svg,
 html[data-mao-tk-motion="on"] .maotk-ui-kit.mtk-article-reading[data-mao-tk-ui-reading="1"] .mtk-faq-icon{transition:transform 380ms cubic-bezier(.32,0,.18,1),color .2s ease!important}
 #mao-tk-showcase-settings .mtk-showcase-admin :is(.setting-section,.category-editor)>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none}

@@ -1,0 +1,33 @@
+.mtk-config [hidden]{display:none!important}
+.mtk-config-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.mtk-config-fields{padding:22px 24px}
+.mtk-config-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 20px}
+.mtk-config-checks label,.mtk-config-images,.mtk-config-ack{display:flex;align-items:center;gap:7px;line-height:1.6}
+.mtk-config-checks input,.mtk-config-images input,.mtk-config-ack input{flex-shrink:0;margin:0}
+.mtk-config-images{padding-top:20px;margin-top:20px;border-top:1px solid var(--mao-tk-border)}
+.mtk-config .description{font-size:12px;line-height:1.75;color:var(--mao-tk-muted);margin-top:12px}
+.mtk-config-actions{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;border-top:1px solid var(--mao-tk-border)}
+.mtk-config-actions>span{font-size:12px;color:var(--mao-tk-muted)}
+.mtk-config-actions .button{flex-shrink:0}
+.mtk-config-fields>label[for]{display:block;font-weight:500;margin-bottom:12px}
+.mtk-config input[type=file]{max-width:100%;padding:14px;border:1px dashed var(--mao-tk-border);border-radius:7px;width:100%;background:var(--mao-tk-subtle)}
+.mtk-config-boundary{padding:18px 24px;border-top:1px solid var(--mao-tk-border);color:var(--mao-tk-muted)}
+.mtk-config-boundary p{font-size:12px}
+.mtk-config-preview,.mtk-config-history,.mtk-config-help{margin-top:24px}
+.mtk-config-notice{padding:12px 16px;border:1px solid #ccdff5;background:#f4f8ff;border-radius:8px;margin-bottom:20px}
+.mtk-config-notice[data-error=true]{border-color:#e9c5c8;background:#fff7f7;color:#a33442}
+.mtk-config :is([data-config-meta],.mtk-config-notice){overflow-wrap:anywhere}
+.mtk-config-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(100px,42%);align-items:center;gap:20px;padding:14px 0;border-bottom:1px solid var(--mao-tk-border)}
+.mtk-config-row:first-child{padding-top:0}.mtk-config-row:last-child{border-bottom:0}
+.mtk-config-row label{display:flex;align-items:center;gap:8px}
+.mtk-config-row small{font-size:12px;line-height:1.7;color:var(--mao-tk-muted);overflow-wrap:anywhere}
+.mtk-config-row[data-error=true] small{color:#a33442}
+.mtk-config-ack{margin-top:20px;font-weight:500}
+.mtk-config [data-config-result]:not(:empty){margin-top:14px}
+.mtk-config-links{display:flex;flex-wrap:wrap;gap:10px}
+.mtk-config-history-line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--mao-tk-border)}
+.mtk-config-history-line:first-child{padding-top:0}.mtk-config-history-line:last-child{border-bottom:0;padding-bottom:0}
+.mtk-config-history-line small{display:block;font-size:12px;color:var(--mao-tk-muted);margin-top:3px}
+.mtk-config-help .mao-tk-disclosure{margin:0;border:0}.mtk-config-help .mao-tk-disclosure__copy{padding:0 24px 20px}
+@media(max-width:1200px){.mtk-config-layout{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.mtk-config-fields,.mtk-config-actions,.mtk-config-boundary{padding:18px 16px}.mtk-config-checks{grid-template-columns:minmax(0,1fr);gap:12px}.mtk-config-actions{align-items:flex-start;flex-wrap:wrap}.mtk-config-row{grid-template-columns:minmax(0,1fr);gap:6px}.mtk-config-row small{padding-left:24px}.mtk-config .mao-tk-toolkit__section-head{flex-wrap:wrap}.mtk-config-history-line{gap:10px}}

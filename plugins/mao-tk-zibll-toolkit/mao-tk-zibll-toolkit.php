@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Mao TK Zibll Toolkit
  * Description: 面向 Zibll 主题的模块化扩展工作台，提供独立后台与按需启用的模块。
- * Version: 1.15.2
+ * Version: 1.20.0
  * Author: Mao TK
  * Author URI: https://www.maotk.com/
  * Requires at least: 6.0
@@ -12,7 +12,7 @@
 
 defined('ABSPATH') || exit;
 
-define('MAO_TK_ZIBLL_TOOLKIT_VERSION', '1.15.2');
+define('MAO_TK_ZIBLL_TOOLKIT_VERSION', '1.20.0');
 define('MAO_TK_ZIBLL_TOOLKIT_FILE', __FILE__);
 define('MAO_TK_ZIBLL_TOOLKIT_DIR', plugin_dir_path(__FILE__));
 define('MAO_TK_ZIBLL_TOOLKIT_URL', plugin_dir_url(__FILE__));
@@ -80,6 +80,36 @@ require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/not-found/class-provider.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/not-found/class-runtime.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/not-found/class-admin-page.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/modules/class-not-found-module.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/migration/class-store.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/migration/class-package.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/migration/class-links.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/migration/class-admin-page.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/modules/class-links-migration-module.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/post-migration/class-store.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/post-migration/class-package.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/post-migration/class-markup.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/post-migration/class-posts.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/post-migration/class-admin-page.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/modules/class-posts-migration-module.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/product-migration/class-store.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/product-migration/class-schema.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/product-migration/class-package.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/product-migration/class-markup.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/product-migration/class-products.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/product-migration/class-admin-page.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/modules/class-products-migration-module.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/system-mail/class-catalog.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/system-mail/class-settings.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/system-mail/class-renderer.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/system-mail/class-source.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/system-mail/class-runtime.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/system-mail/class-admin-page.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/modules/class-system-mail-module.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/config-backup/class-registry.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/config-backup/class-assets.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/config-backup/class-store.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/config-backup/class-service.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/config-backup/class-admin-page.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/class-admin.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/class-plugin.php';
 

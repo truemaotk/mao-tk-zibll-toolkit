@@ -26,6 +26,10 @@ final class ModuleManager
             'user-profile-presets' => true,
             'page-order-query' => true,
             'site-not-found' => true,
+            'data-migration-links' => true,
+            'data-migration-posts' => true,
+            'data-migration-products' => true,
+            'system-mail-appearance' => false,
         ));
     }
 
