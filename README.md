@@ -2,7 +2,7 @@
 
 适用于 WordPress + Zibll 子比主题的模块化工具箱，同时提供文章写作技能 `maotk-toolkit-articles`。
 
-**当前插件：1.20.0 · SKILL：1.3.0**
+**当前插件：1.21.0 · SKILL：1.3.0**
 
 > 本仓库按作者决定公开展示源码，**暂未授予开源许可**。公开可见不等于允许任意使用、修改或再分发。第三方组件继续适用各自随附许可，详见 [权利说明](RIGHTS.md) 与 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
@@ -12,15 +12,17 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| `mao-tk-zibll-toolkit-1.20.0.zip` | WordPress 后台 → 插件 → 安装插件 → 上传插件 |
+| `mao-tk-zibll-toolkit-1.21.0.zip` | WordPress 后台 → 插件 → 安装插件 → 上传插件 |
 | `maotk-toolkit-articles-1.3.0.zip` | 本地 Codex 写作技能；保持整个技能文件夹完整 |
 | `SHA256SUMS.txt` | 对应发行包的 SHA-256 校验值 |
 
-插件最新版见 [Toolkit 1.20.0 发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.20.0)。SKILL 1.3.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.3.0)，两者分别安装与更新。技能包含 WebP／无损图片、新文章封面、Rank Math 与旧文完整保留流程；1.3.0 增加资源迁入新站、旧站引用扫描、附件与免费／付费权限验收。
+插件最新版见 [Toolkit 1.21.0 发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.21.0)。SKILL 1.3.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.3.0)，两者分别安装与更新。技能包含 WebP／无损图片、新文章封面、Rank Math 与旧文完整保留流程；1.3.0 增加资源迁入新站、旧站引用扫描、附件与免费／付费权限验收。
 
 GitHub 自动生成的 **Source code / Download ZIP 是整仓库源码，不是 WordPress 安装包**。请使用 Releases 中的插件 ZIP。升级前备份；已有明确关闭的模块不会被强制开启。使用与再分发权限以本仓库权利说明为准。
 
 1.20.0 新增系统邮件模板、客服回复和 CNY 显示，并汇总链接／文章／子比商品迁移与配置备份。系统邮件默认关闭，升级后须核对来源、配置并主动开启。本版已完成本地验收；GitHub 发布不代表已部署到作者网站或已完成真实邮箱投递验收。安装和继承规则见 [系统邮件指南](docs/SYSTEM_MAIL.md)。
+
+1.21.0 新增可独立关闭的自定义页脚：栏目、社交图标替换/大小/底座圆角、二维码与版权备案，支持手机折叠、媒体库和独立配置预览。先配置保存再开启；关闭恢复原生页脚，不改主题文件。配置备份覆盖新增页脚分类。用户自行安装，未由本次发布部署生产网站。见 [页脚指南](docs/CUSTOM_FOOTER.md)。
 
 ## 两部分怎样配合
 

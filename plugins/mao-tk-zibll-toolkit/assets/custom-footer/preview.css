@@ -1,0 +1,5 @@
+/* Isolated admin iframe only. Never enqueued on the public site. */
+body{--main-bg-color:#fff;--main-color:#4e5358;--key-color:#333;--muted-color:#777;--muted-bg-2-color:#f6f7f8;--main-border-color:rgba(50,50,50,.06);--body-bg-color:#f5f6f7}
+body.dark-theme{--main-bg-color:#323335;--main-color:#e5eef7;--key-color:#f8fafc;--muted-color:#b4b6bb;--muted-bg-2-color:#37383a;--main-border-color:rgba(114,114,114,.1);--body-bg-color:#292a2d}
+*{box-sizing:border-box}body{margin:0;padding-top:24px;font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;background:var(--body-bg-color);color:var(--main-color)}h2,p{margin:0}a{color:inherit}
+.mtk-footer-component{--mian-max-width:inherit}.mtk-footer-component .mg-b{border:0;background:none}.mtk-footer-component .widget p{margin:0 0 10px}.mtk-footer-component .row{margin-left:-15px;margin-right:-15px}

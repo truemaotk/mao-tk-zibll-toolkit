@@ -17,3 +17,5 @@
 程序不打包网页截图原图、生产文章数据、客户资料、支付密钥或后台会话。历史机器专用测试夹具与内部部署记录未公开。
 
 推荐／工具入口 v1.1.1 复用作者旧文章样式及已提供的链接 SVG。FinalShell 标志来源于作者旧文章媒体，只作工具识别使用，不另行授予品牌素材许可。v2rayN 图标原许可位于插件 assets/article-ui/resources/assets/V2RAYN-LICENSE。示例不包含作者的推广 ID，使用时填写自己的完整网址。
+
+自定义页脚 1.21.0 以用户提供的腾飞博客页脚片段和逐轮确认的 v0.1.11 样板为视觉参考；不附带原人物、背景、二维码或完整主题文件。页脚 Tabler 细线图标的 MIT 原文保留于 plugins/mao-tk-zibll-toolkit/custom-footer/TABLER-LICENSE.txt；不改变整体权利说明。

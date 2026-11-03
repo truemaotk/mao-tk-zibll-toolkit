@@ -58,7 +58,7 @@ defined('ABSPATH') || exit;
                         'display' => array('文章展示', array('top-info', 'article-freshness')),
                         'content' => array('正文组件', array('article-ui-code', 'article-ui-link-preview', 'article-ui-tabs', 'article-ui-postsbox', 'article-ui-reading', 'article-ui-resources', 'article-note')),
                         'pages' => array('页面与链接', array('page-showcase', 'private-links', 'user-profile-presets', 'page-order-query')),
-                        'site' => array('站点功能', array('site-maintenance', 'site-not-found', 'system-mail-appearance')),
+                        'site' => array('站点功能', array('site-maintenance', 'site-not-found', 'system-mail-appearance', 'site-custom-footer')),
                         'migration' => array('导入&导出', array('data-migration-links','data-migration-posts','data-migration-products')),
                         'workspace' => array('工作台与扩展', array()),
                     );
@@ -89,6 +89,7 @@ defined('ABSPATH') || exit;
                                 <?php if ($module['id'] === 'user-profile-presets') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ProfilePresets\AdminPage::SLUG)); ?>">管理头像、背景与注册规则</a></p><?php endif; ?>
                                 <?php if ($module['id'] === 'page-order-query') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . OrderQuery\AdminPage::SLUG)); ?>">设置与创建查询页面</a></p><?php endif; ?>
                                 <?php if ($module['id'] === 'site-not-found') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . NotFound\AdminPage::SLUG)); ?>">设置与预览 404 公益页面</a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'site-custom-footer') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . CustomFooter\AdminPage::SLUG)); ?>">页脚栏目、社交图标与预览</a></p><?php endif; ?>
                                 <?php if ($module['id'] === 'system-mail-appearance') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . SystemMail\AdminPage::SLUG)); ?>">邮件通用模板、类型设置与预览</a></p><?php endif; ?>
                             </div>
                             <div class="mao-tk-toolkit__module-actions">

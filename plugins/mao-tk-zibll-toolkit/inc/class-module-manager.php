@@ -30,6 +30,7 @@ final class ModuleManager
             'data-migration-posts' => true,
             'data-migration-products' => true,
             'system-mail-appearance' => false,
+            'site-custom-footer' => false,
         ));
     }
 

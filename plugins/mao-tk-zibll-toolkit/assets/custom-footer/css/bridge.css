@@ -1,0 +1,20 @@
+/* Only the native footer containing this module is adapted. Never change site widths. */
+.mtk-footer-component,
+.mtk-footer-component *,
+.mtk-footer-component *::before,
+.mtk-footer-component *::after { box-sizing: border-box; }
+.mtk-footer-component { text-align: left; }
+.mtk-footer-component #mtk-footer-about .textwidget p,
+.mtk-footer-component #mtk-footer-inner .menu { text-align: left; }
+body.mao-tk-custom-footer-active > footer.footer:has(> .container-footer > .mtk-footer-component) {
+  padding: 0;
+  margin: 0;
+  background: var(--main-bg-color, #fff);
+}
+body.mao-tk-custom-footer-active > footer.footer > .container-footer:has(> .mtk-footer-component) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
