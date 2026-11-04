@@ -49,6 +49,7 @@ final class Plugin
         $manager->register(new Modules\ProductsMigrationModule());
         $manager->register(new Modules\SystemMailModule());
         $manager->register(new Modules\CustomFooterModule());
+        $manager->register(new Modules\ArchiveHeaderModule());
         Showcase\Integration::register();
         OrderQuery\Runtime::register();
         NotFound\Runtime::register();
@@ -79,6 +80,7 @@ final class Plugin
             (new ProductMigration\AdminPage($manager, $admin))->register();
             (new SystemMail\AdminPage($manager, $admin))->register();
             (new CustomFooter\AdminPage($manager, $admin))->register();
+            (new ArchiveHeader\AdminPage($manager, $admin))->register();
             (new ConfigBackup\AdminPage($admin))->register();
             if (!TopInfo\Runtime::conflict()) { (new TopInfo\Editor())->register(); }
         }

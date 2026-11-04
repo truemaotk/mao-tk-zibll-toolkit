@@ -31,6 +31,7 @@ final class ModuleManager
             'data-migration-products' => true,
             'system-mail-appearance' => false,
             'site-custom-footer' => false,
+            'archive-header' => false,
         ));
     }
 

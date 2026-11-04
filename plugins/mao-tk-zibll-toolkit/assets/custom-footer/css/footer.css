@@ -25,19 +25,6 @@
   margin-top:25px;
   margin-left: 5px;
 }
-.mtk-footer-component #mtk-footer-inner .tfbk-footer .widget-title::before {
-  position:absolute;
-  bottom:-5px;
-  left:0;
-  width:40px;
-  height:2px;
-  background-color:#40e0d0!important;
-  content:'';
-  transition:width .3s ease;
-}
-.mtk-footer-component #mtk-footer-inner .tfbk-footer section:hover .widget-title::before {
-  width:80px;
-}
 .mtk-footer-component #mtk-footer-inner .tfbk-footer .textwidget {
   padding:10px 0;
   line-height:26px;

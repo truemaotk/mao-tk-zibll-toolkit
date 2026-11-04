@@ -31,6 +31,9 @@ final class Settings
                 array('title' => '帮助中心', 'links' => self::placeholder_links()),
             ),
             'social_title' => '关注我们',
+            'qr_border_enabled' => true,
+            'qr_border_width' => 1,
+            'qr_border_radius' => 12,
             'qrcodes' => array(
                 array('label' => '关注公众号', 'url' => '', 'link' => ''),
                 array('label' => '加入群聊', 'url' => '', 'link' => ''),
@@ -63,7 +66,12 @@ final class Settings
                 $resolved[$key] = in_array($key, array('logo_url', 'icp_icon_url'), true) ? self::image_url($overrides[$key]) : $overrides[$key];
             } elseif (is_int($value) && is_numeric($overrides[$key])) {
                 if ($key === 'schema_version') { continue; }
-                $bounds = array('social_icon_size' => array(12,32), 'social_base_radius' => array(0,24));
+                $bounds = array(
+                    'social_icon_size' => array(12, 32),
+                    'social_base_radius' => array(0, 24),
+                    'qr_border_width' => array(1, 4),
+                    'qr_border_radius' => array(0, 24),
+                );
                 $range = $bounds[$key];
                 $resolved[$key] = max($range[0], min($range[1], (int) $overrides[$key]));
             } elseif (is_bool($value) && is_bool($overrides[$key])) {

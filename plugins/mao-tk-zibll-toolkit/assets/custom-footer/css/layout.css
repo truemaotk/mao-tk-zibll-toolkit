@@ -1,8 +1,12 @@
-/* v0.1.6. Container dimensions follow the verified Zibll header/footer rule.
-   Only --mian-max-width is read here; the 1440px site value belongs to preview. */
+/* Zibll's header shell is the theme width plus 180px. Match its content inset. */
+.mtk-footer-component {
+  --mtk-footer-inline-gutter: 30px;
+  --mtk-footer-content-max: calc(var(--mian-max-width, 1200px) + 180px - 2 * var(--mtk-footer-inline-gutter));
+}
+.mtk-footer-component[data-footer-width="full"] { --mtk-footer-content-max: none; }
 .mtk-footer-component #mtk-footer-inner .tfbk-footer>.wrapper {
-  width: calc(100% - 60px);
-  max-width: calc(var(--mian-max-width, 1200px) + 180px);
+  width: calc(100% - 2 * var(--mtk-footer-inline-gutter));
+  max-width: var(--mtk-footer-content-max);
   margin: 0 auto;
   padding: 0;
   border-bottom: 0;
@@ -11,30 +15,38 @@
   margin: 0;
 }
 .mtk-footer-component #mtk-footer-inner .footer-bottom {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-inline: var(--mtk-footer-inline-gutter);
 }
-.mtk-footer-component .footer-bottom-container {
-  max-width: calc(var(--mian-max-width, 1200px) + 180px);
+.mtk-footer-component #mtk-footer-inner .footer-bottom-container {
+  max-width: var(--mtk-footer-content-max);
 }
 @media (min-width: 769px) {
   .mtk-footer-component #mtk-footer-inner .tfbk-footer .tfbk-footer-widget-in {
-    display: grid;
-    grid-template-columns: minmax(0,1.5fr) repeat(3,minmax(0,.75fr)) minmax(300px,1.65fr);
-    column-gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    column-gap: clamp(20px, 2vw, 32px);
   }
   .mtk-footer-component #mtk-footer-inner .tfbk-footer section.widget {
+    flex: 1 1 0;
     width: auto!important;
     min-width: 0;
     padding: 0;
+    overflow-wrap: anywhere;
   }
-  .mtk-footer-component #mtk-footer-social {
-    grid-column: 5;
-    grid-row: 1;
+  .mtk-footer-component #mtk-footer-inner .tfbk-footer #mtk-footer-about {
+    flex-grow: 1.85;
+  }
+  .mtk-footer-component #mtk-footer-about .textwidget p {
+    max-width: 60ch;
+  }
+  .mtk-footer-component #mtk-footer-inner .tfbk-footer #mtk-footer-social {
+    --mtk-footer-qr-size: 90px;
+    flex: 0 0 auto;
   }
   .mtk-footer-component #mtk-footer-inner .tfbk-footer .footer-links {
-    grid-column: 1 / -1;
-    grid-row: 2;
+    order: 1;
+    flex: 0 0 100%;
     width: 100%;
     max-width: none;
     padding-left: 0;
@@ -43,31 +55,36 @@
   }
   .mtk-footer-component #mtk-footer-inner #mtk-footer-social .qr-container {
     margin: 0;
+    padding-inline: 0;
     justify-content: flex-start;
     gap: 10px;
   }
-  .mtk-footer-component #mtk-footer-social .qr-item { padding: 0; }
+  .mtk-footer-component #mtk-footer-social .qr-item {
+    flex: 0 0 var(--mtk-footer-qr-size);
+    width: var(--mtk-footer-qr-size);
+    padding: 0;
+  }
+  .mtk-footer-component #mtk-footer-social .qr-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
 }
 @media (min-width: 769px) and (max-width: 1100px) {
-  .mtk-footer-component #mtk-footer-inner .tfbk-footer .tfbk-footer-widget-in {
-    grid-template-columns: minmax(0,1.5fr) repeat(3,minmax(0,.75fr)) minmax(236px,1.65fr);
-    column-gap: 20px;
+  .mtk-footer-component #mtk-footer-inner .tfbk-footer #mtk-footer-social {
+    --mtk-footer-qr-size: 72px;
   }
-  .mtk-footer-component #mtk-footer-social .qr-wrapper { width: 72px; height: 72px; }
-  .mtk-footer-component #mtk-footer-social .qr-tips { max-width: 72px; font-size: 12px; }
+  .mtk-footer-component #mtk-footer-social .qr-tips { font-size: 12px; }
 }
-@media (min-width: 769px) and (max-width: 991px) {
-  .mtk-footer-component #mtk-footer-inner .tfbk-footer>.wrapper {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+@media (min-width: 992px) {
+  .mtk-footer-component[data-footer-width="full"] {
+    --mtk-footer-inline-gutter: clamp(30px, 4vw, 76px);
   }
+}
+@media (max-width: 991px) {
+  .mtk-footer-component { --mtk-footer-inline-gutter: 20px; }
 }
 @media (max-width: 768px) {
-  .mtk-footer-component #mtk-footer-inner .tfbk-footer>.wrapper {
-    width: 100%;
-    padding: 0 20px;
-  }
   .mtk-footer-component #mtk-footer-inner .footer-links { margin: 0; }
   .mtk-footer-component #mtk-footer-inner #mtk-footer-social .widget-title {
     text-align: center;
@@ -78,5 +95,4 @@
   .mtk-footer-component #mtk-footer-inner #mtk-footer-social {
     border-bottom: 0;
   }
-  .mtk-footer-component #mtk-footer-inner .footer-bottom { padding-left: 20px; padding-right: 20px; }
 }

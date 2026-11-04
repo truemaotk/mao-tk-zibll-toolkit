@@ -1,0 +1,88 @@
+.mtk-archive-header {
+  color: var(--main-color, #4e5358);
+  background: var(--main-bg-color, #fff);
+  border-radius: var(--main-radius, 12px);
+  border: 1px solid var(--main-border-color, #eee);
+  margin: 0 0 14px;
+}
+
+.mtk-archive-header__cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3.25;
+  object-fit: cover;
+  border-radius: var(--main-radius, 12px) var(--main-radius, 12px) 0 0;
+}
+
+.mtk-archive-header__body { padding: 17px 20px; }
+
+.mtk-archive-header__row,
+.mtk-archive-header__identity,
+.mtk-archive-header__actions {
+  display: flex;
+  align-items: center;
+}
+
+.mtk-archive-header__row { justify-content: space-between; gap: 12px; }
+.mtk-archive-header__identity { gap: 9px; min-width: 0; flex-wrap: wrap; }
+.mtk-archive-header__icon { font-size: 1.05em; color: var(--key-color, #333); }
+.mtk-archive-header #mtk-archive-title {
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  color: var(--key-color, #333);
+  font-size: clamp(17px, 2vw, 20px);
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.mtk-archive-header #mtk-archive-title span {
+  text-decoration: underline 2px var(--focus-color, #ff8d1a);
+  text-underline-offset: 6px;
+  text-decoration-skip-ink: none;
+}
+
+.mtk-archive-header__meta { color: var(--muted-color, #777); font-size: 12px; white-space: nowrap; }
+.mtk-archive-header__actions { gap: 4px; flex: 0 0 auto; }
+.mtk-archive-header .mtk-archive-header__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  color: var(--main-color, #4e5358);
+  border-radius: 8px;
+  font-size: 17px;
+}
+.mtk-archive-header .mtk-archive-header__action:hover {
+  background: var(--muted-bg-2-color, #f5f6f7);
+  color: var(--focus-color, #ff8d1a);
+}
+.mtk-archive-header .mtk-archive-header__action:focus-visible {
+  outline: 2px solid var(--focus-color, #ff8d1a);
+  outline-offset: -2px;
+}
+.mtk-archive-header__description {
+  margin: 9px 0 0;
+  color: var(--muted-color, #777);
+  font-size: 13px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.mtk-archive-header__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .mtk-archive-header__body { padding: 10px 12px 10px 14px; }
+  .mtk-archive-header__cover { aspect-ratio: 2.7; }
+  .mtk-archive-header__identity { gap: 5px 7px; }
+}

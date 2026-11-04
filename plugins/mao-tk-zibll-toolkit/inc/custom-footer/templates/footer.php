@@ -1,5 +1,5 @@
 <?php defined('ABSPATH') || exit; ?>
-<div class="mtk-footer-component" data-footer-width="<?php echo esc_attr($settings['width_mode']); ?>" data-footer-follow="<?php echo $settings['show_follow'] ? '1' : '0'; ?>" data-footer-count="<?php echo esc_attr((string) $footer_columns); ?>">
+<div class="mtk-footer-component" data-footer-width="<?php echo esc_attr($settings['width_mode']); ?>">
     <div role="group" aria-label="网站页脚" id="mtk-footer-outer" class="onecad_new_footer bg_img">
         <div id="mtk-footer-inner" class="footer">
             <div id="mtk-footer-background">

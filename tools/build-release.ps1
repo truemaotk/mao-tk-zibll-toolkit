@@ -8,7 +8,7 @@ if (Test-Path -LiteralPath $outputPath) {
 } else { New-Item -ItemType Directory -Path $outputPath | Out-Null }
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $packages = @(
-    @{ Directory = Join-Path $repoRoot 'plugins/mao-tk-zibll-toolkit'; File = 'mao-tk-zibll-toolkit-1.21.0.zip' },
+    @{ Directory = Join-Path $repoRoot 'plugins/mao-tk-zibll-toolkit'; File = 'mao-tk-zibll-toolkit-1.22.0.zip' },
     @{ Directory = Join-Path $repoRoot 'skills/maotk-toolkit-articles'; File = 'maotk-toolkit-articles-1.3.0.zip' }
 )
 $checksums = @()

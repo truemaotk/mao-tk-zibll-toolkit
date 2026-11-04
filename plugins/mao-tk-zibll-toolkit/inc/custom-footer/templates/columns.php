@@ -1,7 +1,7 @@
 <?php defined('ABSPATH') || exit; ?>
             <?php if ($settings['show_about']): ?>
             <section id="mtk-footer-about" class="widget widget_text mg-b zibtf-radius mtk-footer-always-open">
-                <h2 class="widget-title footer-h"><?php echo esc_html($settings['about_title']); ?></h2>
+                <h2 class="widget-title footer-h"><span class="mtk-footer-title-text"><?php echo esc_html($settings['about_title']); ?></span></h2>
                 <div class="mtk-footer-static-content">
                 <div class="textwidget"><p><?php echo esc_html($settings['about_description']); ?></p></div>
                 <?php if ($social_links): ?>
@@ -33,7 +33,7 @@
             <?php endif; ?>
             <?php foreach ($menu_groups as $index => $group): ?>
             <section id="mtk-footer-menu-<?php echo esc_attr((string) ($index + 2)); ?>" class="widget widget_nav_menu mg-b zibtf-radius" data-footer-disclosure>
-                <h2 class="widget-title footer-h"><button class="mtk-footer-toggle" type="button" aria-expanded="true" aria-controls="mtk-footer-menu-panel-<?php echo esc_attr((string) ($index + 1)); ?>" disabled><span><?php echo esc_html($group['title']); ?></span><span class="mtk-footer-chevron" aria-hidden="true"></span></button></h2>
+                <h2 class="widget-title footer-h"><button class="mtk-footer-toggle" type="button" aria-expanded="true" aria-controls="mtk-footer-menu-panel-<?php echo esc_attr((string) ($index + 1)); ?>" disabled><span class="mtk-footer-title-text"><?php echo esc_html($group['title']); ?></span><span class="mtk-footer-chevron" aria-hidden="true"></span></button></h2>
                 <div class="mtk-footer-panel" id="mtk-footer-menu-panel-<?php echo esc_attr((string) ($index + 1)); ?>"><div class="mtk-footer-panel-content">
                 <div class="menu-footer-container">
                     <ul id="mtk-footer-menu-items-<?php echo esc_attr((string) ($index + 1)); ?>" class="menu">

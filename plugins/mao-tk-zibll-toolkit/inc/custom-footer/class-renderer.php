@@ -26,7 +26,6 @@ final class Renderer
             return $item['url'] !== '' || $item['qr_url'] !== '' || $this->social_preview;
         }));
         $menu_groups = $settings['show_menus'] ? array_values(array_filter($settings['menu_groups'],static function(array $group): bool { foreach($group['links'] as $link) { if($link['label']!==''&&$link['url']!=='')return true; }return false; })) : array();
-        $footer_columns = ($settings['show_about'] ? 1 : 0) + count($menu_groups) + ($settings['show_follow'] ? 1 : 0);
         include __DIR__ . '/templates/footer.php';
     }
 }

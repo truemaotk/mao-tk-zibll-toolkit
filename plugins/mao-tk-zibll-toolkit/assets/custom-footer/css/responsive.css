@@ -61,9 +61,6 @@
     font-weight: 500;
     line-height: 1.5;
   }
-  .mtk-footer-component #mtk-footer-inner .tfbk-footer .widget-title::before {
-    display: none;
-  }
   .mtk-footer-component .mtk-footer-toggle {
     min-height: 52px;
     padding: 14px 0;

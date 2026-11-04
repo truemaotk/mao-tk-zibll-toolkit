@@ -110,16 +110,25 @@
       });
     });
     accordion('follow','关注我们与二维码',content=>{
-      textField(content,'栏目标题','social_title');state.qrcodes.forEach((qr,index)=>{const g=group(content,'二维码 '+(index+1));textField(g,'图片下方文字','qrcodes.'+index+'.label');imageControl(g,'二维码图片地址','qrcodes.'+index+'.url','');textField(g,'点击跳转（可留空）','qrcodes.'+index+'.link',{url:true});});
+      textField(content,'栏目标题','social_title');
+      const appearance=group(content,'统一边框');
+      const border=toggle(appearance,'显示边框','qr_border_enabled');
+      const width=rangeField(appearance,'边框粗细','qr_border_width',1,4);
+      rangeField(appearance,'外框圆角','qr_border_radius',0,24);
+      const syncBorder=()=>{width.disabled=!border.checked;};
+      border.addEventListener('change',syncBorder);
+      syncBorder();
+      appearance.append(node('p',{class:'mtkf-help'},'应用于此栏的所有二维码。边框颜色跟随主题，调节时二维码大小不变。'));
+      state.qrcodes.forEach((qr,index)=>{const g=group(content,'二维码 '+(index+1));textField(g,'图片下方文字','qrcodes.'+index+'.label');imageControl(g,'二维码图片地址','qrcodes.'+index+'.url','');textField(g,'点击跳转（可留空）','qrcodes.'+index+'.link',{url:true});});
     });
     accordion('legal','版权与备案',content=>{
       const g=group(content,'底栏信息（并排显示）');toggle(g,'显示版权信息','show_copyright');textField(g,'版权文案','copyright');toggle(g,'显示备案信息','show_icp');textField(g,'备案号','icp_label');textField(g,'备案查询地址','icp_url',{url:true,help:'原站地址为 #。当前按纯文字保留，填写有效地址后才可点击。'});imageControl(g,'备案标识图片','icp_icon_url');toggle(g,'显示查询次数和加载耗时','show_performance');
       g.append(node('p',{class:'mtkf-help'},'性能信息来自当前请求，不作为网站测速结果。默认关闭。'));
     });
     accordion('layout','布局与继承',content=>{
-      choice(content,'页脚内容宽度','width_mode',[['theme','跟随主题'],['full','全宽']]);
-      content.append(node('p',{class:'mtkf-help'},'背景始终铺满。此选项控制栏目和版权栏的内容宽度，全宽模式仍保留两侧安全边距。可切到 1920px 桌面预览对比。'));
-      const box=node('div',{class:'mtkf-readonly'});box.append(node('strong',{},'主题与配色'),node('p',{},'跟随主题时，本站页脚内容最大 1620px；全宽模式使用可用宽度，两侧仍留边距。'),node('p',{},'浅色、深色、强调色和边框跟随主题，保留已确认的间距与折叠动效。'));content.append(box);
+      choice(content,'页脚内容宽度','width_mode',[['theme','跟随页眉'],['full','全宽']]);
+      content.append(node('p',{class:'mtkf-help'},'跟随页眉时，栏目和版权栏使用同一居中宽度，两侧等量留白。全宽模式使用可用宽度，背景在两种模式下均铺满。'));
+      const box=node('div',{class:'mtkf-readonly'});box.append(node('strong',{},'主题与配色'),node('p',{},'浅色、深色、强调色和边框跟随主题。'));content.append(box);
     });
     sections.removeAttribute('aria-busy');
   }

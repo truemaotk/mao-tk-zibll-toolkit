@@ -21,6 +21,7 @@ final class Registry
             'order-query'=>array('label'=>'订单查询页面设置','option'=>\MaoTK\ZibllToolkit\OrderQuery\Settings::OPTION,'class'=>\MaoTK\ZibllToolkit\OrderQuery\Settings::class,'validator'=>'normalize'),
             'not-found'=>array('label'=>'404 公益页面设置','option'=>\MaoTK\ZibllToolkit\NotFound\Settings::OPTION,'class'=>\MaoTK\ZibllToolkit\NotFound\Settings::class,'validator'=>'normalize'),
             'custom-footer'=>array('label'=>'自定义页脚与社交图标','option'=>\MaoTK\ZibllToolkit\CustomFooter\Settings::OPTION,'class'=>\MaoTK\ZibllToolkit\CustomFooter\Settings::class,'validator'=>'normalize'),
+            'archive-header'=>array('label'=>'归档页顶部','option'=>\MaoTK\ZibllToolkit\ArchiveHeader\Settings::OPTION,'class'=>\MaoTK\ZibllToolkit\ArchiveHeader\Settings::class,'validator'=>'normalize'),
             'system-mail'=>array('label'=>'系统邮件外观与各类模板','option'=>\MaoTK\ZibllToolkit\SystemMail\Settings::KEY,'class'=>\MaoTK\ZibllToolkit\SystemMail\Settings::class,'validator'=>'validate'),
         );
     }
