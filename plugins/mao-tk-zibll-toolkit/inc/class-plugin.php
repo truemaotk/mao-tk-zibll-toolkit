@@ -50,6 +50,8 @@ final class Plugin
         $manager->register(new Modules\SystemMailModule());
         $manager->register(new Modules\CustomFooterModule());
         $manager->register(new Modules\ArchiveHeaderModule());
+        $manager->register(new Modules\R2DownloadsModule());
+        $manager->register(new Modules\R2MediaModule());
         Showcase\Integration::register();
         OrderQuery\Runtime::register();
         NotFound\Runtime::register();
@@ -81,6 +83,8 @@ final class Plugin
             (new SystemMail\AdminPage($manager, $admin))->register();
             (new CustomFooter\AdminPage($manager, $admin))->register();
             (new ArchiveHeader\AdminPage($manager, $admin))->register();
+            (new R2Downloads\AdminPage($manager, $admin))->register();
+            (new R2Media\AdminPage($manager, $admin))->register();
             (new ConfigBackup\AdminPage($admin))->register();
             if (!TopInfo\Runtime::conflict()) { (new TopInfo\Editor())->register(); }
         }

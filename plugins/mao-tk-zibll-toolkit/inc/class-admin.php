@@ -126,7 +126,10 @@ final class Admin
             wp_die('维护页配置异常或旧维护模式仍在运行，未开启维护。', '', array('response' => 400));
         }
         $saved = $this->manager->set_enabled($id, $enabled === '1');
-        $return_page = isset($_POST['return_page']) && is_string($_POST['return_page']) && in_array($_POST['return_page'], array(TopInfo\AdminPage::SLUG, Freshness\AdminPage::SLUG, ArticleUI\AdminPage::SLUG, ArticleNote\AdminPage::SLUG, Showcase\AdminPage::SLUG, PrivateLinks\AdminPage::SLUG, Maintenance\AdminPage::SLUG, ProfilePresets\AdminPage::SLUG, OrderQuery\AdminPage::SLUG, NotFound\AdminPage::SLUG, Migration\AdminPage::SLUG, PostMigration\AdminPage::SLUG, ProductMigration\AdminPage::SLUG, SystemMail\AdminPage::SLUG, CustomFooter\AdminPage::SLUG, ArchiveHeader\AdminPage::SLUG), true)
+        if ($saved && $id === R2Media\Runtime::MODULE && $enabled === '0') {
+            R2Media\Runtime::stop();
+        }
+        $return_page = isset($_POST['return_page']) && is_string($_POST['return_page']) && in_array($_POST['return_page'], array(TopInfo\AdminPage::SLUG, Freshness\AdminPage::SLUG, ArticleUI\AdminPage::SLUG, ArticleNote\AdminPage::SLUG, Showcase\AdminPage::SLUG, PrivateLinks\AdminPage::SLUG, Maintenance\AdminPage::SLUG, ProfilePresets\AdminPage::SLUG, OrderQuery\AdminPage::SLUG, NotFound\AdminPage::SLUG, Migration\AdminPage::SLUG, PostMigration\AdminPage::SLUG, ProductMigration\AdminPage::SLUG, SystemMail\AdminPage::SLUG, CustomFooter\AdminPage::SLUG, ArchiveHeader\AdminPage::SLUG, R2Downloads\AdminPage::SLUG, R2Media\AdminPage::SLUG), true)
             ? $_POST['return_page'] : self::SLUG;
         wp_safe_redirect(add_query_arg(
             array('page' => $return_page, 'mao_tk_notice' => $saved ? 'saved' : 'save-failed'),

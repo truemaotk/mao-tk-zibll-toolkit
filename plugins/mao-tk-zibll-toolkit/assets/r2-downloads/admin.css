@@ -1,0 +1,78 @@
+.mtk-r2 {
+    --mtk-r2-inset: 24px;
+    --mtk-r2-control-border: #aebcd0;
+}
+
+.mtk-r2 [hidden] { display: none !important; }
+.mtk-r2 .mao-tk-toolkit__header { margin-bottom: 20px; }
+.mtk-r2 .mtk-r2__state { grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 16px var(--mtk-r2-inset); border-top: 0; }
+.mtk-r2 .mtk-r2__state .mao-tk-toolkit__module-form { grid-column: 2; margin: 0; }
+.mtk-r2 .mtk-r2__state:hover { background: var(--mao-tk-surface); }
+.mtk-r2 .mtk-r2__state .mao-tk-toolkit__module-heading { margin-bottom: 3px; }
+.mtk-r2 .mtk-r2__layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px; align-items: start; margin-top: 20px; }
+.mtk-r2 .mtk-r2__work { display: grid; gap: 16px; min-width: 0; }
+.mtk-r2 .mtk-r2__settings { scroll-margin-top: 60px; }
+.mtk-r2 .mao-tk-toolkit__section-head { padding: 17px var(--mtk-r2-inset); border-bottom: 1px solid var(--mao-tk-border); }
+.mtk-r2 .mtk-r2__group { min-width: 0; margin: 20px var(--mtk-r2-inset); padding: 0; border: 0; }
+.mtk-r2 .mtk-r2__group + .mtk-r2__group { padding-top: 4px; }
+.mtk-r2 .mtk-r2__group legend { display: flex; align-items: center; gap: 9px; padding: 0; margin-bottom: 12px; font-size: 14px; font-weight: 600; }
+.mtk-r2 .mtk-r2__group + .mtk-r2__group legend { width: 100%; padding-top: 17px; border-top: 1px solid var(--mao-tk-border); }
+.mtk-r2 .mtk-r2__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 16px; }
+.mtk-r2 .mtk-r2__reference-fields { grid-template-columns: minmax(108px, .6fr) minmax(0, 1.4fr); }
+.mtk-r2 .mtk-r2__field { display: grid; gap: 5px; align-content: start; min-width: 0; }
+.mtk-r2 .mtk-r2__field label { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; font-weight: 600; }
+.mtk-r2 .mtk-r2__field small,
+.mtk-r2 p.mtk-r2__hint,
+.mtk-r2 p.mtk-r2__feedback { color: var(--mao-tk-muted); font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.mtk-r2 .mtk-r2__field input:not([type="file"]) { width: 100%; min-width: 0; min-height: 40px; padding: 5px 11px; margin: 0; border: 1px solid var(--mtk-r2-control-border); border-radius: 6px; transition: border-color 140ms ease; }
+.mtk-r2 .mtk-r2__field input::placeholder { color: var(--mao-tk-muted); opacity: 1; }
+.mtk-r2 .mtk-r2__field input:not([type="file"]):hover:enabled { border-color: var(--mao-tk-muted); }
+.mtk-r2 .mtk-r2__field input:not([type="file"]):focus { border-color: var(--mao-tk-accent); }
+.mtk-r2 .mtk-r2__field input:disabled { color: var(--mao-tk-muted); background: var(--mao-tk-subtle); cursor: not-allowed; }
+.mtk-r2 .mtk-r2__body { display: grid; gap: 10px; padding: 16px var(--mtk-r2-inset); }
+.mtk-r2 .mtk-r2__file { padding: 12px; border: 1px dashed var(--mtk-r2-control-border); border-radius: 7px; background: var(--mao-tk-subtle); transition: border-color 140ms ease; }
+.mtk-r2 .mtk-r2__file > span { font-size: 13px; font-weight: 600; }
+.mtk-r2 .mtk-r2__file:has(input:enabled) { cursor: pointer; }
+.mtk-r2 .mtk-r2__file:has(input:disabled) { cursor: not-allowed; }
+.mtk-r2 .mtk-r2__file:has(input:enabled):hover,
+.mtk-r2 .mtk-r2__file:focus-within { border-color: var(--mao-tk-accent); }
+.mtk-r2 .mtk-r2__file input { min-width: 0; width: 100%; max-width: 100%; border-radius: 5px; font: inherit; }
+.mtk-r2 .mtk-r2__file input::file-selector-button { margin-inline-end: 8px; padding: 6px 10px; border: 1px solid var(--mtk-r2-control-border); border-radius: 5px; background: var(--mao-tk-surface); color: var(--mao-tk-text); font: inherit; cursor: pointer; }
+.mtk-r2 .mtk-r2__file input:disabled::file-selector-button { color: var(--mao-tk-muted); cursor: not-allowed; }
+.mtk-r2 .mtk-r2__actions { justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; padding: 12px var(--mtk-r2-inset); }
+.mtk-r2 .mtk-r2__actions > .button:last-child { margin-inline-start: auto; }
+.mtk-r2 .mtk-r2__actions .button:disabled { opacity: .75; }
+.mtk-r2 .mtk-r2__result > div { display: flex; align-items: stretch; gap: 8px; }
+.mtk-r2 .mtk-r2__result button { flex: none; }
+.mtk-r2 .mtk-r2__feedback:empty { display: none; }
+.mtk-r2 .mtk-r2__feedback[data-state="success"] { color: #146646; }
+.mtk-r2 .mtk-r2__feedback[data-state="error"] { color: #a12025; }
+.mtk-r2 .mtk-r2__notice { margin: 16px var(--mtk-r2-inset); padding: 9px 12px; border: 1px solid #bce6d1; border-radius: 6px; color: #146646; background: #eaf9f1; }
+.mtk-r2 .mtk-r2__notice[data-error="true"] { color: #a12025; border-color: #ecc8cc; background: #fff5f5; }
+.mtk-r2 progress { display: block; width: 100%; height: 8px; accent-color: var(--mao-tk-accent); }
+.mtk-r2 .mtk-r2__library { margin-top: 20px; }
+.mtk-r2 .mtk-r2__file-controls { min-width: 0; margin: 0; padding: 0; border: 0; }
+.mtk-r2 .mtk-r2__file-list { margin: 0; }
+.mtk-r2 .mtk-r2__file-list:empty { display: none; }
+.mtk-r2 .mtk-r2__file-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; padding: 12px 0; margin: 0; border-bottom: 1px solid var(--mao-tk-border); }
+.mtk-r2 .mtk-r2__file-row:first-child { padding-top: 0; }
+.mtk-r2 .mtk-r2__file-meta { flex: 1 1 220px; min-width: 0; overflow-wrap: anywhere; }
+.mtk-r2 .mtk-r2__file-meta small { display: block; color: var(--mao-tk-muted); }
+.mtk-r2 .mtk-r2__file-nav,
+.mtk-r2 .mtk-r2__file-nav > div,
+.mtk-r2 .mtk-r2__file-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.mtk-r2 .mtk-r2__file-nav { justify-content: space-between; }
+.mtk-r2 .mtk-r2__file-list:not(:empty) + .mtk-r2__file-nav { margin-top: 12px; }
+.mtk-r2 .mtk-r2__delete:not(:disabled) { color: #a12025; border-color: #ecc8cc; }
+.mtk-r2 .mtk-r2__delete:hover:enabled { background: #fff5f5; }
+
+@media (max-width: 1000px) { .mtk-r2 .mtk-r2__layout { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 520px) {
+    .mtk-r2 { --mtk-r2-inset: 15px; }
+    .mtk-r2 .mtk-r2__fields { grid-template-columns: minmax(0, 1fr); }
+    .mtk-r2 .mtk-r2__actions { align-items: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .mtk-r2 .mtk-r2__field input:not([type="file"]),
+    .mtk-r2 .mtk-r2__file { transition: none; }
+}

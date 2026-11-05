@@ -2,10 +2,13 @@
  * 1.5.7：顶栏与代码区保持可辨色差；语法配色与浅深切换仍由子比原生 Enlighter 负责。 */
 .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap { min-width: 0; max-width: 100%; margin-block: 14px 20px; border: 1px solid #d9dee4; border-color: color-mix(in srgb,var(--main-color,#4e5358) 22%,var(--main-bg-color,#fff)); border-radius: 9px; overflow: hidden; }
 .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap pre.wp-block-zibllblock-enlighter { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; overflow: hidden; }
-.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default { margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+/* Keep the header anchored while the theme's asynchronously loaded stylesheet is pending. */
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default { position: relative; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default + .enlighter-origin,
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default:not(.enlighter-show-rawcode) .enlighter-raw { display: none; }
 .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default::before { content: ""; display: block; height: 50px; background: var(--muted-bg-color,#eee); background: color-mix(in srgb,var(--main-color,#4e5358) 12%,var(--main-bg-color,#fff)); border-bottom: 1px solid #e5e8ec; border-bottom-color: color-mix(in srgb,var(--main-color,#4e5358) 16%,var(--main-bg-color,#fff)); }
 .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-default::after { content: ""; position: absolute; top: 18px; left: 15px; width: 14px; height: 14px; border-radius: 50%; background: #ff605c; box-shadow: 20px 0 #ffbd44, 40px 0 #00ca4e; pointer-events: none; }
-.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-toolbar { top: 13px; right: 12px; opacity: 1; }
+.maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-toolbar { position: absolute; top: 13px; right: 12px; opacity: 1; }
 .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-btn { background-color: var(--muted-bg-color,#eee); color: var(--muted-color,#777); }
 /* A quiet light-mode surface; native toolbar nodes, icons and click handlers stay intact. */
 body:not(.dark-theme) .maotk-ui-kit[data-mao-tk-ui-code="1"] .mtk-code-wrap .enlighter-btn:not(:hover) { background-color: #dfe2e6; background-color: color-mix(in srgb,var(--main-color,#4e5358) 18%,var(--main-bg-color,#fff)); box-shadow: inset 0 0 0 1px rgba(70,80,95,.08); }

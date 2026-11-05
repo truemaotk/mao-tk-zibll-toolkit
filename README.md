@@ -2,7 +2,7 @@
 
 适用于 WordPress + Zibll 子比主题的模块化工具箱，同时提供文章写作技能 `maotk-toolkit-articles`。
 
-**当前插件：1.22.0 · SKILL：1.3.0**
+**稳定发行：1.22.0 · 当前候选版：1.24.0-rc.5 · SKILL：1.3.0**
 
 > 本仓库按作者决定公开展示源码，**暂未授予开源许可**。公开可见不等于允许任意使用、修改或再分发。第三方组件继续适用各自随附许可，详见 [权利说明](RIGHTS.md) 与 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
@@ -16,7 +16,7 @@
 | `maotk-toolkit-articles-1.3.0.zip` | 本地 Codex 写作技能；保持整个技能文件夹完整 |
 | `SHA256SUMS.txt` | 对应发行包的 SHA-256 校验值 |
 
-插件最新版见 [Toolkit 1.22.0 发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.22.0)。SKILL 1.3.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.3.0)，两者分别安装与更新。技能包含 WebP／无损图片、新文章封面、Rank Math 与旧文完整保留流程；1.3.0 增加资源迁入新站、旧站引用扫描、附件与免费／付费权限验收。
+稳定版见 [Toolkit 1.22.0 发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.22.0)。如需测试 R2 同步和并行上传，可下载 [Toolkit 1.24.0-rc.5 预发布](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.24.0-rc.5)。SKILL 1.3.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.3.0)，两者分别安装与更新。技能包含 WebP／无损图片、新文章封面、Rank Math 与旧文完整保留流程；1.3.0 增加资源迁入新站、旧站引用扫描、附件与免费／付费权限验收。
 
 GitHub 自动生成的 **Source code / Download ZIP 是整仓库源码，不是 WordPress 安装包**。请使用 Releases 中的插件 ZIP。升级前备份；已有明确关闭的模块不会被强制开启。使用与再分发权限以本仓库权利说明为准。
 
@@ -25,6 +25,8 @@ GitHub 自动生成的 **Source code / Download ZIP 是整仓库源码，不是 
 1.21.0 新增可独立关闭的自定义页脚：栏目、社交图标替换/大小/底座圆角、二维码与版权备案，支持手机折叠、媒体库和独立配置预览。先配置保存再开启；关闭恢复原生页脚，不改主题文件。配置备份覆盖新增页脚分类。用户自行安装，未由本次发布部署生产网站。见 [页脚指南](docs/CUSTOM_FOOTER.md)。
 
 1.22.0 新增「归档页顶部」。分类、标签和专题共用标题栏，封面与正文描述分别控制，保留当前栏目搜索。同步页脚宽度、二维码边框和版权栏调整。见 [归档页设置](plugins/mao-tk-zibll-toolkit/archive-header/README.md)。
+
+1.24.0-rc.5 提供两个默认关闭的 R2 模块，分别使用私有下载桶和媒体桶。下载文件通过浏览器直传并保留子比的下载权限检查。图片同步保留 WordPress 本地文件，可选择补传或完整核对。配置与 Worker 源码见 [R2 下载](plugins/mao-tk-zibll-toolkit/R2-DOWNLOADS.md)、[下载 Worker](workers/r2-downloads/worker.js)、[R2 图片](plugins/mao-tk-zibll-toolkit/R2-MEDIA.md)、[媒体 Worker](workers/r2-media/worker.mjs)。
 
 ## 两部分怎样配合
 
@@ -78,6 +80,7 @@ plugins/mao-tk-zibll-toolkit/    WordPress 可安装插件完整生产源码
 skills/maotk-toolkit-articles/  SKILL、13 份区块模板、参考说明与只读检查器
 tools/build-release.ps1        从上述目录生成两个独立 ZIP
 docs/                         维护入口与当前验收范围
+workers/                      R2 下载和图片同步的 Cloudflare Workers 源码
 ```
 
 仓库不包含生产数据库、站点配置、Cookie、密码、令牌、私有文章导出、浏览器资料或机器专用测试夹具。

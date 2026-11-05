@@ -32,6 +32,8 @@ final class ModuleManager
             'system-mail-appearance' => false,
             'site-custom-footer' => false,
             'archive-header' => false,
+            'r2-downloads' => false,
+            'r2-media' => false,
         ));
     }
 

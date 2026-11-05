@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Mao TK Zibll Toolkit
  * Description: 面向 Zibll 主题的模块化扩展工作台，提供独立后台与按需启用的模块。
- * Version: 1.22.0
+ * Version: 1.24.0-rc.5
  * Author: Mao TK
  * Author URI: https://www.maotk.com/
  * Requires at least: 6.0
@@ -12,7 +12,7 @@
 
 defined('ABSPATH') || exit;
 
-define('MAO_TK_ZIBLL_TOOLKIT_VERSION', '1.22.0');
+define('MAO_TK_ZIBLL_TOOLKIT_VERSION', '1.24.0-rc.5');
 define('MAO_TK_ZIBLL_TOOLKIT_FILE', __FILE__);
 define('MAO_TK_ZIBLL_TOOLKIT_DIR', plugin_dir_path(__FILE__));
 define('MAO_TK_ZIBLL_TOOLKIT_URL', plugin_dir_url(__FILE__));
@@ -115,6 +115,18 @@ require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/archive-header/class-settings.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/archive-header/class-runtime.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/archive-header/class-admin-page.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/modules/class-archive-header-module.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-downloads/class-settings.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-downloads/class-storage.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-downloads/class-uploads.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-downloads/class-runtime.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-downloads/class-admin-page.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/modules/class-r2-downloads-module.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-media/class-settings.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-media/class-files.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-media/class-sync.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-media/class-runtime.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-media/class-admin-page.php';
+require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/modules/class-r2-media-module.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/config-backup/class-registry.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/config-backup/class-assets.php';
 require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/config-backup/class-store.php';
@@ -127,4 +139,5 @@ require_once MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/class-plugin.php';
 MaoTK\ZibllToolkit\ArticleNote\Integration::instance()->register();
 
 register_activation_hook(__FILE__, array('MaoTK\\ZibllToolkit\\Plugin', 'activate'));
+register_deactivation_hook(__FILE__, array('MaoTK\\ZibllToolkit\\R2Media\\Runtime', 'stop'));
 add_action('after_setup_theme', array('MaoTK\\ZibllToolkit\\Plugin', 'boot'), 20);
