@@ -1,5 +1,6 @@
-const DOWNLOAD_PATH = '/v1/download';
-const MAX_TTL_SECONDS = 20 * 60;
+const COOKIE = '__Host-maotk-r2-session';
+const SESSION_FORMAT = /^[A-Za-z0-9_-]{43}$/;
+const HANDSHAKE_TTL = 120;
 const CLOCK_SKEW_SECONDS = 30;
 const encoder = new TextEncoder();
 const decoder = new TextDecoder('utf-8', { fatal: true });
@@ -7,16 +8,18 @@ const decoder = new TextDecoder('utf-8', { fatal: true });
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname !== DOWNLOAD_PATH) return reply(request, 404, 'Not found');
-    if (request.method !== 'GET' && request.method !== 'HEAD') {
-      return reply(request, 405, 'Method not allowed', { Allow: 'GET, HEAD' });
+    const session = url.pathname === '/v2/session';
+    const legacy = url.pathname === '/v1/download';
+    if (!session && !legacy && url.pathname !== '/v2/download') return reply(request, 404, 'Not found');
+    if (legacy && env.MAOTK_R2_ALLOW_LEGACY !== '1') {
+      return reply(request, 403, 'Open the original article for a new download');
+    }
+    if (request.method !== 'GET' && (session || request.method !== 'HEAD')) {
+      return reply(request, 405, 'Method not allowed', { Allow: session ? 'GET' : 'GET, HEAD' });
     }
 
-    const tokens = url.searchParams.getAll('token');
-    const token = tokens.length === 1 && tokens[0].length <= 6000
-      ? /^([A-Za-z0-9_-]+)\.([A-Za-z0-9_-]{43})$/.exec(tokens[0])
-      : null;
-    if (!token) return reply(request, 403, 'Download authorization required');
+    const [token] = url.searchParams.getAll(session ? 'state' : 'token');
+    if (!token || url.searchParams.size !== 1) return reply(request, 403, 'Download authorization required');
 
     const secret = env.MAOTK_R2_SIGNING_KEY;
     const bucket = env.DOWNLOADS_BUCKET;
@@ -25,8 +28,16 @@ export default {
     }
 
     try {
-      const grant = await verifyGrant(token[1], token[2], secret);
-      if (!grant) return reply(request, 403, 'Invalid or expired download authorization');
+      const signingKey = await crypto.subtle.importKey(
+        'raw', encoder.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign', 'verify'],
+      );
+      const cookie = sessionCookie(request);
+      if (session) return await startSession(request, env, signingKey, token, cookie);
+
+      const grant = await verifyGrant(token, legacy ? 'v1' : 'r2-session-download', signingKey, legacy ? 1200 : 600);
+      if (!validObject(grant?.key) || (!legacy && (!cookie || grant.browser !== await digest(cookie)))) {
+        return reply(request, 403, 'Invalid or expired download authorization');
+      }
       return await sendObject(request, bucket, grant.key);
     } catch {
       return reply(request, 503, 'Download service temporarily unavailable');
@@ -54,12 +65,55 @@ function base64UrlBytes(value) {
   return Uint8Array.from(atob(base64.padEnd(Math.ceil(base64.length / 4) * 4, '=')), c => c.charCodeAt(0));
 }
 
-async function verifyGrant(payload, signature, secret) {
-  const key = await crypto.subtle.importKey(
-    'raw', encoder.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['verify'],
-  );
+function base64Url(value) {
+  return btoa(String.fromCharCode(...value)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+async function digest(value) {
+  const hash = new Uint8Array(await crypto.subtle.digest('SHA-256', encoder.encode(value)));
+  return Array.from(hash, byte => byte.toString(16).padStart(2, '0')).join('');
+}
+
+function sessionCookie(request) {
+  const values = (request.headers.get('Cookie') ?? '').split(';')
+    .map(value => value.trim()).filter(value => value.startsWith(COOKIE + '='));
+  const value = values.length === 1 ? values[0].slice(COOKIE.length + 1) : '';
+  return SESSION_FORMAT.test(value) ? value : '';
+}
+
+async function startSession(request, env, signingKey, state, existingCookie) {
+  const grant = await verifyGrant(state, 'r2-session-start', signingKey, HANDSHAKE_TTL);
+  let callback;
+  try {
+    callback = new URL(grant?.return);
+  } catch {
+    return reply(request, 403, 'Invalid or expired download authorization');
+  }
+  if (!callback || callback.protocol !== 'https:' || callback.username || callback.password || callback.hash
+      || callback.origin === new URL(request.url).origin || (env.MAOTK_R2_SITE_ORIGIN && callback.origin !== env.MAOTK_R2_SITE_ORIGIN)
+      || callback.searchParams.has('mtk_r2_state') || callback.searchParams.has('mtk_r2_proof')) {
+    return reply(request, 403, 'Invalid or expired download authorization');
+  }
+
+  const cookie = existingCookie || base64Url(crypto.getRandomValues(new Uint8Array(32)));
+  const payload = base64Url(encoder.encode(JSON.stringify({
+    state: await digest(state), browser: await digest(cookie), exp: grant.exp,
+  })));
+  const signature = await crypto.subtle.sign('HMAC', signingKey, encoder.encode('r2-session-proof.' + payload));
+  callback.searchParams.set('mtk_r2_state', state);
+  callback.searchParams.set('mtk_r2_proof', payload + '.' + base64Url(new Uint8Array(signature)));
+
+  const headers = headersFor({ Location: callback.href });
+  if (!existingCookie) headers.set('Set-Cookie', COOKIE + '=' + cookie + '; Path=/; Secure; HttpOnly; SameSite=Lax');
+  return new Response(null, { status: 303, headers });
+}
+
+async function verifyGrant(token, purpose, key, ttl) {
+  const parts = token.length <= 8192 ? /^([A-Za-z0-9_-]+)\.([A-Za-z0-9_-]{43})$/.exec(token) : null;
+  if (!parts) return null;
+  const [, payload, signature] = parts;
   const valid = await crypto.subtle.verify(
-    'HMAC', key, base64UrlBytes(signature), encoder.encode('v1.' + payload),
+    'HMAC', key, base64UrlBytes(signature), encoder.encode(purpose + '.' + payload),
   );
   if (!valid) return null;
 
@@ -70,13 +124,13 @@ async function verifyGrant(payload, signature, secret) {
     return null;
   }
   const now = Math.floor(Date.now() / 1000);
-  if (!grant || typeof grant.key !== 'string' || !Number.isSafeInteger(grant.exp)
-      || grant.exp <= now || grant.exp > now + MAX_TTL_SECONDS + CLOCK_SKEW_SECONDS
-      || !grant.key || grant.key.endsWith('/') || /[\x00-\x1f\x7f]/.test(grant.key)
-      || encoder.encode(grant.key).length > 1024) {
-    return null;
-  }
-  return grant;
+  return Number.isSafeInteger(grant?.exp) && grant.exp > now && grant.exp <= now + ttl + CLOCK_SKEW_SECONDS
+    ? grant : null;
+}
+
+function validObject(key) {
+  return typeof key === 'string' && key !== '' && !key.endsWith('/') && !/[\x00-\x1f\x7f]/.test(key)
+    && encoder.encode(key).length <= 1024;
 }
 
 async function sendObject(request, bucket, key) {

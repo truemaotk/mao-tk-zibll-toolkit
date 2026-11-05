@@ -118,8 +118,16 @@ $groups = array(
                             <div class="mtk-r2__field"><label for="mtk-r2-key">R2 对象键</label>
                                 <input type="text" id="mtk-r2-key" maxlength="1024" placeholder="例如 releases/plugin.zip" <?php disabled(!$enabled || !$download_ready || !$upload_ready); ?>></div>
                         </div>
+                        <div class="mtk-r2__field">
+                            <label for="mtk-r2-reference-mode">下载方式</label>
+                            <select id="mtk-r2-reference-mode" aria-describedby="mtk-r2-reference-mode-hint" <?php disabled(!$enabled || !$download_ready || !$upload_ready); ?>>
+                                <option value="native">子比原生权限</option>
+                                <option value="public">公开下载 · 正文卡片</option>
+                            </select>
+                            <small id="mtk-r2-reference-mode-hint">沿用文章设置的登录、购买和下载次数规则。</small>
+                        </div>
                         <div class="mtk-r2__field mtk-r2__result" id="mtk-r2-ref-result" hidden>
-                            <label for="mtk-r2-reference-url">子比下载链接</label>
+                            <label for="mtk-r2-reference-url" id="mtk-r2-reference-label">子比资源下载地址（R2 引用）</label>
                             <div><input type="url" id="mtk-r2-reference-url" readonly>
                                 <button class="button button-primary" type="button" id="mtk-r2-copy">复制下载引用</button></div>
                         </div>

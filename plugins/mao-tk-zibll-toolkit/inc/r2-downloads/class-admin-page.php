@@ -158,6 +158,13 @@ final class AdminPage
     {
         $post_id = filter_var(self::input('post_id'), FILTER_VALIDATE_INT, array('options' => array('min_range' => 1)));
         $key = self::input('object_key');
+        $mode = self::input('reference_mode');
+        if (!in_array($mode, array('', 'native', 'public'), true)) {
+            throw new \InvalidArgumentException('请选择有效的下载方式。');
+        }
+        if ($mode === 'public' && !class_exists('WP_HTML_Tag_Processor')) {
+            throw new \InvalidArgumentException('公开下载需要 WordPress 6.2 或更高版本。');
+        }
         if (Runtime::origin() === '' || Runtime::signing_key() === '') {
             throw new \RuntimeException('请先配置下载域名和 Worker 签名密钥。');
         }
@@ -168,7 +175,7 @@ final class AdminPage
         if (!Storage::valid_key($key) || $storage->size($key) === null) {
             throw new \InvalidArgumentException('R2 桶中没有找到该对象，请核对完整对象键。');
         }
-        return array('url' => Runtime::reference($post_id, $key));
+        return array('url' => $mode === 'public' ? PublicDownload::reference($post_id, $key) : Runtime::reference($post_id, $key));
     }
 
     private static function input(string $name): string

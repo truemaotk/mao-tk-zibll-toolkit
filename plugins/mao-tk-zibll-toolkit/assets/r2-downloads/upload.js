@@ -12,6 +12,7 @@
     const progress = field('progress');
     const objectKey = field('key');
     const postId = field('post');
+    const refMode = field('reference-mode');
     const reference = field('reference');
     const refStatus = field('ref-status');
     const refResult = field('ref-result');
@@ -72,7 +73,7 @@
         const uploaded = job && job.completed.size === Math.ceil(job.file.size / partSize);
         start.textContent = job ? (uploaded ? '重试确认' : '继续上传') : '开始上传';
         cancel.disabled = !job || cancelling || finishing || cancelRequested || uploaded;
-        objectKey.disabled = postId.disabled = !referenceReady || referenceBusy || deleting;
+        objectKey.disabled = postId.disabled = refMode.disabled = !referenceReady || referenceBusy || deleting;
         reference.disabled = postId.disabled || !objectKey.value.trim() || !postId.value;
         reference.setAttribute('aria-busy', String(referenceBusy));
         field('library-hint').hidden = uploadReady;
@@ -347,8 +348,11 @@
             event.returnValue = '';
         }
     });
-    [postId, objectKey].forEach((input) => input.addEventListener('input', () => {
+    [postId, objectKey, refMode].forEach((input) => input.addEventListener('input', () => {
         refResult.hidden = true;
+        field('reference-mode-hint').textContent = refMode.value === 'public'
+            ? '仅用于可公开分享的文件。文章的阅读限制仍然有效。'
+            : '沿用文章设置的登录、购买和下载次数规则。';
         feedback(refStatus, '');
         refresh();
     }));
@@ -359,10 +363,14 @@
         feedback(refStatus, '正在检查对象并生成引用…');
         refresh();
         try {
-            const { url } = await api('reference', { post_id: postId.value, object_key: objectKey.value });
+            const mode = refMode.value;
+            const { url } = await api('reference', { post_id: postId.value, object_key: objectKey.value, reference_mode: mode });
             refUrl.value = url;
+            field('reference-label').textContent = mode === 'public' ? '公开下载链接' : '子比资源下载地址（R2 引用）';
             refResult.hidden = false;
-            feedback(refStatus, '引用已生成。请贴到该文章的子比下载链接字段。', 'success');
+            feedback(refStatus, mode === 'public'
+                ? '请贴到该文章正文的子比「文件下载」区块。保存并发布后即可下载。'
+                : '请贴到该文章的「付费功能 → 资源下载 → 下载地址」。', 'success');
         } catch (error) {
             feedback(refStatus, error.message, 'error');
         } finally {
