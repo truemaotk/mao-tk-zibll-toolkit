@@ -41,8 +41,18 @@ $groups = array(
         <div class="mtk-r2__layout">
             <section class="mao-tk-toolkit__panel mtk-r2__settings" id="mtk-r2-settings" aria-labelledby="mtk-r2-settings-heading">
                 <div class="mao-tk-toolkit__section-head"><div><h2 id="mtk-r2-settings-heading"><?php esc_html_e('连接设置', 'mao-tk-zibll-toolkit'); ?></h2><p><?php esc_html_e('在这里填写 Cloudflare 的两组凭据，保存后立即应用。', 'mao-tk-zibll-toolkit'); ?></p></div></div>
-                <?php if ($notice !== '') : ?>
+                <?php if ($unreadable) : ?>
+                    <div class="mtk-r2__notice" role="alert" data-error="true"><?php echo esc_html(sprintf(
+                        /* translators: %s: list of credential field names. */
+                        __('以下已保存的密钥无法解密：%s。通常是 WordPress 安全密钥（AUTH_KEY / AUTH_SALT）被更换，请重新填写这些密钥并保存。', 'mao-tk-zibll-toolkit'),
+                        implode(' / ', $unreadable)
+                    )); ?></div>
+                <?php endif; ?>
+                <?php if ($notice !== '' && strpos($save_status, 'resign') !== 0) : ?>
                     <div class="mtk-r2__notice" role="<?php echo $save_status === 'saved' ? 'status' : 'alert'; ?>" data-error="<?php echo $save_status === 'saved' ? 'false' : 'true'; ?>"><?php echo esc_html($notice); ?></div>
+                <?php endif; ?>
+                <?php if (is_array($credential_notice)) : ?>
+                    <div class="mtk-r2__notice" role="<?php echo $credential_notice['ok'] ? 'status' : 'alert'; ?>" data-error="<?php echo $credential_notice['ok'] ? 'false' : 'true'; ?>"><?php echo esc_html($credential_notice['message']); ?></div>
                 <?php endif; ?>
                 <form id="mtk-r2-settings-form" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" autocomplete="off">
                     <input type="hidden" name="action" value="<?php echo esc_attr(self::SAVE_ACTION); ?>">
@@ -90,6 +100,11 @@ $groups = array(
                         <span><?php esc_html_e('密钥加密保存在站点中。', 'mao-tk-zibll-toolkit'); ?></span>
                         <button class="button button-primary" type="submit"><?php esc_html_e('保存连接设置', 'mao-tk-zibll-toolkit'); ?></button>
                     </div>
+                </form>
+                <form class="mao-tk-toolkit__panel-foot mtk-r2__actions" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+                    <input type="hidden" name="action" value="<?php echo esc_attr(self::MIGRATE_CREDENTIALS_ACTION); ?>">
+                    <?php wp_nonce_field(self::MIGRATE_CREDENTIALS_ACTION); ?>
+                    <?php require MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-downloads/credential-migration-view.php'; ?>
                 </form>
             </section>
             <div class="mtk-r2__work">
@@ -158,5 +173,47 @@ $groups = array(
                 </fieldset>
             </div>
         </section>
-    </div>
+            <section class="mao-tk-toolkit__panel" id="mtk-r2-references" aria-labelledby="mtk-r2-references-heading">
+            <div class="mao-tk-toolkit__section-head"><div><h2 id="mtk-r2-references-heading"><?php esc_html_e('下载链接签名', 'mao-tk-zibll-toolkit'); ?></h2><p><?php esc_html_e('新生成的下载引用使用独立签名密钥，更换 WordPress 安全密钥不会让它们失效。1.24.0-rc.11 之前生成的引用仍可使用，但更换安全密钥前应先在这里重新签名。', 'mao-tk-zibll-toolkit'); ?></p></div></div>
+            <div class="mtk-r2__body">
+                <?php if ($notice !== '' && strpos($save_status, 'resign') === 0) : ?>
+                    <div class="mtk-r2__notice" role="<?php echo $save_status === 'resign-failed' ? 'alert' : 'status'; ?>" data-error="<?php echo $save_status === 'resign-failed' ? 'true' : 'false'; ?>"><?php echo esc_html($notice); ?></div>
+                <?php endif; ?>
+                <?php
+                $scan_mode = $reference_status['mode'] ?? '';
+                $scan_done = !empty($reference_status['done']);
+                $scan_total = (int) ($reference_status['total'] ?? 0);
+                ?>
+                <p class="mtk-r2__hint"><?php
+                    if ($scan_mode === '') {
+                        esc_html_e('尚未扫描下载引用。点击下方按钮后分批处理。', 'mao-tk-zibll-toolkit');
+                    } else {
+                        echo esc_html(sprintf(
+                            /* translators: 1: scan state, 2: total references processed. */
+                            __('%1$s · 本轮已转换 %2$d 个下载引用', 'mao-tk-zibll-toolkit'),
+                            $scan_done ? __('已扫到末尾', 'mao-tk-zibll-toolkit') : __('扫描未完成', 'mao-tk-zibll-toolkit'),
+                            $scan_total
+                        ));
+                    }
+                ?></p>
+                <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+                    <input type="hidden" name="action" value="<?php echo esc_attr(self::RESIGN_ACTION); ?>">
+                    <?php wp_nonce_field(self::RESIGN_ACTION); ?>
+                    <?php if ($scan_mode !== 'legacy' || $scan_done) : ?>
+                        <p><button class="button button-primary" type="submit" name="r2_command" value="<?php echo $scan_mode === 'current' && $scan_done ? 'current-restart' : 'current'; ?>"><?php
+                            echo esc_html($scan_mode === 'current' && !$scan_done ? __('继续重新签名', 'mao-tk-zibll-toolkit') : __('扫描并更新旧签名', 'mao-tk-zibll-toolkit'));
+                        ?></button></p>
+                    <?php endif; ?>
+                    <details<?php echo $scan_mode === 'legacy' && !$scan_done ? ' open' : ''; ?>>
+                        <summary><?php esc_html_e('准备回退旧版', 'mao-tk-zibll-toolkit'); ?></summary>
+                        <p class="mtk-r2__hint"><?php esc_html_e('先备份数据库。使用旧版前，分批把下载引用改回当前 WordPress 安全密钥签名；处理完成后再覆盖安装旧版，并清理页面缓存。回退后不要同时更换 WordPress 安全密钥。', 'mao-tk-zibll-toolkit'); ?></p>
+                        <p><button class="button" type="submit" name="r2_command" value="<?php echo $scan_mode === 'legacy' && $scan_done ? 'legacy-restart' : 'legacy'; ?>"><?php
+                            echo esc_html($scan_mode === 'legacy' && !$scan_done ? __('继续准备回退', 'mao-tk-zibll-toolkit') : __('改回旧版可读签名', 'mao-tk-zibll-toolkit'));
+                        ?></button></p>
+                    </details>
+                    <p class="mtk-r2__hint"><?php esc_html_e('写入前备份原引用，正文其他内容、下载设置与 R2 文件保持原样。迁移期间请暂缓编辑下载链接，结束后可重新扫描。', 'mao-tk-zibll-toolkit'); ?></p>
+                </form>
+            </div>
+        </section>
+</div>
 </div>

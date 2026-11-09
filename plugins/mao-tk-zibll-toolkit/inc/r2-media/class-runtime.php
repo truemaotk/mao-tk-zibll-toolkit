@@ -10,6 +10,10 @@ final class Runtime
     private static $lookup = array();
     private static $queued = array();
     private static $source = array();
+    private static $lookups = 0;
+    private const QUEUE_LIMIT = 8;
+    private const LOOKUP_LIMIT = 40;
+    private const CACHE_GROUP = 'mao_tk_r2_media';
 
     public static function register(): void
     {
@@ -53,14 +57,27 @@ final class Runtime
 
     public static function start_render($template)
     {
-        if (is_admin() || is_user_logged_in() || is_preview() || is_feed() || is_404() || is_embed()
-            || ($_SERVER['REQUEST_METHOD'] ?? '') !== 'GET' || !class_exists('WP_HTML_Tag_Processor') || !Settings::storage()) {
+        if (
+            is_admin() ||
+            is_user_logged_in() ||
+            is_preview() ||
+            is_feed() ||
+            is_404() ||
+            is_embed() ||
+            ($_SERVER['REQUEST_METHOD'] ?? '') !== 'GET' ||
+            !class_exists('WP_HTML_Tag_Processor') ||
+            !Settings::storage()
+        ) {
             return $template;
         }
         if (is_singular()) {
             $post = get_queried_object();
-            if (!$post instanceof \WP_Post || $post->post_status !== 'publish' || $post->post_password !== ''
-                || (function_exists('zib_get_post_allow_view_data') && empty(zib_get_post_allow_view_data($post)['allow']))) {
+            if (
+                !($post instanceof \WP_Post) ||
+                $post->post_status !== 'publish' ||
+                $post->post_password !== '' ||
+                (function_exists('zib_get_post_allow_view_data') && empty(zib_get_post_allow_view_data($post)['allow']))
+            ) {
                 return $template;
             }
         }
@@ -75,7 +92,10 @@ final class Runtime
             return $html;
         }
         foreach (headers_list() as $header) {
-            if (stripos($header, 'Content-Length:') === 0 || (stripos($header, 'Content-Type:') === 0 && stripos($header, 'text/html') === false)) {
+            if (
+                stripos($header, 'Content-Length:') === 0 ||
+                (stripos($header, 'Content-Type:') === 0 && stripos($header, 'text/html') === false)
+            ) {
                 return $html;
             }
         }
@@ -84,7 +104,8 @@ final class Runtime
             return $html;
         }
         $destination = $storage->destination();
-        $origin = Settings::get('MAOTK_MEDIA_REWRITE') === '1' && Settings::verified($destination) ? Settings::origin() : '';
+        $origin =
+            Settings::get('MAOTK_MEDIA_REWRITE') === '1' && Settings::verified($destination) ? Settings::origin() : '';
         try {
             $tags = new \WP_HTML_Tag_Processor($html);
             while ($tags->next_tag()) {
@@ -109,9 +130,10 @@ final class Runtime
                     if (!is_string($value) || $value === '') {
                         continue;
                     }
-                    $next = strpos($attribute, 'srcset') !== false
-                        ? self::rewrite_srcset($value, $hint, $destination, $origin)
-                        : self::rewrite_url($value, $hint, $destination, $origin);
+                    $next =
+                        strpos($attribute, 'srcset') !== false
+                            ? self::rewrite_srcset($value, $hint, $destination, $origin)
+                            : self::rewrite_url($value, $hint, $destination, $origin);
                     if ($next !== $value) {
                         $tags->set_attribute($attribute, $next);
                     }
@@ -151,7 +173,9 @@ final class Runtime
         $entry = Files::state($id, $destination)[$relative] ?? array();
         $path = Files::disk_path($relative);
         $exists = $path !== '' && is_file($path);
-        $current = $entry && (!$exists || ($entry['mtime'] === (int) filemtime($path) && $entry['size'] === (int) filesize($path)));
+        $current =
+            $entry &&
+            (!$exists || ($entry['mtime'] === (int) filemtime($path) && $entry['size'] === (int) filesize($path)));
         if (!$current || !$exists) {
             self::queue_once($id, (bool) $entry && !$exists);
         }
@@ -169,6 +193,17 @@ final class Runtime
             return $hint;
         }
         if (!isset(self::$lookup[$relative])) {
+            // URL-to-attachment lookups are uncached database queries: reuse results from the
+            // object cache and stop resolving unknown URLs after LOOKUP_LIMIT per page.
+            $cache_key = md5($relative);
+            $cached = wp_cache_get($cache_key, self::CACHE_GROUP);
+            if (is_int($cached)) {
+                return self::$lookup[$relative] = $cached;
+            }
+            if (self::$lookups >= self::LOOKUP_LIMIT) {
+                return 0;
+            }
+            self::$lookups++;
             $uploads = wp_get_upload_dir();
             $base = trailingslashit($uploads['baseurl']);
             $id = attachment_url_to_postid($base . $relative);
@@ -182,23 +217,35 @@ final class Runtime
                 }
             }
             self::$lookup[$relative] = $id && array_key_exists($relative, Files::entries($id)) ? (int) $id : 0;
+            wp_cache_set($cache_key, self::$lookup[$relative], self::CACHE_GROUP, 12 * HOUR_IN_SECONDS);
         }
         return self::$lookup[$relative];
     }
 
+    /**
+     * Visit-time sync. Each new job rewrites WordPress's autoloaded cron option, so a page view
+     * schedules at most QUEUE_LIMIT jobs; later views (and the background scan) pick up the rest.
+     */
     private static function queue_once(int $id, bool $repair): void
     {
-        $count = count(self::$queued);
-        if ((isset(self::$queued[$id]) ? $repair && !self::$queued[$id] : $count < 100)) {
-            self::$queued[$id] = $repair;
-            Sync::enqueue($id, $repair);
+        if (isset(self::$queued[$id]) ? !$repair || self::$queued[$id] : count(self::$queued) >= self::queue_limit()) {
+            return;
         }
+        self::$queued[$id] = $repair;
+        Sync::enqueue($id, $repair);
+    }
+
+    private static function queue_limit(): int
+    {
+        return max(0, min(100, (int) apply_filters('mao_tk_toolkit_r2_media_queue_per_request', self::QUEUE_LIMIT)));
     }
 
     public static function register_source(): void
     {
         register_rest_route('maotk-media/v1', '/source/(?P<asset>[a-f0-9]{64})', array(
-            'methods' => 'GET, HEAD', 'permission_callback' => array(self::class, 'authorize'), 'callback' => array(self::class, 'source'),
+            'methods' => 'GET, HEAD',
+            'permission_callback' => array(self::class, 'authorize'),
+            'callback' => array(self::class, 'source')
         ));
     }
 
@@ -206,8 +253,11 @@ final class Runtime
     {
         $timestamp = $request->get_header('X-MaoTK-Media-Time');
         $signature = $request->get_header('X-MaoTK-Media-Signature');
-        if (!preg_match('/\A\d{10}\z/', (string) $timestamp) || abs(time() - (int) $timestamp) > 90
-            || !preg_match('/\A[a-f0-9]{64}\z/', (string) $signature)) {
+        if (
+            !preg_match('/\A\d{10}\z/', (string) $timestamp) ||
+            abs(time() - (int) $timestamp) > 90 ||
+            !preg_match('/\A[a-f0-9]{64}\z/', (string) $signature)
+        ) {
             return false;
         }
         $asset = $request->get_url_params()['asset'];
@@ -232,12 +282,18 @@ final class Runtime
                 Sync::enqueue($id, true);
             }
             $path = Files::disk_path($relative);
-            if ($path !== '' && is_file($path) && (int) filesize($path) === $entry['size']
-                && hash_file('sha256', $path) === $entry['hash']) {
+            if (
+                $path !== '' &&
+                is_file($path) &&
+                (int) filesize($path) === $entry['size'] &&
+                hash_file('sha256', $path) === $entry['hash']
+            ) {
                 self::$source[$request->get_route()] = $path;
                 return new \WP_REST_Response(null, 200, array(
-                    'Content-Type' => $entry['type'], 'Content-Length' => (string) $entry['size'],
-                    'Cache-Control' => 'private, no-store', 'X-Content-Type-Options' => 'nosniff',
+                    'Content-Type' => $entry['type'],
+                    'Content-Length' => (string) $entry['size'],
+                    'Cache-Control' => 'private, no-store',
+                    'X-Content-Type-Options' => 'nosniff'
                 ));
             }
             break;
@@ -248,7 +304,12 @@ final class Runtime
     public static function serve_source(bool $served, $response, \WP_REST_Request $request): bool
     {
         $path = self::$source[$request->get_route()] ?? '';
-        if ($served || $path === '' || $response->get_status() !== 200 || strpos($request->get_route(), self::ROUTE) !== 0) {
+        if (
+            $served ||
+            $path === '' ||
+            $response->get_status() !== 200 ||
+            strpos($request->get_route(), self::ROUTE) !== 0
+        ) {
             return $served;
         }
         if ($request->get_method() !== 'HEAD') {

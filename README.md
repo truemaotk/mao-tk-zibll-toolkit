@@ -2,7 +2,7 @@
 
 适用于 WordPress + Zibll 子比主题的模块化工具箱，同时提供文章写作技能 `maotk-toolkit-articles`。
 
-**稳定发行：1.22.0 · 当前候选版：1.24.0-rc.10 · SKILL：1.3.0**
+**稳定发行：1.22.0 · 当前候选版：1.24.0-rc.15 · SKILL：1.3.0**
 
 > 本仓库按作者决定公开展示源码，**暂未授予开源许可**。公开可见不等于允许任意使用、修改或再分发。第三方组件继续适用各自随附许可，详见 [权利说明](RIGHTS.md) 与 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
@@ -16,7 +16,7 @@
 | `maotk-toolkit-articles-1.3.0.zip` | 本地 Codex 写作技能；保持整个技能文件夹完整 |
 | `SHA256SUMS.txt` | 对应发行包的 SHA-256 校验值 |
 
-稳定版见 [Toolkit 1.22.0 发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.22.0)。简体中文与英文后台，以及 R2 下载、图片同步和并行上传，见 [Toolkit 1.24.0-rc.10 预发布](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.24.0-rc.10)。从 rc.9 升级可继续使用已部署的 Worker。更早版本接入 R2 下载时，按 [R2 下载指南](plugins/mao-tk-zibll-toolkit/R2-DOWNLOADS.md#v2-worker-升级顺序) 配置。SKILL 1.3.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.3.0)，两者分别安装与更新。技能包含 WebP／无损图片、新文章封面、Rank Math 与旧文完整保留流程。1.3.0 增加资源迁入新站、旧站引用扫描、附件与免费／付费权限验收。
+稳定版见 [Toolkit 1.22.0 发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.22.0)。R2 凭据迁移、下载引用分批改签及媒体连接重测修复见 [Toolkit 1.24.0-rc.15 预发布](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.24.0-rc.15)。接入或升级 R2 下载时，按 [R2 下载指南](plugins/mao-tk-zibll-toolkit/R2-DOWNLOADS.md#v2-worker-升级顺序) 配置。SKILL 1.3.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.3.0)，两者分别安装与更新。技能包含 WebP／无损图片、新文章封面、Rank Math 与旧文完整保留流程。1.3.0 增加资源迁入新站、旧站引用扫描、附件与免费／付费权限验收。
 
 GitHub 自动生成的 **Source code / Download ZIP 是整仓库源码，不是 WordPress 安装包**。请使用 Releases 中的插件 ZIP。升级前备份；已有明确关闭的模块不会被强制开启。使用与再分发权限以本仓库权利说明为准。
 

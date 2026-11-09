@@ -14,6 +14,13 @@ $action_url = admin_url('admin-post.php');
         </div>
     </header>
     <?php $switch_notice = isset($_GET['mao_tk_notice']) && is_string($_GET['mao_tk_notice']) ? $_GET['mao_tk_notice'] : ''; require MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/views/switch-feedback.php'; ?>
+    <?php if (!empty($unreadable)) : ?>
+        <div class="notice inline notice-error"><p><?php echo esc_html(sprintf(
+            /* translators: %s: list of credential field names. */
+            __('以下已保存的密钥无法解密：%s。通常是 WordPress 安全密钥（AUTH_KEY / AUTH_SALT）被更换，请重新填写这些密钥并保存。', 'mao-tk-zibll-toolkit'),
+            implode(' / ', $unreadable)
+        )); ?></p></div>
+    <?php endif; ?>
     <?php if (is_array($notice)) : ?>
         <div class="notice inline <?php echo $notice['ok'] ? 'notice-success' : 'notice-error'; ?>"><p><?php echo esc_html($notice['message']); ?></p></div>
     <?php endif; ?>
@@ -57,6 +64,12 @@ $action_url = admin_url('admin-post.php');
                     <span><?php esc_html_e('签名密钥应与 Worker 的', 'mao-tk-zibll-toolkit'); ?> <code>MAOTK_MEDIA_SIGNING_KEY</code> <?php esc_html_e('一致。', 'mao-tk-zibll-toolkit'); ?></span>
                     <?php submit_button(__('保存连接设置', 'mao-tk-zibll-toolkit'), 'primary', 'submit', false); ?>
                 </div>
+            </form>
+            <form class="mao-tk-toolkit__panel-foot mtk-r2-media__actions" action="<?php echo esc_url($action_url); ?>" method="post">
+                <input type="hidden" name="action" value="<?php echo esc_attr(self::ACTION); ?>">
+                <input type="hidden" name="operation" value="migrate-credentials">
+                <?php wp_nonce_field(self::ACTION); ?>
+                <?php require MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/r2-downloads/credential-migration-view.php'; ?>
             </form>
         </section>
         <div class="mtk-r2-media__side">

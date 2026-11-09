@@ -22,8 +22,11 @@ final class Storage
 
     public static function with_credentials(string $account, string $bucket, string $access, string $secret): ?self
     {
-        if (in_array('', array($account, $bucket, $access, $secret), true)
-            || PHP_INT_SIZE < 8 || !function_exists('simplexml_load_string')) {
+        if (
+            in_array('', array($account, $bucket, $access, $secret), true) ||
+            PHP_INT_SIZE < 8 ||
+            !function_exists('simplexml_load_string')
+        ) {
             return null;
         }
         return new self(strtolower($account) . '.r2.cloudflarestorage.com', $bucket, $access, $secret);
@@ -44,25 +47,36 @@ final class Storage
 
     public static function valid_key(string $key): bool
     {
-        return $key !== '' && strlen($key) <= 1024 && substr($key, -1) !== '/'
-            && preg_match('//u', $key) === 1 && !preg_match('/[\x00-\x1f\x7f\\\\]/', $key)
-            && !preg_match('~(?:^|/)\.{1,2}(?:/|$)~', $key);
+        return $key !== '' &&
+            strlen($key) <= 1024 &&
+            substr($key, -1) !== '/' &&
+            preg_match('//u', $key) === 1 &&
+            !preg_match('/[\x00-\x1f\x7f\\\\]/', $key) &&
+            !preg_match('~(?:^|/)\.{1,2}(?:/|$)~', $key);
     }
 
     public static function managed_key(string $key): bool
     {
-        return self::valid_key($key) && preg_match(
-            '~\A' . self::TOOLKIT_PREFIX . '[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}/[^/]+\z~',
-            $key
-        ) === 1;
+        return self::valid_key($key) &&
+            preg_match(
+                '~\A' .
+                    self::TOOLKIT_PREFIX .
+                    '[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}/[^/]+\z~',
+                $key
+            ) === 1;
     }
 
     public function files(string $cursor): array
     {
         if (strlen($cursor) > 4096 || preg_match('/[^\x21-\x7e]/', $cursor)) {
-            throw new \InvalidArgumentException('分页信息无效，请重新读取文件。');
+            throw new \InvalidArgumentException(__('分页信息无效，请重新读取文件。', 'mao-tk-zibll-toolkit'));
         }
-        $parameters = array('list-type' => '2', 'prefix' => self::TOOLKIT_PREFIX, 'max-keys' => '25', 'encoding-type' => 'url');
+        $parameters = array(
+            'list-type' => '2',
+            'prefix' => self::TOOLKIT_PREFIX,
+            'max-keys' => '25',
+            'encoding-type' => 'url'
+        );
         if ($cursor !== '') {
             $parameters['continuation-token'] = $cursor;
         }
@@ -78,7 +92,7 @@ final class Storage
         }
         $next = (string) $xml->IsTruncated === 'true' ? (string) $xml->NextContinuationToken : '';
         if ((string) $xml->IsTruncated === 'true' && ($next === '' || $next === $cursor)) {
-            throw new \RuntimeException('R2 返回的分页信息不完整，请重新读取文件。');
+            throw new \RuntimeException(__('R2 返回的分页信息不完整，请重新读取文件。', 'mao-tk-zibll-toolkit'));
         }
         return array('files' => $files, 'next' => $next);
     }
@@ -86,11 +100,11 @@ final class Storage
     public function delete_file(string $key): void
     {
         if (!self::managed_key($key)) {
-            throw new \InvalidArgumentException('仅可删除 Toolkit 上传的文件。');
+            throw new \InvalidArgumentException(__('仅可删除 Toolkit 上传的文件。', 'mao-tk-zibll-toolkit'));
         }
         $response = $this->request('DELETE', $key, array(), '', '');
         if (wp_remote_retrieve_response_code($response) !== 204) {
-            throw new \RuntimeException('R2 未确认删除，请刷新文件列表核对。');
+            throw new \RuntimeException(__('R2 未确认删除，请刷新文件列表核对。', 'mao-tk-zibll-toolkit'));
         }
     }
 
@@ -99,7 +113,7 @@ final class Storage
         $response = $this->request('POST', $key, array('uploads' => ''), '', 'application/octet-stream');
         $upload_id = (string) $this->xml($response, 'InitiateMultipartUploadResult')->UploadId;
         if ($upload_id === '' || strlen($upload_id) > 2048) {
-            throw new \RuntimeException('R2 没有返回有效的上传编号。');
+            throw new \RuntimeException(__('R2 没有返回有效的上传编号。', 'mao-tk-zibll-toolkit'));
         }
         return $upload_id;
     }
@@ -116,11 +130,12 @@ final class Storage
             'X-Amz-Credential' => $this->access_key . '/' . $scope,
             'X-Amz-Date' => $date,
             'X-Amz-Expires' => '900',
-            'X-Amz-SignedHeaders' => 'host',
+            'X-Amz-SignedHeaders' => 'host'
         );
         $canonical_query = $this->query($query);
         $canonical = "PUT\n$path\n$canonical_query\nhost:{$this->host}\n\nhost\nUNSIGNED-PAYLOAD";
-        return "https://{$this->host}$path?$canonical_query&X-Amz-Signature=" . $this->signature($canonical, $date, $scope);
+        return "https://{$this->host}$path?$canonical_query&X-Amz-Signature=" .
+            $this->signature($canonical, $date, $scope);
     }
 
     public function parts(string $key, string $upload_id): ?array
@@ -131,14 +146,14 @@ final class Storage
         }
         $xml = $this->xml($response, 'ListPartsResult');
         if ((string) $xml->IsTruncated === 'true') {
-            throw new \RuntimeException('分片数量超过当前上传上限。');
+            throw new \RuntimeException(__('分片数量超过当前上传上限。', 'mao-tk-zibll-toolkit'));
         }
         $parts = array();
         foreach ($xml->Part as $part) {
             $number = (int) $part->PartNumber;
             $etag = (string) $part->ETag;
             if ($number < 1 || isset($parts[$number]) || !preg_match('/\A"[a-f0-9]{32}"\z/i', $etag)) {
-                throw new \RuntimeException('R2 返回了无效的分片信息。');
+                throw new \RuntimeException(__('R2 返回了无效的分片信息。', 'mao-tk-zibll-toolkit'));
             }
             $parts[$number] = array('size' => (int) $part->Size, 'etag' => $etag);
         }
@@ -169,7 +184,7 @@ final class Storage
         }
         $size = (string) wp_remote_retrieve_header($response, 'content-length');
         if ($size === '' || !ctype_digit($size)) {
-            throw new \RuntimeException('R2 没有返回有效的文件大小。');
+            throw new \RuntimeException(__('R2 没有返回有效的文件大小。', 'mao-tk-zibll-toolkit'));
         }
         return (int) $size;
     }
@@ -187,7 +202,7 @@ final class Storage
         }
         $body = wp_remote_retrieve_body($response);
         if ($body === '' || strlen($body) > $limit) {
-            throw new \RuntimeException('R2 图片大小无效。');
+            throw new \RuntimeException(__('R2 图片大小无效。', 'mao-tk-zibll-toolkit'));
         }
         return $body;
     }
@@ -206,7 +221,9 @@ final class Storage
     private function path(string $key): string
     {
         $bucket_path = '/' . $this->bucket;
-        return $key === '' ? $bucket_path : $bucket_path . '/' . implode('/', array_map('rawurlencode', explode('/', $key)));
+        return $key === ''
+            ? $bucket_path
+            : $bucket_path . '/' . implode('/', array_map('rawurlencode', explode('/', $key)));
     }
 
     private function query(array $parameters): string
@@ -224,8 +241,16 @@ final class Storage
         return hash_hmac('sha256', "AWS4-HMAC-SHA256\n$date\n$scope\n" . hash('sha256', $canonical), $signing_key);
     }
 
-    private function request(string $method, string $key, array $parameters, string $body, string $content_type, array $allowed = array(), int $response_limit = 524288, int $timeout = 25): array
-    {
+    private function request(
+        string $method,
+        string $key,
+        array $parameters,
+        string $body,
+        string $content_type,
+        array $allowed = array(),
+        int $response_limit = 524288,
+        int $timeout = 25
+    ): array {
         $path = $this->path($key);
         $query = $this->query($parameters);
         $date = gmdate('Ymd\THis\Z');
@@ -236,8 +261,9 @@ final class Storage
         $headers = array(
             'X-Amz-Content-Sha256' => $hash,
             'X-Amz-Date' => $date,
-            'Authorization' => "AWS4-HMAC-SHA256 Credential={$this->access_key}/$scope, SignedHeaders=$signed_headers, Signature="
-                . $this->signature($canonical, $date, $scope),
+            'Authorization' =>
+                "AWS4-HMAC-SHA256 Credential={$this->access_key}/$scope, SignedHeaders=$signed_headers, Signature=" .
+                $this->signature($canonical, $date, $scope)
         );
         if ($content_type !== '') {
             $headers['Content-Type'] = $content_type;
@@ -248,14 +274,19 @@ final class Storage
             'body' => $body,
             'timeout' => $timeout,
             'redirection' => 0,
-            'limit_response_size' => $response_limit,
+            'limit_response_size' => $response_limit
         ));
         if (is_wp_error($response)) {
-            throw new \RuntimeException('WordPress 无法连接 R2。请稍后重试。', 503);
+            throw new \RuntimeException(__('WordPress 无法连接 R2。请稍后重试。', 'mao-tk-zibll-toolkit'), 503);
         }
         $status = wp_remote_retrieve_response_code($response);
         if (($status < 200 || $status >= 300) && !in_array($status, $allowed, true)) {
-            throw new \RuntimeException('R2 返回 HTTP ' . $status . '。请核对桶、上传凭据或连接后重试。', (int) $status);
+            throw new \RuntimeException(
+                __('R2 返回 HTTP ', 'mao-tk-zibll-toolkit') .
+                    $status .
+                    __('。请核对桶、上传凭据或连接后重试。', 'mao-tk-zibll-toolkit'),
+                (int) $status
+            );
         }
         return $response;
     }
@@ -263,9 +294,12 @@ final class Storage
     private function xml(array $response, string $expected): \SimpleXMLElement
     {
         $body = wp_remote_retrieve_body($response);
-        $xml = stripos($body, '<!DOCTYPE') === false ? @simplexml_load_string($body, 'SimpleXMLElement', LIBXML_NONET) : false;
+        $xml =
+            stripos($body, '<!DOCTYPE') === false
+                ? @simplexml_load_string($body, 'SimpleXMLElement', LIBXML_NONET)
+                : false;
         if ($xml === false || $xml->getName() !== $expected) {
-            throw new \RuntimeException('R2 返回的响应无法读取。请重试。');
+            throw new \RuntimeException(__('R2 返回的响应无法读取。请重试。', 'mao-tk-zibll-toolkit'));
         }
         return $xml;
     }

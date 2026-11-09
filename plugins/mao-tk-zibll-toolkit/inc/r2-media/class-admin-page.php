@@ -31,16 +31,38 @@ final class AdminPage
 
     public function menu(): void
     {
-        $this->screen = (string) add_submenu_page(Admin::SLUG, __('R2 图片同步', 'mao-tk-zibll-toolkit'), __('R2 图片同步', 'mao-tk-zibll-toolkit'), 'manage_options', self::SLUG, array($this, 'render'));
+        $this->screen = (string) add_submenu_page(
+            Admin::SLUG,
+            __('R2 图片同步', 'mao-tk-zibll-toolkit'),
+            __('R2 图片同步', 'mao-tk-zibll-toolkit'),
+            'manage_options',
+            self::SLUG,
+            array($this, 'render')
+        );
         $this->admin->allow_screen($this->screen);
     }
 
     public function enqueue(string $screen): void
     {
         if ($this->screen !== '' && $this->screen === $screen) {
-            wp_enqueue_style('mao-tk-toolkit-r2-media-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/r2-media/admin.css', array('mao-tk-zibll-toolkit-admin'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
-            wp_enqueue_script('mao-tk-toolkit-r2-media-progress', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/r2-media/progress.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
-            wp_set_script_translations('mao-tk-toolkit-r2-media-progress', 'mao-tk-zibll-toolkit', MAO_TK_ZIBLL_TOOLKIT_DIR . 'languages');
+            wp_enqueue_style(
+                'mao-tk-toolkit-r2-media-admin',
+                MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/r2-media/admin.css',
+                array('mao-tk-zibll-toolkit-admin'),
+                MAO_TK_ZIBLL_TOOLKIT_VERSION
+            );
+            wp_enqueue_script(
+                'mao-tk-toolkit-r2-media-progress',
+                MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/r2-media/progress.js',
+                array(),
+                MAO_TK_ZIBLL_TOOLKIT_VERSION,
+                true
+            );
+            wp_set_script_translations(
+                'mao-tk-toolkit-r2-media-progress',
+                'mao-tk-zibll-toolkit',
+                MAO_TK_ZIBLL_TOOLKIT_DIR . 'languages'
+            );
         }
     }
 
@@ -51,13 +73,18 @@ final class AdminPage
                 return $module;
             }
         }
-        return array('id' => Runtime::MODULE, 'name' => __('R2 图片同步', 'mao-tk-zibll-toolkit'), 'enabled' => false, 'status' => 'disabled');
+        return array(
+            'id' => Runtime::MODULE,
+            'name' => __('R2 图片同步', 'mao-tk-zibll-toolkit'),
+            'enabled' => false,
+            'status' => 'disabled'
+        );
     }
 
     public function render(): void
     {
         if (!current_user_can('manage_options')) {
-            wp_die(__('需要管理员权限。', 'mao-tk-zibll-toolkit'), '', array('response' => 403));
+            wp_die(esc_html__('需要管理员权限。', 'mao-tk-zibll-toolkit'), '', array('response' => 403));
         }
         $switch_module = $this->module();
         $switch_valid = $this->manager->storage_is_valid();
@@ -71,6 +98,7 @@ final class AdminPage
         $last_error = get_option(Sync::LAST_ERROR, array());
         $notice_key = 'mao_tk_r2_media_notice_' . get_current_user_id();
         $notice = get_transient($notice_key);
+        $unreadable = Settings::unreadable();
         if ($notice !== false) {
             delete_transient($notice_key);
         }
@@ -97,19 +125,23 @@ final class AdminPage
         $paused = Sync::paused($bulk);
         $pausing = $paused && Sync::in_flight();
         return array(
-            'active' => $active, 'ready' => $ready, 'polling' => $active && (!$paused || $pausing),
-            'paused' => $paused, 'pausing' => $pausing,
-            'job' => $active && !empty($bulk['managed']) ? $bulk['job'] : '',
+            'active' => $active,
+            'ready' => $ready,
+            'polling' => $active && (!$paused || $pausing),
+            'paused' => $paused,
+            'pausing' => $pausing,
+            'job' => $active && !empty($bulk['managed']) ? $bulk['job'] : ''
         );
     }
 
     public function submit(): void
     {
         if (!current_user_can('manage_options') || ($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
-            wp_die(__('无权执行此操作。', 'mao-tk-zibll-toolkit'), '', array('response' => 403));
+            wp_die(esc_html__('无权执行此操作。', 'mao-tk-zibll-toolkit'), '', array('response' => 403));
         }
         check_admin_referer(self::ACTION);
-        $operation = isset($_POST['operation']) && is_string($_POST['operation']) ? wp_unslash($_POST['operation']) : '';
+        $operation =
+            isset($_POST['operation']) && is_string($_POST['operation']) ? wp_unslash($_POST['operation']) : '';
         $ok = false;
         try {
             if ($operation === 'save') {
@@ -117,23 +149,54 @@ final class AdminPage
                 $fields['MAOTK_MEDIA_REWRITE'] = isset($fields['MAOTK_MEDIA_REWRITE']) ? '1' : '0';
                 $status = Settings::save($fields);
                 $ok = $status === 'saved';
-                $message = $ok ? __('媒体连接设置已保存。', 'mao-tk-zibll-toolkit') : (Settings::FIELDS[$status]['label'] ?? __('媒体连接设置', 'mao-tk-zibll-toolkit')) . __('未保存，请检查格式或服务器加密配置。', 'mao-tk-zibll-toolkit');
+                $message = $ok
+                    ? __('媒体连接设置已保存。', 'mao-tk-zibll-toolkit')
+                    : (isset(Settings::FIELDS[$status])
+                            ? translate(Settings::FIELDS[$status]['label'], 'mao-tk-zibll-toolkit')
+                            : __('媒体连接设置', 'mao-tk-zibll-toolkit')) .
+                        __('未保存，请检查格式或服务器加密配置。', 'mao-tk-zibll-toolkit');
+            } elseif ($operation === 'migrate-credentials') {
+                $changed = Settings::migrate_credentials();
+                $ok = true;
+                $message = $changed
+                    ? __('已迁移保存的 R2 凭据，并校验独立密钥可读取。', 'mao-tk-zibll-toolkit')
+                    : __('没有需要迁移的 R2 凭据。', 'mao-tk-zibll-toolkit');
             } elseif ($operation === 'test') {
                 Settings::verify_connection();
                 $ok = true;
                 $message = __('媒体桶和 Worker 已通过实际读写测试。', 'mao-tk-zibll-toolkit');
-            } elseif (in_array($operation, array('sync', 'repair'), true) && $this->module()['status'] === 'loaded' && Settings::storage()) {
+            } elseif (
+                in_array($operation, array('sync', 'repair'), true) &&
+                $this->module()['status'] === 'loaded' &&
+                Settings::storage()
+            ) {
                 $ok = Sync::start_bulk($operation === 'repair');
-                $message = $ok ? __('已提交批量同步，可在历史图片中查看进度。', 'mao-tk-zibll-toolkit') : __('暂未能启动批量同步，请稍后重试。', 'mao-tk-zibll-toolkit');
-            } elseif (in_array($operation, array('pause', 'resume'), true) && $this->module()['status'] === 'loaded' && Settings::storage()) {
+                $message = $ok
+                    ? __('已提交批量同步，可在历史图片中查看进度。', 'mao-tk-zibll-toolkit')
+                    : __('暂未能启动批量同步，请稍后重试。', 'mao-tk-zibll-toolkit');
+            } elseif (
+                in_array($operation, array('pause', 'resume'), true) &&
+                $this->module()['status'] === 'loaded' &&
+                Settings::storage()
+            ) {
                 $job = isset($_POST['job']) && is_string($_POST['job']) ? wp_unslash($_POST['job']) : '';
                 $ok = Sync::set_paused($job, $operation === 'pause');
-                $message = $ok ? ($operation === 'pause' ? __('已请求暂停批量同步。', 'mao-tk-zibll-toolkit') : __('已继续批量同步。', 'mao-tk-zibll-toolkit')) : __('无法切换任务状态，请核对当前任务后重试。', 'mao-tk-zibll-toolkit');
+                $message = $ok
+                    ? ($operation === 'pause'
+                        ? __('已请求暂停批量同步。', 'mao-tk-zibll-toolkit')
+                        : __('已继续批量同步。', 'mao-tk-zibll-toolkit'))
+                    : __('无法切换任务状态，请核对当前任务后重试。', 'mao-tk-zibll-toolkit');
             } else {
                 $message = __('请先配置媒体桶并开启模块。', 'mao-tk-zibll-toolkit');
             }
         } catch (\RuntimeException $error) {
             $message = translate($error->getMessage(), 'mao-tk-zibll-toolkit');
+            if ($operation === 'test') {
+                $storage = Settings::storage();
+                if ($storage && Settings::verified($storage->destination())) {
+                    $message .= ' ' . __('本次测试失败，当前配置保留上次通过的结果。', 'mao-tk-zibll-toolkit');
+                }
+            }
         }
         set_transient('mao_tk_r2_media_notice_' . get_current_user_id(), array('ok' => $ok, 'message' => $message), 60);
         wp_safe_redirect(admin_url('admin.php?page=' . self::SLUG), 303);

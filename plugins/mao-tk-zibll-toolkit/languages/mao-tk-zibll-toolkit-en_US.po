@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: Mao TK Zibll Toolkit 1.24.0-rc.10\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: Mao TK Zibll Toolkit 1.24.0-rc.15\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "\n引用此文件的文章将无法下载。"
 msgstr "\nArticles citing this file will not be downloadable."
@@ -6528,3 +6528,123 @@ msgstr "; Some configurations were modified by other windows and were not forcib
 
 msgid "；顶部 TAB 外层"
 msgstr ";Top TAB outer layer"
+
+msgid "%1$s · 本轮已转换 %2$d 个下载引用"
+msgstr "%1$s · %2$d download references converted in this scan"
+
+msgid "。"
+msgstr "."
+
+msgid "下载引用密钥无效：请设置至少 32 个字符后再生成或迁移。"
+msgstr "Invalid download reference key. Set a key of at least 32 characters before generating or migrating references."
+
+msgid "下载链接签名"
+msgstr "Download link signatures"
+
+msgid "以下已保存的密钥无法解密：%s。通常是 WordPress 安全密钥（AUTH_KEY / AUTH_SALT）被更换，请重新填写这些密钥并保存。"
+msgstr "These saved secrets can no longer be decrypted: %s. This usually means the WordPress security keys (AUTH_KEY / AUTH_SALT) were changed. Please enter them again and save."
+
+msgid "先备份数据库。使用旧版前，分批把下载引用改回当前 WordPress 安全密钥签名；处理完成后再覆盖安装旧版，并清理页面缓存。回退后不要同时更换 WordPress 安全密钥。"
+msgstr "Back up the database first. Before reinstalling an older release, re-sign references in batches with the current WordPress security key. After the scan finishes, install the older release over this one and clear the page cache. Keep the WordPress security key unchanged during rollback."
+
+msgid "写入前备份原引用，正文其他内容、下载设置与 R2 文件保持原样。迁移期间请暂缓编辑下载链接，结束后可重新扫描。"
+msgstr "Original references are backed up before replacement. Other post content, download settings and R2 files are unchanged. Pause edits to download links during migration. You can rescan afterward."
+
+msgid "准备回退旧版"
+msgstr "Prepare to roll back"
+
+msgid "凭据迁移未写入。请刷新页面后重试。"
+msgstr "The credential migration was not saved. Refresh and try again."
+
+msgid "凭据重新加密校验失败。"
+msgstr "The re-encrypted credentials could not be verified."
+
+msgid "另一批下载引用正在处理，请稍后重试。"
+msgstr "A batch of download references is being processed. Try again shortly."
+
+msgid "在轮换 WordPress 安全密钥前，可直接迁移本页已保存的凭据。"
+msgstr "Migrate the saved credentials on this page before rotating the WordPress authentication keys."
+
+msgid "媒体连接验证结果未保存，请重试。"
+msgstr "The media connection verification was not saved. Try again."
+
+msgid "尚未扫描下载引用。点击下方按钮后分批处理。"
+msgstr "Download references have not been scanned. Use the button below to process them in batches."
+
+msgid "已扫到末尾"
+msgstr "Scan complete"
+
+msgid "已迁移保存的 R2 凭据，并校验独立密钥可读取。"
+msgstr "The saved R2 credentials were migrated and verified with the dedicated key."
+
+msgid "扫描并更新旧签名"
+msgstr "Scan and update legacy signatures"
+
+msgid "扫描未完成"
+msgstr "Scan incomplete"
+
+msgid "改回旧版可读签名"
+msgstr "Restore legacy signatures"
+
+msgid "新生成的下载引用使用独立签名密钥，更换 WordPress 安全密钥不会让它们失效。1.24.0-rc.11 之前生成的引用仍可使用，但更换安全密钥前应先在这里重新签名。"
+msgstr "New download references use a dedicated signing key, so changing the WordPress security keys does not break them. References created before 1.24.0-rc.11 still work, but re-sign them here before changing the security keys."
+
+msgid "无效的下载引用迁移操作。"
+msgstr "Invalid download reference migration action."
+
+msgid "无法保存下载链接签名密钥，请检查数据库写入权限。"
+msgstr "Could not save the download signing key. Please check database write access."
+
+msgid "无法保存扫描位置，重试时会跳过已处理的引用。"
+msgstr "Could not save the scan position. Completed references are skipped on retry."
+
+msgid "无法备份下载引用，未修改对应文章或下载设置。"
+msgstr "Could not back up the download references. The associated post or settings were not modified."
+
+msgid "无法读取下载引用密钥，未写入该引用。"
+msgstr "Could not read the download reference key. The reference was not written."
+
+msgid "无法读取旧下载引用，未完成本批扫描。"
+msgstr "Could not read the older download references. This scan batch did not finish."
+
+msgid "无法读取旧凭据。请用原值重新保存后再试。"
+msgstr "The previous credentials could not be read. Re-enter their original values and try again."
+
+msgid "本批转换了 %d 个下载引用；请继续下一批。"
+msgstr "Converted %d download references in this batch. Continue with the next batch."
+
+msgid "本次测试失败，当前配置保留上次通过的结果。"
+msgstr "This test failed. The current configuration retains its last successful result."
+
+msgid "本轮扫描完成，本批转换了 %d 个下载引用。"
+msgstr "Scan complete. This batch converted %d download references."
+
+msgid "本轮未完成，请检查下载引用密钥和数据库后重试。"
+msgstr "The scan did not complete. Check the download reference key and database before trying again."
+
+msgid "没有需要迁移的 R2 凭据。"
+msgstr "No R2 credentials require migration."
+
+msgid "测试期间媒体配置已变更，请重新测试。"
+msgstr "The media configuration changed during the test. Run the test again."
+
+msgid "继续准备回退"
+msgstr "Continue preparing rollback"
+
+msgid "继续重新签名"
+msgstr "Continue re-signing"
+
+msgid "该下载卡片不可用：链接已失效，或卡片放在了不支持公开下载的区块中。"
+msgstr "This download is unavailable: the link has expired, or the card is placed in a block that does not support public downloads."
+
+msgid "请先配置独立加密密钥并启用 PHP OpenSSL。"
+msgstr "Configure a dedicated encryption key and enable PHP OpenSSL first."
+
+msgid "迁移前请在服务器配置 MAO_TK_TOOLKIT_SECRET_KEY 并启用 OpenSSL。"
+msgstr "Configure MAO_TK_TOOLKIT_SECRET_KEY on the server and enable OpenSSL before migrating."
+
+msgid "迁移已保存凭据"
+msgstr "Migrate saved credentials"
+
+msgid "遇到正在修改的文章或下载设置。本批已成功的修改保留；继续时会重新读取冲突记录。"
+msgstr "A post or download setting was edited during the scan. Completed changes are kept. The conflicting record is read again on retry."
