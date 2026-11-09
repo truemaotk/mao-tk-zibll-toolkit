@@ -1,0 +1,15 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "有未保存的修改，预览不影响正式文章。": [
+        "There are unsaved changes, and the preview does not affect the official article."
+      ]
+    }
+  }
+}

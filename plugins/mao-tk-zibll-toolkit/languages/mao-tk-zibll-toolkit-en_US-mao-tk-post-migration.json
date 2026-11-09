@@ -1,0 +1,123 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "待确认": [
+        "To be confirmed"
+      ],
+      "准备就绪": [
+        "Ready"
+      ],
+      "正在处理": [
+        "Processing"
+      ],
+      "已暂停": [
+        "Suspended"
+      ],
+      "已完成": [
+        "Completed"
+      ],
+      "已过期": [
+        "Expired"
+      ],
+      "包校验失败": [
+        "Package verification failed"
+      ],
+      "新增": [
+        "New"
+      ],
+      "跳过已有": [
+        "Skip existing"
+      ],
+      "更新已有": [
+        "Updated"
+      ],
+      "存在冲突": [
+        "There is a conflict"
+      ],
+      "导出": [
+        "Export"
+      ],
+      "请求未完成，请刷新任务核对。": [
+        "The request is not completed, please refresh the task verification."
+      ],
+      "导入预检与执行结果": [
+        "Import preflight and execution results"
+      ],
+      "导出任务": [
+        "Export tasks"
+      ],
+      "成功 ": [
+        "Success "
+      ],
+      " · 跳过 ": [
+        " · Skip "
+      ],
+      " · 失败 ": [
+        " · Failed "
+      ],
+      "第 ": [
+        "No. "
+      ],
+      " 页 · 每页 20 条": [
+        " Page · 20 items per page"
+      ],
+      "继续任务": [
+        "Continue mission"
+      ],
+      "确认并开始": [
+        "Confirm and start"
+      ],
+      "下载成功部分 ZIP": [
+        "Download successful partial ZIP"
+      ],
+      "下载完整 ZIP": [
+        "Download full ZIP"
+      ],
+      "导出含失败项：当前 ZIP 仅包含成功部分。可以先重试失败项，再下载完整包。": [
+        "Export with failed items: The current ZIP contains only successful items. You can retry the failed items before downloading the complete package."
+      ],
+      "正在读取任务…": [
+        "Reading tasks..."
+      ],
+      "还没有迁移任务。": [
+        "There are no migration tasks yet."
+      ],
+      "查看任务": [
+        "View tasks"
+      ],
+      "导入文章": [
+        "Import articles"
+      ],
+      "导出文章": [
+        "Export article"
+      ],
+      " 条": [
+        " Article"
+      ],
+      "请求超时，已停止自动发送；请刷新任务核对已保存进度后继续。": [
+        "The request has timed out and automatic sending has stopped; please refresh the task to check the saved progress before continuing."
+      ],
+      "任务处理结束，请检查失败项后重试。": [
+        "Task processing is completed, please check the failed items and try again."
+      ],
+      "任务已完成。": [
+        "Mission completed."
+      ],
+      "失败项已准备好，点击“继续任务”重试。": [
+        "The failed item is ready, click \"Continue Task\" to try again."
+      ],
+      "运行中 · 仅管理员后台使用，不影响前台文章显示。": [
+        "Running · Only used by administrators in the background and does not affect the display of articles in the front."
+      ],
+      "未运行 · 请开启模块，并确认当前为 Zibll 或其子主题。": [
+        "Not running · Please open the module and confirm that it is Zibll or its subtheme."
+      ]
+    }
+  }
+}

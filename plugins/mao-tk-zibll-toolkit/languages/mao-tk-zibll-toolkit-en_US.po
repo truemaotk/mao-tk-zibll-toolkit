@@ -1,0 +1,6530 @@
+msgid ""
+msgstr "Project-Id-Version: Mao TK Zibll Toolkit 1.24.0-rc.10\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "\n引用此文件的文章将无法下载。"
+msgstr "\nArticles citing this file will not be downloadable."
+
+msgid " / 图标 "
+msgstr " / icon "
+
+msgid " · 失败 "
+msgstr " · Failed "
+
+msgid " · 跳过 "
+msgstr " · Skip "
+
+msgid " 个分片。"
+msgstr " shards."
+
+msgid " 件商品，请按分类分批。"
+msgstr " items, please batch by category."
+
+msgid " 分钟"
+msgstr " minutes"
+
+msgid " 可刷新列表核对。"
+msgstr " Refreshable list check."
+
+msgid " 可重试取消。"
+msgstr " Cancellation can be retried."
+
+msgid " 图"
+msgstr " Figure"
+
+msgid " 小时"
+msgstr " hours"
+
+msgid " 张图片"
+msgstr " pictures"
+
+msgid " 张本地图片"
+msgstr " local images"
+
+msgid " 当前任务可重试。"
+msgstr " The current task can be retried."
+
+msgid " 条"
+msgstr " Article"
+
+msgid " 条链接的 LOGO 不在包内，将保留原图片网址；不会自动请求外部图片。"
+msgstr " links are not included in the package, and the original image URL will be retained; external images will not be automatically requested."
+
+msgid " 条链接，请按分类分批。"
+msgstr " links, please sort by category."
+
+msgid " 格式有误，连接设置未保存。"
+msgstr " Bad format, connection settings not saved."
+
+msgid " 秒"
+msgstr " seconds"
+
+msgid " 篇文章，请按分类分批。"
+msgstr " articles, please group them by category."
+
+msgid " 运行中"
+msgstr " Running"
+
+msgid " 部分配置需要核对恢复前快照。"
+msgstr " Some configurations require verification of pre-restore snapshots."
+
+msgid " 页 · 每页 20 条"
+msgstr " Page · 20 items per page"
+
+msgid " 页面截图"
+msgstr " Page screenshot"
+
+msgid " 项"
+msgstr " items"
+
+msgid " 项模块"
+msgstr " modules"
+
+msgid " 项独立"
+msgstr " independent"
+
+msgid " 项组件"
+msgstr " item component"
+
+msgid "%1$d / %2$d 运行中"
+msgstr "%1$d / %2$d running"
+
+msgid "%s开关"
+msgstr "Toggle %s"
+
+msgid "%s类型"
+msgstr "%s style"
+
+msgid "0px 为直角，调大可变为圆形。关闭底座仍保留点击区域。"
+msgstr "0px is a right angle, and it can be turned into a circle by increasing the size. The click area remains when closing the base."
+
+msgid "100% 实际大小"
+msgstr "100% actual size"
+
+msgid "1025px 及以上"
+msgstr "1025px and above"
+
+msgid "404 公益页面"
+msgstr "404 Public Service Page"
+
+msgid "404 公益页面设置"
+msgstr "404 public welfare page settings"
+
+msgid "404 标题"
+msgstr "404 Title"
+
+msgid "404 页面替换"
+msgstr "404 page replacement"
+
+msgid "404 页面设置已保存。"
+msgstr "404 Page setup saved."
+
+msgid "767px 及以下"
+msgstr "767px and below"
+
+msgid "LOGO 不是支持的图片，或图片像素过大；SVG 和可执行文件不会导入。"
+msgstr "LOGO is not a supported image, or the image pixels are too large; SVG and executable files will not be imported."
+
+msgid "LOGO 为空或超过 2 MiB。"
+msgstr "LOGO is empty or exceeds 2 MiB."
+
+msgid "LOGO 元数据格式无效。"
+msgstr "LOGO metadata format is invalid."
+
+msgid "LOGO 入库失败："
+msgstr "LOGO storage failed:"
+
+msgid "LOGO 数量超出限制。"
+msgstr "The number of LOGOs exceeds the limit."
+
+msgid "LOGO 文件已丢失或变化，请重新上传迁移包。"
+msgstr "The LOGO file has been lost or changed, please re-upload the migration package."
+
+msgid "LOGO 未能打包；可重试，或明确选择不包含 LOGO 后重新导出。"
+msgstr "LOGO failed to be packaged; you can try again, or explicitly choose not to include the LOGO and re-export."
+
+msgid "LOGO 校验值不一致。"
+msgstr "LOGO check values are inconsistent."
+
+msgid "Logo 与背景"
+msgstr "Logo and background"
+
+msgid "Logo 位置"
+msgstr "Logo location"
+
+msgid "Logo 图片网址"
+msgstr "Logo image URL"
+
+msgid "Logo 媒体格式不是 PNG。"
+msgstr "Logo media format is not PNG."
+
+msgid "Logo 显示宽度"
+msgstr "Logo display width"
+
+msgid "Mao TK Zibll Toolkit"
+msgstr "Mao TK Zibll Toolkit"
+
+msgid "Mao TK 作者主页"
+msgstr "Mao TK Author Homepage"
+
+msgid "Mao TK 客服"
+msgstr "Mao TK Customer Service"
+
+msgid "MaoTK 案例分类"
+msgstr "MaoTK case classification"
+
+msgid "MaoTK 案例展示"
+msgstr "MaoTK case presentation"
+
+msgid "MaoTK 案例展示（模块未启用）"
+msgstr "MaoTK case display (module not enabled)"
+
+msgid "MaoTK 订单查询"
+msgstr "MaoTK order query"
+
+msgid "R2 上传凭据"
+msgstr "R2 upload credentials"
+
+msgid "R2 上传返回 HTTP "
+msgstr "R2 upload returns HTTP "
+
+msgid "R2 图片同步"
+msgstr "R2 Image Sync"
+
+msgid "R2 图片大小无效。"
+msgstr "R2 image size is invalid."
+
+msgid "R2 对象键"
+msgstr "R2 Object Key"
+
+msgid "R2 已上传文件"
+msgstr "Files Uploaded to R2"
+
+msgid "R2 收到的分片大小与所选文件不符。"
+msgstr "The fragment size received by R2 does not match the selected file."
+
+msgid "R2 收到的分片还不完整。"
+msgstr "The fragment received by R2 was incomplete."
+
+msgid "R2 文件上传与下载"
+msgstr "R2 File Uploads & Downloads"
+
+msgid "R2 未确认删除，请刷新文件列表核对。"
+msgstr "R2 deletion not confirmed, please refresh the file list to check."
+
+msgid "R2 未确认最终文件大小。请重试确认。"
+msgstr "R2 Unconfirmed final file size. Please try again to confirm."
+
+msgid "R2 桶中没有找到该对象，请核对完整对象键。"
+msgstr "The object was not found in the R2 bucket, please check the full object key."
+
+msgid "R2 没有返回有效的上传编号。"
+msgstr "R2 did not return a valid upload number."
+
+msgid "R2 没有返回有效的文件大小。"
+msgstr "R2 did not return a valid file size."
+
+msgid "R2 返回 HTTP "
+msgstr "R2 returns HTTP "
+
+msgid "R2 返回了无效的分片信息。"
+msgstr "R2 returned invalid shard information."
+
+msgid "R2 返回的分页信息不完整，请重新读取文件。"
+msgstr "The paging information returned by R2 is incomplete, please re-read the file."
+
+msgid "R2 返回的响应无法读取。请重试。"
+msgstr "The response returned by R2 cannot be read. Please try again."
+
+msgid "SEO 关联保存失败。"
+msgstr "SEO association save failed."
+
+msgid "SVG 图标未通过纯图形安全校验。"
+msgstr "SVG icon failed graphics-only security check."
+
+msgid "SVG包含不支持的脚本、外部引用或图形属性，请换用纯图形SVG或PNG。"
+msgstr "SVG contains unsupported scripts, external references or graphic attributes, please use pure graphic SVG or PNG instead."
+
+msgid "Toolkit R2 图片批量同步"
+msgstr "Toolkit R2 image batch synchronization"
+
+msgid "Toolkit 提供（默认，原插件未启用时）"
+msgstr "Provided by Toolkit (default, when the original plug-in is not enabled)"
+
+msgid "Toolkit 提示框外观"
+msgstr "Toolkit prompt box appearance"
+
+msgid "Toolkit 正在提供原 maotk/note 区块；关闭外观增强仍保留基础编辑。"
+msgstr "Toolkit is providing native maotk/note blocks; turning off appearance enhancements still retains basic editing."
+
+msgid "Toolkit 私密链接"
+msgstr "Toolkit private link"
+
+msgid "Toolkit 配置图片"
+msgstr "Toolkit configuration picture"
+
+msgid "V1 暂不提供网络级启用，请在需要的单个站点中启用插件。"
+msgstr "V1 does not provide network-level activation yet. Please enable the plug-in in the individual site where you need it."
+
+msgid "WooCommerce 与 Order Email Manager：独立完整模板，自动排除，暂不在此模块编辑。"
+msgstr "WooCommerce and Order Email Manager: independent complete templates, automatically excluded, not currently edited in this module."
+
+msgid "WordPress retrieve_password_notification_email；仅在原生重置链接邮件实际发送时接管外观。"
+msgstr "WordPress retrieve_password_notification_email; only takes over the appearance if the native reset link email is actually sent."
+
+msgid "WordPress wp_new_user_notification_email；子比前台注册未发现独立欢迎邮件，不额外发送。"
+msgstr "WordPress wp_new_user_notification_email; Zibi front-end registration did not find an independent welcome email and will not send it additionally."
+
+msgid "WordPress 原生链接不支持 _parent 打开方式，请先调整源链接。"
+msgstr "WordPress native links do not support the _parent opening method. Please adjust the source link first."
+
+msgid "WordPress 无法连接 R2。请稍后重试。"
+msgstr "WordPress cannot connect to R2. Please try again later."
+
+msgid "WordPress 登录入口"
+msgstr "WordPress login portal"
+
+msgid "WordPress 链接列表、子比网址导航和链接详情页。链接仍为私密，原生后台“待审核”计数不变。允许用户的页面禁止共享缓存。"
+msgstr "WordPress link list, sub-url navigation and link details page. The link remains private, and the native backend \"pending review\" count remains unchanged. Allow users' pages to disable shared caching."
+
+msgid "Worker 下载域名"
+msgstr "Worker download domain name"
+
+msgid "Worker 下载签名"
+msgstr "Worker download signature"
+
+msgid "Worker 未返回测试图片。请核对 Worker 绑定、域名和签名。"
+msgstr "Worker not returning test images. Please check worker binding, domain name and signature."
+
+msgid "Worker 签名密钥"
+msgstr "Worker signing key"
+
+msgid "ZIP 上限 256 MiB，单图 8 MiB。超过 PHP 上传上限时，可使用站外私有收件目录。"
+msgstr "ZIP limit 256 MiB, single image 8 MiB. When the PHP upload limit is exceeded, an off-site private inbox directory can be used."
+
+msgid "ZIP 不可用、为空或超过 256 MiB。"
+msgstr "ZIP is unavailable, empty, or larger than 256 MiB."
+
+msgid "ZIP 不可用或超过 256 MiB。"
+msgstr "ZIP is unavailable or exceeds 256 MiB."
+
+msgid "ZIP 不存在或超过 32 MiB。"
+msgstr "ZIP does not exist or exceeds 32 MiB."
+
+msgid "ZIP 写入失败。"
+msgstr "ZIP write failed."
+
+msgid "ZIP 创建失败。"
+msgstr "ZIP creation failed."
+
+msgid "ZIP 含非法、重复或不支持的路径。"
+msgstr "ZIP contains illegal, duplicate, or unsupported paths."
+
+msgid "ZIP 已失效。"
+msgstr "ZIP has expired."
+
+msgid "ZIP 损坏。"
+msgstr "ZIP corrupted."
+
+msgid "ZIP 文件数量过多。"
+msgstr "Too many ZIP files."
+
+msgid "ZIP 无法打开或校验失败。"
+msgstr "ZIP cannot be opened or verification failed."
+
+msgid "ZIP 解压大小超过限制。"
+msgstr "ZIP decompression size exceeds limit."
+
+msgid "https://… 或从媒体库选择"
+msgstr "https://… or select from media library"
+
+msgid "https://…（留空不显示）"
+msgstr "https://… (leave blank not to display)"
+
+msgid "https://旧站域名/"
+msgstr "https://old site domain name/"
+
+msgid "manifest.json 缺失或损坏。"
+msgstr "manifest.json is missing or corrupt."
+
+msgid "manifest.json 缺失或无效。"
+msgstr "manifest.json is missing or invalid."
+
+msgid "wp_mail 未接受测试邮件，请检查原系统 SMTP 配置；本模块未修改 SMTP。"
+msgstr "wp_mail did not accept test emails, please check the original system SMTP configuration; this module has not modified SMTP."
+
+msgid "· 失败"
+msgstr "· Failed"
+
+msgid "· 已处理"
+msgstr "· Processed"
+
+msgid "· 点击选中完整网址"
+msgstr "· Click to select full URL"
+
+msgid "”即可。也可直接创建一个公开页面。"
+msgstr "” is all. You can also create a public page directly."
+
+msgid "”已"
+msgstr "\"has"
+
+msgid "”无法核对身份；不会按旧用户 ID 套用规则。请取消此分类或先核对目标账号。"
+msgstr "\"Unable to verify identity; rules will not be applied based on old user ID. Please cancel this classification or verify the target account first."
+
+msgid "”未能保存，开关已恢复为服务器确认的状态。"
+msgstr "\"Failed to save, switch has reverted to server confirmed state."
+
+msgid "”的保存结果未确认，已恢复显示；请刷新页面核对后重试。"
+msgstr "\"The saved result has not been confirmed and has been restored to display; please refresh the page to check and try again."
+
+msgid "”的内容；原设置未改变。"
+msgstr "” content; the original settings have not been changed."
+
+msgid "”的开关设置…"
+msgstr "Switch settings for “…"
+
+msgid "。原生邮件包装器："
+msgstr ". Native mail wrapper:"
+
+msgid "。大包可使用私有收件目录。"
+msgstr ". Large packages can use private incoming directories."
+
+msgid "。文章、链接与商品迁移包请在对应入口使用。"
+msgstr ". Please use the corresponding entrance for articles, links and product migration packages."
+
+msgid "。普通链接可使用"
+msgstr ". Normal links can be used"
+
+msgid "。留空显示“恢复时间待确认”；到期后仍保持维护，需手动关闭。"
+msgstr ". Leave it blank to display \"Recovery time to be confirmed\"; maintenance will continue after expiration and needs to be closed manually."
+
+msgid "。维护页不依赖主题资源，停用模块立即恢复正常渲染，内容配置继续保留。"
+msgstr ". The maintenance page does not rely on theme resources. Normal rendering will resume immediately after deactivating the module, and the content configuration will continue to be retained."
+
+msgid "。请核对桶、上传凭据或连接后重试。"
+msgstr ". Please check the bucket, upload credentials, or try again after connecting."
+
+msgid "。阅读与折叠在根组增加"
+msgstr ". Reading and folding are added in the root group"
+
+msgid "一个模块未能完成页面输出，工作台其它区域仍可使用。请检查最近启用的模块。"
+msgstr "A module failed to complete the page output, other areas of the workbench are still available. Please check recently enabled modules."
+
+msgid "一个轻量、可逐步扩展的 Zibll 工作台。功能按需加载，设置由你掌握。"
+msgstr "A lightweight, progressively extensible Zibll workbench. Features are loaded on demand, and the settings are in your control."
+
+msgid "一套通用设置，按邮件类型继承。只调整外观，继续使用原系统发送。"
+msgstr "A common set of settings, inherited by message type. Only adjust the appearance and continue to use the original system to send."
+
+msgid "一条一条处理，已完成项不会重复执行。"
+msgstr "Process each item one by one, and completed items will not be executed repeatedly."
+
+msgid "一致。"
+msgstr "Consistent."
+
+msgid "三个导航栏目"
+msgstr "Three navigation columns"
+
+msgid "上一页"
+msgstr "Previous page"
+
+msgid "上传会话已过期，或与当前账号或存储配置不符。"
+msgstr "The upload session has expired or does not match the current account or storage configuration."
+
+msgid "上传会话无效，请重新选择文件。"
+msgstr "Invalid upload session, please select the file again."
+
+msgid "上传你自己的图标，或粘贴图片链接。设置统一应用到所有案例。"
+msgstr "Upload your own icon, or paste a link to an image. Settings are applied uniformly to all cases."
+
+msgid "上传后只预检，不会立刻覆盖设置或写入图片。"
+msgstr "Only preflight after uploading, settings will not be overwritten or images will be written immediately."
+
+msgid "上传商品迁移包"
+msgstr "Upload product migration package"
+
+msgid "上传图标"
+msgstr "Upload icon"
+
+msgid "上传已停止。"
+msgstr "Upload stopped."
+
+msgid "上传已完成。请在下方填入文章 ID 并生成引用。"
+msgstr "Upload completed. Please enter your article ID below and generate a citation."
+
+msgid "上传并预检"
+msgstr "Upload and preflight"
+
+msgid "上传文件"
+msgstr "Upload files"
+
+msgid "上传文件和生成下载引用"
+msgstr "Upload files and generate download references"
+
+msgid "上传文章迁移包"
+msgstr "Upload article migration package"
+
+msgid "上传时请保持本页打开，失败后可继续当前任务。"
+msgstr "Please keep this page open when uploading. If it fails, you can continue the current task."
+
+msgid "上传迁移包"
+msgstr "Upload migration package"
+
+msgid "上传进度"
+msgstr "Upload progress"
+
+msgid "上方留白"
+msgstr "Leave the top blank"
+
+msgid "上移"
+msgstr "Move up"
+
+msgid "上移当前案例"
+msgstr "Move current case up"
+
+msgid "下一页"
+msgstr "Next page"
+
+msgid "下单但尚未付款：本次未找到独立邮件入口，不新增发送。"
+msgstr "Order placed but not yet paid: No independent email entrance was found this time, no new email will be sent."
+
+msgid "下方留白"
+msgstr "Leave the bottom blank"
+
+msgid "下移"
+msgstr "Move down"
+
+msgid "下移当前案例"
+msgstr "Move current case down"
+
+msgid "下载 ZIP"
+msgstr "Download ZIP"
+
+msgid "下载会话已失效，请回到文章重新点击下载。"
+msgstr "The download session has expired, please return to the article and click download again."
+
+msgid "下载包已失效，请重新导出。"
+msgstr "The download package has expired, please export it again."
+
+msgid "下载完整 ZIP"
+msgstr "Download full ZIP"
+
+msgid "下载引用无效或当前文章不可下载。"
+msgstr "The download citation is invalid or the current article cannot be downloaded."
+
+msgid "下载恢复前快照"
+msgstr "Download pre-restore snapshot"
+
+msgid "下载成功部分 ZIP"
+msgstr "Download successful partial ZIP"
+
+msgid "下载报告／原文备份"
+msgstr "Download report/original text backup"
+
+msgid "下载报告／覆盖前备份"
+msgstr "Download report/backup before overwriting"
+
+msgid "下载报告／配置备份"
+msgstr "Download report/configuration backup"
+
+msgid "下载方式"
+msgstr "Download method"
+
+msgid "下载暂时无法开始。"
+msgstr "Download cannot be started at this time."
+
+msgid "下载签名尚未配置，请联系管理员。"
+msgstr "Download signature has not been configured, please contact the administrator."
+
+msgid "下载类型无效。"
+msgstr "Invalid download type."
+
+msgid "下载配置包"
+msgstr "Download configuration package"
+
+msgid "不会按标题合并商品。来源 ID 或完整别名冲突、预检后被修改的商品会单独提示。"
+msgstr "Products will not be merged by title. Products with conflicting source IDs or complete aliases or products that have been modified after preflight will be prompted separately."
+
+msgid "不会按标题合并文章。来源 ID 或完整别名冲突、预检后被修改的文章会单独提示。"
+msgstr "Articles will not be merged by title. Articles with conflicting source IDs or complete aliases, or articles that have been modified after preflight will be prompted separately."
+
+msgid "不可见"
+msgstr "Not visible"
+
+msgid "不含文章、商品、订单、用户密码或 SMTP 密钥"
+msgstr "No articles, products, orders, user passwords or SMTP keys"
+
+msgid "不接受加密包或符号链接。"
+msgstr "Do not accept encrypted packages or symbolic links."
+
+msgid "不接受符号链接或加密 ZIP。"
+msgstr "Do not accept symbolic links or encrypted ZIPs."
+
+msgid "不支持此操作。"
+msgstr "This operation is not supported."
+
+msgid "不支持的任务操作。"
+msgstr "Unsupported task operation."
+
+msgid "不是支持的 Toolkit 配置备份。"
+msgstr "Toolkit configuration backup is not supported."
+
+msgid "不是支持的商品迁移格式。"
+msgstr "is not a supported product migration format."
+
+msgid "不是支持的文章迁移格式。"
+msgstr "is not a supported article migration format."
+
+msgid "不是支持的旧版友链清单。"
+msgstr "is not a supported legacy friend list."
+
+msgid "不是数组。"
+msgstr "is not an array."
+
+msgid "不显示属性"
+msgstr "Do not display attributes"
+
+msgid "不能创建私有收件目录。"
+msgstr "Unable to create private incoming directory."
+
+msgid "不能包含换行或 HTML。"
+msgstr "Cannot contain line breaks or HTML."
+
+msgid "不迁移订单、购买权益、销量、评价、实际卡密、邀请码、优惠活动、用户和下载文件实体。自动发货的标识与视频／外部链接需在目标站复核。"
+msgstr "Orders, purchase rights, sales, reviews, actual card secrets, invitation codes, promotions, users and downloaded file entities will not be migrated. Automatic shipping logos and videos/external links need to be reviewed at the target site."
+
+msgid "不选则按账号单独允许"
+msgstr "If not selected, allow individually by account."
+
+msgid "不选择时按上面的分类与可见范围导出"
+msgstr "When not selected, export according to the above classification and visible range"
+
+msgid "不透明度"
+msgstr "Opacity"
+
+msgid "与 Worker 的 MAOTK_R2_SIGNING_KEY 一致，共 64 个十六进制字符。"
+msgstr "Consistent with Worker's MAOTK_R2_SIGNING_KEY, 64 hex characters in total."
+
+msgid "两个按钮使用相同图标"
+msgstr "Same icon for two buttons"
+
+msgid "两个按钮图标大小"
+msgstr "Two button icon sizes"
+
+msgid "两个按钮的统一图标"
+msgstr "Unified icon for both buttons"
+
+msgid "个"
+msgstr "indivual"
+
+msgid "个附件 ·"
+msgstr "attachments ·"
+
+msgid "中"
+msgstr "Medium"
+
+msgid "中断商品已被修改，请重新预检。"
+msgstr "The discontinued product has been modified, please pre-check again."
+
+msgid "中断文章已被修改，请重新预检。"
+msgstr "The interrupted article has been modified, please pre-check again."
+
+msgid "中断项分类恢复失败，请重试。"
+msgstr "Interrupted item classification recovery failed, please try again."
+
+msgid "临时目录不能是符号链接。"
+msgstr "The temporary directory cannot be a symbolic link."
+
+msgid "临时目录位于可公开访问的网站目录内，已停止创建迁移包。请配置站外私有临时目录。"
+msgstr "The temporary directory located within a publicly accessible website directory has stopped creating migration packages. Please configure an off-site private temporary directory."
+
+msgid "为个人主页与用户中心增加预设图片选择，保留原生上传；头像、背景与注册随机分配分别管理。"
+msgstr "Add default image selection for personal homepage and user center, retain native upload; avatar, background and registration random allocation are managed separately."
+
+msgid "为已识别的系统通知配置通用与独立模板，保留原发送、验证、订单及 SMTP 逻辑。"
+msgstr "Configure common and independent templates for identified system notifications, retaining original sending, validation, order and SMTP logic."
+
+msgid "为走丢的页面保留返回入口，也为公益寻亲多一份关注。"
+msgstr "Reserve a return entrance for lost pages, and also pay more attention to the charity family search."
+
+msgid "主图缺失。"
+msgstr "Main image missing."
+
+msgid "主按钮悬停"
+msgstr "Main button hover"
+
+msgid "主按钮背景"
+msgstr "Main button background"
+
+msgid "主题与配色"
+msgstr "Theme and color matching"
+
+msgid "主题未就绪"
+msgstr "Topic not ready"
+
+msgid "主题版本"
+msgstr "Theme version"
+
+msgid "主题色"
+msgstr "Theme color"
+
+msgid "主题："
+msgstr "Subject:"
+
+msgid "也可以选中案例后按 Alt＋↑ / ↓。"
+msgstr "You can also select the case and press Alt＋↑ / ↓."
+
+msgid "书签"
+msgstr "Bookmark"
+
+msgid "二维码 "
+msgstr "QR code "
+
+msgid "二维码图片地址"
+msgstr "QR code image address"
+
+msgid "五种提示框的封板外观与配置继承；保留旧 maotk/note 区块、段落和列表。"
+msgstr "The cover appearance and configuration of five prompt boxes are inherited; the old maotk/note blocks, paragraphs and lists are retained."
+
+msgid "五种类型"
+msgstr "Five types"
+
+msgid "交互"
+msgstr "Interaction"
+
+msgid "产品"
+msgstr "Products"
+
+msgid "人民币显示方式"
+msgstr "RMB display method"
+
+msgid "人民币统一显示 CNY"
+msgstr "RMB unified display CNY"
+
+msgid "仅公开链接"
+msgstr "Public links only"
+
+msgid "仅勾选的项目单独配置，其余继续继承通用设置。"
+msgstr "Only the checked items are configured individually, and the rest continue to inherit the common settings."
+
+msgid "仅可删除 Toolkit 上传的文件。"
+msgstr "Only files uploaded by the Toolkit can be deleted."
+
+msgid "仅在明确标记的正文内应用紧凑间距、图片边界和已确认的折叠交互；标题与目录沿用主题。"
+msgstr "Apply tight spacing, image boundaries, and confirmed fold interactions only within clearly marked body text; follow the theme in headings and tables of contents."
+
+msgid "仅处理不存在页面的 HTML 请求，保留真实 HTTP 404 状态。关闭后立即恢复子比原生模板。"
+msgstr "Only handle HTML requests for non-existent pages, retaining the true HTTP 404 status. Restore sub-native template immediately after closing."
+
+msgid "仅导入标题、说明、Logo、恢复时间和页脚，不导入开启状态，不覆盖或删除旧配置。"
+msgstr "Only the title, description, logo, recovery time and footer are imported, the open status is not imported, and the old configuration is not overwritten or deleted."
+
+msgid "仅引用媒体库图片；移出预设不会删除原图。支持 JPG、PNG、WebP、GIF。"
+msgstr "Only media library images are referenced; moving out of a preset does not delete the original image. Supports JPG, PNG, WebP, GIF."
+
+msgid "仅当前账号可查看；最多保留 10 条记录，文件有效期 7 天。"
+msgstr "Only the current account can be viewed; a maximum of 10 records can be retained, and the file is valid for 7 days."
+
+msgid "仅当前账号最新 20 个任务，包与备份有效期 24 小时。"
+msgstr "Only the latest 20 tasks of the current account, the package and backup are valid for 24 hours."
+
+msgid "仅显示当前账号最近 20 个任务；迁移包有效期 24 小时。"
+msgstr "Only the last 20 tasks of the current account are displayed; the migration package is valid for 24 hours."
+
+msgid "仅普通文章"
+msgstr "Normal articles only"
+
+msgid "仅更新已有草稿，并保存原商品备份"
+msgstr "Only update existing drafts and save a backup of the original product"
+
+msgid "仅点击后发送，沿用现有 SMTP。测试邮件会明确标记，不生成真实验证码或订单；不会保存当前未保存的设置。"
+msgstr "Click-to-send only, inherits existing SMTP. Test emails are clearly marked and will not generate real verification codes or orders; currently unsaved settings will not be saved."
+
+msgid "仅用于可公开分享的文件。文章的阅读限制仍然有效。"
+msgstr "Only for files that can be shared publicly. Article reading restrictions remain in effect."
+
+msgid "仅用户本人确认后保存。原生上传入口和已有图片保留，关闭模块不删除资料。"
+msgstr "Only save after confirmation by the user. The native upload entrance and existing images are retained, and closing the module does not delete the data."
+
+msgid "仅私密链接"
+msgstr "Private links only"
+
+msgid "仅能覆盖草稿商品，在售／私密／回收站商品未修改。"
+msgstr "Only draft items can be covered, and active/private/recycle bin items have not been modified."
+
+msgid "仅补传未同步"
+msgstr "Supplemental transmission only not synchronized"
+
+msgid "仅调整提示框，文章标题与主题目录沿用原生。"
+msgstr "Only the prompt box is adjusted, and the article title and topic directory remain native."
+
+msgid "仅迁移商品配置，不包含订单、购买权益、实际卡密、邀请码或优惠活动。依赖主题全局配置的项目需在目标站复核。"
+msgstr "Only the product configuration is migrated, and orders, purchase rights, actual card codes, invitation codes or promotions are not included. Projects that rely on theme global configuration need to be reviewed on the target site."
+
+msgid "仅迁移文章、图片与扩展字段。评论、订单、已购权益、站点设置、账号权限及下载文件实体不在本次范围；特殊扩展字段中的业务 ID 保留原值，需要另行核对。"
+msgstr "Only articles, images and extension fields are migrated. Comments, orders, purchased rights, site settings, account permissions and downloaded file entities are not included in this scope; the business ID in the special extension field retains its original value and needs to be checked separately."
+
+msgid "仅适配顶部横向 TAB B，切换、状态和面板仍由主题负责。"
+msgstr "Styles the theme’s horizontal Tab B. The theme manages tab switching and panels."
+
+msgid "从 R2 删除"
+msgstr "Removed from R2"
+
+msgid "从品牌商城到内容站，看看不同页面的呈现方式。"
+msgstr "From brand mall to content site, look at how different pages are presented."
+
+msgid "从媒体库添加"
+msgstr "Add from media library"
+
+msgid "从媒体库选择"
+msgstr "Select from media library"
+
+msgid "从旧站带走完整链接，在新站预检后再写入。"
+msgstr "Take the complete link from the old site and write it after preflight at the new site."
+
+msgid "付款成功 · 买家"
+msgstr "Payment successful · Buyer"
+
+msgid "代码区块外层组填写"
+msgstr "Fill in the outer group of the code block"
+
+msgid "以父主题目录识别依赖"
+msgstr "Detected by the parent theme directory"
+
+msgid "价格／图片"
+msgstr "Price/Pictures"
+
+msgid "任务不存在或不属于当前账号。"
+msgstr "The task does not exist or does not belong to the current account."
+
+msgid "任务仅对创建账号可见。私密迁移包放在网站目录之外，下载需要登录与权限验证。"
+msgstr "Tasks are only visible to created accounts. The private migration package is placed outside the website directory, and downloading requires login and permission verification."
+
+msgid "任务保存失败，请刷新后核对进度。"
+msgstr "Task saving failed, please refresh and check the progress."
+
+msgid "任务处理结束，请检查失败项后重试。"
+msgstr "Task processing is completed, please check the failed items and try again."
+
+msgid "任务已中断"
+msgstr "Mission interrupted"
+
+msgid "任务已完成。"
+msgstr "Mission completed."
+
+msgid "任务已过期，仅保留列表摘要。"
+msgstr "Task has expired, only list summary remains."
+
+msgid "任务已过期，请重新创建。"
+msgstr "The task has expired, please create it again."
+
+msgid "任务文件丢失或过大。"
+msgstr "Task file is missing or too large."
+
+msgid "任务文件写入失败。"
+msgstr "Task file writing failed."
+
+msgid "任务文件替换失败。"
+msgstr "Task file replacement failed."
+
+msgid "任务文件校验失败。"
+msgstr "Mission file verification failed."
+
+msgid "任务标识无效。"
+msgstr "Invalid task ID."
+
+msgid "任务正在处理，请稍后重试；若上次请求意外终止，可在 2 分钟后恢复任务。"
+msgstr "The task is being processed, please try again later; if the last request was terminated unexpectedly, the task can be resumed after 2 minutes."
+
+msgid "任务正文与备份超过 64 MiB，请缩小迁移范围。"
+msgstr "Task body and backup exceed 64 MiB, please reduce the scope of migration."
+
+msgid "任务版本无效。"
+msgstr "Invalid task version."
+
+msgid "任务版本无效，请刷新任务。"
+msgstr "The task version is invalid, please refresh the task."
+
+msgid "任务状态保存失败。"
+msgstr "Task status saving failed."
+
+msgid "任务目录异常。"
+msgstr "Task directory exception."
+
+msgid "任务记录"
+msgstr "Mission records"
+
+msgid "任务记录保存失败。"
+msgstr "Task record saving failed."
+
+msgid "任务预检"
+msgstr "Task preflight"
+
+msgid "优创 · 让爱回家数据（备用）"
+msgstr "Youchuang·Let love come home data (backup)"
+
+msgid "会话已过期或权限不足，请刷新后再试。"
+msgstr "The session has expired or has insufficient permissions. Please refresh and try again."
+
+msgid "会话已过期，请刷新页面。"
+msgstr "The session has expired, please refresh the page."
+
+msgid "位用户"
+msgstr "users"
+
+msgid "位置选项无效。"
+msgstr "Invalid location option."
+
+msgid "你没有修改文章时效提示的权限。"
+msgstr "You do not have the permission to modify the article expiration date."
+
+msgid "你没有修改模块设置的权限。"
+msgstr "You do not have permission to modify module settings."
+
+msgid "你没有修改私密链接设置的权限。"
+msgstr "You do not have permission to modify private link settings."
+
+msgid "你没有刷新公益信息的权限。"
+msgstr "You do not have permission to refresh public welfare information."
+
+msgid "你没有管理 404 页面的权限。"
+msgstr "You do not have permission to manage 404 pages."
+
+msgid "你没有管理案例库的权限。"
+msgstr "You do not have permission to manage case libraries."
+
+msgid "你没有管理用户可见范围的权限。"
+msgstr "You do not have permission to manage user visibility scope."
+
+msgid "你没有管理维护页面的权限。"
+msgstr "You do not have permission to manage maintenance pages."
+
+msgid "你没有管理订单查询页面的权限。"
+msgstr "You do not have permission to manage the order inquiry page."
+
+msgid "你没有管理预设图片的权限。"
+msgstr "You do not have permission to manage preset images."
+
+msgid "你没有访问文章顶部信息设置的权限。"
+msgstr "You do not have permission to access the post top information settings."
+
+msgid "你没有访问此设置页的权限。"
+msgstr "You do not have permission to access this settings page."
+
+msgid "你没有访问此页面的权限。"
+msgstr "You do not have permission to access this page."
+
+msgid "你访问的页面可能已移动或不存在，可以返回首页，或试试站内搜索。"
+msgstr "The page you visited may have moved or no longer exists. You can return to the homepage or try searching within the site."
+
+msgid "使用Toolkit中央案例库"
+msgstr "Using Toolkit Central Case Library"
+
+msgid "使用与兼容说明"
+msgstr "Usage and Compatibility Instructions"
+
+msgid "使用内置图片库（"
+msgstr "Use the built-in image library ("
+
+msgid "使用原图"
+msgstr "Use original image"
+
+msgid "使用原尺寸高清 PNG，建议至少为显示宽度的 2 倍。独立于网站导航 Logo。"
+msgstr "Use full-size HD PNGs, at least 2x the display width recommended. Independent of website navigation logo."
+
+msgid "使用原生邮件样式"
+msgstr "Use native email styles"
+
+msgid "使用封板默认（单块覆盖）"
+msgstr "Use cover default (single block coverage)"
+
+msgid "使用方式与迁移说明"
+msgstr "Usage and migration instructions"
+
+msgid "使用样例"
+msgstr "Usage Example"
+
+msgid "使用此 PNG"
+msgstr "Use this PNG"
+
+msgid "使用此图片"
+msgstr "Use this image"
+
+msgid "使用独立私有媒体桶及仅限该桶的 Object Read &amp; Write 凭据。"
+msgstr "Use a separate private media bucket and Object Read & Write credentials only for that bucket."
+
+msgid "使用说明"
+msgstr "Getting Started"
+
+msgid "使用这张截图"
+msgstr "Use this screenshot"
+
+msgid "使用通用模板"
+msgstr "Use generic templates"
+
+msgid "使用限定到该桶的 Object Read & Write 凭据。"
+msgstr "Use Object Read & Write credentials qualified to that bucket."
+
+msgid "使用颜色 "
+msgstr "Use color "
+
+msgid "使用默认图标"
+msgstr "Use default icon"
+
+msgid "例如 31"
+msgstr "Example 31"
+
+msgid "例如 https://download.example.com。填写 HTTPS 域名。"
+msgstr "For example https://download.example.com. Fill in the HTTPS domain name."
+
+msgid "例如 releases/plugin.zip"
+msgstr "For example releases/plugin.zip"
+
+msgid "例如：31, 166, 176"
+msgstr "Example: 31, 166, 176"
+
+msgid "例如：80, 81, 82"
+msgstr "Example: 80, 81, 82"
+
+msgid "保存 404 页面设置"
+msgstr "Save 404 page settings"
+
+msgid "保存上传与签名设置后可生成引用。"
+msgstr "References can be generated after saving upload and signature settings."
+
+msgid "保存上传凭据后可以选择文件。"
+msgstr "Ability to select files after saving upload credentials."
+
+msgid "保存内容或版本标识缺失。"
+msgstr "The save content or version identifier is missing."
+
+msgid "保存后应用到正式文章"
+msgstr "Save and apply to the official article"
+
+msgid "保存后更新所有关联页面"
+msgstr "Update all associated pages after saving"
+
+msgid "保存图片失败。"
+msgstr "Failed to save image."
+
+msgid "保存失败。原有配置保持不变，请检查数据格式及数据库连接。"
+msgstr "Save failed. The original configuration remains unchanged, please check the data format and database connection."
+
+msgid "保存失败，当前修改仍保留。"
+msgstr "Save failed, current modifications are retained."
+
+msgid "保存失败，请保留当前修改并重试。"
+msgstr "Saving failed, please keep the current modifications and try again."
+
+msgid "保存失败，请重试。"
+msgstr "Saving failed, please try again."
+
+msgid "保存媒体桶凭据后即可开启。"
+msgstr "The media bucket can be opened after saving the credentials."
+
+msgid "保存完成；仍有后续修改未保存"
+msgstr "Save completed; there are still subsequent modifications that have not been saved."
+
+msgid "保存显示设置"
+msgstr "Save display settings"
+
+msgid "保存未完成，数据可能已被其他窗口更新。当前修改仍保留，请导出后刷新核对。"
+msgstr "Save not completed, data may have been updated by other windows. The current modifications are still retained, please refresh and check after exporting."
+
+msgid "保存未成功，请重试。"
+msgstr "Saving failed, please try again."
+
+msgid "保存本页账号规则"
+msgstr "Save account rules on this page"
+
+msgid "保存查询设置"
+msgstr "Save query settings"
+
+msgid "保存案例库"
+msgstr "Save case library"
+
+msgid "保存结果未确认，请刷新页面核对后重试。"
+msgstr "The saving result is not confirmed, please refresh the page to check and try again."
+
+msgid "保存角色规则"
+msgstr "Save role rules"
+
+msgid "保存设置"
+msgstr "Save settings"
+
+msgid "保存设置不需要 JavaScript；独立预览与设备切换需要启用 JavaScript。"
+msgstr "Saving settings does not require JavaScript; standalone preview and device switching require JavaScript to be enabled."
+
+msgid "保存设置或打开预览不会开启维护。关闭后保留全部内容。"
+msgstr "Saving settings or opening a preview does not start maintenance. Keep all contents after closing."
+
+msgid "保存连接设置"
+msgstr "Save connection settings"
+
+msgid "保存连接设置后，启用模块即可上传文件和生成下载引用。"
+msgstr "After saving connection settings, enable the module to upload files and generate download references."
+
+msgid "保存邮件设置"
+msgstr "Save mail settings"
+
+msgid "保存预设设置"
+msgstr "Save default settings"
+
+msgid "保持原状态，可能立即公开"
+msgstr "Remain as is, may be made public immediately"
+
+msgid "保持发布状态需要发布权限。"
+msgstr "Publishing permission is required to remain published."
+
+msgid "保留 WordPress 原图，按访问同步旧图，也可以批量同步和恢复。"
+msgstr "Keep the original WordPress images, synchronize old images by access, and batch sync and restore."
+
+msgid "保留原图片；外部图片地址保留，不主动抓取。备份可能含内部链接、账号规则和业务联系文案，请勿公开分享。"
+msgstr "Keep the original image; the external image address is retained and is not actively captured. The backup may contain internal links, account rules and business contact copy, please do not share it publicly."
+
+msgid "保留原币种标识"
+msgstr "Keep original currency identification"
+
+msgid "保留原文与区块，先预检，再迁移。"
+msgstr "Keep the original text and blocks, pre-check first, and then migrate."
+
+msgid "保留原版文章横幅效果，展示标题、封面和阅读信息；设置与预览独立于前台开关。"
+msgstr "Retain the original article banner effect, displaying the title, cover and reading information; settings and previews are independent of the foreground switch."
+
+msgid "保留原邮件的回复地址"
+msgstr "Use the original reply address"
+
+msgid "保留图标原有颜色；上传文件和链接图片都会导入WordPress媒体库。"
+msgstr "Keep the original color of the icon; uploaded files and linked images will be imported into the WordPress media library."
+
+msgid "保留图片网址"
+msgstr "Preserve image URL"
+
+msgid "信息图标颜色"
+msgstr "Information icon color"
+
+msgid "信息文字颜色"
+msgstr "Message text color"
+
+msgid "信息来源与更新"
+msgstr "Information sources and updates"
+
+msgid "信息缓存 15 分钟；失败短时退避，近期缓存最多保留 6 小时并标注。前台请求超时设为 2 秒，后台手动刷新设为 5 秒；接口不可用时保留返回首页与搜索。"
+msgstr "Information is cached for 15 minutes; short-term backoff on failure, recent cache is retained for up to 6 hours and marked. The foreground request timeout is set to 2 seconds, and the background manual refresh is set to 5 seconds; when the interface is unavailable, return to the home page and search are retained."
+
+msgid "修改后保存，前台刷新生效。"
+msgstr "Save after modification, and the foreground refresh will take effect."
+
+msgid "修改后自动更新"
+msgstr "Automatically update after modification"
+
+msgid "停用模块会保留设置。此工作台不会修改主题文件。"
+msgstr "Your settings are kept when modules are disabled. Toolkit runs separately from your theme files."
+
+msgid "停用模块只关闭功能，保留原有设置。"
+msgstr "Deactivating a module only turns off the functionality and retains the original settings."
+
+msgid "允许查看"
+msgstr "Allow viewing"
+
+msgid "元"
+msgstr "Yuan"
+
+msgid "先保存媒体桶凭据、Worker 地址和签名密钥。"
+msgstr "First save the media bucket credentials, worker address and signing key."
+
+msgid "先在左侧“管理案例分类”中添加分类。"
+msgstr "First add a category in the \"Management Case Category\" on the left."
+
+msgid "先把 ZIP 放入以下站外目录，再刷新页面；不接受任意路径或符号链接。"
+msgstr "First put the ZIP into the following off-site directory and then refresh the page; any path or symbolic link is not accepted."
+
+msgid "先检查当前设置，再保存。"
+msgstr "Review your settings before saving."
+
+msgid "先选文件并填写文章 ID，生成后即可复制引用。"
+msgstr "Select the file first and fill in the article ID. Once generated, you can copy the citation."
+
+msgid "先预检，再确认。暂停或关掉页面后，可以从任务记录继续。"
+msgstr "Pre-check first, then confirm. After pausing or closing the page, you can continue from the task record."
+
+msgid "免登录订单必须持有同一浏览器中的子比签名凭据。凭据失效时不能仅凭手机号、邮箱或短编号恢复访问。"
+msgstr "Login-free orders must hold subbi signing credentials from the same browser. When credentials expire, access cannot be restored with just a mobile phone number, email address or short number."
+
+msgid "入口文字"
+msgstr "Entry text"
+
+msgid "入口文字应在 60 个汉字以内。"
+msgstr "Entry text should be within 60 Chinese characters."
+
+msgid "全宽"
+msgstr "full width"
+
+msgid "全部"
+msgstr "All"
+
+msgid "全部分类"
+msgstr "All categories"
+
+msgid "全部存为草稿（推荐）"
+msgstr "Save all as draft (recommended)"
+
+msgid "全部恢复继承"
+msgstr "Restore inheritance in all"
+
+msgid "全部有效状态"
+msgstr "All valid states"
+
+msgid "全部案例"
+msgstr "All cases"
+
+msgid "全部继承"
+msgstr "Inherit all"
+
+msgid "公开"
+msgstr "Public"
+
+msgid "公开下载 · 正文卡片"
+msgstr "Public download · Text card"
+
+msgid "公开下载链接"
+msgstr "Public download link"
+
+msgid "公开下载需要 WordPress 6.2 或更高版本。"
+msgstr "Public download requires WordPress 6.2 or higher."
+
+msgid "公开与私密"
+msgstr "Public vs. private"
+
+msgid "公开链接与私密链接按原状态迁移；本站角色和账号可见性规则不会被覆盖。"
+msgstr "Public links and private links will be migrated as they were; the site's role and account visibility rules will not be overwritten."
+
+msgid "公益信息已刷新，前台可读取最新缓存。"
+msgstr "Public welfare information has been refreshed, and the latest cache can be read in the frontend."
+
+msgid "公益区域标题"
+msgstr "Public benefit area title"
+
+msgid "公益寻亲信息"
+msgstr "Public welfare family search information"
+
+msgid "公益数据接口"
+msgstr "Public welfare data interface"
+
+msgid "共用查看按钮图标"
+msgstr "Shared view button icon"
+
+msgid "关于工具箱"
+msgstr "About Toolkit"
+
+msgid "关于我们"
+msgstr "About us"
+
+msgid "关注公众号"
+msgstr "Follow the public account"
+
+msgid "关注我们"
+msgstr "Follow us"
+
+msgid "关注我们与二维码"
+msgstr "Follow us and QR code"
+
+msgid "关联 "
+msgstr "Association "
+
+msgid "关联更新被其他过滤器改写。"
+msgstr "Association updates were overwritten by other filters."
+
+msgid "关联核对前商品已被修改，未覆盖，请重新预检。"
+msgstr "The product has been modified before association verification and is not covered. Please pre-check again."
+
+msgid "关联核对前文章已被修改，未覆盖，请重新预检。"
+msgstr "The article has been modified before the association check and has not been covered. Please pre-check again."
+
+msgid "关闭"
+msgstr "Close"
+
+msgid "关闭上方共用开关，即可单独设置。"
+msgstr "Turn off the shared switch above to set it individually."
+
+msgid "关闭内置图库后，可以只使用媒体库中的自定义图片。没有可用图片时，前台显示空状态。"
+msgstr "After turning off the built-in gallery, you can only use custom images from the media library. When there are no images available, the frontend displays an empty state."
+
+msgid "关闭只停止正式提示，设置与预览仍可用。"
+msgstr "Turning off only stops the official prompts, settings and previews are still available."
+
+msgid "关闭后仍可设置和预览，原区块内容保留。"
+msgstr "Settings and previews can still be made after closing, and the original block content is retained."
+
+msgid "关闭后恢复原邮件样式，独立配置仍然保留。预览与设置可以在关闭时使用。"
+msgstr "Restore the original email style after closing, and the independent configuration is still retained. Preview and settings are available when closed."
+
+msgid "关闭后显示紧凑标题栏。右侧搜索继续按当前分类、标签或专题搜索。"
+msgstr "Show compact titlebar when closed. Search on the right to continue searching by current category, tag or topic."
+
+msgid "关闭截图预览"
+msgstr "Turn off screenshot preview"
+
+msgid "关闭模块保留配置；前台跟随主题配色。"
+msgstr "Close the module to retain the configuration; the frontend follows the theme color matching."
+
+msgid "其他扩展改变了商品状态，请先恢复草稿后重新预检。"
+msgstr "Other extensions have changed the product status, please restore the draft first and then pre-check again."
+
+msgid "兼容 Toolkit 新格式和旧 posts-N.zip，上传后只做预检。"
+msgstr "Compatible with Toolkit’s new format and old posts-N.zip, only pre-checking is done after uploading."
+
+msgid "兼容旧区块：历史案例及配色属性继续保留，不自动迁移或覆盖。"
+msgstr "Compatible with old blocks: historical cases and color matching attributes will continue to be retained and will not be automatically migrated or overwritten."
+
+msgid "内容"
+msgstr "Content"
+
+msgid "内容不存在，或你没有预览该内容的权限。"
+msgstr "The content does not exist, or you do not have permission to preview the content."
+
+msgid "内容与代码"
+msgstr "Content and Code"
+
+msgid "内容与显示"
+msgstr "Content and display"
+
+msgid "内容内边距"
+msgstr "Content padding"
+
+msgid "内容宽度"
+msgstr "Content width"
+
+msgid "内容最大宽度"
+msgstr "Content maximum width"
+
+msgid "内容组件预览 · 不计入阅读量"
+msgstr "Content component preview · Not counted in reading count"
+
+msgid "内容组织"
+msgstr "Content Organization"
+
+msgid "内容背景"
+msgstr "Content background"
+
+msgid "内容边框圆角"
+msgstr "Content border rounded corners"
+
+msgid "内部标题颜色"
+msgstr "Internal title color"
+
+msgid "再点回到顶部"
+msgstr "Click back to the top"
+
+msgid "写入 LOGO 失败。"
+msgstr "Failed to write LOGO."
+
+msgid "写入后商品发生修改，请重新预检。"
+msgstr "The product has been modified after writing, please pre-check again."
+
+msgid "写入后文章发生修改，请重新预检。"
+msgstr "The article has been modified after writing, please pre-check again."
+
+msgid "写入测试小图，经 Worker 读回后清理。"
+msgstr "Write test thumbnails and clean them after being read back by the Worker."
+
+msgid "准备图片期间配置发生变化，请重新预检。"
+msgstr "The configuration changed during image preparation, please preflight check again."
+
+msgid "准备就绪"
+msgstr "Ready"
+
+msgid "准备预览"
+msgstr "Preparing preview"
+
+msgid "出现未适配字段："
+msgstr "Unadapted fields appear:"
+
+msgid "分别调整整个案例区域的上下留白，默认各10px。不改变卡片内部间距。"
+msgstr "Adjust the upper and lower margins of the entire case area separately, defaulting to 10px each. Does not change the internal spacing of the card."
+
+msgid "分片数量超过当前上传上限。"
+msgstr "The number of shards exceeds the current upload limit."
+
+msgid "分片编号无效。"
+msgstr "Invalid shard number."
+
+msgid "分类"
+msgstr "Classification"
+
+msgid "分类、标签、专题共用一套标题栏，可单独开关封面和正文描述。"
+msgstr "Categories, tags, and topics share a set of title bars, and the cover and text description can be switched separately."
+
+msgid "分类、标签和专题共用一套标题栏。顶部开关可随时切回子比原版。"
+msgstr "Categories, tags, and topics share a common title bar. The top switch can switch back to the original version at any time."
+
+msgid "分类、继承与恢复说明"
+msgstr "Classification, inheritance and restoration instructions"
+
+msgid "分类不存在。"
+msgstr "Classification does not exist."
+
+msgid "分类供页面选择。移除分类后，原来引用该分类的页面显示空状态，不会自动切换为全部案例。"
+msgstr "Categories for page selection. After removing a category, the page that originally referenced the category will appear empty and will not automatically switch to all cases."
+
+msgid "分类写入失败："
+msgstr "Category write failed:"
+
+msgid "分类名称"
+msgstr "Classification name"
+
+msgid "分类名称不能为空。"
+msgstr "Category name cannot be empty."
+
+msgid "分类层级与新分类的原生配置一起导入；已有分类配置不同会提示冲突，不会覆盖而影响其他商品。主题全局配置及优惠活动需在目标站单独设置。"
+msgstr "The classification level is imported together with the native configuration of the new classification; if the existing classification configuration is different, a conflict will be prompted, and it will not be overwritten and affect other products. The global configuration of the theme and promotional activities need to be set separately on the target site."
+
+msgid "分类层级冲突，请先检查目标站分类。"
+msgstr "Classification level conflict, please check the target station classification first."
+
+msgid "分类层级存在循环。"
+msgstr "There is a cycle in the classification hierarchy."
+
+msgid "分类层级循环。"
+msgstr "Classification hierarchy loops."
+
+msgid "分类已从草稿中移除，保存后生效"
+msgstr "Category has been removed from draft, will take effect after saving"
+
+msgid "分类标签无效。"
+msgstr "Invalid category tag."
+
+msgid "分类标识、名称或类型无效。"
+msgstr "Invalid taxonomy ID, name, or type."
+
+msgid "分类标识重复。"
+msgstr "Duplicate category identifiers."
+
+msgid "分类格式无效。"
+msgstr "Invalid category format."
+
+msgid "分类父级缺失、跨类型或存在循环。"
+msgstr "Classification parent is missing, cross-type, or exists in a loop."
+
+msgid "分类父级缺失或存在循环。"
+msgstr "Classification parent missing or loop present."
+
+msgid "分类读取失败。"
+msgstr "Category read failed."
+
+msgid "分页信息无效，请重新读取文件。"
+msgstr "The paging information is invalid, please read the file again."
+
+msgid "切换案例列表与设置面板"
+msgstr "Switch case list and settings panel"
+
+msgid "切换预览浅深色"
+msgstr "Switch preview between light and dark colors"
+
+msgid "列表值无效。"
+msgstr "Invalid list value."
+
+msgid "列表无效。"
+msgstr "Invalid list."
+
+msgid "创建导出任务"
+msgstr "Create export task"
+
+msgid "创建并发布订单查询页面"
+msgstr "Create and publish order inquiry page"
+
+msgid "创建页面 → 选择“MaoTK 案例展示”模板 → 选择案例分类"
+msgstr "Create page → Select the \"MaoTK Case Display\" template → Select the case category"
+
+msgid "删除"
+msgstr "Delete"
+
+msgid "删除当前案例"
+msgstr "Delete current case"
+
+msgid "删除确认已失效，请刷新文件列表后重试。"
+msgstr "Delete confirmation has expired, please refresh the file list and try again."
+
+msgid "删除第 "
+msgstr "Delete the "
+
+msgid "刷新"
+msgstr "Refresh"
+
+msgid "刷新公益信息"
+msgstr "Refresh public welfare information"
+
+msgid "刷新文件"
+msgstr "Refresh file"
+
+msgid "刷新状态"
+msgstr "Refresh status"
+
+msgid "刷新记录"
+msgstr "Refresh record"
+
+msgid "刷新进度"
+msgstr "Refresh progress"
+
+msgid "前台外观增强未启用或此文章类型未纳入范围。配置仍可保存，画布保留基础外观。"
+msgstr "Frontend appearance enhancements are not enabled or this post type is not in scope. Configurations can still be saved and the canvas retains its base appearance."
+
+msgid "前台按背景比例展示，不裁改原始文件。"
+msgstr "The foreground is displayed in proportion to the background without cropping the original file."
+
+msgid "前台模块"
+msgstr "Frontend module"
+
+msgid "前台私密链接"
+msgstr "public site private link"
+
+msgid "前台订单查询"
+msgstr "public site order query"
+
+msgid "加入群聊"
+msgstr "Join group chat"
+
+msgid "加载失败"
+msgstr "Loading failed"
+
+msgid "加载已阻止"
+msgstr "Loading blocked"
+
+msgid "动效与操作"
+msgstr "Animation and operation"
+
+msgid "勾选“私密链接”后，开启 Toolkit 模块可让指定角色或账号在前台查看。游客和未获准账号仍不可见。"
+msgstr "After checking \"Private Link\", open the Toolkit module to allow the specified role or account to be viewed in the foreground. Guest and unapproved accounts remain invisible."
+
+msgid "包内含非法、重复或不支持的文件路径。"
+msgstr "The package contains an illegal, duplicate, or unsupported file path."
+
+msgid "包内商品标识重复。"
+msgstr "Duplicate product identification in package."
+
+msgid "包内固定发货内容和报告可能包含私有下载地址，请按私有备份保管。迁移包与备份保留 24 小时，任务仅创建账号可查看。"
+msgstr "The fixed delivery content and reports in the package may contain private download addresses, please keep them as private backups. Migration packages and backups are retained for 24 hours, and tasks can only be viewed by creating an account."
+
+msgid "包内文件过多。"
+msgstr "Too many files in package."
+
+msgid "包内文章标识重复。"
+msgstr "Duplicate article identifiers in the package."
+
+msgid "包内最多 1,000 条链接、单张 LOGO 2 MiB、解压总量 64 MiB。支持 PNG、JPEG、WebP、GIF 和可识别的 ICO。"
+msgstr "There are a maximum of 1,000 links in the package, a single LOGO is 2 MiB, and the total decompressed size is 64 MiB. Supports PNG, JPEG, WebP, GIF and recognized ICO."
+
+msgid "包含 Rank Math 标题、描述等 SEO 字段"
+msgstr "Includes SEO fields such as Rank Math title, description, etc."
+
+msgid "包含 SEO 与文章扩展字段"
+msgstr "Includes SEO and post extension fields"
+
+msgid "包含未知邮件配置项。"
+msgstr "Contains unknown mail configuration items."
+
+msgid "包含本地 LOGO 图片"
+msgstr "Include local LOGO image"
+
+msgid "包含本地正文图片与特色图"
+msgstr "Contains local text images and featured images"
+
+msgid "包含本地自定义图片与图标"
+msgstr "Contains local custom pictures and icons"
+
+msgid "包校验失败"
+msgstr "Package verification failed"
+
+msgid "区块提供者"
+msgstr "Block Provider"
+
+msgid "区块提供者等待初始化。"
+msgstr "Block provider waiting to be initialized."
+
+msgid "十六进制值"
+msgstr "Hexadecimal value"
+
+msgid "单个扩展字段超过 2 MiB。"
+msgstr "A single extension field exceeds 2 MiB."
+
+msgid "单块覆盖"
+msgstr "Single block coverage"
+
+msgid "单张本地图片不得超过 5 MiB。"
+msgstr "A single local image must not exceed 5 MiB."
+
+msgid "单次最多 1,000 条"
+msgstr "Maximum of 1,000 entries at a time"
+
+msgid "单次最多处理 "
+msgstr "Maximum processing at a time "
+
+msgid "单独允许"
+msgstr "Allowed individually"
+
+msgid "单独禁止"
+msgstr "Individually banned"
+
+msgid "单独禁止优先于允许，单独允许优先于角色规则。"
+msgstr "A single disallow takes precedence over a allow, and a separate allow takes precedence over a role rule."
+
+msgid "单独规则"
+msgstr "Individual rules"
+
+msgid "单独设置"
+msgstr "Individual settings"
+
+msgid "单独配置此类型"
+msgstr "Configure this type individually"
+
+msgid "卡片圆角"
+msgstr "Card rounded corners"
+
+msgid "卡片轻微抬起 2px，按钮不放大。图片预览与访问网站使用独立入口，避免误跳转。"
+msgstr "Card slightly raised 2px, button not enlarged. Use separate entrances for image preview and website access to avoid accidental jumps."
+
+msgid "卡片间距"
+msgstr "Card Spacing"
+
+msgid "历史图片"
+msgstr "Existing Images"
+
+msgid "原分类已移除，请重新选择"
+msgstr "The original category has been removed, please select again."
+
+msgid "原创、转载等标签"
+msgstr "Original, reprinted, etc. tags"
+
+msgid "原区块内容保留"
+msgstr "Original block content retained"
+
+msgid "原插件启用时优先由它提供，避免重复注册。停用 Toolkit 前请保留可用提供者。"
+msgstr "When the original plug-in is enabled, it will be provided first to avoid repeated registration. Please keep the providers available before deactivating the Toolkit."
+
+msgid "原插件是唯一提供者，Toolkit 仅适配控件与外观。不会停用原插件。"
+msgstr "The original plug-in is the only provider, and Toolkit only adapts controls and appearances. The original plugin will not be deactivated."
+
+msgid "原插件注册入口存在但未完成注册，Toolkit 没有抢占。"
+msgstr "The original plug-in registration entrance exists but the registration has not been completed, and Toolkit has not preempted it."
+
+msgid "原文备份不是整站回滚；已创建的媒体和分类不会在失败后自动删除。请及时下载报告。"
+msgstr "Original text backup is not a full site rollback; created media and categories will not be automatically deleted after failure. Please download the report in time."
+
+msgid "原状态"
+msgstr "Original state"
+
+msgid "原生 postsbox 的局部外观，保留真实文章数据、全部入口和主题图标。"
+msgstr "Styles native article cards while preserving article data, links and theme icons."
+
+msgid "原生下载、付费、会员、商品、媒体和目录保持原样。阅读与折叠仅在明确标记的正文中启用；商品宽度不在本模块中接管。"
+msgstr "Native downloads, premiums, memberships, merchandise, media, and catalogs remain unchanged. Reading and folding are only enabled in explicitly marked text; item width is not taken over in this module."
+
+msgid "原生商品配置接口不可用："
+msgstr "The native product configuration interface is not available:"
+
+msgid "原生商品配置接口不可用：%s"
+msgstr "Zibll product configuration API unavailable: %s"
+
+msgid "原生商城商品独立迁移，不适用于 WooCommerce 或付费阅读文章。"
+msgstr "Native store products are migrated independently and are not applicable to WooCommerce or paid reading articles."
+
+msgid "原生支付价格索引未同步。"
+msgstr "Native paid price index not synchronized."
+
+msgid "原生样式 · 结构预览"
+msgstr "Native styles · Structure preview"
+
+msgid "原生模式"
+msgstr "Native mode"
+
+msgid "原稿中关闭证书校验、未转义输出及过期字段已修正。只引用第三方公开信息；联系方式请通过来源页面核实。"
+msgstr "The turned off certificate verification, unescaped output and expiration fields in the manuscript have been corrected. Only cite third-party public information; please verify contact information through the source page."
+
+msgid "原站地址为 #。当前按纯文字保留，填写有效地址后才可点击。"
+msgstr "The original site address is #. It is currently reserved as plain text and can only be clicked after filling in a valid address."
+
+msgid "友情链接"
+msgstr "links"
+
+msgid "友情链接迁移模块未运行，请先在工作台开启并确认 Zibll 环境。"
+msgstr "The friendly link migration module is not running. Please open it on the workbench and confirm the Zibll environment."
+
+msgid "友情链接："
+msgstr "links:"
+
+msgid "发布日期 · 从"
+msgstr "Release date · From"
+
+msgid "发布日期 · 到"
+msgstr "Release date · To"
+
+msgid "发现已有链接时"
+msgstr "When an existing link is found"
+
+msgid "发货通知 · 买家"
+msgstr "Shipping Notice · Buyer"
+
+msgid "发货键与商品规格不一致。"
+msgstr "The shipping key is inconsistent with the product specifications."
+
+msgid "发送测试邮件"
+msgstr "Send test email"
+
+msgid "取值无效。"
+msgstr "Invalid value."
+
+msgid "取消任务"
+msgstr "Cancel task"
+
+msgid "变量格式应为 {{variable_name}}。"
+msgstr "Variable format should be {{variable_name}}."
+
+msgid "另一个窗口已经保存过案例库。请先导出当前修改，再刷新后合并。"
+msgstr "The case library has been saved in another window. Please export the current modifications first, then refresh and merge them."
+
+msgid "只启用需要的功能，各模块独立管理。"
+msgstr "Enable the features you need. Each module is managed independently."
+
+msgid "只增强已包装的原生 Enlighter 外观，保留主题工具、语法颜色与滚动。"
+msgstr "Styles wrapped Enlighter code blocks while keeping the theme’s tools, syntax colors and scrolling."
+
+msgid "只影响标题下方的描述。SEO 摘要、页面标题和索引规则由主题或 SEO 插件管理。"
+msgstr "Only affects the description below the title. SEO snippets, page titles, and indexing rules are managed by the theme or SEO plugin."
+
+msgid "只恢复所选 Toolkit 配置，不覆盖子比全局设置。私密链接账号规则按用户名与邮箱摘要核对；新站不会直接沿用旧用户或图片 ID。"
+msgstr "Only restore selected Toolkit configuration, not overwriting sub-global settings. Private link account rules are checked based on username and email summary; the new site will not directly inherit the old user or picture ID."
+
+msgid "只接受 32 MiB 以内的 JSON 配置备份。"
+msgstr "Only accept JSON configuration backups under 32 MiB."
+
+msgid "只接受 Toolkit 子比商品迁移包，与文章／友情链接 ZIP 相互隔离。上传后只做预检。"
+msgstr "Only the Toolkit product migration package is accepted, and it is isolated from the article/link ZIP. Only pre-check is done after uploading."
+
+msgid "只读取有权查看的订单。关闭后已建页面保留，显示暂不可用；不删除订单或查询设置。"
+msgstr "Only read orders that you have permission to view. After closing, the created page will be retained and displayed as temporarily unavailable; orders or query settings will not be deleted."
+
+msgid "只调整可识别的人民币标识，不换算金额，不修改积分、外币或交付凭据。"
+msgstr "Only adjusts the recognizable RMB logo, does not convert amounts, and does not modify points, foreign currency, or delivery receipts."
+
+msgid "可写普通文字并插入变量。验证码、有效期及原始通知详情由系统保留，不会因自定义文案丢失。"
+msgstr "Can write normal text and insert variables. The verification code, validity period and original notification details are retained by the system and will not be lost due to custom copywriting."
+
+msgid "可填写客服团队名称，不影响真实收件地址。"
+msgstr "The name of the customer service team can be filled in without affecting the actual receiving address."
+
+msgid "可多选"
+msgstr "Multiple selections possible"
+
+msgid "可导入，覆盖该分类当前配置"
+msgstr "Can be imported to overwrite the current configuration of this category"
+
+msgid "可按文章或已注册产品的 ID、标题搜索。实际内容预览不调用主题阅读量接口。"
+msgstr "Search by article or registered product ID, title. The actual content preview does not call the topic reading interface."
+
+msgid "可见性筛选无效。"
+msgstr "Visibility filtering is invalid."
+
+msgid "可见范围"
+msgstr "Visible range"
+
+msgid "可见范围已保存，刷新前台页面后生效。"
+msgstr "The visible range has been saved and will take effect after refreshing the front page."
+
+msgid "可见角色"
+msgstr "Visible roles"
+
+msgid "可选：同时恢复模块启停状态"
+msgstr "Optional: restore the module start and stop status at the same time"
+
+msgid "右"
+msgstr "Right"
+
+msgid "右对齐"
+msgstr "Right justified"
+
+msgid "各设备留白"
+msgstr "Leave each device blank"
+
+msgid "同步中"
+msgstr "Synchronizing"
+
+msgid "同步完成"
+msgstr "Sync completed"
+
+msgid "同步进度"
+msgstr "Sync progress"
+
+msgid "后台加密保存需要 PHP OpenSSL 和 WordPress 安全密钥。"
+msgstr "Background encrypted saves require PHP OpenSSL and WordPress security keys."
+
+msgid "后台将在"
+msgstr "The backend will be in"
+
+msgid "后台将在 %s 后恢复处理。"
+msgstr "Processing will resume after %s."
+
+msgid "后台请求失败，请刷新登录状态或稍后重试。"
+msgstr "The background request failed, please refresh the login status or try again later."
+
+msgid "后台集中管理案例与分类，页面选择模板和分类；保留v0.4浏览器卡片、长图及图标设置。"
+msgstr "Centralized management of cases and categories in the background, page selection templates and categories; retains v0.4 browser card, long image and icon settings."
+
+msgid "后恢复处理。"
+msgstr "Post-resumption processing."
+
+msgid "含有未知字段。"
+msgstr "Contains unknown fields."
+
+msgid "启用、访问与缓存说明"
+msgstr "Enablement, access and caching instructions"
+
+msgid "启用前台地址切换"
+msgstr "Serve synced images from the media domain"
+
+msgid "启用模块后可以选择文件。"
+msgstr "Enable file selection when module is enabled."
+
+msgid "启用模块后可生成引用。"
+msgstr "References can be generated when modules are enabled."
+
+msgid "启用模块并保存上传凭据后即可读取文件。"
+msgstr "Files can be read after enabling the module and saving upload credentials."
+
+msgid "启用统一标题栏"
+msgstr "Enable unified title bar"
+
+msgid "启用长截图预览"
+msgstr "Enable long screenshot preview"
+
+msgid "咨询按钮"
+msgstr "Consult button"
+
+msgid "咨询按钮文字"
+msgstr "Consult button text"
+
+msgid "咨询按钮链接"
+msgstr "Consult button link"
+
+msgid "咨询方案"
+msgstr "Consulting plan"
+
+msgid "咨询链接添加 nofollow"
+msgstr "Add nofollow to consultation link"
+
+msgid "品牌与邮件 Logo"
+msgstr "Brand & Email Logo"
+
+msgid "售后"
+msgstr "After sales"
+
+msgid "售后取值无效。"
+msgstr "After-sales value is invalid."
+
+msgid "售后处理结果 · 买家"
+msgstr "After-sales processing results · Buyer"
+
+msgid "售后明细"
+msgstr "After-sales details"
+
+msgid "售后类型无效。"
+msgstr "Aftermarket type is invalid."
+
+msgid "商品"
+msgstr "Products"
+
+msgid "商品 HTML 被其他过滤器改写，请核对后重新预检。"
+msgstr "The product HTML has been rewritten by other filters, please check and re-preflight check."
+
+msgid "商品 ID 数量或取值无效。"
+msgstr "Invalid product ID quantity or value."
+
+msgid "商品 ID 请以逗号或空格分隔。"
+msgstr "Product IDs must be separated by commas or spaces."
+
+msgid "商品写入失败。"
+msgstr "Product writing failed."
+
+msgid "商品分类"
+msgstr "Product classification"
+
+msgid "商品分类、图片或扩展字段格式无效。"
+msgstr "Invalid product category, image, or extension field format."
+
+msgid "商品分类引用缺失。"
+msgstr "Product category reference missing."
+
+msgid "商品分类／标签配置"
+msgstr "Product classification/tag configuration"
+
+msgid "商品分类／标签配置仅用于新增分类，已有分类不覆盖，配置冲突会拒绝该项。主题全局配置不迁移。"
+msgstr "Product category/tag configuration is only used for new categories. Existing categories will not be overwritten. If the configuration conflicts, the item will be rejected. Theme global configuration is not migrated."
+
+msgid "商品图片引用缺失。"
+msgstr "Product image reference is missing."
+
+msgid "商品图集缺少明确的附件映射。"
+msgstr "Product gallery lacks clear attachment mapping."
+
+msgid "商品在读取期间发生变化，请重新创建导出。"
+msgstr "The item changed during reading, please recreate the export."
+
+msgid "商品导入&amp;导出"
+msgstr "Product import & export"
+
+msgid "商品导入&导出"
+msgstr "Product Import & Export"
+
+msgid "商品已写入，分类未保存。"
+msgstr "The product has been written, but the category has not been saved."
+
+msgid "商品已写入，扩展字段保存失败。"
+msgstr "The product has been written, but the extension field failed to save."
+
+msgid "商品已写入，正在核对图片与本批商品的已知关联；完成后再结束任务。"
+msgstr "The product has been written, and the known association between the image and this batch of products is being checked; end the task after completion."
+
+msgid "商品形式无效。"
+msgstr "Invalid product form."
+
+msgid "商品日期格式无效。"
+msgstr "Invalid product date format."
+
+msgid "商品标识或状态无效。"
+msgstr "Invalid product ID or status."
+
+msgid "商品正文与扩展字段超过 16 MiB，请缩小范围。"
+msgstr "Product text and extension fields exceed 16 MiB, please reduce the range."
+
+msgid "商品正文及配置合计超过 16 MiB，请缩小导出范围。"
+msgstr "The total product text and configuration exceeds 16 MiB, please reduce the export range."
+
+msgid "商品状态"
+msgstr "Product status"
+
+msgid "商品状态无效。"
+msgstr "Invalid item status."
+
+msgid "商品缺少起始价格，不能按普通文章迁移。"
+msgstr "The product lacks a starting price and cannot be migrated as a normal article."
+
+msgid "商品记录无效。"
+msgstr "Invalid product record."
+
+msgid "商品迁移"
+msgstr "Product Migration"
+
+msgid "商品迁移方式"
+msgstr "Product migration method"
+
+msgid "商品迁移模块未运行。"
+msgstr "Product migration module not running."
+
+msgid "商品迁移目前仅适配已核实的 Zibll 9.2（支持其子主题）。"
+msgstr "Product migration currently only works with verified Zibll 9.2 (which supports subthemes)."
+
+msgid "商品迁移规则"
+msgstr "Product Migration Rules"
+
+msgid "商品迁移进度"
+msgstr "Product migration progress"
+
+msgid "商品迁移需要 JavaScript，当前不会自动执行任何导入。"
+msgstr "Product migration requires JavaScript and no imports are currently performed automatically."
+
+msgid "商品迁移需要 WordPress 6.2 或更新版本的 HTML 接口。"
+msgstr "Product migration requires WordPress 6.2 or newer HTML interface."
+
+msgid "商品配置"
+msgstr "Product configuration"
+
+msgid "商品配置保存后不一致。"
+msgstr "Product configuration is inconsistent after saving."
+
+msgid "商品预检"
+msgstr "Product pre-inspection"
+
+msgid "回复邮箱："
+msgstr "Reply-to:"
+
+msgid "固定浅色"
+msgstr "Fixed light color"
+
+msgid "固定深色"
+msgstr "Fixed dark color"
+
+msgid "固定运费"
+msgstr "Flat shipping fee"
+
+msgid "图标"
+msgstr "icon"
+
+msgid "图标为空或超过512KB。"
+msgstr "Icon is empty or exceeds 512KB."
+
+msgid "图标位置"
+msgstr "Icon position"
+
+msgid "图标图片"
+msgstr "Icon picture"
+
+msgid "图标大小"
+msgstr "Icon size"
+
+msgid "图标导入失败"
+msgstr "Icon import failed"
+
+msgid "图标尺寸"
+msgstr "Icon size"
+
+msgid "图标尺寸 · "
+msgstr "Icon size · "
+
+msgid "图标尺寸滑块"
+msgstr "Icon size slider"
+
+msgid "图标已导入WordPress媒体库，全部案例同步更新。"
+msgstr "The icon has been imported into the WordPress media library, and all cases are updated simultaneously."
+
+msgid "图标已导入媒体库，保存后应用"
+msgstr "The icon has been imported into the media library and will be applied after saving."
+
+msgid "图标无法写入媒体目录，请检查上传目录权限。"
+msgstr "The icon cannot be written to the media directory, please check the upload directory permissions."
+
+msgid "图标链接"
+msgstr "Icon link"
+
+msgid "图片"
+msgstr "Pictures"
+
+msgid "图片 "
+msgstr "Pictures "
+
+msgid "图片 ALT"
+msgstr "Image ALT"
+
+msgid "图片、文字和来源链接均校验后显示，所有文本转义；不展示服务器错误或访问者数据。"
+msgstr "Images, text, and source links are all verified and displayed, and all text is escaped; no server errors or visitor data are displayed."
+
+msgid "图片下方文字"
+msgstr "Text below image"
+
+msgid "图片不可用 · "
+msgstr "Image not available · "
+
+msgid "图片丢失或校验不一致。"
+msgstr "The image is missing or the verification is inconsistent."
+
+msgid "图片为空或超过 8 MiB。"
+msgstr "Image is empty or exceeds 8 MiB."
+
+msgid "图片入库失败："
+msgstr "Image storage failed:"
+
+msgid "图片入库需要媒体上传权限。"
+msgstr "Media upload permission is required to store images into the database."
+
+msgid "图片地址指向多个不同文件。"
+msgstr "Image address points to multiple different files."
+
+msgid "图片地址无效。"
+msgstr "Invalid image address."
+
+msgid "图片地址映射无效。"
+msgstr "Invalid image address mapping."
+
+msgid "图片引用编号无效。"
+msgstr "Invalid image reference number."
+
+msgid "图片总大小超过单包限制，请按分类拆分导出。"
+msgstr "The total image size exceeds the single package limit, please split and export by category."
+
+msgid "图片总量超过 200 MiB，请缩小导出范围。"
+msgstr "The total image size exceeds 200 MiB, please reduce the export range."
+
+msgid "图片描述格式无效。"
+msgstr "Invalid image description format."
+
+msgid "图片数据总量超出限制。"
+msgstr "The total amount of image data exceeds the limit."
+
+msgid "图片数据损坏。"
+msgstr "Image data corrupted."
+
+msgid "图片数据无效。"
+msgstr "Invalid image data."
+
+msgid "图片无法显示，请换一个图标。"
+msgstr "The image cannot be displayed, please change the icon."
+
+msgid "图片无法读取、格式不受支持或超过 16 MiB。"
+msgstr "Image cannot be read, is in an unsupported format, or is larger than 16 MiB."
+
+msgid "图片暂存失败。"
+msgstr "Image temporary storage failed."
+
+msgid "图片暂时无法加载"
+msgstr "Image cannot be loaded temporarily"
+
+msgid "图片未包含在备份内。"
+msgstr "Image not included in backup."
+
+msgid "图片来源地址无效。"
+msgstr "The image source address is invalid."
+
+msgid "图片校验值不一致。"
+msgstr "Image checksums are inconsistent."
+
+msgid "图片格式不支持或像素过大。SVG 和可执行文件不导入。"
+msgstr "The image format is not supported or the pixels are too large. SVG and executable files are not imported."
+
+msgid "图片清单无效。"
+msgstr "Invalid image list."
+
+msgid "图片清单路径无效。"
+msgstr "Invalid image manifest path."
+
+msgid "图片类型与内容不一致。"
+msgstr "Image type and content are inconsistent."
+
+msgid "图片类型无效。"
+msgstr "Invalid image type."
+
+msgid "图片编号指向多个不同文件。"
+msgstr "Image number points to multiple different files."
+
+msgid "图片编号无法映射。"
+msgstr "Picture numbers cannot be mapped."
+
+msgid "图片编号缺少来源映射，不能直接沿用旧站编号。"
+msgstr "The image number lacks source mapping and the old site number cannot be used directly."
+
+msgid "图片说明无效。"
+msgstr "Invalid image caption."
+
+msgid "图片链接无法读取，请确认网址可公开访问，或改为上传文件。"
+msgstr "The image link cannot be read. Please confirm that the URL is publicly accessible, or upload a file instead."
+
+msgid "在 Cloudflare R2 概览中复制账户 ID。"
+msgstr "Copy account ID in Cloudflare R2 overview."
+
+msgid "在 Gutenberg 的组区块“额外 CSS 类”填写"
+msgstr "Fill in the \"Extra CSS Classes\" group box in Gutenberg"
+
+msgid "在前台展示此案例"
+msgstr "Display this case in the foreground"
+
+msgid "在后台添加第一个案例，即可预览。"
+msgstr "Add the first case in the background to preview."
+
+msgid "在新窗口打开"
+msgstr "Opens in new window"
+
+msgid "在本页显示一条欢迎提示，用于检查模块的独立启用与加载。"
+msgstr "Display a welcome prompt on this page to check independent enabling and loading of modules."
+
+msgid "在模块列表中启用需要的功能。"
+msgstr "Enable required features in the module list."
+
+msgid "在超过设定更新天数的文章正文前提醒读者，显示最后更新时间与反馈入口。"
+msgstr "Remind readers before the text of articles that have exceeded the set update date, and display the last update time and feedback entry."
+
+msgid "在这里填写 Cloudflare 的两组凭据，保存后立即应用。"
+msgstr "Fill in the two sets of credentials for Cloudflare here and apply them immediately after saving."
+
+msgid "在页面“模板”中选择“MaoTK 案例展示”，发布后自动显示案例。"
+msgstr "Select \"MaoTK Case Display\" in the \"Template\" page to automatically display the case after publishing."
+
+msgid "地址"
+msgstr "address"
+
+msgid "地址栏显示文字"
+msgstr "Display text in address bar"
+
+msgid "均为第三方接口，保留原始公益网站的详情入口。切换并保存后，可在右侧手动刷新。"
+msgstr "They are all third-party interfaces and retain the detailed entry of the original public welfare website. After switching and saving, you can manually refresh on the right side."
+
+msgid "填写 R2 桶名称，保持公开访问关闭。"
+msgstr "Fill in the R2 bucket name and keep public access closed."
+
+msgid "填写与 Access Key ID 配套的密钥。"
+msgstr "Fill in the key matching the Access Key ID."
+
+msgid "填写有效的十六进制颜色后，预览会继续自动更新。"
+msgstr "After filling in a valid hex color, the preview continues to update automatically."
+
+msgid "增强未加载"
+msgstr "Enhancement not loaded"
+
+msgid "增强范围"
+msgstr "Enhanced range"
+
+msgid "处理中"
+msgstr "Processing"
+
+msgid "处理中，请稍候…"
+msgstr "Processing, please wait..."
+
+msgid "处理结束，有失败"
+msgstr "Processing ended with failure"
+
+msgid "处理结果"
+msgstr "Processing results"
+
+msgid "备份与恢复说明"
+msgstr "Backup and recovery instructions"
+
+msgid "备份中包含当前版本不支持的模块。"
+msgstr "The backup contains modules that are not supported by the current version."
+
+msgid "备份中没有所选分类。"
+msgstr "The selected category is not available in the backup."
+
+msgid "备份中没有所选配置。"
+msgstr "The selected configuration is not in the backup."
+
+msgid "备份文件内容异常。"
+msgstr "The backup file content is abnormal."
+
+msgid "备份文件写入不完整。"
+msgstr "Incomplete backup file writing."
+
+msgid "备份文件已存在或无法创建。"
+msgstr "The backup file already exists or cannot be created."
+
+msgid "备份文件标识无效。"
+msgstr "Invalid backup file ID."
+
+msgid "备份文件缺失或校验失败。"
+msgstr "The backup file is missing or failed to verify."
+
+msgid "备份来自更新的插件版本，请先核对并升级插件。"
+msgstr "The backup is from a newer plug-in version, please check and upgrade the plug-in first."
+
+msgid "备案号"
+msgstr "Registration number"
+
+msgid "备案地址或图标无效。"
+msgstr "The filing address or icon is invalid."
+
+msgid "备案查询地址"
+msgstr "Registration inquiry address"
+
+msgid "备案标识图片"
+msgstr "Registration logo picture"
+
+msgid "备用入口与页脚"
+msgstr "Alternate entry and footer"
+
+msgid "备用站点网址"
+msgstr "Alternate site URL"
+
+msgid "复制"
+msgstr "Copy"
+
+msgid "复制下载引用"
+msgstr "Copy download citation"
+
+msgid "复制图片失败。"
+msgstr "Failed to copy image."
+
+msgid "复制当前案例"
+msgstr "Copy current case"
+
+msgid "复用已确认的推荐卡与外部工具入口、手机间距和居中图标；不接管原生文件下载或支付。"
+msgstr "Reuse confirmed recommendation cards with external tool entrances, phone spacing, and centered icons; do not accept native file downloads or payments."
+
+msgid "外框圆角"
+msgstr "Frame rounded corners"
+
+msgid "外观与文章属性"
+msgstr "Appearance and article properties"
+
+msgid "外观增强"
+msgstr "Appearance enhancements"
+
+msgid "外观开关已开启，但尚无可安全适配的提示框提供者，请查看正文提示框设置。"
+msgstr "The appearance switch is turned on, but there is no securely adapted prompt box provider. Please check the text prompt box settings."
+
+msgid "外观模块"
+msgstr "Appearance module"
+
+msgid "外观设置"
+msgstr "Appearance Settings"
+
+msgid "外部上方间距"
+msgstr "External top spacing"
+
+msgid "外部下方间距"
+msgstr "External lower spacing"
+
+msgid "外部下载会请求对应图片网址；失败项目会单独列出，不会伪装成已完成。"
+msgstr "External downloads will request the corresponding image URL; failed items will be listed separately and will not be pretended to be completed."
+
+msgid "外部图片、网盘与下载链接保留原网址。取消图片打包后，特色图需在目标站重新选择。"
+msgstr "External images, network disks and download links retain their original URLs. After canceling image packaging, the featured image needs to be re-selected on the target site."
+
+msgid "多个 ID 用逗号或空格分隔；留空按上方条件导出。"
+msgstr "Separate multiple IDs with commas or spaces; leave them blank to export according to the conditions above."
+
+msgid "大文件分片直传私有 R2，使用子比原生下载入口签发临时链接。"
+msgstr "Large files are directly transferred to private R2 in fragments, and temporary links are issued using the Zibi native download entrance."
+
+msgid "天。此预览不影响正式文章。"
+msgstr "days. This preview does not affect the official article."
+
+msgid "失败 %d 个"
+msgstr "Failed %d"
+
+msgid "失败项已准备好，点击“继续任务”重试。"
+msgstr "The failed item is ready, click \"Continue Task\" to try again."
+
+msgid "头像"
+msgstr "Avatar"
+
+msgid "头像与背景"
+msgstr "Avatars & Backgrounds"
+
+msgid "头像与背景预设"
+msgstr "Avatar & Background Presets"
+
+msgid "头像入口文字"
+msgstr "Avatar entrance text"
+
+msgid "如请求意外中断，15 分钟后可恢复过期任务锁，再从最近记录核对或恢复该任务。"
+msgstr "If a request is unexpectedly interrupted, the expired task lock can be restored after 15 minutes, and the task can be checked or restored from the most recent record."
+
+msgid "媒体 Worker HTTPS 地址"
+msgstr "Media Worker HTTPS URL"
+
+msgid "媒体 Worker 签名密钥"
+msgstr "Media Worker Signing Key"
+
+msgid "媒体图片编号无效。"
+msgstr "Invalid media image number."
+
+msgid "媒体库暂时无法打开，请刷新管理页后重试。"
+msgstr "The media library cannot be opened temporarily, please refresh the management page and try again."
+
+msgid "媒体库未加载，请刷新后重试。"
+msgstr "The media library is not loaded, please refresh and try again."
+
+msgid "媒体库未加载，请填写 PNG 图片地址。"
+msgstr "Media library not loaded, please fill in the PNG image address."
+
+msgid "媒体桶和 Worker 已通过实际读写测试。"
+msgstr "Media buckets and workers passed real-world read and write testing."
+
+msgid "媒体记录保存失败，请重试。"
+msgstr "Media record saving failed, please try again."
+
+msgid "媒体连接设置"
+msgstr "Media connection settings"
+
+msgid "媒体连接设置已保存。"
+msgstr "Media connection settings saved."
+
+msgid "子比 resetpassword_captcha → zib_send_captcha；沿用原校验与频率限制。"
+msgstr "Zib resetpassword_captcha → zib_send_captcha; keep the original check and frequency limit."
+
+msgid "子比 zib_send_captcha；从原始通知读取验证码与有效期，识别失败时回退原生。"
+msgstr "Zib_send_captcha; read the verification code and validity period from the original notification, and fall back to the original when the recognition fails."
+
+msgid "子比 zib_shop_after_sale_to_end_to_user；不是所有售后结果都代表退款成功，状态沿用原通知。"
+msgstr "Zib_shop_after_sale_to_end_to_user; not all after-sales results represent a successful refund, and the status remains the original notification."
+
+msgid "子比 zib_shop_manual_shipping_to_user；保留快递单号、物流公司与发货备注。"
+msgstr "Zib_shop_manual_shipping_to_user; retain the courier number, logistics company and shipping notes."
+
+msgid "子比 zib_shop_notify_shipping_to_author；真实订单数据来自原通知函数参数。"
+msgstr "Zib_shop_notify_shipping_to_author; the real order data comes from the original notification function parameters."
+
+msgid "子比 zib_shop_virtual_shipping_to_user；原始交付内容必定保留，不记录到设置或日志。"
+msgstr "Subzib_shop_virtual_shipping_to_user; original delivery content must be retained and not logged to settings or logs."
+
+msgid "子比 zibpay_mail_payment_order；保留原开关、付款明细与原始通知。"
+msgstr "Zibpay_mail_payment_order; retain the original switch, payment details and original notification."
+
+msgid "子比前台注册成功独立欢迎信：未发现原始发送行为；仅美化确实发生的 WordPress 账号通知。"
+msgstr "Zibi front-end registration successful independent welcome letter: no original sending behavior found; only beautify the WordPress account notification that did occur."
+
+msgid "子比原生商品独立迁移，先预检，再导入草稿。"
+msgstr "Zibi native products are migrated independently, pre-checked first, and then imported into draft."
+
+msgid "子比原生权限"
+msgstr "Subbi native permissions"
+
+msgid "子比商品价格同步钩子未启用，已停止迁移。"
+msgstr "Migration is paused until Zibll product price sync hooks are available."
+
+msgid "子比订单接口未就绪，查询暂停。"
+msgstr "The Zibi order interface is not ready and the query is suspended."
+
+msgid "子比资源下载地址（R2 引用）"
+msgstr "Zibi resource download address (R2 reference)"
+
+msgid "字段格式无效。"
+msgstr "Invalid field format."
+
+msgid "存在冲突"
+msgstr "There is a conflict"
+
+msgid "完成"
+msgstr "Complete"
+
+msgid "完整保留商品 HTML 需要 unfiltered_html 权限。"
+msgstr "Keeping product HTML intact requires the unfiltered_html permission."
+
+msgid "完整保留文章 HTML 需要 unfiltered_html 权限。"
+msgstr "Preserving the article HTML intact requires the unfiltered_html permission."
+
+msgid "完整文档与模块开发"
+msgstr "Documentation & module development"
+
+msgid "完整核对"
+msgstr "Full check"
+
+msgid "完整预览"
+msgstr "Full preview"
+
+msgid "定时"
+msgstr "Timing"
+
+msgid "定时发布"
+msgstr "Scheduled release"
+
+msgid "宝贝回家"
+msgstr "Baobeihuijia"
+
+msgid "实时应用当前设置"
+msgstr "Apply current settings in real time"
+
+msgid "实时样例预览"
+msgstr "Live sample preview"
+
+msgid "实时预览"
+msgstr "Live Preview"
+
+msgid "实时预览不会保存设置。"
+msgstr "Live preview does not save settings."
+
+msgid "客服与回复"
+msgstr "Support & Reply Address"
+
+msgid "客服回复信息不能包含变量、换行或邮件头分隔符。"
+msgstr "Customer service reply messages cannot contain variables, newlines, or header delimiters."
+
+msgid "客服回复邮箱"
+msgstr "Customer service reply email"
+
+msgid "客服回复邮箱需为一个有效邮箱地址。"
+msgstr "The customer service reply email must be a valid email address."
+
+msgid "客服显示名称"
+msgstr "Customer service display name"
+
+msgid "客服链接应为完整的 HTTP 或 HTTPS 地址。"
+msgstr "Customer service links should be full HTTP or HTTPS addresses."
+
+msgid "客服链接（可选）"
+msgstr "Customer service link (optional)"
+
+msgid "密钥加密保存在站点中。"
+msgstr "Key encryption is stored within the site."
+
+msgid "寻鲸录 · 宝贝回家数据"
+msgstr "Whale Hunting · Baby Returning Home Data"
+
+msgid "导入 LOGO 需要媒体上传权限。"
+msgstr "Importing LOGO requires media upload permission."
+
+msgid "导入&导出"
+msgstr "Import & Export"
+
+msgid "导入前自动保留快照，可在任务内恢复"
+msgstr "Automatically retain snapshots before importing and restore within the task"
+
+msgid "导入后一律保存为草稿，核对价格、库存和发货内容后再手动发布。在售、私密、定时和回收站商品不允许覆盖。"
+msgstr "After importing, always save it as a draft. Check the price, inventory and shipping content before publishing manually. On-sale, private, timed, and recycle bin items are not allowed to be overridden."
+
+msgid "导入后的状态"
+msgstr "Status after import"
+
+msgid "导入后配置已再次修改，未覆盖新修改；请核对恢复前快照。"
+msgstr "The configuration has been modified again after import, and the new modifications have not been overwritten; please check the pre-restoration snapshot."
+
+msgid "导入商品"
+msgstr "Import products"
+
+msgid "导入已有配置"
+msgstr "Import existing configuration"
+
+msgid "导入文章"
+msgstr "Import articles"
+
+msgid "导入旧维护页内容"
+msgstr "Import old maintenance page content"
+
+msgid "导入链接"
+msgstr "Import link"
+
+msgid "导入预检与执行结果"
+msgstr "Import preflight and execution results"
+
+msgid "导出"
+msgstr "Export"
+
+msgid "导出任务"
+msgstr "Export tasks"
+
+msgid "导出含失败项：当前 ZIP 仅包含成功部分。可以先重试失败项，再下载完整包。"
+msgstr "Export with failed items: The current ZIP contains only successful items. You can retry the failed items before downloading the complete package."
+
+msgid "导出商品"
+msgstr "Export products"
+
+msgid "导出当前配置"
+msgstr "Export current configuration"
+
+msgid "导出文章"
+msgstr "Export article"
+
+msgid "导出范围"
+msgstr "Export range"
+
+msgid "导出配置"
+msgstr "Export configuration"
+
+msgid "导出链接"
+msgstr "Export link"
+
+msgid "导航文字或链接无效。"
+msgstr "Invalid navigation text or link."
+
+msgid "导航栏目"
+msgstr "Navigation section"
+
+msgid "封板默认"
+msgstr "Block board default"
+
+msgid "封面和正文描述设置"
+msgstr "Cover and body description settings"
+
+msgid "封面图集编号无效。"
+msgstr "Invalid cover album number."
+
+msgid "将 Toolkit 配置带到新安装，先预检，再恢复。"
+msgstr "Bring Toolkit configuration to new installation, preflight first, then restore."
+
+msgid "尚未填写网址"
+msgstr "URL not filled in yet"
+
+msgid "尚未识别到 Zibll 主题"
+msgstr "Zibll theme not detected"
+
+msgid "尝试下载外部 LOGO"
+msgstr "Try downloading external LOGO"
+
+msgid "居中"
+msgstr "Center"
+
+msgid "展开内容超过限制。"
+msgstr "Expanded content exceeds limit."
+
+msgid "展示前 24 张；前台每页 24 张，可翻页浏览完整图片库。"
+msgstr "Shows the first 24 pictures; 24 pictures per page at the public site, you can turn the page to browse the complete picture gallery."
+
+msgid "展示标签（可选）"
+msgstr "Display tags (optional)"
+
+msgid "工作台与扩展"
+msgstr "Workbench & Extensions"
+
+msgid "工作台仍可使用。依赖主题的模块暂不加载，启用 Zibll 或其子主题后再查看状态。"
+msgstr "The workbench is still available. Modules that depend on the theme are not loaded yet. Check the status after enabling Zibll or its subthemes."
+
+msgid "工作台仍含无效的扩展开关，请先核对原配置。"
+msgstr "The workbench still contains invalid expansion switches, please check the original configuration first."
+
+msgid "工作台开关配置异常，请同时勾选模块开关后重新预检，避免隐式重置开关。"
+msgstr "The workbench switch configuration is abnormal. Please check the module switch at the same time and re-preflight check to avoid implicit reset of the switch."
+
+msgid "工作台欢迎提示"
+msgstr "Workbench welcome prompt"
+
+msgid "左"
+msgstr "Left"
+
+msgid "左对齐"
+msgstr "Left aligned"
+
+msgid "已上传 "
+msgstr "Uploaded "
+
+msgid "已上传文件操作"
+msgstr "Uploaded file operations"
+
+msgid "已与保存配置同步"
+msgstr "Synchronized with saved configuration"
+
+msgid "已保存"
+msgstr "Saved"
+
+msgid "已保存的邮件设置格式异常，运行时使用原生样式；当前预览为默认值，不会覆盖旧设置。"
+msgstr "The format of the saved email settings is abnormal, and the native style is used at runtime; the current preview is the default value and the old settings will not be overwritten."
+
+msgid "已保存结果"
+msgstr "Results saved"
+
+msgid "已保存配置格式异常，前台保留原生页脚，当前预览为默认值。请先通过配置备份核对原设置。"
+msgstr "The format of the saved configuration is abnormal, the native footer is retained in the frontend, and the current preview is the default value. Please verify the original settings through a configuration backup first."
+
+msgid "已保存配置格式异常，请先核对。"
+msgstr "The saved configuration format is abnormal, please check first."
+
+msgid "已加载"
+msgstr "Loaded"
+
+msgid "已发布"
+msgstr "Published"
+
+msgid "已取得可用信息"
+msgstr "Available information obtained"
+
+msgid "已取消上传。"
+msgstr "Upload canceled."
+
+msgid "已同步"
+msgstr "Synced"
+
+msgid "已启用"
+msgstr "Enabled"
+
+msgid "已启用／加载"
+msgstr "Enabled/Loaded"
+
+msgid "已在本任务完成，未重复写入"
+msgstr "This task has been completed and has not been written repeatedly."
+
+msgid "已处理 %d 个"
+msgstr "Processed %d"
+
+msgid "已复制当前案例"
+msgstr "Current case copied"
+
+msgid "已存在，未改动链接与 LOGO"
+msgstr "Already exists, the link and LOGO have not been changed"
+
+msgid "已存在，正文与媒体未改动"
+msgstr "already exists, the text and media have not been changed"
+
+msgid "已完成"
+msgstr "Completed"
+
+msgid "已完成，图片与已迁入商品关联已核对"
+msgstr "Completed, the association between the image and the imported product has been verified"
+
+msgid "已完成，图片与已迁入文章关联已核对"
+msgstr "Completed, the association between the image and the imported article has been verified"
+
+msgid "已导入"
+msgstr "Imported"
+
+msgid "已导入旧维护页内容，未导入开启状态；请核对 Logo、备用站点和页脚信息。"
+msgstr "The content of the old maintenance page has been imported, but the open status has not been imported; please check the logo, alternate site and footer information."
+
+msgid "已导出"
+msgstr "Exported"
+
+msgid "已开启"
+msgstr "Enabled"
+
+msgid "已恢复"
+msgstr "Restored"
+
+msgid "已恢复中断后的写入，未重复新增"
+msgstr "Writing after interruption has been resumed, no new additions have been repeated"
+
+msgid "已恢复默认图标"
+msgstr "Default icon restored"
+
+msgid "已恢复默认外观，案例与分类保留"
+msgstr "Default appearance restored, cases and categories retained"
+
+msgid "已扫描"
+msgstr "Scanned"
+
+msgid "已扫描 %1$d / %2$d 个附件"
+msgstr "Scanned %1$d / %2$d attachments"
+
+msgid "已排队"
+msgstr "Queued"
+
+msgid "已排队 %d 个"
+msgstr "Queued %d"
+
+msgid "已提交批量同步，可在历史图片中查看进度。"
+msgstr "Batch synchronization has been submitted, and the progress can be viewed in the history picture."
+
+msgid "已提交预览；当前输入尚未保存。"
+msgstr "Preview submitted; current input not saved."
+
+msgid "已撤销最近修改"
+msgstr "Recent changes undone"
+
+msgid "已撤销本次配置导入。导入的媒体保留，不删除或改动现有文件。"
+msgstr "This configuration import has been cancelled. Imported media is retained and existing files are not deleted or altered."
+
+msgid "已放入收件目录的 ZIP"
+msgstr "ZIP placed in incoming directory"
+
+msgid "已新增，私密状态保持"
+msgstr "Added, private status remains"
+
+msgid "已新增，等待关联核对"
+msgstr "Added, waiting for association verification"
+
+msgid "已暂停"
+msgstr "Suspended"
+
+msgid "已暂停加载，原有配置未被覆盖。"
+msgstr "Loading has been paused and the original configuration has not been overwritten."
+
+msgid "已更新，原商品已备份"
+msgstr "Updated, the original product has been backed up"
+
+msgid "已更新，原文已备份"
+msgstr "Updated, original text has been backed up"
+
+msgid "已更新，原记录已备份"
+msgstr "Updated, original record has been backed up"
+
+msgid "已有 style/script 或旧预览浮层时先盘点、备份和逐组件去重。当前版本保守避让内嵌资源，不自动删除文章代码。"
+msgstr "If you already have style/script or old preview overlay, first inventory, backup and deduplicate it component by component. The current version conservatively avoids embedded resources and does not automatically delete article codes."
+
+msgid "已有分类的父级不同，未移动分类："
+msgstr "The existing category has a different parent and the category is not moved:"
+
+msgid "已有分类的配置或父级不同，未覆盖分类："
+msgstr "The configuration or parent of the existing classification is different, and the classification is not covered:"
+
+msgid "已有分类配置不同，未覆盖："
+msgstr "The existing classification configuration is different and not covered:"
+
+msgid "已检查 ZIP 扩展、WordPress HTML 接口、私有临时目录、权限与模块状态。"
+msgstr "Checked ZIP extensions, WordPress HTML interface, private temporary directories, permissions and module status."
+
+msgid "已添加案例，请填写内容"
+msgstr "Case has been added, please fill in the content"
+
+msgid "已确认的文章组件与阅读折叠独立启停，仅作用于明确包装的文章正文。关闭后保留正文和原生功能。"
+msgstr "The confirmed article component starts and stops independently from the reading fold, and only works on explicitly packaged article text. The main text and native functionality are retained after closing."
+
+msgid "已继续批量同步。"
+msgstr "Batch sync has continued."
+
+msgid "已识别 Zibll"
+msgstr "Zibll detected"
+
+msgid "已识别旧版 links-export.zip；旧清单没有来源站点与校验值，已按当前文件检查图片，旧 subdir 路径不会写回。"
+msgstr "Older links-export.zip identified; old manifest has no source site and checksum, images are checked against current file, old subdir paths are not written back.\nThe LOGOs of"
+
+msgid "已请求暂停批量同步。"
+msgstr "A pause in bulk sync has been requested."
+
+msgid "已读取主题资料，点击保存后生效"
+msgstr "The topic data has been read and will take effect after clicking save."
+
+msgid "已过期"
+msgstr "Expired"
+
+msgid "已选"
+msgstr "Selected"
+
+msgid "已选 "
+msgstr "Selected "
+
+msgid "已选中链接，可以手动复制。"
+msgstr "The link is selected and can be copied manually."
+
+msgid "已选择 "
+msgstr "Selected "
+
+msgid "已选择 0 条"
+msgstr "0 items selected"
+
+msgid "已选择。建议原图宽度至少为显示宽度的两倍，以便高清显示。"
+msgstr "Selected. It is recommended that the width of the original image be at least twice the display width for high-definition display."
+
+msgid "已选择媒体库截图，保存后应用"
+msgstr "Selected media library screenshot, save and apply"
+
+msgid "已选择邮件 Logo；网站导航 Logo 保持原设置。"
+msgstr "Email logo selected; website navigation logo remains as is."
+
+msgid "已通过"
+msgstr "Passed"
+
+msgid "已配置"
+msgstr "Configured"
+
+msgid "布局与继承"
+msgstr "Layout and inheritance"
+
+msgid "帮助中心"
+msgstr "Help Center"
+
+msgid "帮助问号"
+msgstr "Help circle"
+
+msgid "常用颜色"
+msgstr "Common colors"
+
+msgid "平板"
+msgstr "Tablet"
+
+msgid "平板 900px"
+msgstr "Tablet 900px"
+
+msgid "库存只允许 -1 或非负整数。"
+msgstr "Inventories only allow -1 or non-negative integers."
+
+msgid "库存键与商品规格不一致，请在源站保存并刷新后修正。"
+msgstr "The inventory key is inconsistent with the product specifications. Please save and refresh the source site to correct it."
+
+msgid "应用"
+msgstr "Application"
+
+msgid "应用于此栏的所有二维码。边框颜色跟随主题，调节时二维码大小不变。"
+msgstr "Applies to all QR codes in this column. The border color follows the theme, and the size of the QR code remains unchanged when adjusted."
+
+msgid "底座圆角"
+msgstr "Base fillet"
+
+msgid "底栏信息（并排显示）"
+msgstr "Bottom bar information (displayed side by side)"
+
+msgid "建议重试间隔（秒）"
+msgstr "Recommended retry interval (seconds)"
+
+msgid "开关"
+msgstr "switch"
+
+msgid "开关只影响正式文章页。停用保留所有配置及文章属性；已有整页缓存需按站点缓存策略刷新。"
+msgstr "The switch only affects official article pages. Disable to retain all configuration and article properties; existing full page cache needs to be refreshed according to the site cache policy."
+
+msgid "开关已开启，识别到 Zibll 后才会加载。"
+msgstr "The switch is on and Zibll will not be loaded until it is recognized."
+
+msgid "开关格式无效。"
+msgstr "Invalid switch format."
+
+msgid "开关配置异常"
+msgstr "Switch configuration abnormality"
+
+msgid "开启"
+msgstr "Turn on"
+
+msgid "开启后按下方规则显示；关闭后恢复子比原生隐藏方式。游客始终不可见。"
+msgstr "After turning it on, it will be displayed according to the rules below; after turning it off, it will restore the sub-bi's native hiding mode. Visitors are always invisible."
+
+msgid "开启后，普通访客网页返回维护页与 HTTP 503。管理员可正常浏览，后台与登录入口保留。"
+msgstr "When enabled, the normal visitor web page returns the maintenance page and HTTP 503. Administrators can browse normally, and the backend and login portal are retained."
+
+msgid "开启或关闭后，请按网站原有流程清除页面缓存与 CDN 缓存；直接命中 CDN 的旧缓存可能不会执行 WordPress。管理员预览始终使用私有、不缓存的响应。"
+msgstr "After turning it on or off, please clear the page cache and CDN cache according to the original process of the website; the old cache that directly hits the CDN may not execute WordPress. Admin preview always uses private, uncacheable responses."
+
+msgid "开始上传"
+msgstr "Start uploading"
+
+msgid "引用Toolkit中央案例库，兼容旧案例区块。"
+msgstr "Reference the Toolkit central case library and be compatible with old case blocks."
+
+msgid "引用已复制。"
+msgstr "Reference copied."
+
+msgid "张可选"
+msgstr "available"
+
+msgid "张）"
+msgstr "Zhang)"
+
+msgid "归档页顶部"
+msgstr "Archive Headers"
+
+msgid "归档页顶部设置无效。"
+msgstr "Invalid archive page top setting."
+
+msgid "当前 Toolkit"
+msgstr "Current Toolkit"
+
+msgid "当前主题用户资料接口未就绪，前台预设功能暂不加载。"
+msgstr "The current theme user information interface is not ready, and the foreground default function is not loaded yet."
+
+msgid "当前主题的下载权限或计数入口不可用。"
+msgstr "Download permissions or counting entries for the current topic are not available."
+
+msgid "当前仅核对了子比 9.2 的通知入口。此主题版本运行时保留原生邮件，设置与示例预览仍可使用。"
+msgstr "Currently only notification entries for subbit 9.2 are checked. This theme version runs with native email intact, and settings and sample previews are still available."
+
+msgid "当前使用子主题"
+msgstr "Currently using subtheme"
+
+msgid "当前共"
+msgstr "Current total"
+
+msgid "当前兼容读取旧插件配置。保存后独立存储，旧记录仍保留。"
+msgstr "Currently compatible with reading old plugin configurations. After saving, it is stored independently and old records are still retained."
+
+msgid "当前分片上传超时。"
+msgstr "The current multipart upload has timed out."
+
+msgid "当前原始发布来源："
+msgstr "Current original publishing source:"
+
+msgid "当前原始发布来源：%s。"
+msgstr "Original source: %s."
+
+msgid "当前图标"
+msgstr "Current icon"
+
+msgid "当前图片文件处理后即暂停。"
+msgstr "Pause after processing of current image file."
+
+msgid "当前已有维护页配置，未覆盖。请手工核对旧配置后填写。"
+msgstr "The maintenance page is currently configured and has not been overwritten. Please manually check the old configuration before filling it in."
+
+msgid "当前提示框设置异常。"
+msgstr "The current prompt box setting is abnormal."
+
+msgid "当前服务器未能取得可用公益信息。请查看连接状态，或切换备用接口后重试。"
+msgstr "The current server cannot obtain available public interest information. Please check the connection status, or switch to the backup interface and try again."
+
+msgid "当前未检测到已核实的子比 9.2 页脚结构，前台使用原生页脚；设置与预览仍可使用。"
+msgstr "Verified Subratio 9.2 footer structure is not currently detected, the frontend uses native footers; settings and previews still work."
+
+msgid "当前本地环境未启用；已检查现有源码为独立 WooCommerce 模板"
+msgstr "Not enabled in current local environment; existing source code checked as standalone WooCommerce template"
+
+msgid "当前格式异常，未导出默认值代替原配置。"
+msgstr "The current format is abnormal and the default value is not exported to replace the original configuration."
+
+msgid "当前案例允许滚动"
+msgstr "Current case allows scrolling"
+
+msgid "当前案例库配置已导出"
+msgstr "The current case library configuration has been exported"
+
+msgid "当前案例预览图片"
+msgstr "Current case preview image"
+
+msgid "当前模块开关格式异常，不能导出。"
+msgstr "The current module switch format is abnormal and cannot be exported."
+
+msgid "当前没有 maotk/note 提供者。如需由 Toolkit 提供，请在下方明确选择接管并保存。"
+msgstr "There is currently no maotk/note provider. To be served by Toolkit, please explicitly select Takeover and Save below."
+
+msgid "当前没有已注册模块。添加模块后，它会显示在这里。"
+msgstr "There are currently no registered modules. After adding a module, it will appear here."
+
+msgid "当前状态："
+msgstr "Current status:"
+
+msgid "当前环境未启用"
+msgstr "Not enabled in current environment"
+
+msgid "当前筛选没有可导出的链接。"
+msgstr "There are no exportable links for the current filter."
+
+msgid "当前类型"
+msgstr "Current type"
+
+msgid "当前范围超过 1,000 条，请按分类或指定链接分批导出。"
+msgstr "The current range exceeds 1,000 items, please export in batches by category or specified link."
+
+msgid "当前规则已保存"
+msgstr "Current rule saved"
+
+msgid "当前账号没有该文章的阅读权限。"
+msgstr "The current account does not have permission to read this article."
+
+msgid "当前账号的有效任务已达到 100 个，请等待旧任务过期后再创建。"
+msgstr "The number of valid tasks for the current account has reached 100. Please wait for the old tasks to expire before creating them again."
+
+msgid "当前运行环境未加载"
+msgstr "The current running environment is not loaded"
+
+msgid "当前配置包含非 JSON 数据，已停止恢复，避免丢失原值。"
+msgstr "The current configuration contains non-JSON data and recovery has been stopped to avoid losing original values."
+
+msgid "当前配置编码异常，已停止恢复，避免丢失原值。"
+msgstr "The current configuration encoding is abnormal and recovery has been stopped to avoid losing the original value."
+
+msgid "当前："
+msgstr "Currently:"
+
+msgid "当前：样例文章（演示数据）"
+msgstr "Current: Sample article (demo data)"
+
+msgid "待发货提醒 · 商家"
+msgstr "Pending shipment reminder · Merchant"
+
+msgid "待同步"
+msgstr "Pending synchronization"
+
+msgid "待审核"
+msgstr "Pending review"
+
+msgid "待确认"
+msgstr "To be confirmed"
+
+msgid "待配置"
+msgstr "Setup required"
+
+msgid "待验证"
+msgstr "Pending verification"
+
+msgid "微信"
+msgstr "WeChat"
+
+msgid "微信咨询"
+msgstr "WeChat consultation"
+
+msgid "必须是文本或标记值。"
+msgstr "Must be a text or markup value."
+
+msgid "性能信息来自当前请求，不作为网站测速结果。默认关闭。"
+msgstr "Performance information comes from the current request and is not used as website speed test results. Off by default."
+
+msgid "总库存"
+msgstr "Total Inventory"
+
+msgid "恢复前快照用于当前任务核对与撤销，不作为跨站导入包。如果导入后又修改了同一配置，撤销会停止，避免覆盖新修改。"
+msgstr "The pre-restore snapshot is used for checking and undoing the current task, and is not used as a cross-site import package. If the same configuration is modified after importing, the undo will stop to avoid overwriting the new modifications."
+
+msgid "恢复原版苹果式窗口细节。右上角分享与书签为装饰；放大图片使用截图上的独立入口。"
+msgstr "Restore original Apple style window details. The sharing and bookmarks in the upper right corner are for decoration; to enlarge the picture, use the independent entrance on the screenshot."
+
+msgid "恢复封板默认"
+msgstr "Restore blocking default"
+
+msgid "恢复尺寸继承"
+msgstr "Restore size inheritance"
+
+msgid "恢复此任务前配置"
+msgstr "Restore the configuration before this task"
+
+msgid "恢复此任务导入前的配置？已有新修改时会停止，媒体文件保留。"
+msgstr "Restore the configuration before importing this task? It will stop when there are new modifications and the media files will be retained."
+
+msgid "恢复继承"
+msgstr "Restore inheritance"
+
+msgid "恢复该颜色继承"
+msgstr "Restore this color inheritance"
+
+msgid "恢复过期任务锁"
+msgstr "Restore expired task lock"
+
+msgid "恢复默认"
+msgstr "Restore default"
+
+msgid "恢复默认图标"
+msgstr "Restore default icon"
+
+msgid "恢复默认外观"
+msgstr "Restore default appearance"
+
+msgid "恢复默认留白"
+msgstr "Restore default blank space"
+
+msgid "悬停二维码"
+msgstr "Hover QR code"
+
+msgid "悬停浏览长图"
+msgstr "Hover to browse long images"
+
+msgid "成功 "
+msgstr "Success "
+
+msgid "我确认覆盖勾选的插件配置"
+msgstr "I confirm overwriting the checked plug-in configuration"
+
+msgid "或 mailto: 邮箱链接"
+msgstr "or mailto: email link"
+
+msgid "或填写图标链接"
+msgstr "Or fill in the icon link"
+
+msgid "截图"
+msgstr "Screenshot"
+
+msgid "所属角色"
+msgstr "Role"
+
+msgid "所有商品存为草稿；仅允许覆盖草稿，不改在售商品。默认跳过已有项。"
+msgstr "All items are saved as drafts; only drafts are allowed to be overwritten, not items on sale. Existing items are skipped by default."
+
+msgid "所选分类已不存在。"
+msgstr "The selected category no longer exists."
+
+msgid "所选媒体必须是可用的本地 JPG / PNG / WebP / GIF 图片。"
+msgstr "The selected media must be a native JPG / PNG / WebP / GIF image available."
+
+msgid "所选配置已导入，刷新对应设置页后查看。恢复前快照已保留；新图片未重新压缩。"
+msgstr "The selected configuration has been imported, please refresh the corresponding settings page to view it. The pre-restore snapshot is retained; new images are not recompressed."
+
+msgid "所选链接格式无效。"
+msgstr "The selected link format is invalid."
+
+msgid "手机"
+msgstr "Mobile"
+
+msgid "手机 390px"
+msgstr "Mobile 390px"
+
+msgid "手机端：关于我们常显，菜单和友链折叠，关注区在版权信息上方。"
+msgstr "Mobile version: About us is always displayed, the menu and friend links are folded, and the attention area is above the copyright information."
+
+msgid "手机采用流式表格与内联 CSS，不依赖网站前端样式。不同邮箱对圆角等细节支持可能不同，实际收件效果需用测试邮件核对。"
+msgstr "Mobile uses fluid tables and inline CSS, and does not rely on website front-end styles. Different mailboxes may have different support for details such as rounded corners, and the actual receiving effect needs to be verified with a test email."
+
+msgid "手机预览"
+msgstr "Mobile preview"
+
+msgid "手机预览高度"
+msgstr "Mobile preview height"
+
+msgid "打包链接与 LOGO，导入前预检，保留推荐参数与私密状态；分批执行并记录结果。"
+msgstr "Package links and LOGOs, pre-check before importing, retain recommended parameters and private status; execute in batches and record results."
+
+msgid "打开中央案例库"
+msgstr "Open the central case library"
+
+msgid "打开工作台"
+msgstr "Open workbench"
+
+msgid "扩展字段包含对象或嵌套过深，不能安全迁移。"
+msgstr "The extension field contains objects or is nested too deeply to be safely migrated."
+
+msgid "扩展字段名称或取值无效。"
+msgstr "Invalid extension field name or value."
+
+msgid "扩展字段数组过大。"
+msgstr "Extended fields array too large."
+
+msgid "扩展模块"
+msgstr "Modules"
+
+msgid "扫描中"
+msgstr "Scanning"
+
+msgid "扫描进度"
+msgstr "Scan progress"
+
+msgid "批量迁移需要 JavaScript。请启用后刷新；当前不会自动执行任何导入。"
+msgstr "Bulk migration requires JavaScript. Please enable post-refresh; no imports are currently performed automatically."
+
+msgid "找回密码 · 重置链接"
+msgstr "Retrieve password · Reset link"
+
+msgid "找回密码 · 验证码"
+msgstr "Retrieve password · Verification code"
+
+msgid "拖动左侧手柄调整顺序。"
+msgstr "Drag the left handle to adjust the order."
+
+msgid "拖动或输入 0—200。选择右侧对应设备查看效果，保存设置后应用到正式页面。"
+msgstr "Drag or enter 0—200. Select the corresponding device on the right to view the effect, save the settings and apply to the official page."
+
+msgid "拖动排序"
+msgstr "Drag sort"
+
+msgid "拖动排序 · Alt＋方向键移动"
+msgstr "Drag to sort · Alt + arrow keys to move"
+
+msgid "拖动色板选择颜色，右侧拖动色相。方向键微调，Shift 加速，Esc 收起。"
+msgstr "Drag the swatch to select a color, and drag the hue on the right side. Arrow keys to fine-tune, Shift to accelerate, Esc to close."
+
+msgid "拖动调节"
+msgstr "Drag adjustment"
+
+msgid "拖动选色，方向键微调。留空或选“继承”可跟随默认。"
+msgstr "Drag to select color and use arrow keys to fine-tune. Leave blank or select \"Inherit\" to follow the default."
+
+msgid "指定列表仅显示前 1,000 条；其余请按分类导出。"
+msgstr "Specify the list to display only the first 1,000 items; please export the rest by category."
+
+msgid "指定商品 ID（可选）"
+msgstr "Specify product ID (optional)"
+
+msgid "指定文章 ID（可选）"
+msgstr "Specify article ID (optional)"
+
+msgid "指定链接"
+msgstr "Specify link"
+
+msgid "按 WordPress 站点时区显示更新时间，不改变全局时区。"
+msgstr "Show update times by WordPress site timezone without changing global timezone."
+
+msgid "按分类、日期或 ID 分批导出"
+msgstr "Batch export by category, date or ID"
+
+msgid "按分类保存为 JSON，本地自定义图片可一起带走。"
+msgstr "Save as JSON by category, and local customized pictures can be taken away together."
+
+msgid "按完整网址精确判重，保留邀请码和推荐参数。包内重复或目标站多条同网址记录会提示冲突。"
+msgstr "Accurately judge the weight based on the complete URL, and retain the invitation code and recommendation parameters. Duplication in the package or multiple records of the same URL in the target site will prompt a conflict."
+
+msgid "按已核实的入口分类，不新增通知"
+msgstr "Classify by verified entrance, no new notifications will be added"
+
+msgid "按真实设备宽度渲染；背景、文字和强调色跟随子比主题。手机端关注区位于版权上方。"
+msgstr "Render to true device width; background, text, and accent colors follow the sub-theme. The mobile phone concern area is located above the copyright."
+
+msgid "按类型调整外观，预览每一次更改。"
+msgstr "Adjust appearance by type and preview every change."
+
+msgid "按范围打包商品、分类标签和图片，预检后导入，默认草稿，仅更新草稿并保存覆盖前备份。"
+msgstr "Package products, category tags and images by scope, import after pre-checking, default draft, only update the draft and save backup before overwriting."
+
+msgid "按范围打包文章、分类标签和图片，预检后导入，默认草稿并保留覆盖前备份。"
+msgstr "Pack articles, category tags and images by scope, import after preflight, default draft and keep backup before overwriting."
+
+msgid "按规格发货配置无效。"
+msgstr "Invalid ship-to-spec configuration."
+
+msgid "按角色与指定账号显示私密链接，默认仅站点管理员；保留子比导航与详情页样式。"
+msgstr "Display private links by role and specified account, with only site administrators by default; retain sub-navigation and detail page styles."
+
+msgid "按钮与页脚"
+msgstr "Buttons & Footer"
+
+msgid "按钮圆角"
+msgstr "Button rounded corners"
+
+msgid "按钮文字颜色"
+msgstr "Button text color"
+
+msgid "按钮背景"
+msgstr "Button background"
+
+msgid "按需显示，不填则隐藏"
+msgstr "Show on demand, hide if left blank"
+
+msgid "接入"
+msgstr "Integration"
+
+msgid "接入与范围"
+msgstr "Access and Range"
+
+msgid "接入边界"
+msgstr "Access Boundary"
+
+msgid "接口返回异常状态"
+msgstr "The interface returns an exception status"
+
+msgid "接口："
+msgstr "Interface:"
+
+msgid "推荐"
+msgstr "Recommendation"
+
+msgid "推荐与外部工具入口在根组增加"
+msgstr "Recommended and external tool entry added in root group"
+
+msgid "推荐与工具入口 v1.1.1 已接入；未设置的组件默认启用，已关闭的设置保持。"
+msgstr "Recommendation and tool portal v1.1.1 has been connected; unset components are enabled by default, and closed settings remain."
+
+msgid "推荐与工具调用说明"
+msgstr "Recommendations and tool calling instructions"
+
+msgid "推荐勾选"
+msgstr "Check circle"
+
+msgid "提供独立页面模板，按账号归属或子比原生游客凭据查询订单，保留原生详情和支付入口。"
+msgstr "Provide independent page templates to query orders based on account ownership or sub-ratio of native visitor credentials, retaining native details and payment entrances."
+
+msgid "提示"
+msgstr "Tip"
+
+msgid "提示文字"
+msgstr "Prompt text"
+
+msgid "提示框外观配置异常，已暂停增强，原区块基础注册与内容保留。请核对后保存有效设置。"
+msgstr "The appearance configuration of the prompt box is abnormal, enhancement has been suspended, and the basic registration and content of the original block are retained. Please check and save the valid settings."
+
+msgid "提示框提供者配置无效。"
+msgstr "Invalid tooltip provider configuration."
+
+msgid "提示框设置已保存并重新读取。"
+msgstr "Toolbox settings saved and reloaded."
+
+msgid "提示框配置"
+msgstr "Prompt box configuration"
+
+msgid "提示框配置无效。"
+msgstr "The prompt box configuration is invalid."
+
+msgid "提示框配置无效：请使用完整 HEX、12–28px 尺寸和已注册图标；原设置未改变。"
+msgstr "Invalid tooltip configuration: please use full HEX, 12–28px size and registered icon; original settings unchanged."
+
+msgid "提示灯泡"
+msgstr "Light bulb"
+
+msgid "提示设置"
+msgstr "Prompt settings"
+
+msgid "提示说明"
+msgstr "Tips"
+
+msgid "插件上限 256 MiB；当前 PHP 上传上限"
+msgstr "Plugin limit 256 MiB; current PHP upload limit"
+
+msgid "插件只在显示时补充属性与 TAB 文字包装，不改写已存正文；不生成示例文章 ID，也不复制主题的代码工具或 TAB 事件。"
+msgstr "The plug-in only adds attributes and TAB text packaging when displayed, and does not rewrite the existing text; it does not generate sample article IDs, nor copy the theme's code tools or TAB events."
+
+msgid "插入变量 "
+msgstr "Insert variables "
+
+msgid "插入示例、迁移与回退说明"
+msgstr "Insert examples, migration and rollback instructions"
+
+msgid "搜索内容过长或格式无效。"
+msgstr "The search content is too long or has an invalid format."
+
+msgid "搜索同时遵循子比“404 页面搜索”开关。关闭公益信息后不再请求第三方接口。"
+msgstr "Searching while respecting the sub-\"404 Page Search\" switch. After closing the public welfare information, the third-party interface will no longer be requested."
+
+msgid "搜索文章/产品标题，或输入 ID"
+msgstr "Search article/product title, or enter ID"
+
+msgid "搜索暂不可用，请刷新页面后重试。"
+msgstr "Search is temporarily unavailable, please refresh the page and try again."
+
+msgid "搜索用户"
+msgstr "Search for users"
+
+msgid "搜索用户名或显示名称"
+msgstr "Search username or display name"
+
+msgid "撤销"
+msgstr "Undo"
+
+msgid "撤销修改"
+msgstr "Undo changes"
+
+msgid "撤销最近修改"
+msgstr "Undo recent changes"
+
+msgid "操作不支持。"
+msgstr "Operation not supported."
+
+msgid "操作已完成，请查看结果。"
+msgstr "Operation completed, please view the results."
+
+msgid "操作按钮"
+msgstr "Action buttons"
+
+msgid "操作按钮文案"
+msgstr "Action button copy"
+
+msgid "操作无效。"
+msgstr "Invalid operation."
+
+msgid "操作未完成。"
+msgstr "Operation not completed."
+
+msgid "操作验证码"
+msgstr "Operation verification code"
+
+msgid "支持 SVG、PNG、JPG、WebP，最大 512 KB。"
+msgstr "Supports SVG, PNG, JPG, WebP, up to 512 KB."
+
+msgid "支持 Toolkit 新格式与旧版 links-export.zip。上传后先预检，不会直接写入。"
+msgstr "Support Toolkit new format and legacy links-export.zip. It will be pre-checked after uploading and will not be written directly."
+
+msgid "支持 p、br、strong、em、列表和普通链接，脚本与内嵌样式会被移除。"
+msgstr "Support p, br, strong, em, list and normal links, scripts and inline styles will be removed."
+
+msgid "支持图片地址；建议使用清晰的 PNG 或 WebP。"
+msgstr "Support image addresses; clear PNG or WebP recommended."
+
+msgid "支持服务"
+msgstr "Support Services"
+
+msgid "支持直接填写图片网址。留空使用站点 Logo / 图标；都没有时显示站点名称。"
+msgstr "Support filling in image URL directly. Leave blank to use the site logo/icon; if neither is available, the site name will be displayed."
+
+msgid "放大"
+msgstr "Zoom in"
+
+msgid "放大截图"
+msgstr "Enlarge screenshot"
+
+msgid "数值无效。"
+msgstr "Invalid value."
+
+msgid "文件与恢复说明"
+msgstr "Files and recovery instructions"
+
+msgid "文件内容不是支持的图片格式。"
+msgstr "File content is not in a supported image format."
+
+msgid "文件名无效或过长，请修改后重试。"
+msgstr "The file name is invalid or too long, please modify it and try again."
+
+msgid "文件已从 R2 删除。"
+msgstr "File removed from R2."
+
+msgid "文件已超过 7 天有效期，请重新导出或预检。"
+msgstr "The file has expired for 7 days, please re-export or preflight check."
+
+msgid "文件类型无效。"
+msgstr "Invalid file type."
+
+msgid "文件超过 32 MiB。"
+msgstr "File exceeds 32 MiB."
+
+msgid "文字"
+msgstr "Text"
+
+msgid "文字前"
+msgstr "before text"
+
+msgid "文字后"
+msgstr "After text"
+
+msgid "文字或地址过长。"
+msgstr "The text or address is too long."
+
+msgid "文字过长或格式无效。"
+msgstr "The text is too long or has an invalid format."
+
+msgid "文本无效。"
+msgstr "Invalid text."
+
+msgid "文章"
+msgstr "Article"
+
+msgid "文章 HTML 被其他过滤器改写，请核对后重新预检。"
+msgstr "The article HTML has been rewritten by other filters, please check and re-preflight check."
+
+msgid "文章 ID"
+msgstr "Article ID"
+
+msgid "文章 ID 可从编辑地址中的 post= 参数查看。"
+msgstr "The post ID can be viewed from the post= parameter in the edit address."
+
+msgid "文章 ID 数量或取值无效。"
+msgstr "Invalid article ID quantity or value."
+
+msgid "文章 ID 请以逗号或空格分隔。"
+msgstr "Please separate article IDs with commas or spaces."
+
+msgid "文章 UI · TAB 极简线条"
+msgstr "Article UI · Minimal Tabs"
+
+msgid "文章 UI · 推荐与工具入口"
+msgstr "Article UI · Recommendations & Tools"
+
+msgid "文章 UI · 文章卡片"
+msgstr "Article UI · Article Cards"
+
+msgid "文章 UI · 链接预览"
+msgstr "Article UI · Link Previews"
+
+msgid "文章 UI · 阅读与折叠"
+msgstr "Article UI · Reading & Accordions"
+
+msgid "文章 UI · 高亮代码"
+msgstr "Article UI · Syntax Highlighting"
+
+msgid "文章 UI 组件"
+msgstr "Article UI Components"
+
+msgid "文章 UI 组件需要 WordPress 6.2 或更新版本的 HTML API，当前增强暂停；原有模块不受影响。"
+msgstr "The article UI component requires WordPress 6.2 or newer version of the HTML API, and the current enhancement is suspended; the original module is not affected."
+
+msgid "文章写入失败。"
+msgstr "Article writing failed."
+
+msgid "文章分类"
+msgstr "Article classification"
+
+msgid "文章分类、图片或扩展字段格式无效。"
+msgstr "Invalid article category, image or extended field format."
+
+msgid "文章分类引用缺失。"
+msgstr "Article category citation is missing."
+
+msgid "文章图片引用缺失。"
+msgstr "Article image citation is missing."
+
+msgid "文章导入&amp;导出"
+msgstr "Article import & export"
+
+msgid "文章导入&导出"
+msgstr "Article Import & Export"
+
+msgid "文章导入与导出"
+msgstr "Article import and export"
+
+msgid "文章展示"
+msgstr "Article Display"
+
+msgid "文章属性"
+msgstr "Article properties"
+
+msgid "文章属性列表"
+msgstr "Article attribute list"
+
+msgid "文章已写入，分类未保存。"
+msgstr "The article has been written, but the category has not been saved."
+
+msgid "文章已写入，扩展字段保存失败。"
+msgstr "The article has been written and the extension field failed to be saved."
+
+msgid "文章已写入，正在核对图片与本批文章的已知关联；完成后再结束任务。"
+msgstr "The article has been written, and the known connections between the pictures and this batch of articles are being checked; end the task after completion."
+
+msgid "文章形式无效。"
+msgstr "The article form is invalid."
+
+msgid "文章日期格式无效。"
+msgstr "Invalid article date format."
+
+msgid "文章时效提示"
+msgstr "Article Freshness Notice"
+
+msgid "文章时效提示预览"
+msgstr "Article timeliness prompt preview"
+
+msgid "文章标识或状态无效。"
+msgstr "Invalid article ID or status."
+
+msgid "文章正文与扩展字段超过 16 MiB，请缩小范围。"
+msgstr "The article body and extended fields exceed 16 MiB, please reduce the range."
+
+msgid "文章状态"
+msgstr "Article status"
+
+msgid "文章状态无效。"
+msgstr "Article status is invalid."
+
+msgid "文章组件"
+msgstr "Article component"
+
+msgid "文章编号无效。"
+msgstr "Invalid article number."
+
+msgid "文章记录无效。"
+msgstr "The article record is invalid."
+
+msgid "文章迁移"
+msgstr "Article migration"
+
+msgid "文章迁移方式"
+msgstr "Article migration method"
+
+msgid "文章迁移模块未运行。"
+msgstr "Article migration module not running."
+
+msgid "文章迁移进度"
+msgstr "Article migration progress"
+
+msgid "文章迁移需要 JavaScript，当前不会自动执行任何导入。"
+msgstr "Article migration requires JavaScript and no imports are currently performed automatically."
+
+msgid "文章迁移需要 WordPress 6.2 或更新版本的 HTML 接口。"
+msgstr "Post migration requires WordPress 6.2 or newer HTML interface."
+
+msgid "文章顶部信息"
+msgstr "Article Header"
+
+msgid "文章顶部信息 · 原配置保留"
+msgstr "Information at the top of the article · Original configuration retained"
+
+msgid "文章顶部信息 · 文章属性"
+msgstr "Article top information · Article attributes"
+
+msgid "文章顶部信息 · 独立预览"
+msgstr "Information at top of article · Independent preview"
+
+msgid "文章顶部信息预览"
+msgstr "Preview of information at the top of the article"
+
+msgid "文章预检"
+msgstr "Article preflight"
+
+msgid "新增"
+msgstr "New"
+
+msgid "新增图片按内容去重，重复文章默认跳过；覆盖前备份可随报告下载。"
+msgstr "Newly added images are deduplicated based on content, and duplicate articles are skipped by default; backups before overwriting can be downloaded with the report."
+
+msgid "新增案例"
+msgstr "New case"
+
+msgid "新建展示页面"
+msgstr "Create a new display page"
+
+msgid "新建页面后，将模板选为“"
+msgstr "After creating a new page, select the template as \""
+
+msgid "新用户注册时随机分配头像"
+msgstr "Randomly assign avatar to new user when registering"
+
+msgid "新链接"
+msgstr "New link"
+
+msgid "无"
+msgstr "None"
+
+msgid "无效字段"
+msgstr "Invalid field"
+
+msgid "无权执行此操作。"
+msgstr "does not have permission to perform this operation."
+
+msgid "无法保存任务。"
+msgstr "Unable to save task."
+
+msgid "无法保存私有图片文件。"
+msgstr "Unable to save private image file."
+
+msgid "无法准备 LOGO。"
+msgstr "Unable to prepare LOGO."
+
+msgid "无法切换任务状态，请核对当前任务后重试。"
+msgstr "Unable to switch task status, please check the current task and try again."
+
+msgid "无法创建任务目录。"
+msgstr "Unable to create task directory."
+
+msgid "无法创建私有任务目录。"
+msgstr "Unable to create private task directory."
+
+msgid "无法创建站外配置备份目录。"
+msgstr "Unable to create off-site configuration backup directory."
+
+msgid "无法在媒体目录中创建恢复文件。"
+msgstr "Unable to create recovery file in media directory."
+
+msgid "无法将 R2 副本恢复到原路径。"
+msgstr "Unable to restore R2 replica to original path."
+
+msgid "无法生成 ZIP，任务可继续重试。"
+msgstr "Unable to generate ZIP, task may continue to be retried."
+
+msgid "无法识别上传操作。"
+msgstr "Upload operation not recognized."
+
+msgid "无角色"
+msgstr "No role"
+
+msgid "无需修改主题文件"
+msgstr "No need to modify theme files"
+
+msgid "日期无效。"
+msgstr "Invalid date."
+
+msgid "旧主题或其他插件仍在提供 maotk/demo-showcase 区块。Toolkit 保留原提供者，不重复注册；案例页面模板与后台案例库独立可用。"
+msgstr "Old themes or other plugins still provide the maotk/demo-showcase block. Toolkit retains the original provider and does not register repeatedly; the case page template and the background case library are available independently."
+
+msgid "旧包无原始哈希，已验证实际图片；不读取旧包 subdir，不从任意服务器路径补文件。"
+msgstr "Old packages have no original hash, the actual image has been verified; old package subdir is not read, and files are not supplemented from any server path."
+
+msgid "旧包来源网址（旧格式必填）"
+msgstr "Old package source URL (required in old format)"
+
+msgid "旧包没有来源标识，请填写旧站完整网址后重新预检。"
+msgstr "The old package has no source identification. Please fill in the complete URL of the old site and re-preflight check."
+
+msgid "旧包的分类标签未包含完整清单。"
+msgstr "Classification tags for older packages did not contain complete listings."
+
+msgid "旧包缺少 posts、images 或 terms。"
+msgstr "Old package is missing posts, images or terms."
+
+msgid "旧头像插件若仍启用，本模块暂停前台接入，避免重复菜单和写入。停用旧插件即可，不需要删除旧文件或设置。"
+msgstr "If the old avatar plug-in is still enabled, this module will suspend front-end access to avoid repeated menus and writing. Just deactivate the old plugin, no need to delete old files or settings."
+
+msgid "旧插件内容导入"
+msgstr "Old plugin content import"
+
+msgid "旧案例保留在此区块中；切换到中央案例库后，前台改为读取Toolkit的统一资料。"
+msgstr "Old cases remain in this block; after switching to the central case library, the frontend changes to reading Toolkit's unified data."
+
+msgid "旧版任务将继续处理。新建的批量任务支持暂停和继续。"
+msgstr "Legacy tasks will continue to be processed. Newly created batch tasks support pausing and continuing."
+
+msgid "旧维护插件仍在运行。请先关闭旧维护模式，再启用 Toolkit；不会自动停用或删除旧插件。"
+msgstr "Old maintenance plugin still running. Please turn off old maintenance mode before enabling Toolkit; old plug-ins will not be automatically deactivated or removed."
+
+msgid "旧配置的恢复时间格式无效，未执行导入。"
+msgstr "The old configuration's recovery time format is invalid and the import was not performed."
+
+msgid "时效提示设置已保存。"
+msgstr "Aging reminder settings saved."
+
+msgid "时效提示预览"
+msgstr "Preview of aging prompts"
+
+msgid "显示"
+msgstr "Show"
+
+msgid "显示与注册规则"
+msgstr "Display and registration rules"
+
+msgid "显示分享与书签装饰"
+msgstr "Show sharing and bookmark decoration"
+
+msgid "显示咨询按钮"
+msgstr "Show consultation button"
+
+msgid "显示图标"
+msgstr "Show icon"
+
+msgid "显示图标底座"
+msgstr "Show icon base"
+
+msgid "显示图片操作提示"
+msgstr "Show image operation prompts"
+
+msgid "显示备案信息"
+msgstr "Display filing information"
+
+msgid "显示子比原生站内搜索"
+msgstr "Show Zibi native site search"
+
+msgid "显示寻亲照片"
+msgstr "Display family search photos"
+
+msgid "显示封面图"
+msgstr "Show cover image"
+
+msgid "显示查看按钮"
+msgstr "Show view button"
+
+msgid "显示查询次数和加载耗时"
+msgstr "Display query times and loading time"
+
+msgid "显示模块标题"
+msgstr "Show module title"
+
+msgid "显示模式"
+msgstr "Display mode"
+
+msgid "显示正文描述"
+msgstr "Show text description"
+
+msgid "显示浏览器顶栏"
+msgstr "Show browser top bar"
+
+msgid "显示版权信息"
+msgstr "Show copyright information"
+
+msgid "显示第三方公益寻亲信息"
+msgstr "Display third-party public welfare family search information"
+
+msgid "显示红黄绿圆点"
+msgstr "Display red, yellow and green dots"
+
+msgid "显示胶囊地址栏"
+msgstr "Show capsule address bar"
+
+msgid "显示范围"
+msgstr "Display range"
+
+msgid "显示设置"
+msgstr "Display settings"
+
+msgid "显示说明文字"
+msgstr "Show description text"
+
+msgid "显示边框"
+msgstr "Show borders"
+
+msgid "显示选项"
+msgstr "Display options"
+
+msgid "普通文章及页面"
+msgstr "General articles and pages"
+
+msgid "暂不可用"
+msgstr "Not available yet"
+
+msgid "暂停"
+msgstr "Pause"
+
+msgid "暂停同步"
+msgstr "Pause sync"
+
+msgid "暂无 Toolkit 上传文件。"
+msgstr "There is no Toolkit upload file yet."
+
+msgid "暂无文件"
+msgstr "No files yet"
+
+msgid "暂时无法建立下载会话，请重试。"
+msgstr "The download session cannot be established at this time, please try again."
+
+msgid "暂时无法读取进度，将自动重试。"
+msgstr "Temporarily unable to read progress, will automatically retry."
+
+msgid "暂未能启动批量同步，请稍后重试。"
+msgstr "Batch synchronization failed to start, please try again later."
+
+msgid "更新已有"
+msgstr "Updated"
+
+msgid "更新已有文章，保存原文备份"
+msgstr "Update existing articles and save original text backup"
+
+msgid "更新已有链接，并备份原记录"
+msgstr "Update existing links and back up original records"
+
+msgid "更新预览"
+msgstr "Update preview"
+
+msgid "更新预览…"
+msgstr "Update preview…"
+
+msgid "替换图片"
+msgstr "Replace image"
+
+msgid "最多显示 20 项，请继续输入以缩小范围。"
+msgstr "Maximum of 20 items displayed, please continue entering to narrow the range."
+
+msgid "最近一次失败"
+msgstr "Latest failure"
+
+msgid "最近任务"
+msgstr "Recent tasks"
+
+msgid "最近商品任务"
+msgstr "Recent product tasks"
+
+msgid "最近文章任务"
+msgstr "Recent article tasks"
+
+msgid "最近的配置备份"
+msgstr "Recent configuration backup"
+
+msgid "最近连接状态："
+msgstr "Recent connection status:"
+
+msgid "有扩展模块未能完成注册。已注册模块仍会独立加载，请检查最近添加的模块。"
+msgstr "An extension module failed to complete registration. Registered modules will still load independently, please check for recently added modules."
+
+msgid "有无效或重复的图标扩展被忽略，请核对注册代码。"
+msgstr "An invalid or duplicate icon extension was ignored, please check the registration code."
+
+msgid "有未保存的修改"
+msgstr "There are unsaved changes"
+
+msgid "有未保存的修改，保存后才会应用到前台。"
+msgstr "There are unsaved modifications, which will not be applied to the foreground until saved."
+
+msgid "有未保存的修改，可先预览再保存。"
+msgstr "There are unsaved modifications. You can preview them first and then save them."
+
+msgid "有未保存的修改，预览不影响正式文章。"
+msgstr "There are unsaved changes, and the preview does not affect the official article."
+
+msgid "有未保存的修改；实时预览不会发布修改。"
+msgstr "There are unsaved changes; live preview will not post changes."
+
+msgid "服务器 ZIP 不存在、越界或超出大小限制。"
+msgstr "Server ZIP does not exist, is out of bounds, or exceeds size limit."
+
+msgid "服务器依赖缺失"
+msgstr "Missing server dependency"
+
+msgid "服务器收件目录不能为符号链接。"
+msgstr "The server incoming directory cannot be a symbolic link."
+
+msgid "服务器文件名称无效。"
+msgstr "Invalid server file name."
+
+msgid "服务器暂时无法加密保存密钥。请检查 OpenSSL 与 WordPress 安全密钥后重试。"
+msgstr "The server is temporarily unable to encrypt and save the key. Please check your OpenSSL and WordPress security keys and try again."
+
+msgid "服务器未启用 ZipArchive。"
+msgstr "ZipArchive is not enabled on the server."
+
+msgid "服务器未启用 ZipArchive，暂时不能迁移。"
+msgstr "ZipArchive is not enabled on the server and migration is not possible at the moment."
+
+msgid "服务器未返回有效数据，请刷新记录核对结果。"
+msgstr "The server did not return valid data, please refresh the record verification results."
+
+msgid "服务器未返回有效数据，请稍后重试。"
+msgstr "The server did not return valid data, please try again later."
+
+msgid "服务器缺少 ZipArchive。"
+msgstr "Server is missing ZipArchive."
+
+msgid "未保存"
+msgstr "Not saved"
+
+msgid "未保存的修改仅在预览显示"
+msgstr "Unsaved changes only show in preview"
+
+msgid "未保存的更改仅显示在这里"
+msgstr "Unsaved changes only appear here"
+
+msgid "未保存，请检查格式或服务器加密配置。"
+msgstr "Not saved, please check the format or server encryption configuration."
+
+msgid "未发现旧维护插件的可导入配置。"
+msgstr "No importable configuration found for old maintenance plugin."
+
+msgid "未启用"
+msgstr "Disabled"
+
+msgid "未命名案例"
+msgstr "Unnamed case"
+
+msgid "未完成"
+msgstr "Not completed"
+
+msgid "未开启"
+msgstr "Not enabled"
+
+msgid "未打包的外部 LOGO 保留原网址。图片采用原文件，不重新压缩。"
+msgstr "Unpackaged external LOGO retains the original URL. The images are from the original files and are not recompressed."
+
+msgid "未找到有效的本地图片或 R2 副本。"
+msgstr "No valid local image or R2 copy found."
+
+msgid "未收到有效 ZIP，请检查上传上限或改用私有服务器收件目录。"
+msgstr "No valid ZIP received, please check the upload limit or use a private server recipient directory instead."
+
+msgid "未知"
+msgstr "Unknown"
+
+msgid "未知邮件类型。"
+msgstr "Unknown message type."
+
+msgid "未知配置项。"
+msgstr "Unknown configuration item."
+
+msgid "未获取"
+msgstr "Not obtained"
+
+msgid "未运行"
+msgstr "Not running"
+
+msgid "未运行 · 请开启模块并检查服务器环境。"
+msgstr "Not running · Please enable the module and check the server environment."
+
+msgid "未运行 · 请开启模块，并确认当前为 Zibll 或其子主题。"
+msgstr "Not running · Please open the module and confirm that it is Zibll or its subtheme."
+
+msgid "未配置"
+msgstr "Not configured"
+
+msgid "本任务已写入，未重复处理"
+msgstr "This task has been written and will not be processed again."
+
+msgid "本地图标"
+msgstr "Local icon"
+
+msgid "本地图片、六种渐变"
+msgstr "Local pictures, six gradients"
+
+msgid "本地图片不可读。"
+msgstr "Local images are not readable."
+
+msgid "本地图片内容或尺寸不受支持。"
+msgstr "Local image content or dimensions are not supported."
+
+msgid "本地图片目录不可用，无法核对或恢复此文件。"
+msgstr "The local pictures directory is unavailable and this file cannot be checked or restored."
+
+msgid "本地图片缺失、越界或超过 8 MiB。"
+msgstr "Local image is missing, out of bounds, or larger than 8 MiB."
+
+msgid "本地图缺失，R2 上没有校验一致的副本。"
+msgstr "This map is missing and there is no check-consistent copy on R2."
+
+msgid "本地定稿归档已校验；当前真实 WordPress、主题版本、编辑器保存及局部刷新仍需在测试站验收。"
+msgstr "The local final archive has been verified; the current real WordPress, theme version, editor save and partial refresh still need to be accepted on the test site."
+
+msgid "本地封面、规格图及正文图片自动打包。视频、外部链接和实际下载文件保留网址；不打包订单、销量、评价、卡密及优惠活动。"
+msgstr "Automatically package local cover, specification pictures and text pictures. Videos, external links and actual downloaded files retain their URLs; orders, sales, reviews, card secrets and promotions are not packaged."
+
+msgid "本地配置图片合计超过 24 MiB 或 400 张，请分分类导出。"
+msgstr "The total number of local configuration images exceeds 24 MiB or 400 images. Please export them in categories."
+
+msgid "本地配置图片缺失、越界或超过大小限制。"
+msgstr "The local configuration image is missing, out of bounds, or exceeds the size limit."
+
+msgid "本次加载发生异常，你可以先关闭此模块。"
+msgstr "An exception occurred during this loading. You can close this module first."
+
+msgid "本次所有写入商品均存为草稿，原始状态仍保留在包内。"
+msgstr "All products written this time are saved as drafts, and the original state is still retained in the package."
+
+msgid "本次所有写入文章均存为草稿，原始状态仍保留在包内。"
+msgstr "All articles written this time are saved as drafts, and the original state is still retained in the package."
+
+msgid "本页没有 Toolkit 文件，可查看下一页。"
+msgstr "There is no Toolkit file on this page, please see the next page."
+
+msgid "权限优先级："
+msgstr "Permission priority:"
+
+msgid "条链接。私密标记、推荐参数与备注一起保留。"
+msgstr "links. Private tags and recommended parameters are retained along with notes."
+
+msgid "来源 ID "
+msgstr "Source ID "
+
+msgid "来源信息无效。"
+msgstr "Invalid source information."
+
+msgid "来源或别名冲突，请处理后重新预检。"
+msgstr "Source or alias conflict, please handle it and re-preflight check."
+
+msgid "来源或别名匹配不唯一，请先处理重复商品。"
+msgstr "The source or alias match is not unique, please deal with duplicate products first."
+
+msgid "来源："
+msgstr "Source:"
+
+msgid "查看任务"
+msgstr "View tasks"
+
+msgid "查看按钮"
+msgstr "View button"
+
+msgid "查看按钮文字"
+msgstr "View button text"
+
+msgid "查看按钮链接"
+msgstr "View button link"
+
+msgid "查看网站"
+msgstr "View website"
+
+msgid "查看订单查询页"
+msgstr "View order inquiry page"
+
+msgid "查看记录"
+msgstr "View records"
+
+msgid "查看详情"
+msgstr "View details"
+
+msgid "查看通过 Toolkit 上传的文件。删除会同步到 R2，引用该文件的文章将无法下载。"
+msgstr "View files uploaded via Toolkit. The deletion will be synced to R2 and articles referencing the file will not be downloadable."
+
+msgid "查询帮助"
+msgstr "Query help"
+
+msgid "查询标题"
+msgstr "Query title"
+
+msgid "查询自己的订单，查看支付状态与订单详情。"
+msgstr "Check your order, check the payment status and order details."
+
+msgid "查询范围与兼容边界"
+msgstr "Query scope and compatibility boundaries"
+
+msgid "查询设置已保存。"
+msgstr "Query settings saved."
+
+msgid "查询页面"
+msgstr "Query page"
+
+msgid "标签、图标、标题与左侧色条使用同一类型色。"
+msgstr "The label, icon, title and side accent share the same color."
+
+msgid "标签位置"
+msgstr "Label position"
+
+msgid "标签和标题的显示开关仍在原提示框设置中；内部标题不加入文章目录。"
+msgstr "The display switches of tags and titles are still in the original prompt box settings; internal titles are not added to the article table of contents."
+
+msgid "标题字号"
+msgstr "Title font size"
+
+msgid "栏目 "
+msgstr "Column "
+
+msgid "栏目标题"
+msgstr "Column title"
+
+msgid "样例文章 · 数值为演示数据"
+msgstr "Sample article · Values are demonstration data"
+
+msgid "样式"
+msgstr "Style"
+
+msgid "格式无效。"
+msgstr "Invalid format."
+
+msgid "案例内容"
+msgstr "Case content"
+
+msgid "案例分类"
+msgstr "Case Classification"
+
+msgid "案例列表"
+msgstr "Case list"
+
+msgid "案例名称"
+msgstr "Case name"
+
+msgid "案例图片或图标记录不存在，请先修正配置。"
+msgstr "The case picture or icon record does not exist, please correct the configuration first."
+
+msgid "案例在前台动态展示，请预览页面。"
+msgstr "The case is displayed dynamically in the foreground, please preview the page."
+
+msgid "案例展示"
+msgstr "Showcase"
+
+msgid "案例展示前台模块需要WordPress 6.3或更新版本。案例资料保留，其他Toolkit模块不受影响。"
+msgstr "The case display front-end module requires WordPress 6.3 or later. The case data is retained and other Toolkit modules are not affected."
+
+msgid "案例展示模块未启用；当前选择会保留，前台暂不显示案例。"
+msgstr "The case display module is not enabled; the current selection will be retained and the case will not be displayed in the public site."
+
+msgid "案例展示设置与案例库"
+msgstr "Case display settings and case library"
+
+msgid "案例已移除"
+msgstr "Case removed"
+
+msgid "案例库会包含分类和案例，但不创建展示页面；新站仍需在页面中选择模板与案例分类。文章、商品、友情链接本身，以及账号、订单、权限权益和主题设置不在这个备份里。"
+msgstr "The case library will contain categories and cases, but no display page will be created; the new site still needs to select templates and case categories on the page. Articles, products, links themselves, as well as accounts, orders, permissions, rights and theme settings are not included in this backup."
+
+msgid "案例库可以编辑保存；请在 Toolkit 工作台启用“页面组件 · 案例展示”，前台才会显示。"
+msgstr "The case library can be edited and saved; please enable \"Page Component·Case Display\" in the Toolkit workbench before it will be displayed in the frontend."
+
+msgid "案例库工具"
+msgstr "Case library tool"
+
+msgid "案例库已保存"
+msgstr "Case library has been saved"
+
+msgid "案例库已保存，关联页面已更新"
+msgstr "The case library has been saved and the associated page has been updated"
+
+msgid "案例库已更新，请导出当前修改后刷新核对。"
+msgstr "The case library has been updated, please export the current modifications and refresh to check."
+
+msgid "案例库格式不正确；最多支持300个案例、100个分类。"
+msgstr "The format of the case library is incorrect; it supports up to 300 cases and 100 categories."
+
+msgid "案例库格式异常，原始数据仍保留，已暂停保存。请先检查或恢复案例库备份。"
+msgstr "The format of the case library is abnormal, the original data is still retained, and the saving has been suspended. Please check or restore the case library backup first."
+
+msgid "案例库格式异常，已暂停写入，请先恢复备份。"
+msgstr "The format of the case library is abnormal and writing has been suspended. Please restore the backup first."
+
+msgid "案例库超过保存大小限制。"
+msgstr "The case library exceeds the save size limit."
+
+msgid "案例库过大，请减少文字或图片链接长度"
+msgstr "The case library is too large, please reduce the length of text or image links"
+
+msgid "案例来源"
+msgstr "Case source"
+
+msgid "案例标题字号"
+msgstr "Case title font size"
+
+msgid "案例管理"
+msgstr "Case Management"
+
+msgid "案例编号"
+msgstr "Case number"
+
+msgid "案例网址"
+msgstr "Case URL"
+
+msgid "案例链接仍可正常打开"
+msgstr "Case links can still be opened normally"
+
+msgid "案例链接添加 nofollow"
+msgstr "Add nofollow to case link"
+
+msgid "案例顺序已更新"
+msgstr "Case order updated"
+
+msgid "桌面"
+msgstr "Desktop"
+
+msgid "桌面 1280px"
+msgstr "Desktop 1280px"
+
+msgid "桌面、平板与手机"
+msgstr "Desktop, tablet and mobile"
+
+msgid "桌面列数"
+msgstr "Number of desktop columns"
+
+msgid "桌面预览"
+msgstr "Desktop preview"
+
+msgid "桌面预览宽度"
+msgstr "Desktop preview width"
+
+msgid "桌面预览高度"
+msgstr "Desktop preview height"
+
+msgid "检测到旧的 article_time_update 提示仍在运行。请先自行移除旧提示的挂钩，避免重复；本插件不会修改主题文件。"
+msgstr "Detected that old article_time_update prompt is still running. Please remove the old prompt hooks yourself first to avoid duplication; this plug-in will not modify the theme files."
+
+msgid "检测到旧预设头像插件，先停用旧插件再开启本模块。旧图片与旧设置不会被删除。"
+msgstr "The old default avatar plug-in is detected, please disable the old plug-in first and then enable this module. Old pictures and settings will not be deleted."
+
+msgid "检测到未知或无法安全适配的同名区块，已停止接管与增强；请核对提供者。"
+msgstr "A block with the same name that is unknown or cannot be safely adapted was detected, and the takeover and enhancement has been stopped; please check with the provider."
+
+msgid "检测到独立版顶部信息插件或旧版回调。本模块不会接管前台；请自行停用旧插件后再使用，避免重复横幅。设置与预览仍可使用。"
+msgstr "Standalone top info plugin or legacy callback detected. This module will not take over the frontend; please deactivate the old plug-in before using it to avoid repeated banners. Settings and preview are still available."
+
+msgid "检测到运行／启用，保持其完整模板"
+msgstr "Running/enabled detected, keeping its full template"
+
+msgid "模块"
+msgstr "Module"
+
+msgid "模块上下留白"
+msgstr "Leave space above and below the module"
+
+msgid "模块上方间距"
+msgstr "Spacing above module"
+
+msgid "模块上限 32 MiB；当前服务器上传上限"
+msgstr "Module limit 32 MiB; current server upload limit"
+
+msgid "模块上限 32 MiB；当前服务器上限"
+msgstr "Module limit 32 MiB; current server limit"
+
+msgid "模块下方间距"
+msgstr "Spacing below module"
+
+msgid "模块不处理后台、REST、AJAX、Feed 或 JSON 请求；文章、支付、下载、订单查询与维护模块保持原逻辑。"
+msgstr "The module does not handle background, REST, AJAX, Feed or JSON requests; the article, payment, download, order query and maintenance modules maintain the original logic."
+
+msgid "模块关闭时仍保留属性；前台展示由 Toolkit 开关控制。"
+msgstr "Properties are retained when the module is closed; foreground presentation is controlled by Toolkit switches."
+
+msgid "模块关闭时恢复子比原生隐藏规则。链接仍保留私密标记。"
+msgstr "Restore sub-native hidden rules when module is closed. The link remains private."
+
+msgid "模块已在本次请求中加载。"
+msgstr "This module is loaded."
+
+msgid "模块开关"
+msgstr "Module switch"
+
+msgid "模块开关已保存，实际加载状态已更新。"
+msgstr "Module switches saved and actual loading status updated."
+
+msgid "模块开关未能保存，请检查配置状态与数据库连接后重试。"
+msgstr "The module switch failed to be saved, please check the configuration status and database connection and try again."
+
+msgid "模块开关格式无效。"
+msgstr "Invalid module switch format."
+
+msgid "模块开关配置异常，操作已暂停；请检查配置后刷新页面。"
+msgstr "The module switch configuration is abnormal and the operation has been suspended; please check the configuration and refresh the page."
+
+msgid "模块开关默认不恢复；勾选“模块开关”可能开启维护模式或邮件外观，请核对后操作。"
+msgstr "Module switch is not restored by default; checking \"Module Switch\" may enable maintenance mode or email appearance, please check before proceeding."
+
+msgid "模块或目标状态无效，请返回工作台重试。"
+msgstr "Invalid module or target status, please return to the workbench and try again."
+
+msgid "模块未运行"
+msgstr "Module not running"
+
+msgid "模块状态"
+msgstr "Module status"
+
+msgid "模块运行中"
+msgstr "Module running"
+
+msgid "模块通用设置"
+msgstr "Module common settings"
+
+msgid "模块配置格式异常，已暂停前台及设置写入。原数据没有重置；当前以默认值供预览。"
+msgstr "The module configuration format is abnormal, and the writing of foreground and settings has been suspended. The original data has not been reset; the default values ​​are currently available for preview."
+
+msgid "模块配置格式异常，开关写入暂停，原有配置未覆盖。"
+msgstr "The module configuration format is abnormal, switch writing is suspended, and the original configuration is not overwritten."
+
+msgid "模板与回退说明"
+msgstr "Templates and fallback instructions"
+
+msgid "横幅上下留白（px）"
+msgstr "Leave space above and below the banner (px)"
+
+msgid "横幅与真实主题导航、正文、侧栏的最终位置需要在目标主题环境验收。"
+msgstr "The final position of the banner, real theme navigation, body text, and sidebar needs to be accepted in the target theme environment."
+
+msgid "橙红渐变"
+msgstr "Orange-red gradient"
+
+msgid "欢迎提示已生效"
+msgstr "Welcome prompt has taken effect"
+
+msgid "正在交给原邮件发送系统…"
+msgstr "Handing over to original email sending system..."
+
+msgid "正在从 R2 删除文件…"
+msgstr "Deleting files from R2..."
+
+msgid "正在估算"
+msgstr "Estimating"
+
+msgid "正在保存“"
+msgstr "Saving\""
+
+msgid "正在保存…"
+msgstr "Saving…"
+
+msgid "正在保存模块开关设置…"
+msgstr "Saving module switch settings..."
+
+msgid "正在创建 R2 上传任务…"
+msgstr "Creating R2 upload task..."
+
+msgid "正在加载案例库…"
+msgstr "Loading case library..."
+
+msgid "正在加载设置…"
+msgstr "Loading settings..."
+
+msgid "正在加载预览；正式设置未改变。"
+msgstr "Loading preview; official settings unchanged."
+
+msgid "正在取消上传任务…"
+msgstr "Canceling upload task..."
+
+msgid "正在处理"
+msgstr "Processing"
+
+msgid "正在导入图标…"
+msgstr "Importing icons…"
+
+msgid "正在暂停"
+msgstr "Pausing"
+
+msgid "正在暂停…"
+msgstr "Pausing…"
+
+msgid "正在检查对象并生成引用…"
+msgstr "Checking object and generating reference..."
+
+msgid "正在浏览长图"
+msgstr "Browsing long image"
+
+msgid "正在编辑："
+msgstr "Editing:"
+
+msgid "正在让 R2 合并分片并核对文件大小…"
+msgstr "Letting R2 merge shards and check file sizes…"
+
+msgid "正在读取 R2 文件…"
+msgstr "Reading R2 file..."
+
+msgid "正在读取任务…"
+msgstr "Reading tasks..."
+
+msgid "正在读取记录…"
+msgstr "Reading records…"
+
+msgid "正在读取页脚配置…"
+msgstr "Reading footer configuration..."
+
+msgid "正在配置"
+msgstr "Configuring"
+
+msgid "正在重试分片 "
+msgstr "Retrying sharding "
+
+msgid "正式模板 · 已更新"
+msgstr "Preview updated"
+
+msgid "正式邮件模板"
+msgstr "Email Template Preview"
+
+msgid "正文、区块与代码保持原样，仅更新识别到的图片和本批文章关联。"
+msgstr "The text, blocks, and code remain the same, and only the identified images associated with this batch of articles are updated."
+
+msgid "正文、区块与商品字段已准备"
+msgstr "Text, block and product fields have been prepared"
+
+msgid "正文、区块与文章字段已准备"
+msgstr "Text, block and article fields are prepared"
+
+msgid "正文中性色"
+msgstr "Neutral color for body text"
+
+msgid "正文区域示意"
+msgstr "Text area representation"
+
+msgid "正文及原生业务保持可用；启用后还需匹配文章包装与迁移条件。"
+msgstr "Text and native services remain available; after enabling, article packaging and migration conditions need to be matched."
+
+msgid "正文字号"
+msgstr "Text size"
+
+msgid "正文提示框"
+msgstr "Article Callouts"
+
+msgid "正文提示框设置与预览"
+msgstr "Text prompt box setting and preview"
+
+msgid "正文提示框配色与接入设置"
+msgstr "Text prompt box color and access settings"
+
+msgid "正文提示框需要 WordPress 6.3+、区块注册与 HTML API。"
+msgstr "Text tooltip requires WordPress 6.3+, block registration and HTML API."
+
+msgid "正文文案"
+msgstr "Text copy"
+
+msgid "正文普通链接的悬浮卡、原网址复制与键盘操作；不接管原链接点击。"
+msgstr "Adds hover previews, URL copying and keyboard access to standard article links. Links still open as usual."
+
+msgid "正文组件"
+msgstr "Article Components"
+
+msgid "正文颜色"
+msgstr "Text color"
+
+msgid "此任务不能恢复，请下载快照核对。"
+msgstr "This task cannot be restored, please download the snapshot for verification."
+
+msgid "此处可在关闭状态预览。"
+msgstr "Preview in closed state here."
+
+msgid "此管理器需要启用浏览器JavaScript；当前案例数据不会被改变。"
+msgstr "This manager requires browser JavaScript to be enabled; current case data will not be changed."
+
+msgid "此邮件由 {{site_name}} 发送。"
+msgstr "This message was sent by {{site_name}}."
+
+msgid "此页面只关联分类，案例资料在Toolkit后台统一管理。"
+msgstr "This page is only associated with categories, and case information is managed uniformly in the Toolkit background."
+
+msgid "此页面只展示组件排版，不执行主题文章模板，不保存配置，不更新阅读量或统计缓存。"
+msgstr "This page only displays component layout, does not execute theme article templates, does not save configurations, and does not update reading volume or statistical cache."
+
+msgid "此项由服务器配置管理。"
+msgstr "This item is managed by the server configuration."
+
+msgid "段落与区域间距"
+msgstr "Paragraph and section spacing"
+
+msgid "段落范围。"
+msgstr "Paragraph range."
+
+msgid "每人最多保留 10 个订单编号，仅本人可见；不保存查询关键词和联系方式。前台可清空记录。"
+msgstr "Each person can retain up to 10 order numbers, which are visible only to him/her; query keywords and contact information are not saved. Records can be cleared at the public site."
+
+msgid "每列最多 20 条导航，且必须为列表。"
+msgstr "Maximum of 20 navigation items per column and must be a list."
+
+msgid "每包最多 100 件。保留价格、规格、库存、发货配置、分类标签和本地图片。"
+msgstr "Maximum 100 pieces per pack. Keep prices, specifications, inventory, shipping configurations, category tags, and local images."
+
+msgid "每包最多 100 篇。原生区块、文字、代码、分类和发布时间一起保留。"
+msgstr "Maximum of 100 articles per pack. Native blocks, text, code, categories, and publishing times are preserved together."
+
+msgid "每包最多 100 篇；ZIP 256 MiB，单图 8 MiB。支持常见位图，不导入可执行文件。"
+msgstr "Maximum 100 articles per package; ZIP 256 MiB, single image 8 MiB. Supports common bitmaps and does not import executable files."
+
+msgid "每类最多选择 200 张自定义图片。"
+msgstr "Select up to 200 custom images per category."
+
+msgid "每行 2 个"
+msgstr "2 per line"
+
+msgid "每行 3 个"
+msgstr "3 per line"
+
+msgid "每行一个，例如“原创”“转载”。在编辑文章时选择；历史属性保留，未选择时不显示属性徽标。"
+msgstr "One per line, such as \"original\" and \"reprinted\". Select when editing an article; historical attributes are retained and attribute logos are not displayed when not selected."
+
+msgid "每页 20 位，翻页前请先保存。"
+msgstr "20 digits per page, please save before turning the page."
+
+msgid "每页最多 20 条，订单详情与继续支付复用子比原生弹窗；本模块不处理支付回调，不修改订单状态、金额、下载权益或售后政策。"
+msgstr "Each page has a maximum of 20 items. The order details and payment continuation use the same sub-native pop-up window; this module does not handle payment callbacks and does not modify order status, amount, download rights or after-sales policies."
+
+msgid "永久删除这个 R2 文件？\n"
+msgstr "Permanently delete this R2 file?\n"
+
+msgid "没有匹配内容，请尝试 ID 或更具体的标题。"
+msgstr "No match, please try ID or more specific title."
+
+msgid "没有可恢复的过期锁。"
+msgstr "No recoverable expired lock."
+
+msgid "没有媒体上传权限。"
+msgstr "No media upload permission."
+
+msgid "没有找到用户，请尝试其他名称。"
+msgstr "User not found, please try another name."
+
+msgid "没有收到有效 ZIP，请检查 PHP 上传限制后重试。"
+msgstr "No valid ZIP received, please check PHP upload limits and try again."
+
+msgid "没有符合条件的历史图片"
+msgstr "No matching historical images"
+
+msgid "没有编辑目标商品的权限。"
+msgstr "No permission to edit target product."
+
+msgid "没有编辑目标文章的权限。"
+msgstr "No permission to edit target article."
+
+msgid "没有访问所选商品的权限。"
+msgstr "No permission to access the selected product."
+
+msgid "没有访问所选文章的权限。"
+msgstr "No permission to access the selected article."
+
+msgid "沿用原插件"
+msgstr "Keep using the original plug-in"
+
+msgid "沿用原版前台横幅；关闭模块后仍能设置和预览。"
+msgstr "Use the original front banner; you can still set and preview it after closing the module."
+
+msgid "沿用文章设置的登录、购买和下载次数规则。"
+msgstr "Inherit the login, purchase and download count rules set by the article."
+
+msgid "沿用页面可用宽度，不额外缩窄。样板按本站 1440px 外层容器预览；正式接入跟随主题。"
+msgstr "Use the available width of the page without additional narrowing. The template is previewed according to the 1440px outer container of this site; it is officially connected to follow the theme."
+
+msgid "注册／账号创建通知"
+msgstr "Registration/account creation notification"
+
+msgid "注意"
+msgstr "Caution"
+
+msgid "注意三角"
+msgstr "Warning triangle"
+
+msgid "浅色"
+msgstr "Light"
+
+msgid "浅色、深色、强调色和边框跟随主题。"
+msgstr "Light colors, dark colors, accent colors and borders follow the theme."
+
+msgid "浅色卡片背景"
+msgstr "Light card background"
+
+msgid "浅色标题"
+msgstr "Light title"
+
+msgid "浅色模式"
+msgstr "Light mode"
+
+msgid "浅色模式颜色"
+msgstr "Light mode color"
+
+msgid "浅色边框"
+msgstr "Light border"
+
+msgid "测试媒体连接"
+msgstr "Test Media Connection"
+
+msgid "测试收件邮箱"
+msgstr "Test receiving email"
+
+msgid "测试邮件已交给原邮件发送系统，请到目标邮箱检查实际收件效果。"
+msgstr "The test email has been handed over to the original email sending system. Please go to the target mailbox to check the actual receiving effect."
+
+msgid "浏览器上传"
+msgstr "Browser upload"
+
+msgid "浏览器式预览，点击查看在线案例站点。喜欢同款风格？可直接咨询建站方案。"
+msgstr "Browser-style preview, click to view the online case site. Like the same style? You can directly inquire about website building plans."
+
+msgid "浏览器直接分片上传到 R2，单个文件最大 30 GiB。"
+msgstr "The browser directly uploads parts to R2, with a maximum size of 30 GiB for a single file."
+
+msgid "浏览器窗口"
+msgstr "Browser window"
+
+msgid "浏览器窗口装饰"
+msgstr "Browser window decoration"
+
+msgid "浏览速度"
+msgstr "Browsing speed"
+
+msgid "深色"
+msgstr "Dark"
+
+msgid "深色卡片背景"
+msgstr "Dark card background"
+
+msgid "深色标题"
+msgstr "Dark title"
+
+msgid "深色模式"
+msgstr "Dark mode"
+
+msgid "深色模式颜色"
+msgstr "Dark mode colors"
+
+msgid "深色边框"
+msgstr "Dark border"
+
+msgid "添加一个案例，开始编辑图片、文字和链接。"
+msgstr "Add a case and start editing images, text and links."
+
+msgid "添加分类"
+msgstr "Add category"
+
+msgid "添加到预设"
+msgstr "Add to preset"
+
+msgid "添加网站截图后，在这里预览"
+msgstr "After adding the website screenshot, preview it here"
+
+msgid "添加链接"
+msgstr "Add link"
+
+msgid "清单大小超出限制。"
+msgstr "Manifest size exceeds limit."
+
+msgid "清单字段类型或长度无效。"
+msgstr "Invalid manifest field type or length."
+
+msgid "清单超过 16 MiB，请分批。"
+msgstr "Manifest exceeds 16 MiB, please batch it."
+
+msgid "清除"
+msgstr "Clear"
+
+msgid "清除搜索"
+msgstr "Clear search"
+
+msgid "满额运费"
+msgstr "Full shipping fee"
+
+msgid "演示：最后更新已超过"
+msgstr "Demo: last update exceeded"
+
+msgid "点击色块展开拖动调色盘。0% 全透明，100% 不透明。"
+msgstr "Click on the color block to expand and drag the palette. 0% fully transparent, 100% opaque."
+
+msgid "点击跳转（可留空）"
+msgstr "Click to jump (can be left blank)"
+
+msgid "热门频道"
+msgstr "Popular Channels"
+
+msgid "父主题目录"
+msgstr "Parent theme directory"
+
+msgid "版式与金额显示"
+msgstr "Layout & Currency Display"
+
+msgid "版本号来自当前环境；主题识别不等于已完成该版本的兼容性测试。"
+msgstr "Versions reflect this installation. Detection alone does not verify compatibility."
+
+msgid "版权与备案"
+msgstr "Copyright and Registration"
+
+msgid "版权文字"
+msgstr "Copyright text"
+
+msgid "版权文案"
+msgstr "Copyright copywriting"
+
+msgid "特色图缺失。"
+msgstr "Featured image missing."
+
+msgid "状态"
+msgstr "Status"
+
+msgid "状态变为“运行中”后，检查模块效果。"
+msgstr "After the status changes to \"Running\", check the module effect."
+
+msgid "独立“退款到账成功”邮件：本次仅接入售后结果，不把售后完成等同于退款到账。"
+msgstr "Independent \"refund received successfully\" email: This time only the after-sales results are accessed, and the completion of after-sales is not equated with the refund being received."
+
+msgid "独立开关，保留原生上传"
+msgstr "Independent switch, retain native upload"
+
+msgid "独立替换 404 模板，保留子比页头、页脚和搜索，可显示带缓存的第三方公益寻亲信息。"
+msgstr "Independently replace the 404 template, retain the sub-page header, footer and search, and can display cached third-party public welfare family search information."
+
+msgid "独立站建站案例"
+msgstr "Independent website building case"
+
+msgid "独立站案例"
+msgstr "Independent station case"
+
+msgid "独立站案例展示"
+msgstr "Independent station case display"
+
+msgid "独立维护页、预计恢复倒计时与备用入口；启用后访客网页返回 503，站点管理员与登录入口保留。"
+msgstr "Independent maintenance page, expected recovery countdown and backup entrance; after enabling, the visitor webpage returns 503, and the site administrator and login entrance are retained."
+
+msgid "独立设置"
+msgstr "Standalone setup"
+
+msgid "独立配置已保留，切回“单独配置此类型”即可继续使用。"
+msgstr "The independent configuration has been retained. Switch back to \"Configure this type separately\" to continue using it."
+
+msgid "独立配置栏目、社交图标、二维码与版权信息；手机菜单折叠，支持跟随主题或全宽。"
+msgstr "Independently configure columns, social icons, QR codes and copyright information; mobile menu folding supports following the theme or full width."
+
+msgid "玫紫渐变"
+msgstr "Rose purple gradient"
+
+msgid "生成引用"
+msgstr "Generate citations"
+
+msgid "生成文章下载引用"
+msgstr "Create an Article Download Reference"
+
+msgid "生效范围："
+msgstr "Effective scope:"
+
+msgid "用一句话说明截图内容，帮助读屏与图片检索。"
+msgstr "Use one sentence to describe the content of the screenshot to help screen reading and image retrieval."
+
+msgid "用于区分不同站点的原文章 ID，新格式自动读取包内来源。"
+msgstr "Used to distinguish the original article ID of different sites, the new format automatically reads the source in the package."
+
+msgid "用于正文中的说明和提醒。文字、段落和列表继续保留，内部标题不会加入文章目录。"
+msgstr "Use this block for notes and reminders. Paragraphs and lists are preserved, and the callout title stays outside the article table of contents."
+
+msgid "用于维护响应的 Retry-After 请求头；不会定时刷新或自动跳转。"
+msgstr "The Retry-After request header is used to maintain the response; it will not be refreshed regularly or automatically jumped."
+
+msgid "用户"
+msgstr "User"
+
+msgid "用户中心头部和自己的个人主页菜单中显示预设入口。先选图，再确认；取消不改变资料。"
+msgstr "Display default entry in user center header and own profile menu. Select the image first and then confirm; cancel without changing the data."
+
+msgid "用户列表分页"
+msgstr "User list pagination"
+
+msgid "用户头像与背景预设"
+msgstr "Avatar & Background Presets"
+
+msgid "用户属于任一选中角色，即可查看。"
+msgstr "Users who belong to any of the selected roles can be viewed."
+
+msgid "用户或可见性设置无效。"
+msgstr "Invalid user or visibility setting."
+
+msgid "用此文件生成引用"
+msgstr "Use this file to generate citations"
+
+msgid "由 WP-Cron 后台处理，可关闭此页。"
+msgstr "Background processing by WP-Cron, this page can be closed."
+
+msgid "电脑悬停浏览，移开后平滑回到顶部。手机轻点开始，再点回到顶部。放大按钮可打开完整截图。"
+msgstr "When hovering on the computer to browse, it will smoothly return to the top after moving away. Tap on your phone to start, then tap back to the top. The zoom button opens the full screenshot."
+
+msgid "界面语言"
+msgstr "Interface language · English"
+
+msgid "界面语言 · 简体中文"
+msgstr "Interface language · English"
+
+msgid "留白请输入 0—200 的整数；无效项保留上一次有效预览。"
+msgstr "Leave blank, please enter an integer from 0 to 200; invalid items will retain the last valid preview."
+
+msgid "留空则不显示“联系站长”。“留言反馈”指向文章评论区。"
+msgstr "Leave blank to not display \"Contact Webmaster\". \"Leave a message\" points to the article comment area."
+
+msgid "留空时使用案例网址。"
+msgstr "Use case URL when left blank."
+
+msgid "留空时显示完整案例网址。"
+msgstr "Show full case URL when left empty."
+
+msgid "留空显示年份与站点名称"
+msgstr "Leave blank to display year and site name"
+
+msgid "留空跟随通用设置，也可单独调整此类型。"
+msgstr "Leave blank to follow the general settings, or this type can be adjusted individually."
+
+msgid "登录后可按订单号、支付单号或下单时填写的联系方式搜索自己的订单。免登录购买请使用下单时的同一浏览器；凭据失效时请联系网站客服。"
+msgstr "After logging in, you can search for your orders by order number, payment order number, or the contact information filled in when placing the order. To purchase without logging in, please use the same browser you used when placing the order; if your credentials are invalid, please contact the website customer service."
+
+msgid "登录已过期，请刷新页面。"
+msgstr "Login has expired, please refresh the page."
+
+msgid "登录用户保存最近查询记录"
+msgstr "Login user saves recent query records"
+
+msgid "登录用户只查询自己的订单；管理员在前台也不获得全站订单搜索。全站管理仍使用子比商城后台。"
+msgstr "Login users only query their own orders; administrators do not get site-wide order search at the public site. The whole site management still uses Zibi Mall backend."
+
+msgid "的完整网址"
+msgstr "full URL"
+
+msgid "的私密链接规则"
+msgstr "private link rules"
+
+msgid "目标分类的父级冲突。"
+msgstr "Parent conflict for target classification."
+
+msgid "目标商品不是草稿，禁止覆盖在售／私密／定时／回收站商品。"
+msgstr "The target product is not a draft, and it is prohibited to cover active/private/scheduled/recycle bin products."
+
+msgid "目标站不存在权限角色："
+msgstr "The permission role does not exist on the target site:"
+
+msgid "直传连接中断。请检查网络和 R2 的 CORS 配置。"
+msgstr "Direct transfer connection interrupted. Please check the CORS configuration of your network and R2."
+
+msgid "直接回复邮件和页脚客服入口使用此邮箱。留空时保留原邮件 Reply-To；不修改 SMTP 发件配置。"
+msgstr "Use this email address for direct reply emails and footer customer service portal. If left blank, the original email Reply-To will be retained; the SMTP sending configuration will not be modified."
+
+msgid "相同网址对应多条记录或包内重复，已停止该项，请清理冲突后重新预检。"
+msgstr "The same URL corresponds to multiple records or is repeated in the package. This item has been stopped. Please clear the conflicts and re-preflight check."
+
+msgid "真正可用的变量（点击插入当前文案）"
+msgstr "Really usable variables (click to insert the current copy)"
+
+msgid "确认导入所选配置"
+msgstr "Confirm import of selected configuration"
+
+msgid "确认并开始"
+msgstr "Confirm and start"
+
+msgid "社交图标重复或类型无效。"
+msgstr "Duplicate social icon or invalid type."
+
+msgid "社交地址须为 HTTP(S) 或有效邮箱链接。"
+msgstr "Social address must be HTTP(S) or a valid email link."
+
+msgid "社交媒体"
+msgstr "Social media"
+
+msgid "私密"
+msgstr "Private"
+
+msgid "私密链接可见性"
+msgstr "Private Link Visibility"
+
+msgid "私密链接可见性规则"
+msgstr "Private link visibility rules"
+
+msgid "私密链接规则中存在已删除账号，请先清理该规则。"
+msgstr "There is a deleted account in the private link rule, please clear the rule first."
+
+msgid "私有临时目录不可写，请配置网站目录之外的 MAO_TK_TOOLKIT_MIGRATION_TEMP。"
+msgstr "Private temporary directory is not writable, please configure MAO_TK_TOOLKIT_MIGRATION_TEMP outside the website directory."
+
+msgid "私有媒体桶"
+msgstr "Private Media Bucket"
+
+msgid "私有服务器收件目录"
+msgstr "Private Server Inbox Directory"
+
+msgid "私有桶名称"
+msgstr "Private Bucket Name"
+
+msgid "积分 "
+msgstr "Points "
+
+msgid "移出预设"
+msgstr "Move out of default"
+
+msgid "移除分类"
+msgstr "Remove categories"
+
+msgid "移除图片"
+msgstr "Remove image"
+
+msgid "站点功能"
+msgstr "Site Features"
+
+msgid "站点时区："
+msgstr "Site time zone:"
+
+msgid "站点维护页面"
+msgstr "Site Maintenance Page"
+
+msgid "站长联系链接（可选）"
+msgstr "Webmaster contact link (optional)"
+
+msgid "第 "
+msgstr "No. "
+
+msgid "等待 Zibll 主题"
+msgstr "Waiting for Zibll theme"
+
+msgid "等待主题"
+msgstr "Waiting for theme"
+
+msgid "等待区块"
+msgstr "Wait for block"
+
+msgid "等待后台任务"
+msgstr "Waiting for background tasks"
+
+msgid "等待就绪"
+msgstr "Waiting for ready"
+
+msgid "等待扫描"
+msgstr "Waiting for scan"
+
+msgid "等待重试"
+msgstr "Waiting for retry"
+
+msgid "筛选指定链接"
+msgstr "Filter specific links"
+
+msgid "筛选范围没有商品。"
+msgstr "There are no products in the filter range."
+
+msgid "筛选范围没有文章。"
+msgstr "There are no articles in the filter range."
+
+msgid "筛选链接名称或网址"
+msgstr "Filter link name or URL"
+
+msgid "签名密钥应与 Worker 的"
+msgstr "The signing key should match the Worker's"
+
+msgid "简要说明"
+msgstr "Brief description"
+
+msgid "管理可见范围"
+msgstr "Manage visibility scope"
+
+msgid "管理员支付通知、推广佣金、分成、评论、私信等其他邮件：保留原生，后续可分别适配。"
+msgstr "Administrator payment notifications, promotion commissions, sharing, comments, private messages and other emails: remain native and can be adapted separately in the future."
+
+msgid "管理员放行，接口保持独立"
+msgstr "Administrator releases, interface remains independent"
+
+msgid "管理头像、背景与注册规则"
+msgstr "Manage avatar, background and registration rules"
+
+msgid "管理栏目、社交入口和底部信息，统一桌面与手机展示。"
+msgstr "Manage columns, social portals and bottom information, and unify desktop and mobile display."
+
+msgid "管理案例、分类与外观"
+msgstr "Managing Cases, Classifications and Appearances"
+
+msgid "管理案例分类 ·"
+msgstr "Management case classification ·"
+
+msgid "管理私有 R2 文件，为文章生成可用于子比下载的引用。"
+msgstr "Manage private R2 files to generate citations for articles that can be used for subbit downloads."
+
+msgid "管理网站链接"
+msgstr "Manage website links"
+
+msgid "管理角色与账号可见范围"
+msgstr "Management roles and account visibility"
+
+msgid "类型"
+msgstr "Type"
+
+msgid "类型默认颜色"
+msgstr "Type default color"
+
+msgid "粉紫渐变"
+msgstr "Pink-purple gradient"
+
+msgid "系统邮件外观"
+msgstr "System Email Appearance"
+
+msgid "系统邮件外观与各类模板"
+msgstr "System email appearance and various templates"
+
+msgid "系统邮件手机预览"
+msgstr "System email mobile preview"
+
+msgid "系统邮件桌面预览"
+msgstr "System mail desktop preview"
+
+msgid "约 "
+msgstr "approx. "
+
+msgid "约 %d 分钟"
+msgstr "About %d min"
+
+msgid "约 %d 小时"
+msgstr "About %d hr"
+
+msgid "约 %d 秒"
+msgstr "About %d sec"
+
+msgid "组件与使用说明"
+msgstr "Component guide"
+
+msgid "组件包装、原生边界与旧文迁移"
+msgstr "Component packaging, native boundaries and old text migration"
+
+msgid "组件设置"
+msgstr "Component settings"
+
+msgid "统一外观"
+msgstr "Unified appearance"
+
+msgid "统一管理可选图片，为个人主页和用户中心添加预设入口。"
+msgstr "Unify the management of optional pictures and add default entrances to personal homepages and user centers."
+
+msgid "统一边框"
+msgstr "Unified borders"
+
+msgid "继承"
+msgstr "Inheritance"
+
+msgid "继承通用"
+msgstr "Inherit universal"
+
+msgid "继承（当前："
+msgstr "Inheritance (currently:"
+
+msgid "继续上传"
+msgstr "Continue uploading"
+
+msgid "继续任务"
+msgstr "Continue mission"
+
+msgid "继续同步"
+msgstr "Continue syncing"
+
+msgid "维护内容"
+msgstr "Maintenance content"
+
+msgid "维护标题"
+msgstr "Maintain title"
+
+msgid "维护模式只替换普通前台网页。WordPress 后台、原生登录、子比登录模板、REST / AJAX、计划任务、订阅与 robots 请求不由本模块拦截。它不是私密内容权限系统，不能用来保护原文件或接口。"
+msgstr "Maintenance mode only replaces the normal front-end web page. WordPress backend, native login, Zibi login template, REST/AJAX, scheduled tasks, subscriptions and robots requests are not intercepted by this module. It is not a private content rights system and cannot be used to protect original files or interfaces."
+
+msgid "维护配置格式异常，原值已保留。请先检查配置，未执行保存或导入。"
+msgstr "The maintenance configuration format is abnormal and the original value has been retained. Please check the configuration first. Save or import has not been performed."
+
+msgid "维护配置格式异常，未执行预览。"
+msgstr "The maintenance configuration format is abnormal and preview is not performed."
+
+msgid "维护页内容过长，请缩短后保存。"
+msgstr "The content of the maintenance page is too long, please shorten it and save it."
+
+msgid "维护页字段格式无效。"
+msgstr "Maintenance page field format is invalid."
+
+msgid "维护页设置已保存。维护开关保持原状。"
+msgstr "Maintenance page settings saved. The maintenance switch remains in its original position."
+
+msgid "维护页配置异常或旧维护模式仍在运行，未开启维护。"
+msgstr "The maintenance page configuration is abnormal or the old maintenance mode is still running and maintenance is not enabled."
+
+msgid "维护页配置版本无效。"
+msgstr "Maintenance page configuration version is invalid."
+
+msgid "维护页面"
+msgstr "Maintenance Page"
+
+msgid "维护页面设置"
+msgstr "Maintain page settings"
+
+msgid "维护页面预览"
+msgstr "Maintenance page preview"
+
+msgid "维护页预览"
+msgstr "Maintenance page preview"
+
+msgid "编辑"
+msgstr "Edit"
+
+msgid "编辑维护页面与预览"
+msgstr "Edit maintenance page and preview"
+
+msgid "编辑页面"
+msgstr "Edit page"
+
+msgid "缺少封面图集映射，不能沿用源站附件 ID。"
+msgstr "Missing cover album mapping, origin attachment ID cannot be inherited."
+
+msgid "缺少本地图片，目标站也没有匹配文件。请重新导出并包含本地图片。"
+msgstr "Local images are missing and the target site has no matching files. Please re-export and include local images."
+
+msgid "缺少清单中的图片。"
+msgstr "Missing image from listing."
+
+msgid "网址必须是完整的 HTTP / HTTPS 地址，且不能包含账号或密码。"
+msgstr "URL must be a full HTTP / HTTPS address and cannot contain an account or password."
+
+msgid "网址或私密标记未完整保存，请核对后重新预检。"
+msgstr "The URL or private tag is not completely saved, please check and re-preflight check."
+
+msgid "网站介绍"
+msgstr "Website introduction"
+
+msgid "网站维护中"
+msgstr "The website is under maintenance"
+
+msgid "背景"
+msgstr "Background"
+
+msgid "背景、文字与图标"
+msgstr "Background, text and icons"
+
+msgid "背景入口文字"
+msgstr "Background entry text"
+
+msgid "背景配色"
+msgstr "Background color"
+
+msgid "背景颜色"
+msgstr "Background color"
+
+msgid "自动发货"
+msgstr "Automatic shipping"
+
+msgid "自动发货只迁移配置与标识；实际卡密、邀请码、购买权益和下载文件实体不在包内。"
+msgstr "Automatic shipping only migrates the configuration and identification; the actual card password, invitation code, purchase rights and download file entities are not included in the package."
+
+msgid "自动发货文字或开关无效。"
+msgstr "Invalid autoship text or switch."
+
+msgid "自动发货类型无效。"
+msgstr "Invalid autoship type."
+
+msgid "自动同步"
+msgstr "Auto sync"
+
+msgid "自定义最大宽度"
+msgstr "Custom maximum width"
+
+msgid "自定义页脚"
+msgstr "Custom Footer"
+
+msgid "自定义页脚与社交图标"
+msgstr "Custom footer and social icons"
+
+msgid "色值"
+msgstr "color value"
+
+msgid "色板，"
+msgstr "Swatches,"
+
+msgid "色相"
+msgstr "Hue"
+
+msgid "若无法进入子比登录页，可使用"
+msgstr "If you cannot enter the Zibi login page, you can use"
+
+msgid "范围与恢复说明"
+msgstr "Scope and recovery instructions"
+
+msgid "草稿"
+msgstr "Draft"
+
+msgid "蓝紫渐变"
+msgstr "Blue-purple gradient"
+
+msgid "蓝青渐变"
+msgstr "Blue-green gradient"
+
+msgid "虚拟商品交付 · 买家"
+msgstr "Virtual Goods Delivery · Buyer"
+
+msgid "补传跳过已同步且本地未改动的文件。完整核对可检查和修复缺失的副本。"
+msgstr "Post-transmission skips files that have been synchronized and have not been changed locally. Complete verification checks and fixes missing copies."
+
+msgid "补充自定义图片"
+msgstr "Add custom pictures"
+
+msgid "覆盖前会保存原商品快照供下载。它不是整站回滚，失败后不会自动删除已创建的草稿、分类和媒体。"
+msgstr "The original product snapshot will be saved for download before overwriting. It is not a site-wide rollback, and created drafts, categories, and media will not be automatically deleted upon failure."
+
+msgid "覆盖前备份随任务报告下载，保留原链接字段和分类 ID。第一版不提供一键撤销，恢复前需要先核对之后的修改。"
+msgstr "Pre-overwrite backup is downloaded with the task report, retaining the original link fields and category IDs. The first version does not provide one-click undo, and subsequent modifications need to be checked before restoration."
+
+msgid "规则说明与显示范围"
+msgstr "Rule description and display range"
+
+msgid "规格值"
+msgstr "Specification value"
+
+msgid "规格值名称或图片无效。"
+msgstr "Invalid spec value name or image."
+
+msgid "规格值键必须为原生数字键。"
+msgstr "Spec value keys must be raw numeric keys."
+
+msgid "规格分组"
+msgstr "Specification grouping"
+
+msgid "规格分组无效或超过 10 组。"
+msgstr "Spec grouping is invalid or exceeds 10 groups."
+
+msgid "规格发货"
+msgstr "Specifications shipped"
+
+msgid "规格名称、键值或选项无效。"
+msgstr "Invalid specification name, key, or option."
+
+msgid "规格和库存按原始键值一起保留，不重排、不重新生成规格。现有在售商品不覆盖。"
+msgstr "Specifications and inventory are retained together according to the original key values, and specifications are not rearranged or regenerated. Existing products on sale are not covered."
+
+msgid "规格差价"
+msgstr "Spec spread"
+
+msgid "规格库存"
+msgstr "Spec Stock"
+
+msgid "规格库存无效。"
+msgstr "Spec inventory is invalid."
+
+msgid "规格显示类型无效。"
+msgstr "Spec display type is invalid."
+
+msgid "规格组合计算后的售价小于 0。"
+msgstr "Calculated selling price for spec combination is less than 0."
+
+msgid "规格组合超过 512 个，请拆分商品。"
+msgstr "There are more than 512 specification combinations, please split the product."
+
+msgid "角色已变动，请刷新后重新选择。"
+msgstr "The role has been changed, please refresh and select again."
+
+msgid "角色格式无效。"
+msgstr "Invalid character format."
+
+msgid "订单查询"
+msgstr "Order Lookup"
+
+msgid "订单查询页面"
+msgstr "Order Lookup Page"
+
+msgid "订单查询页面已就绪。"
+msgstr "The order inquiry page is ready."
+
+msgid "订单查询页面设置"
+msgstr "Order query page settings"
+
+msgid "订单邮件"
+msgstr "Order Email"
+
+msgid "让爱回家公益寻人网"
+msgstr "Let Love Go Home"
+
+msgid "记录开关无效。"
+msgstr "Logging switch is invalid."
+
+msgid "设置与创建查询页面"
+msgstr "Setting up and creating query pages"
+
+msgid "设置与预览"
+msgstr "Settings & Preview"
+
+msgid "设置与预览 404 公益页面"
+msgstr "Setting up and previewing 404 public welfare page"
+
+msgid "设置与预览需要 JavaScript。当前不会自动发送任何测试邮件。"
+msgstr "Setup and preview require JavaScript. No test emails are currently sent automatically."
+
+msgid "设置会实时更新此预览"
+msgstr "Settings will update this preview in real time"
+
+msgid "设置内容过大。"
+msgstr "Setting content is too large."
+
+msgid "设置分区无效。"
+msgstr "Invalid setting partition."
+
+msgid "设置分类"
+msgstr "Set categories"
+
+msgid "设置媒体连接与历史图片同步"
+msgstr "Set up media connections and historical image synchronization"
+
+msgid "设置已保存。"
+msgstr "Settings saved."
+
+msgid "设置已保存。旧配置和原文章属性保持不变。"
+msgstr "Settings saved. The old configuration and original article properties remain unchanged."
+
+msgid "设置已变化或无法保存，请刷新重试。"
+msgstr "The settings have been changed or cannot be saved, please refresh and try again."
+
+msgid "设置已变化，请刷新重试。"
+msgstr "The settings have changed, please refresh and try again."
+
+msgid "设置已变更或格式异常，本次未覆盖，请刷新重试。"
+msgstr "The settings have been changed or the format is abnormal. It is not covered this time. Please refresh and try again."
+
+msgid "设置已同步"
+msgstr "Settings synced"
+
+msgid "设置已在其他窗口更新或格式异常，本次未覆盖。请刷新后重试。"
+msgstr "The settings have been updated in other windows or the format is abnormal, so they are not overwritten this time. Please refresh and try again."
+
+msgid "设置已被其他页面修改或格式异常，请刷新后核对。"
+msgstr "The settings have been modified by other pages or the format is abnormal. Please refresh and check."
+
+msgid "设置已被其他页面修改，或原配置异常。请刷新核对。"
+msgstr "The settings have been modified by other pages, or the original configuration is abnormal. Please refresh to check."
+
+msgid "设置未能保存，原有配置保持不变。"
+msgstr "Settings failed to save, original configuration remains unchanged."
+
+msgid "设置未能保存，原有配置保留。"
+msgstr "Settings failed to be saved, original configuration retained."
+
+msgid "设置未能保存，请重试。"
+msgstr "Settings failed to save, please try again."
+
+msgid "设置格式无效。"
+msgstr "Invalid setting format."
+
+msgid "访客维护模式"
+msgstr "Guest maintenance mode"
+
+msgid "访客访问时，页面中识别到的旧图进入同步队列。"
+msgstr "When a visitor visits, the old images identified in the page enter the synchronization queue."
+
+msgid "访问地址"
+msgstr "Access address"
+
+msgid "访问备用站点"
+msgstr "Access alternate sites"
+
+msgid "访问时同步旧图，也可一键批量同步。保留 WordPress 原图和私有恢复副本。"
+msgstr "Synchronize old pictures when visiting, or batch synchronize with one click. Keep WordPress originals and private recovery copies."
+
+msgid "访问网站"
+msgstr "Visit website"
+
+msgid "证书校验未通过"
+msgstr "Certificate verification failed"
+
+msgid "评论、订单、已购权益、用户账号、站点设置与下载文件实体不迁移。特殊业务 ID 和未知区块引用需在目标站另行核对。"
+msgstr "Comments, orders, purchased benefits, user accounts, site settings, and downloaded file entities are not migrated. Special business IDs and unknown block references need to be checked separately at the target station."
+
+msgid "评论或引用状态无效。"
+msgstr "Comment or quote status is invalid."
+
+msgid "该公开下载链接已失效。"
+msgstr "The public download link is no longer available."
+
+msgid "该文件不存在。"
+msgstr "The file does not exist."
+
+msgid "该类型不支持变量："
+msgstr "This type does not support variables:"
+
+msgid "该类型使用方式"
+msgstr "How to use this type"
+
+msgid "该类型文案与变量"
+msgstr "Email Copy & Variables"
+
+msgid "详情栏目"
+msgstr "Details column"
+
+msgid "详情栏目数量无效。"
+msgstr "Invalid number of detail columns."
+
+msgid "详情栏目文字无效。"
+msgstr "The details column text is invalid."
+
+msgid "详情栏目类型无效。"
+msgstr "Invalid detail column type."
+
+msgid "说明"
+msgstr "Info"
+
+msgid "说明圆圈"
+msgstr "Info circle"
+
+msgid "说明正文"
+msgstr "Description text"
+
+msgid "请从媒体库重新选择图片。"
+msgstr "Please reselect images from the media library."
+
+msgid "请从文章下载按钮发起请求。"
+msgstr "Please initiate the request from the article download button."
+
+msgid "请使用 POST 提交。"
+msgstr "Please submit using POST."
+
+msgid "请使用 POST。"
+msgstr "Please use POST."
+
+msgid "请使用维护页的预览入口。"
+msgstr "Please use the preview entry of the maintenance page."
+
+msgid "请使用设置表单。"
+msgstr "Please use the settings form."
+
+msgid "请使用设置页表单。"
+msgstr "Please use the settings page form."
+
+msgid "请先修正私有备份目录配置。"
+msgstr "Please correct the private backup directory configuration first."
+
+msgid "请先启用子比原生商城，商品类型或分类尚未注册。"
+msgstr "Enable the Zibll shop first. The product type or taxonomies are unavailable."
+
+msgid "请先启用模块并确认页面发布权限与主题接口。"
+msgstr "Please enable the module first and confirm the page publishing permissions and theme interface."
+
+msgid "请先填写按钮链接"
+msgstr "Please fill in the button link first"
+
+msgid "请先完成或取消当前上传任务。"
+msgstr "Please complete or cancel the current upload task first."
+
+msgid "请先开启公益信息并检查设置。"
+msgstr "Please turn on public welfare information first and check the settings."
+
+msgid "请先暂停或等待任务完成。"
+msgstr "Please pause or wait for the task to complete."
+
+msgid "请先暂停或等待结束。"
+msgstr "Please pause or wait until it ends."
+
+msgid "请先确认撤销本次导入。"
+msgstr "Please confirm to cancel this import first."
+
+msgid "请先确认覆盖所选配置。"
+msgstr "Please confirm overwriting the selected configuration first."
+
+msgid "请先配置下载域名和 Worker 签名密钥。"
+msgstr "Please configure the download domain name and Worker signing key first."
+
+msgid "请先配置媒体桶并开启模块。"
+msgstr "Please configure the media bucket and enable the module first."
+
+msgid "请刷新用户列表后重试。"
+msgstr "Please refresh the user list and try again."
+
+msgid "请刷新设置页后重试。"
+msgstr "Please refresh the settings page and try again."
+
+msgid "请启用模块并配置 R2 上传凭据。"
+msgstr "Please enable the module and configure R2 upload credentials."
+
+msgid "请回到原文点击下载。"
+msgstr "Please return to the original text and click to download."
+
+msgid "请在 CDN / 页面缓存中排除本查询页及 admin-ajax.php。插件会发送私有、禁止缓存响应头。"
+msgstr "Please exclude this query page and admin-ajax.php from CDN/page cache. The plugin will send private, disable caching response headers."
+
+msgid "请填写 1—3650 天、有效提示文字和可选的 HTTP/HTTPS 联系链接。"
+msgstr "Please fill in 1-3650 days, valid prompt text and optional HTTP/HTTPS contact link."
+
+msgid "请填写 HTTP(S) 地址"
+msgstr "Please fill in the HTTP(S) address"
+
+msgid "请填写 HTTP(S) 地址、站内路径或留空。"
+msgstr "Please fill in the HTTP(S) address, site path or leave it blank."
+
+msgid "请填写完整的 HTTP 或 HTTPS 图片链接。"
+msgstr "Please complete the HTTP or HTTPS image link."
+
+msgid "请填写完整的HTTP或HTTPS图片链接。"
+msgstr "Please fill in the complete HTTP or HTTPS image link."
+
+msgid "请填写有效图片地址、站内路径或留空。"
+msgstr "Please fill in a valid image address, site path or leave it blank."
+
+msgid "请填写有权编辑的文章 ID。"
+msgstr "Please fill in the article ID that you have permission to edit."
+
+msgid "请填写维护标题。"
+msgstr "Please fill in the maintenance title."
+
+msgid "请填写页面和公益区域标题。"
+msgstr "Please fill in the page and public area titles."
+
+msgid "请填写页面标题。"
+msgstr "Please fill in the page title."
+
+msgid "请填写预设入口与窗口标题。"
+msgstr "Please fill in the default entry and window title."
+
+msgid "请核对下表，确认后才会写入链接和媒体库。"
+msgstr "Please check the table below and confirm before writing the link and media library."
+
+msgid "请核对新增、跳过与覆盖计划。确认后才会写入商品和图片。"
+msgstr "Please check new, skipped and covered plans. Products and pictures will be written after confirmation."
+
+msgid "请核对新增、跳过与覆盖计划。确认后才会写入文章和图片。"
+msgstr "Please check new, skipped and covered plans. Articles and pictures will be written after confirmation."
+
+msgid "请检查“"
+msgstr "Please check \""
+
+msgid "请检查标红的输入"
+msgstr "Please check the input marked in red"
+
+msgid "请检查输入"
+msgstr "Please check your input"
+
+msgid "请求失败，请刷新后重试。"
+msgstr "The request failed, please refresh and try again."
+
+msgid "请求未完成。"
+msgstr "Request not completed."
+
+msgid "请求未完成，请刷新任务核对。"
+msgstr "The request is not completed, please refresh the task verification."
+
+msgid "请求未完成，请刷新后重试。"
+msgstr "The request is not completed, please refresh and try again."
+
+msgid "请求超时，已停止自动发送；请刷新任务核对已保存进度后继续。"
+msgstr "The request has timed out and automatic sending has stopped; please refresh the task to check the saved progress before continuing."
+
+msgid "请求超时，请刷新核对保存结果后再试。"
+msgstr "The request timed out, please refresh and check the saved results before trying again."
+
+msgid "请求超时，请刷新记录核对任务状态后再试。"
+msgstr "The request timed out, please refresh the record and check the task status before trying again."
+
+msgid "请等待 60 秒再发送下一封测试邮件。"
+msgstr "Please wait 60 seconds before sending the next test email."
+
+msgid "请贴到该文章正文的子比「文件下载」区块。保存并发布后即可下载。"
+msgstr "Please paste it into the \"File Download\" section of the article's text. Save and publish to download."
+
+msgid "请贴到该文章的「付费功能 → 资源下载 → 下载地址」。"
+msgstr "Please post it to the \"Paid Function → Resource Download → Download Address\" of the article."
+
+msgid "请输入 0—200 的整数。"
+msgstr "Please enter an integer from 0 to 200."
+
+msgid "请输入一个有效测试邮箱。"
+msgstr "Please enter a valid test email."
+
+msgid "请输入凭据"
+msgstr "Please enter credentials"
+
+msgid "请输入密钥"
+msgstr "Please enter the key"
+
+msgid "请输入有效的测试邮箱。"
+msgstr "Please enter a valid test email."
+
+msgid "请选择 512 KB 以内的 SVG、PNG、JPG 或 WebP 图标。"
+msgstr "Please select an SVG, PNG, JPG or WebP icon under 512 KB."
+
+msgid "请选择 JSON 配置文件，并确认没有超过服务器上传限制。"
+msgstr "Please select a JSON configuration file and verify that the server upload limit is not exceeded."
+
+msgid "请选择 PNG 图片。"
+msgstr "Please select a PNG image."
+
+msgid "请选择512KB以内的SVG、PNG、JPG或WebP图标。"
+msgstr "Please select an SVG, PNG, JPG or WebP icon within 512KB."
+
+msgid "请选择大于 0 字节、最大 30 GiB 的文件。"
+msgstr "Please select a file larger than 0 bytes, up to 30 GiB."
+
+msgid "请选择已支持的邮件类型。"
+msgstr "Please select a supported email type."
+
+msgid "请选择已核实的公益接口。"
+msgstr "Please select a verified public welfare interface."
+
+msgid "请选择有效的 JSON 配置备份。"
+msgstr "Please select a valid JSON configuration backup."
+
+msgid "请选择有效的下载方式。"
+msgstr "Please select a valid download method."
+
+msgid "请选择有效的背景配色。"
+msgstr "Please select a valid background color."
+
+msgid "请选择至少一类配置。"
+msgstr "Please select at least one configuration."
+
+msgid "请通过 R2 管理页提交。"
+msgstr "Please submit via the R2 admin page."
+
+msgid "请通过工作台按钮提交更改。"
+msgstr "Please submit changes via the workbench button."
+
+msgid "请通过设置表单提交。"
+msgstr "Please submit via the settings form."
+
+msgid "请通过设置页提交。"
+msgstr "Please submit via the settings page."
+
+msgid "请重新上传并预检后导入。"
+msgstr "Please re-upload and pre-check before importing."
+
+msgid "请重新加载后台页面以继续查看进度。"
+msgstr "Please reload the background page to continue viewing progress."
+
+msgid "读取主题资料"
+msgstr "Read topic data"
+
+msgid "读取分类失败。"
+msgstr "Failed to read classification."
+
+msgid "读取失败，请刷新重试。"
+msgstr "Failed to read, please refresh and try again."
+
+msgid "读取链接分类失败。"
+msgstr "Failed to read link classification."
+
+msgid "调整后只影响继续继承这些字段的邮件。"
+msgstr "The adjustment only affects emails that continue to inherit these fields."
+
+msgid "调色盘"
+msgstr "Color palette"
+
+msgid "账号“"
+msgstr "Account \""
+
+msgid "账号例外规则"
+msgstr "Account Exceptions"
+
+msgid "账号单独禁止优先于单独允许，单独允许优先于角色。保存只更新对应区域；账号表单只更新本页用户，其他页的规则保留。"
+msgstr "Individual account bans take precedence over individual permissions, and individual permissions take precedence over roles. Saving will only update the corresponding area; the account form will only update the users on this page, and the rules on other pages will be retained."
+
+msgid "账号归属、原生凭据、原生订单入口"
+msgstr "Account ownership, native credentials, native order entry"
+
+msgid "账号规则缺少可核对的身份信息。"
+msgstr "Account rules lack verifiable identity information."
+
+msgid "账户邮件"
+msgstr "Account Email"
+
+msgid "起始价格"
+msgstr "Starting price"
+
+msgid "起始价格不能小于 0。"
+msgstr "Starting price cannot be less than 0."
+
+msgid "起始日期不能晚于结束日期。"
+msgstr "Start date cannot be later than end date."
+
+msgid "超出允许范围。"
+msgstr "Out of allowed range."
+
+msgid "超过 100 件，请按日期、分类或商品 ID 分批。"
+msgstr "For more than 100 items, please batch by date, category or product ID."
+
+msgid "超过 100 篇，请按日期、分类或文章 ID 分批。"
+msgstr "If there are more than 100 articles, please sort by date, category or article ID."
+
+msgid "超过 90 秒未收到进度。若持续停在这里，请检查 WP-Cron。"
+msgstr "No progress received for over 90 seconds. If it keeps getting stuck here, check WP-Cron."
+
+msgid "超过多少天显示"
+msgstr "Display after how many days"
+
+msgid "超过设定更新天数后，在文章正文前提醒读者。"
+msgstr "After the set update days have passed, remind readers before the article text."
+
+msgid "跟随类型色"
+msgstr "Follow type color"
+
+msgid "跟随网站"
+msgstr "Follow the website"
+
+msgid "跟随页眉"
+msgstr "Follow header"
+
+msgid "跟随页眉时，栏目和版权栏使用同一居中宽度，两侧等量留白。全宽模式使用可用宽度，背景在两种模式下均铺满。"
+msgstr "When following the header, use the same centered width for the column and copyright columns, with equal amounts of white space on both sides. Full-width mode uses the available width, and the background fills up in both modes."
+
+msgid "跟随页面容器"
+msgstr "Follow page container"
+
+msgid "跳转地址无效。"
+msgstr "Invalid jump address."
+
+msgid "跳过已有"
+msgstr "Skip existing"
+
+msgid "跳过已有商品（推荐）"
+msgstr "Skip existing products (recommended)"
+
+msgid "跳过已有文章（推荐）"
+msgstr "Skip existing articles (recommended)"
+
+msgid "跳过已有链接（推荐）"
+msgstr "Skip existing links (recommended)"
+
+msgid "轻点浏览长图"
+msgstr "Tap to browse the long image"
+
+msgid "输入有效设置后自动更新；演示日期不来自真实文章。"
+msgstr "Automatically updates after entering valid settings; demo date not taken from real article."
+
+msgid "输入测试收件邮箱"
+msgstr "Enter test recipient email"
+
+msgid "边框粗细"
+msgstr "Border thickness"
+
+msgid "边框颜色"
+msgstr "Border color"
+
+msgid "迁移包来源"
+msgstr "Migration package source"
+
+msgid "迁移包缺少图片："
+msgstr "Migration package is missing images:"
+
+msgid "迁移包缺少来源标识。"
+msgstr "Migration package is missing source identifier."
+
+msgid "迁移方式"
+msgstr "Migration methods"
+
+msgid "迁移格式或版本不支持。"
+msgstr "Migration format or version not supported."
+
+msgid "迁移范围过大，请每包最多 100 件商品。"
+msgstr "Migration scope is too large, please limit to 100 items per package."
+
+msgid "迁移范围过大，请每包最多 100 篇文章。"
+msgstr "Migration scope is too large, please limit to 100 articles per package."
+
+msgid "迁移规则"
+msgstr "Migration rules"
+
+msgid "迁移进度"
+msgstr "Migration progress"
+
+msgid "过期任务锁已恢复，请从记录中查看任务，再核对或恢复快照。"
+msgstr "The expired task lock has been restored. Please check the task from the record and then check or restore the snapshot."
+
+msgid "运行中"
+msgstr "Running"
+
+msgid "运行中 · 仅管理员后台使用，不影响前台商品显示。"
+msgstr "Running · Only used by the administrator in the backend and does not affect the display of products in the frontend."
+
+msgid "运行中 · 仅管理员后台使用，不影响前台文章显示。"
+msgstr "Running · Only used by administrators in the background and does not affect the display of articles in the front."
+
+msgid "运行中 · 仅管理员后台使用，不影响前台链接显示。"
+msgstr "Running · Only used by the administrator in the background, and does not affect the display of links in the foreground."
+
+msgid "运行中 · 仅管理员后台使用，所有导入需要确认。"
+msgstr "Running · Only used by administrators in the background, all imports require confirmation."
+
+msgid "运行已阻止"
+msgstr "Run blocked"
+
+msgid "运行环境"
+msgstr "Environment"
+
+msgid "运费"
+msgstr "Shipping fee"
+
+msgid "运费文字无效。"
+msgstr "Invalid shipping text."
+
+msgid "返回字段无效或信息不完整"
+msgstr "The return field is invalid or the information is incomplete"
+
+msgid "还没有迁移任务。"
+msgstr "There are no migration tasks yet."
+
+msgid "还没有选择预览图片"
+msgstr "No preview image selected yet"
+
+msgid "还没有配置备份记录。"
+msgstr "Backup logging has not been configured."
+
+msgid "这是示例模块的实际输出。关闭此模块后，这条提示将不再显示。"
+msgstr "This is the actual output of the example module. After closing this module, this prompt will no longer be displayed."
+
+msgid "这篇文章尚未绑定对应的 R2 下载资源。"
+msgstr "This article has not yet been bound to the corresponding R2 download resources."
+
+msgid "这里只控制链接显示，不改变用户角色、会员或购买权益。其他扩展直接查询数据库、手写进文章的 URL 和旧的外部缓存不属于此规则。调整权限后请刷新前台页面。"
+msgstr "This only controls link display and does not change user roles, membership or purchase rights. Other extensions that query the database directly, handwritten URLs into articles, and old external caches do not fall under this rule. Please refresh the front page after adjusting permissions."
+
+msgid "这里将展示你的案例"
+msgstr "Your case will be shown here"
+
+msgid "这里是文章正文示意。"
+msgstr "Here is the text of the article."
+
+msgid "这里调整的是中央案例库的公共展示配置。保存后会更新WordPress中央案例库，引用这些案例的页面同步使用新配置。"
+msgstr "What is adjusted here is the public display configuration of the central case library. After saving, the WordPress central case library will be updated, and pages that reference these cases will use the new configuration simultaneously."
+
+msgid "连接测试"
+msgstr "Connection Test"
+
+msgid "连接测试通过且文件同步完成后，公开页面才使用媒体域名。"
+msgstr "The public page will not use the media domain name until the connection test passes and file synchronization is completed."
+
+msgid "连接设置"
+msgstr "Connection Settings"
+
+msgid "连接设置仍可保存。上传文件和生成引用需要启用 JavaScript。"
+msgstr "Connection settings can still be saved. Uploading files and generating citations requires JavaScript to be enabled."
+
+msgid "连接设置写入失败，请重试。"
+msgstr "Failed to write connection settings, please try again."
+
+msgid "连接设置已保存。可用小文件上传和生成引用验证连接。"
+msgstr "Connection settings saved. Small file uploads and reference verification connections can be generated."
+
+msgid "连接超时"
+msgstr "Connection timeout"
+
+msgid "适合哪些使用场景"
+msgstr "When to use this callout"
+
+msgid "适应画布"
+msgstr "Adapt to canvas"
+
+msgid "适用于已核对的子比 9.2 普通分类、标签、专题模板。"
+msgstr "Applies to checked sub-ratio 9.2 general categories, tags, and topic templates."
+
+msgid "选择"
+msgstr "Select"
+
+msgid "选择 PNG"
+msgstr "Select PNG"
+
+msgid "选择 Toolkit 配置备份"
+msgstr "Select Toolkit Configuration Backup"
+
+msgid "选择 ZIP 文件"
+msgstr "Select ZIP file"
+
+msgid "选择“MaoTK 案例展示”模板后，页面自动显示对应分类。"
+msgstr "After selecting the \"MaoTK Case Display\" template, the page automatically displays the corresponding category."
+
+msgid "选择入口"
+msgstr "Select entrance"
+
+msgid "选择可查看私密链接的角色，可多选"
+msgstr "Select the role that can view private links, multiple selections are allowed"
+
+msgid "选择哪些角色和账号可以在前台查看私密链接。"
+msgstr "Select which roles and accounts can view private links in the foreground."
+
+msgid "选择商品范围"
+msgstr "Select product range"
+
+msgid "选择图片"
+msgstr "Select image"
+
+msgid "选择导出范围"
+msgstr "Select export scope"
+
+msgid "选择文章范围"
+msgstr "Select article range"
+
+msgid "选择本机文件"
+msgstr "Select native files"
+
+msgid "选择案例截图"
+msgstr "Select case screenshot"
+
+msgid "选择案例，或添加第一个案例。"
+msgstr "Select a case, or add the first case."
+
+msgid "选择窗口标题"
+msgstr "Select window title"
+
+msgid "选择维护页 Logo"
+msgstr "Select maintenance page logo"
+
+msgid "选择范围过大。"
+msgstr "The selection range is too large."
+
+msgid "选择邮件专用高清 PNG"
+msgstr "Select HD PNG for mail"
+
+msgid "选择预设图片"
+msgstr "Select default image"
+
+msgid "选择预设头像"
+msgstr "Select a default avatar"
+
+msgid "选择预设背景"
+msgstr "Select a default background"
+
+msgid "选择颜色"
+msgstr "Select color"
+
+msgid "选项不受支持。"
+msgstr "Option not supported."
+
+msgid "选项无效。"
+msgstr "Invalid option."
+
+msgid "逐件处理，已完成记录不会重复新增。"
+msgstr "Processed one by one, completed records will not be added repeatedly."
+
+msgid "逐张处理本地图片，完成后再写商品。已成功的图片会直接复用。"
+msgstr "Process the local images one by one, and then write the product after completion. Successful images will be reused directly."
+
+msgid "逐张处理本地图片，完成后再写文章。已成功的图片会直接复用。"
+msgstr "Process local images one by one and write an article after completion. Successful images will be reused directly."
+
+msgid "逐篇处理，已完成记录不会重复新增。"
+msgstr "Processed article by article, completed records will not be added repeatedly."
+
+msgid "通用"
+msgstr "General"
+
+msgid "通用外观"
+msgstr "Universal appearance"
+
+msgid "通用设置"
+msgstr "General settings"
+
+msgid "通用设置供已接入类型继承。邮件专用 Logo 不修改网站导航 Logo。"
+msgstr "Supported email types inherit these settings. The email logo is independent of the site logo."
+
+msgid "通用设置可供五种类型继承，留空使用封板默认。"
+msgstr "Common settings can be inherited by five types. Leave blank to use the default of sealing."
+
+msgid "通用设置缺少字段。"
+msgstr "Common settings missing field."
+
+msgid "通用邮件模板"
+msgstr "Shared Email Template"
+
+msgid "通知铃铛"
+msgstr "Bell"
+
+msgid "通过 WordPress 原生 404_template 过滤器接入，保留子比页头、页脚和原生搜索。不是新建普通页面，不会将真实 404 变成 200。"
+msgstr "Access via WordPress native 404_template filter, preserving sub-headers, footers, and native search. It is not a new ordinary page, which will not change the real 404 into 200."
+
+msgid "遇到已有商品"
+msgstr "Encountered an existing product"
+
+msgid "遇到已有文章"
+msgstr "Encountered an existing article"
+
+msgid "遵循角色"
+msgstr "follow role"
+
+msgid "邮件 Logo 请选择或填写 PNG 图片地址。"
+msgstr "Email Logo Please select or fill in the PNG image address."
+
+msgid "邮件专用 Logo"
+msgstr "Email-only Logo"
+
+msgid "邮件主题"
+msgstr "Email subject"
+
+msgid "邮件内标题"
+msgstr "Title within email"
+
+msgid "邮件来源与接入范围"
+msgstr "Email source and access scope"
+
+msgid "邮件模式或独立设置不完整。"
+msgstr "Incomplete mail mode or standalone settings."
+
+msgid "邮件背景"
+msgstr "Email background"
+
+msgid "邮件设置保存失败。"
+msgstr "Failed to save mail settings."
+
+msgid "邮件设置已保存。"
+msgstr "Mail settings saved."
+
+msgid "邮件设置格式不完整。"
+msgstr "Mail settings format is incomplete."
+
+msgid "邮件通用模板、类型设置与预览"
+msgstr "Common email templates, type settings and previews"
+
+msgid "邮件配色"
+msgstr "Email Colors"
+
+msgid "邮箱"
+msgstr "Email"
+
+msgid "邮箱链接"
+msgstr "Email link"
+
+msgid "部分内容可能具有时效性，请结合当前情况判断。如有错误或失效，欢迎反馈。"
+msgstr "Some content may be time-sensitive, please judge based on the current situation. If there are any errors or failures, feedback is welcome."
+
+msgid "配置与业务数据分开"
+msgstr "Separate configuration from business data"
+
+msgid "配置修订号无效。"
+msgstr "Invalid configuration revision number."
+
+msgid "配置修订号超出范围。"
+msgstr "Configuration revision number out of range."
+
+msgid "配置内容必须是对象。"
+msgstr "Configuration content must be an object."
+
+msgid "配置写入失败，原记录可能已被其他窗口更新。"
+msgstr "Configuration writing failed, the original record may have been updated by other windows."
+
+msgid "配置分类无效。"
+msgstr "Invalid configuration classification."
+
+msgid "配置图片媒体记录写入失败。"
+msgstr "Configuration image media record writing failed."
+
+msgid "配置图片无法写入媒体目录。"
+msgstr "Configuration image cannot be written to the media directory."
+
+msgid "配置备份目录不能是符号链接。"
+msgstr "The configuration backup directory cannot be a symbolic link."
+
+msgid "配置备份需要 JavaScript；当前不会执行导入。"
+msgstr "Configuring backup requires JavaScript; importing is not currently performed."
+
+msgid "配置导入"
+msgstr "Configuration import"
+
+msgid "配置导入&amp;导出"
+msgstr "Configuration import & export"
+
+msgid "配置导入&导出"
+msgstr "Settings Import & Export"
+
+msgid "配置导入正在处理，请勿重复提交。若请求意外中断，请在 15 分钟后恢复锁。"
+msgstr "The configuration import is being processed, please do not submit again. If the request is interrupted unexpectedly, please wait 15 minutes to restore the lock."
+
+msgid "配置导出"
+msgstr "Configuration export"
+
+msgid "配置导出已准备"
+msgstr "Configuration export prepared"
+
+msgid "配置已变更或格式异常，本次未覆盖，请刷新后重试。"
+msgstr "The configuration has been changed or the format is abnormal. It is not covered this time. Please refresh and try again."
+
+msgid "配置已被其他窗口修改，请重新预检。"
+msgstr "The configuration has been modified by other windows, please preflight check again."
+
+msgid "配置并保存后开启；关闭恢复子比原生页脚，保留已有设置。"
+msgstr "Enable after configuring and saving; close to restore the sub-native footer and retain existing settings."
+
+msgid "配置异常"
+msgstr "Configuration exception"
+
+msgid "配置异常，私密链接已按不可见处理，原始配置未重置。"
+msgstr "Configuration abnormality, the private link has been processed as invisible, and the original configuration has not been reset."
+
+msgid "配置必须为数组。"
+msgstr "Configuration must be an array."
+
+msgid "配置文件可在新站安装相同或更新版本 Toolkit 后预检导入。本地图片按文件内容去重；图片尺寸和像素不改变。导入新增的图片在撤销时保留，不删除现有媒体。"
+msgstr "Configuration files can be preflighted and imported after installing the same or newer version of Toolkit on the new site. Local images are deduplicated based on file content; image size and pixels remain unchanged. Newly imported images are retained when undoing, and existing media is not deleted."
+
+msgid "配置文件校验失败，可能已损坏或被编辑。"
+msgstr "Configuration file verification failed and may be corrupted or edited."
+
+msgid "配置文件超过 32 MiB，请分分类导出。"
+msgstr "The configuration file exceeds 32 MiB, please export it in categories."
+
+msgid "配置格式异常，前台预设功能与写入暂停，原值保留。"
+msgstr "The configuration format is abnormal, the foreground preset function and writing are suspended, and the original values ​​are retained."
+
+msgid "配置格式异常，已停止写入，原有配置未被覆盖。"
+msgstr "The configuration format is abnormal, writing has stopped, and the original configuration has not been overwritten."
+
+msgid "配置格式异常，查询和设置写入暂停，原值保留。"
+msgstr "The configuration format is abnormal, query and setting writing are suspended, and the original values ​​are retained."
+
+msgid "配置格式异常，模块加载和设置写入已暂停；原有数据保持不变，请先检查配置来源。"
+msgstr "The configuration format is abnormal, module loading and setting writing have been suspended; the original data remains unchanged, please check the configuration source first."
+
+msgid "配置格式异常，正式替换与设置写入暂停，原有配置保留。"
+msgstr "The configuration format is abnormal, formal replacement and setting writing are suspended, and the original configuration is retained."
+
+msgid "配置格式异常，正式输出和保存已暂停，原数据未重置。"
+msgstr "The configuration format is abnormal, formal output and saving have been suspended, and the original data has not been reset."
+
+msgid "配置格式异常，维护拦截已跳过，原始配置保持不变。请检查配置后继续。"
+msgstr "The configuration format is abnormal, maintenance interception has been skipped, and the original configuration remains unchanged. Please check the configuration before continuing."
+
+msgid "配置格式异常，请先检查设置。"
+msgstr "The configuration format is abnormal, please check the settings first."
+
+msgid "配置版本无效。"
+msgstr "Invalid configuration version."
+
+msgid "配置维护说明与预计恢复时间。先预览，确认后再开启维护。"
+msgstr "Configuration maintenance instructions and estimated recovery times. Preview first and confirm before starting maintenance."
+
+msgid "配置键不在允许范围内。"
+msgstr "Configuration key is not within allowed range."
+
+msgid "配置预检"
+msgstr "Configuration preflight"
+
+msgid "配置预检与恢复"
+msgstr "Configuration preflight and recovery"
+
+msgid "重复处理方式无效。"
+msgstr "Invalid duplicate handling method."
+
+msgid "重复处理规则无效。"
+msgstr "Invalid duplicate processing rule."
+
+msgid "重试失败项"
+msgstr "Retry failed items"
+
+msgid "重试确认"
+msgstr "Retry confirmation"
+
+msgid "重试间隔应为 60—86400 秒。"
+msgstr "The retry interval should be 60—86400 seconds."
+
+msgid "金额 "
+msgstr "Amount "
+
+msgid "链接"
+msgstr "Link"
+
+msgid "链接与 LOGO 已准备"
+msgstr "Link and LOGO are prepared"
+
+msgid "链接保留私密标记，不改变账号原有权限"
+msgstr "The link retains the private mark and does not change the original permissions of the account"
+
+msgid "链接写入失败，请检查数据库后重试。"
+msgstr "Link writing failed, please check the database and try again."
+
+msgid "链接分类"
+msgstr "Link classification"
+
+msgid "链接字段超过 WordPress 原生字段长度，已停止导入，避免内容被截断。"
+msgstr "The link field exceeds the WordPress native field length and has been stopped to import to avoid content truncation."
+
+msgid "链接导入&amp;导出"
+msgstr "Link import & export"
+
+msgid "链接导入&导出"
+msgstr "Link Import & Export"
+
+msgid "链接导航 · 私密链接可见性"
+msgstr "Link Directory · Private Link Visibility"
+
+msgid "链接已写入，但分类保存失败，请核对后重新预检。"
+msgstr "The link has been written, but the category saving failed. Please check and re-preflight check."
+
+msgid "链接已准备，外部 LOGO 保留原网址"
+msgstr "The link is prepared, the external LOGO retains the original URL"
+
+msgid "链接引用了不存在的 LOGO。"
+msgstr "The link references a non-existent LOGO."
+
+msgid "链接引用了不存在的分类。"
+msgstr "Link references a non-existent category."
+
+msgid "链接必须是完整的 HTTP/HTTPS 地址，且不能包含账号密码或控制字符。"
+msgstr "Links must be full HTTP/HTTPS addresses and cannot contain account passwords or control characters."
+
+msgid "链接或分类数量超出限制。"
+msgstr "Number of links or categories exceeded limit."
+
+msgid "链接来源标识重复。"
+msgstr "Duplicate link source identifier."
+
+msgid "链接的名称、状态、打开方式或分类无效。"
+msgstr "The link has an invalid name, status, open with, or category."
+
+msgid "链接编号无效。"
+msgstr "Invalid link number."
+
+msgid "链接记录格式无效。"
+msgstr "Invalid link record format."
+
+msgid "链接资料已准备"
+msgstr "Link data prepared"
+
+msgid "链接选项"
+msgstr "Link options"
+
+msgid "键盘可聚焦预览区，按 Enter 或空格控制。系统开启“减少动态效果”时停止自动滚动，可手动查看截图。"
+msgstr "Keyboard can focus the preview area, press Enter or space control. When the system turns on \"Reduce Dynamic Effects\", automatic scrolling is stopped and screenshots can be viewed manually."
+
+msgid "长截图"
+msgstr "Long screenshot"
+
+msgid "长截图预览"
+msgstr "Long screenshot preview"
+
+msgid "阅读体验"
+msgstr "Reading experience"
+
+msgid "附件已删除或同步记录无法保存。"
+msgstr "The attachment has been deleted or the sync record cannot be saved."
+
+msgid "附件编号映射无效。"
+msgstr "Invalid attachment number mapping."
+
+msgid "随包迁移"
+msgstr "Migrate with package"
+
+msgid "隐藏"
+msgstr "Hide"
+
+msgid "集中管理你的主题扩展，按需启用每一项能力。"
+msgstr "Manage your Zibll extensions in one place and enable the modules you need."
+
+msgid "集中设置查询页面，模板由 Toolkit 提供，主题更新无需重新添加文件。"
+msgstr "Centrally set up query pages, templates are provided by Toolkit, and theme updates do not require re-adding files."
+
+msgid "需要站点设置与链接管理权限。"
+msgstr "Requires Site Settings and Link Management permissions."
+
+msgid "需要管理员、管理他人商品及分类的权限。"
+msgstr "Requires administrator and permission to manage other people's products and categories."
+
+msgid "需要管理员和管理他人文章的权限。"
+msgstr "Requires Admin and permission to manage other people's posts."
+
+msgid "需要管理员权限。"
+msgstr "Requires administrator privileges."
+
+msgid "青绿渐变"
+msgstr "Turquoise Gradient"
+
+msgid "面向 Zibll 主题的模块化扩展工作台，提供独立后台与按需启用的模块。"
+msgstr "A modular extension workbench for Zibll themes, providing independent backends and modules enabled on demand."
+
+msgid "页脚内容宽度"
+msgstr "Footer content width"
+
+msgid "页脚内容设置"
+msgstr "Footer content settings"
+
+msgid "页脚字段类型无效："
+msgstr "Invalid footer field type:"
+
+msgid "页脚实时预览"
+msgstr "Footer live preview"
+
+msgid "页脚文字或地址无效。"
+msgstr "Invalid footer text or address."
+
+msgid "页脚文案"
+msgstr "Footer copy"
+
+msgid "页脚栏目、社交图标与预览"
+msgstr "Footer columns, social icons and previews"
+
+msgid "页脚设置"
+msgstr "Footer Settings"
+
+msgid "页脚配置包含未知字段。"
+msgstr "Footer configuration contains unknown fields."
+
+msgid "页脚配置已保存"
+msgstr "Footer configuration saved"
+
+msgid "页脚配置已保存，前台刷新后生效"
+msgstr "The footer configuration has been saved and will take effect after the foreground is refreshed."
+
+msgid "页脚配置格式无效。"
+msgstr "Invalid footer configuration format."
+
+msgid "页脚配置版本无效。"
+msgstr "Invalid footer configuration version."
+
+msgid "页脚配置过大。"
+msgstr "Footer configuration is too large."
+
+msgid "页脚链接地址"
+msgstr "Footer link address"
+
+msgid "页脚链接文案"
+msgstr "Footer link copy"
+
+msgid "页脚链接需为完整 HTTP/HTTPS 网址或 {{site_url}}。"
+msgstr "Footer link needs to be a full HTTP/HTTPS URL or {{site_url}}."
+
+msgid "页脚项目包含未知字段。"
+msgstr "Footer item contains unknown fields."
+
+msgid "页脚项目必须为列表。"
+msgstr "Footer items must be lists."
+
+msgid "页脚项目数量过多。"
+msgstr "Too many footer items."
+
+msgid "页脚项目格式无效。"
+msgstr "Footer item format is invalid."
+
+msgid "页脚预览"
+msgstr "Footer preview"
+
+msgid "页面"
+msgstr "page"
+
+msgid "页面与布局"
+msgstr "Pages and Layouts"
+
+msgid "页面与链接"
+msgstr "Pages & Links"
+
+msgid "页面内容"
+msgstr "Page content"
+
+msgid "页面创建失败，请在页面列表手动创建并选择模板。"
+msgstr "Page creation failed, please create it manually in the page list and select a template."
+
+msgid "页面截图预览"
+msgstr "Page screenshot preview"
+
+msgid "页面文字与入口"
+msgstr "Page text and entry"
+
+msgid "页面标题"
+msgstr "Page title"
+
+msgid "页面组件 / 中央案例库"
+msgstr "Page Components/Central Case Library"
+
+msgid "页面组件 · 案例展示"
+msgstr "Page Components · Showcase"
+
+msgid "页面说明"
+msgstr "Page Description"
+
+msgid "页面走丢了"
+msgstr "The page is lost"
+
+msgid "页面预览"
+msgstr "Page preview"
+
+msgid "项"
+msgstr "items"
+
+msgid "预检不会新增链接或媒体"
+msgstr "Preflight does not add links or media"
+
+msgid "预检不写入商品、分类或媒体"
+msgstr "Preflight does not write products, categories or media"
+
+msgid "预检不写入文章、分类或媒体"
+msgstr "Preflight does not write articles, categories or media"
+
+msgid "预检后商品已变化，请重新预检。"
+msgstr "The product has changed after pre-checking, please pre-check again."
+
+msgid "预检后文章已变化，请重新预检。"
+msgstr "The article has changed after pre-checking, please pre-check again."
+
+msgid "预检后目标链接已变化，请重新预检，避免覆盖他人修改。"
+msgstr "The target link has changed after preflight. Please preflight again to avoid overwriting other people's modifications."
+
+msgid "预检后配置已变更，请重新预检，不会覆盖其他窗口的新设置。"
+msgstr "The configuration has been changed after preflight. Please preflight again. The new settings of other windows will not be overwritten."
+
+msgid "预览"
+msgstr "Preview"
+
+msgid "预览 404 页面"
+msgstr "Preview 404 page"
+
+msgid "预览不会保存或改变开关。"
+msgstr "Preview does not save or change switches."
+
+msgid "预览不会保存设置。"
+msgstr "Preview does not save settings."
+
+msgid "预览仅管理员持有效签名时可见，返回 200 且禁止缓存。模块关闭后仍可预览。"
+msgstr "Preview is only visible if the administrator holds a valid signature, returns 200 and disables caching. The module can still be previewed after it is closed."
+
+msgid "预览内容"
+msgstr "Preview content"
+
+msgid "预览内容搜索结果"
+msgstr "Preview content search results"
+
+msgid "预览图片"
+msgstr "Preview image"
+
+msgid "预览图片已移除"
+msgstr "Preview image removed"
+
+msgid "预览已实时更新，正式页面未改变。"
+msgstr "The preview has been updated in real time, and the official page has not changed."
+
+msgid "预览当前输入"
+msgstr "Preview current input"
+
+msgid "预览显示变量位置；实际发送时填入真实数据，不读取客户验证码或订单。"
+msgstr "The preview shows placeholders. Live messages use actual data when sent."
+
+msgid "预览未能加载，请查看画布提示或刷新页面重试。"
+msgstr "The preview failed to load, please check the canvas prompt or refresh the page to try again."
+
+msgid "预览类型"
+msgstr "Preview type"
+
+msgid "预览缩放"
+msgstr "Preview zoom"
+
+msgid "预览范围"
+msgstr "Preview range"
+
+msgid "预览设备"
+msgstr "Preview device"
+
+msgid "预览配色"
+msgstr "Preview color matching"
+
+msgid "预计剩余"
+msgstr "Estimated remaining"
+
+msgid "预计剩余 %s"
+msgstr "Time remaining: %s"
+
+msgid "预计恢复时间"
+msgstr "Estimated recovery time"
+
+msgid "预计恢复时间无效，请重新选择日期和时间。"
+msgstr "Invalid estimated recovery time, please select a new date and time."
+
+msgid "预设"
+msgstr "presets"
+
+msgid "预设图片无法映射。"
+msgstr "Default image cannot be mapped."
+
+msgid "预设图片记录不存在，请先修正配置。"
+msgstr "The default picture record does not exist, please correct the configuration first."
+
+msgid "预设头像与背景"
+msgstr "Default avatar and background"
+
+msgid "预设开关格式无效。"
+msgstr "Invalid default switch format."
+
+msgid "预设文件跟随 Toolkit 保存，卸载前请先处理使用中的头像 / 背景引用；停用不会删除用户资料。"
+msgstr "The default file is saved with the Toolkit. Please process the avatar/background references in use before uninstalling; deactivating will not delete user data."
+
+msgid "预设设置已保存。现有用户的头像和背景未改变。"
+msgstr "Preset settings saved. Existing users' avatars and backgrounds are unchanged."
+
+msgid "预设设置格式无效。"
+msgstr "Invalid preset format."
+
+msgid "预设配置版本号无效。"
+msgstr "The default configuration version number is invalid."
+
+msgid "预设配置版本无效。"
+msgstr "Invalid default configuration version."
+
+msgid "颜色、留白或属性格式无效。留白为 0—200 的整数；属性每行一个，最多 100 项，每项最多 600 字节。"
+msgstr "Invalid color, whitespace, or attribute format. Leave blank as an integer from 0 to 200; attributes are one per line, up to 100 items, and each item can be up to 600 bytes."
+
+msgid "颜色、透明度和上下留白立即更新；保存前不改变正式页面。"
+msgstr "Color, transparency, and top and bottom margins are updated immediately; the official page is not changed before saving."
+
+msgid "颜色与透明度"
+msgstr "Color and Transparency"
+
+msgid "颜色作用于横幅背景与信息文字，原版封面和动画效果保留。"
+msgstr "Color is applied to the banner background and information text, and the original cover and animation effects are retained."
+
+msgid "颜色使用完整 HEX，例如 #FF8A18。"
+msgstr "Use full HEX for colors, such as #FF8A18."
+
+msgid "风险"
+msgstr "Risk"
+
+msgid "风险盾牌"
+msgstr "Alert shield"
+
+msgid "饱和度和明度色板"
+msgstr "Saturation and Value Swatches"
+
+msgid "饱和度和明度，左右调饱和度，上下调明度"
+msgstr "Saturation and lightness, adjust saturation left and right, adjust lightness up and down"
+
+msgid "验收版"
+msgstr "Acceptance Version"
+
+msgid "验证码由原生成函数提供，不能识别验证码／有效期时回退原生。订单字段来自发送通知函数的真实参数；原始通知详情仍保留。未知来源、完整 HTML 和 multipart 邮件不套第二层模板。"
+msgstr "The verification code is provided by the original generation function. If the verification code/validity cannot be recognized, it will fall back to the original function. The order fields come from the real parameters of the send notification function; the original notification details are still preserved. Unknown origin, full HTML, and multipart emails do not apply second-level templates."
+
+msgid "默认 1 天。按实际经过的小时判断；文章更新后重新计算。"
+msgstr "Default 1 day. Judgment based on actual elapsed hours; recalculated after the article is updated."
+
+msgid "默认关闭。开启后仅为新注册且没有自定义头像的用户分配；不会批量修改已有用户，不会自动分配背景。"
+msgstr "Off by default. After being turned on, it will only be assigned to newly registered users without customized avatars; existing users will not be modified in batches, and backgrounds will not be automatically assigned."
+
+msgid "默认关闭，可按需启用。"
+msgstr "Off by default, can be enabled on demand."
+
+msgid "默认导入为草稿，先核对页面效果，再自行发布。"
+msgstr "Import as draft by default, check the page effect first, and then publish it yourself."
+
+msgid "默认色 "
+msgstr "Default color "
+
+msgid "默认跟随网站浅深色。可在预览上方切换查看。"
+msgstr "Default to follow website light and dark colors. You can switch between views above the preview."
+
+msgid "（在新标签页打开）"
+msgstr "(opens in new tab)"
+
+msgid "（无标题）"
+msgstr "(untitled)"
+
+msgid "，也可留空。"
+msgstr ", can also be left blank."
+
+msgid "，仅将需要增强的内容放入该组。"
+msgstr ", put only content that needs enhancement into this group."
+
+msgid "，使用插件提供的推荐／工具结构；图标、边距与整卡链接沿用已确认样式。下方补充说明继续调用阅读折叠，实例 ID 必须唯一。"
+msgstr ", use the recommended/tool structure provided by the plug-in; icons, margins, and full-card links follow the confirmed styles. Supplementary instructions below continue to call reading folding, and the instance ID must be unique."
+
+msgid "，打开调色盘"
+msgstr ", open the color palette"
+
+msgid "，设置已保存。"
+msgstr ", settings saved."
+
+msgid "，附件 #"
+msgstr ", attachment #"
+
+msgid "：独立的原 maotk/note 区块，无需以上组件的外层包装。"
+msgstr ": Independent original maotk/note block, no need for outer packaging of the above components."
+
+msgid "；已恢复本次已写入的配置。"
+msgstr "; The configuration written this time has been restored."
+
+msgid "；文章短代码外层"
+msgstr "; Outer layer of article shortcode"
+
+msgid "；父主题版本"
+msgstr "; Parent theme version"
+
+msgid "；请取消此分类或先配置相应角色。"
+msgstr "; Please cancel this classification or configure the corresponding role first."
+
+msgid "；部分配置被其他窗口修改，未强行覆盖，请核对快照。"
+msgstr "; Some configurations were modified by other windows and were not forcibly overwritten. Please check the snapshot."
+
+msgid "；顶部 TAB 外层"
+msgstr ";Top TAB outer layer"

@@ -1,0 +1,84 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "登录已过期，请刷新页面。": [
+        "Login has expired, please refresh the page."
+      ],
+      "服务器未返回有效数据，请刷新记录核对结果。": [
+        "The server did not return valid data, please refresh the record verification results."
+      ],
+      "操作未完成。": [
+        "Operation not completed."
+      ],
+      "请求超时，请刷新记录核对任务状态后再试。": [
+        "The request timed out, please refresh the record and check the task status before trying again."
+      ],
+      "已导出": [
+        "Exported"
+      ],
+      "待确认": [
+        "To be confirmed"
+      ],
+      "处理中": [
+        "Processing"
+      ],
+      "已导入": [
+        "Imported"
+      ],
+      "未完成": [
+        "Not completed"
+      ],
+      "已恢复": [
+        "Restored"
+      ],
+      "配置导出已准备": [
+        "Configuration export prepared"
+      ],
+      "配置预检与恢复": [
+        "Configuration preflight and recovery"
+      ],
+      "来源：": [
+        "Source:"
+      ],
+      " 张本地图片": [
+        " local images"
+      ],
+      "可选：同时恢复模块启停状态": [
+        "Optional: restore the module start and stop status at the same time"
+      ],
+      "可导入，覆盖该分类当前配置": [
+        "Can be imported to overwrite the current configuration of this category"
+      ],
+      "还没有配置备份记录。": [
+        "Backup logging has not been configured."
+      ],
+      "配置导出": [
+        "Configuration export"
+      ],
+      "配置导入": [
+        "Configuration import"
+      ],
+      "查看记录": [
+        "View records"
+      ],
+      "处理中，请稍候…": [
+        "Processing, please wait..."
+      ],
+      "操作已完成，请查看结果。": [
+        "Operation completed, please view the results."
+      ],
+      "恢复此任务导入前的配置？已有新修改时会停止，媒体文件保留。": [
+        "Restore the configuration before importing this task? It will stop when there are new modifications and the media files will be retained."
+      ],
+      "请先修正私有备份目录配置。": [
+        "Please correct the private backup directory configuration first."
+      ]
+    }
+  }
+}

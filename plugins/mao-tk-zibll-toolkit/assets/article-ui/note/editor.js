@@ -1,5 +1,6 @@
 (function (wp, model, payload) {
   'use strict';
+  const translate = text => window.wp?.i18n?.__(text, 'mao-tk-zibll-toolkit') ?? text;
   if (!wp || !wp.hooks || !model || !payload || window.MaoTKNoteEditorReady) { return; }
   window.MaoTKNoteEditorReady = true;
   var el = wp.element.createElement, Fragment = wp.element.Fragment;
@@ -20,19 +21,19 @@
       var controls = [];
       ['light', 'dark'].forEach(function (key) {
         var explicit = Object.prototype.hasOwnProperty.call(own, key);
-        controls.push(el('div', { key: key }, el('p', null, (key === 'light' ? '浅色模式' : '深色模式') + ' · ' + (explicit ? '单块覆盖' : '继承') + ' ' + effective[key]), el(c.ColorPicker, { color: effective[key], enableAlpha: false, onChange: function (color) { if (typeof color === 'string' && /^#[0-9a-fA-F]{6}$/.test(color)) { set(key, color); } } }), el(c.Button, { variant: 'tertiary', onClick: function () { set(key, undefined); } }, '恢复该颜色继承')));
+        controls.push(el('div', { key: key }, el('p', null, (key === 'light' ? translate("浅色模式") : translate("深色模式")) + ' · ' + (explicit ? translate("单块覆盖") : translate("继承")) + ' ' + effective[key]), el(c.ColorPicker, { color: effective[key], enableAlpha: false, onChange: function (color) { if (typeof color === 'string' && /^#[0-9a-fA-F]{6}$/.test(color)) { set(key, color); } } }), el(c.Button, { variant: 'tertiary', onClick: function () { set(key, undefined); } }, translate("恢复该颜色继承"))));
       });
       function select(key, label, options) {
-        controls.push(el(c.SelectControl, { key: key, label: label, value: Object.prototype.hasOwnProperty.call(own, key) ? String(own[key]) : '', options: [{ label: '继承（当前：' + String(effective[key]) + '）', value: '' }].concat(options), onChange: function (value) { set(key, value === '' ? undefined : key === 'showIcon' ? value === 'true' : value); } }));
+        controls.push(el(c.SelectControl, { key: key, label: label, value: Object.prototype.hasOwnProperty.call(own, key) ? String(own[key]) : '', options: [{ label: translate("继承（当前：") + String(effective[key]) + '）', value: '' }].concat(options), onChange: function (value) { set(key, value === '' ? undefined : key === 'showIcon' ? value === 'true' : value); } }));
       }
-      select('badgePosition', '标签位置', [{ label: '左', value: 'left' }, { label: '中', value: 'center' }, { label: '右', value: 'right' }]);
-      select('iconPosition', '图标位置', [{ label: '文字前', value: 'before' }, { label: '文字后', value: 'after' }]);
-      select('iconKey', '本地图标', Object.keys(payload.icons).map(function (key) { return { label: payload.icons[key].label, value: key }; }));
-      controls.push(el(c.RangeControl, { key: 'size', label: '图标尺寸 · ' + (Object.prototype.hasOwnProperty.call(own, 'iconSize') ? '单块覆盖' : '继承'), value: effective.iconSize, min: 12, max: 28, onChange: function (value) { if (Number.isInteger(value) && value >= 12 && value <= 28) { set('iconSize', value); } } }), el(c.Button, { key: 'inherit-size', variant: 'tertiary', onClick: function () { set('iconSize', undefined); } }, '恢复尺寸继承'));
-      select('showIcon', '显示图标', [{ label: '显示', value: 'true' }, { label: '隐藏', value: 'false' }]);
-      select('titleColor', '内部标题颜色', [{ label: '跟随类型色', value: 'type' }, { label: '正文中性色', value: 'neutral' }]);
-      controls.push(el(c.Button, { key: 'inherit', variant: 'secondary', onClick: reset }, '全部恢复继承'), el(c.Button, { key: 'sealed', variant: 'tertiary', onClick: function () { var update = {}; update[overrideKey] = Object.assign({}, payload.baselines[type]); props.setAttributes(update); } }, '使用封板默认（单块覆盖）'));
-      return el(Fragment, null, el(BlockEdit, props), el(Inspector, null, el(c.PanelBody, { title: 'Toolkit 提示框外观', initialOpen: false }, !payload.enabled && el('p', null, '前台外观增强未启用或此文章类型未纳入范围。配置仍可保存，画布保留基础外观。'), el('p', null, '标签和标题的显示开关仍在原提示框设置中；内部标题不加入文章目录。'), controls)));
+      select('badgePosition', translate("标签位置"), [{ label: translate("左"), value: 'left' }, { label: translate("中"), value: 'center' }, { label: translate("右"), value: 'right' }]);
+      select('iconPosition', translate("图标位置"), [{ label: translate("文字前"), value: 'before' }, { label: translate("文字后"), value: 'after' }]);
+      select('iconKey', translate("本地图标"), Object.keys(payload.icons).map(function (key) { return { label: payload.icons[key].label, value: key }; }));
+      controls.push(el(c.RangeControl, { key: 'size', label: translate("图标尺寸 · ") + (Object.prototype.hasOwnProperty.call(own, 'iconSize') ? translate("单块覆盖") : translate("继承")), value: effective.iconSize, min: 12, max: 28, onChange: function (value) { if (Number.isInteger(value) && value >= 12 && value <= 28) { set('iconSize', value); } } }), el(c.Button, { key: 'inherit-size', variant: 'tertiary', onClick: function () { set('iconSize', undefined); } }, translate("恢复尺寸继承")));
+      select('showIcon', translate("显示图标"), [{ label: translate("显示"), value: 'true' }, { label: translate("隐藏"), value: 'false' }]);
+      select('titleColor', translate("内部标题颜色"), [{ label: translate("跟随类型色"), value: 'type' }, { label: translate("正文中性色"), value: 'neutral' }]);
+      controls.push(el(c.Button, { key: 'inherit', variant: 'secondary', onClick: reset }, translate("全部恢复继承")), el(c.Button, { key: 'sealed', variant: 'tertiary', onClick: function () { var update = {}; update[overrideKey] = Object.assign({}, payload.baselines[type]); props.setAttributes(update); } }, translate("使用封板默认（单块覆盖）")));
+      return el(Fragment, null, el(BlockEdit, props), el(Inspector, null, el(c.PanelBody, { title: translate("Toolkit 提示框外观"), initialOpen: false }, !payload.enabled && el('p', null, translate("前台外观增强未启用或此文章类型未纳入范围。配置仍可保存，画布保留基础外观。")), el('p', null, translate("标签和标题的显示开关仍在原提示框设置中；内部标题不加入文章目录。")), controls)));
     };
   });
   wp.hooks.addFilter('editor.BlockListBlock', 'mao-tk-toolkit/note-preview', function (BlockListBlock) {

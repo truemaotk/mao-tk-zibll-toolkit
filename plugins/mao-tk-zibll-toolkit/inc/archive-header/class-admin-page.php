@@ -27,24 +27,24 @@ final class AdminPage
 
     public function menu(): void
     {
-        $screen = add_submenu_page(Admin::SLUG, '归档页顶部', '归档页顶部', 'manage_options', self::SLUG, array($this, 'render'));
+        $screen = add_submenu_page(Admin::SLUG, __('归档页顶部', 'mao-tk-zibll-toolkit'), __('归档页顶部', 'mao-tk-zibll-toolkit'), 'manage_options', self::SLUG, array($this, 'render'));
         $this->admin->allow_screen((string) $screen);
     }
 
     public function save(): void
     {
         if (!current_user_can('manage_options')) {
-            wp_die('需要管理员权限。', '', array('response' => 403));
+            wp_die(__('需要管理员权限。', 'mao-tk-zibll-toolkit'), '', array('response' => 403));
         }
         if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
-            wp_die('请通过设置页提交。', '', array('response' => 405));
+            wp_die(__('请通过设置页提交。', 'mao-tk-zibll-toolkit'), '', array('response' => 405));
         }
         check_admin_referer(self::ACTION);
         $values = array();
         foreach (Settings::defaults() as $key => $default) {
             $input = $_POST[$key] ?? '0';
             if (!in_array($input, array('0', '1'), true)) {
-                wp_die('归档页顶部设置无效。', '', array('response' => 400));
+                wp_die(__('归档页顶部设置无效。', 'mao-tk-zibll-toolkit'), '', array('response' => 400));
             }
             $values[$key] = $input === '1';
         }
@@ -57,9 +57,9 @@ final class AdminPage
     public function render(): void
     {
         if (!current_user_can('manage_options')) {
-            wp_die('需要管理员权限。', '', array('response' => 403));
+            wp_die(__('需要管理员权限。', 'mao-tk-zibll-toolkit'), '', array('response' => 403));
         }
-        $switch_module = array('id' => Settings::MODULE, 'name' => '归档页顶部', 'enabled' => false, 'status' => 'disabled');
+        $switch_module = array('id' => Settings::MODULE, 'name' => __('归档页顶部', 'mao-tk-zibll-toolkit'), 'enabled' => false, 'status' => 'disabled');
         foreach ($this->manager->all() as $module) {
             if ($module['id'] === Settings::MODULE) {
                 $switch_module = $module;

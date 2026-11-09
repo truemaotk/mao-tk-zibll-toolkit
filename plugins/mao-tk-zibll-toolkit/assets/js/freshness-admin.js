@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    const translate = text => window.wp?.i18n?.__(text, 'mao-tk-zibll-toolkit') ?? text;
     function initialize() {
         var settings = document.getElementById('mao-tk-freshness-settings');
         var preview = document.getElementById('mao-tk-freshness-preview-form');
@@ -7,7 +8,7 @@
         if (!settings || !preview) { return; }
         var timer;
         function refresh() { if (settings.checkValidity() && preview.requestSubmit) { preview.requestSubmit(); } }
-        settings.addEventListener('input', function () { if (note) { note.textContent = '有未保存的修改，预览不影响正式文章。'; } window.clearTimeout(timer); timer = window.setTimeout(refresh, 350); });
+        settings.addEventListener('input', function () { if (note) { note.textContent = translate("有未保存的修改，预览不影响正式文章。"); } window.clearTimeout(timer); timer = window.setTimeout(refresh, 350); });
         preview.addEventListener('submit', function (event) {
             window.clearTimeout(timer);
             if (!settings.reportValidity()) { event.preventDefault(); return; }

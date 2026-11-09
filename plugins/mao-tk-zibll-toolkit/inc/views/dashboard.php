@@ -19,6 +19,9 @@ defined('ABSPATH') || exit;
                 <p class="mao-tk-toolkit__intro"><?php esc_html_e('集中管理你的主题扩展，按需启用每一项能力。', 'mao-tk-zibll-toolkit'); ?></p>
             </div>
         </div>
+        <a class="mao-tk-toolkit__language" href="<?php echo esc_url(get_edit_profile_url() . '#locale'); ?>">
+            <?php echo esc_html(get_user_locale() === 'zh_CN' ? __('界面语言 · 简体中文', 'mao-tk-zibll-toolkit') : __('界面语言', 'mao-tk-zibll-toolkit')); ?>
+        </a>
     </header>
     <?php $switch_notice = $notice; require MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/views/switch-feedback.php'; ?>
 
@@ -55,12 +58,12 @@ defined('ABSPATH') || exit;
                 <div class="mao-tk-toolkit__module-list">
                     <?php
                     $groups = array(
-                        'display' => array('文章展示', array('top-info', 'article-freshness', 'archive-header')),
-                        'content' => array('正文组件', array('article-ui-code', 'article-ui-link-preview', 'article-ui-tabs', 'article-ui-postsbox', 'article-ui-reading', 'article-ui-resources', 'article-note')),
-                        'pages' => array('页面与链接', array('page-showcase', 'private-links', 'user-profile-presets', 'page-order-query')),
-                        'site' => array('站点功能', array('site-maintenance', 'site-not-found', 'system-mail-appearance', 'site-custom-footer', 'r2-downloads', 'r2-media')),
-                        'migration' => array('导入&导出', array('data-migration-links','data-migration-posts','data-migration-products')),
-                        'workspace' => array('工作台与扩展', array()),
+                        'display' => array(__('文章展示', 'mao-tk-zibll-toolkit'), array('top-info', 'article-freshness', 'archive-header')),
+                        'content' => array(__('正文组件', 'mao-tk-zibll-toolkit'), array('article-ui-code', 'article-ui-link-preview', 'article-ui-tabs', 'article-ui-postsbox', 'article-ui-reading', 'article-ui-resources', 'article-note')),
+                        'pages' => array(__('页面与链接', 'mao-tk-zibll-toolkit'), array('page-showcase', 'private-links', 'user-profile-presets', 'page-order-query')),
+                        'site' => array(__('站点功能', 'mao-tk-zibll-toolkit'), array('site-maintenance', 'site-not-found', 'system-mail-appearance', 'site-custom-footer', 'r2-downloads', 'r2-media')),
+                        'migration' => array(__('导入&导出', 'mao-tk-zibll-toolkit'), array('data-migration-links','data-migration-posts','data-migration-products')),
+                        'workspace' => array(__('工作台与扩展', 'mao-tk-zibll-toolkit'), array()),
                     );
                     $known = array_merge($groups['display'][1], $groups['content'][1], $groups['pages'][1], $groups['site'][1], $groups['migration'][1]);
                     foreach ($groups as $group_id => $group) :
@@ -68,7 +71,7 @@ defined('ABSPATH') || exit;
                             return $group_id === 'workspace' ? !in_array($module['id'], $known, true) : in_array($module['id'], $group[1], true);
                         });
                         if (!$group_modules) { continue; }
-                        Admin::disclosure_start('mao-tk-group-' . $group_id, $group[0], count($group_modules) . ' 项模块', false, 'dashboard-modules');
+                        Admin::disclosure_start('mao-tk-group-' . $group_id, $group[0], count($group_modules) . __(' 项模块', 'mao-tk-zibll-toolkit'), false, 'dashboard-modules');
                     ?>
                     <?php foreach ($group_modules as $module) : ?>
                         <?php $state = $this->state($module['status']); ?>
@@ -79,21 +82,21 @@ defined('ABSPATH') || exit;
                                 </div>
                                 <p><?php echo esc_html($module['description']); ?></p>
                                 <p class="mao-tk-toolkit__module-note" id="<?php echo esc_attr('mao-tk-note-' . $module['id']); ?>"><?php echo esc_html($state[2]); ?></p>
-                                <?php if ($module['id'] === 'top-info') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . TopInfo\AdminPage::SLUG)); ?>">设置与预览</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'article-freshness') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . Freshness\AdminPage::SLUG)); ?>">设置与预览</a></p><?php endif; ?>
-                                <?php if (strpos($module['id'], 'article-ui-') === 0) : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ArticleUI\AdminPage::SLUG)); ?>">组件与使用说明</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'article-note') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ArticleNote\AdminPage::SLUG)); ?>">设置与预览</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'page-showcase') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . Showcase\AdminPage::SLUG)); ?>">管理案例、分类与外观</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'private-links') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . PrivateLinks\AdminPage::SLUG)); ?>">管理角色与账号可见范围</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'site-maintenance') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . Maintenance\AdminPage::SLUG)); ?>">编辑维护页面与预览</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'user-profile-presets') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ProfilePresets\AdminPage::SLUG)); ?>">管理头像、背景与注册规则</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'page-order-query') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . OrderQuery\AdminPage::SLUG)); ?>">设置与创建查询页面</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'site-not-found') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . NotFound\AdminPage::SLUG)); ?>">设置与预览 404 公益页面</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'site-custom-footer') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . CustomFooter\AdminPage::SLUG)); ?>">页脚栏目、社交图标与预览</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'archive-header') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ArchiveHeader\AdminPage::SLUG)); ?>">封面和正文描述设置</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'r2-downloads') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . R2Downloads\AdminPage::SLUG)); ?>">上传文件和生成下载引用</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'r2-media') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . R2Media\AdminPage::SLUG)); ?>">设置媒体连接与历史图片同步</a></p><?php endif; ?>
-                                <?php if ($module['id'] === 'system-mail-appearance') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . SystemMail\AdminPage::SLUG)); ?>">邮件通用模板、类型设置与预览</a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'top-info') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . TopInfo\AdminPage::SLUG)); ?>"><?php esc_html_e('设置与预览', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'article-freshness') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . Freshness\AdminPage::SLUG)); ?>"><?php esc_html_e('设置与预览', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if (strpos($module['id'], 'article-ui-') === 0) : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ArticleUI\AdminPage::SLUG)); ?>"><?php esc_html_e('组件与使用说明', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'article-note') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ArticleNote\AdminPage::SLUG)); ?>"><?php esc_html_e('设置与预览', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'page-showcase') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . Showcase\AdminPage::SLUG)); ?>"><?php esc_html_e('管理案例、分类与外观', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'private-links') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . PrivateLinks\AdminPage::SLUG)); ?>"><?php esc_html_e('管理角色与账号可见范围', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'site-maintenance') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . Maintenance\AdminPage::SLUG)); ?>"><?php esc_html_e('编辑维护页面与预览', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'user-profile-presets') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ProfilePresets\AdminPage::SLUG)); ?>"><?php esc_html_e('管理头像、背景与注册规则', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'page-order-query') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . OrderQuery\AdminPage::SLUG)); ?>"><?php esc_html_e('设置与创建查询页面', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'site-not-found') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . NotFound\AdminPage::SLUG)); ?>"><?php esc_html_e('设置与预览 404 公益页面', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'site-custom-footer') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . CustomFooter\AdminPage::SLUG)); ?>"><?php esc_html_e('页脚栏目、社交图标与预览', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'archive-header') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . ArchiveHeader\AdminPage::SLUG)); ?>"><?php esc_html_e('封面和正文描述设置', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'r2-downloads') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . R2Downloads\AdminPage::SLUG)); ?>"><?php esc_html_e('上传文件和生成下载引用', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'r2-media') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . R2Media\AdminPage::SLUG)); ?>"><?php esc_html_e('设置媒体连接与历史图片同步', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
+                                <?php if ($module['id'] === 'system-mail-appearance') : ?><p class="mao-tk-toolkit__module-note"><a href="<?php echo esc_url(admin_url('admin.php?page=' . SystemMail\AdminPage::SLUG)); ?>"><?php esc_html_e('邮件通用模板、类型设置与预览', 'mao-tk-zibll-toolkit'); ?></a></p><?php endif; ?>
                             </div>
                             <div class="mao-tk-toolkit__module-actions">
                                 <?php $switch_module = $module; $switch_valid = $storage_valid; $switch_return_page = self::SLUG; require MAO_TK_ZIBLL_TOOLKIT_DIR . 'inc/views/module-switch.php'; ?>

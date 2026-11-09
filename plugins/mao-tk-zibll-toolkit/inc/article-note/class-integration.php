@@ -47,6 +47,7 @@ final class Integration
         wp_register_style('mao-tk-toolkit-note-editor-base', $url . 'editor-base.css', array(self::BASE), $version);
         wp_register_script('mao-tk-toolkit-note-model', $url . 'model.js', array(), $version, true);
         wp_register_script(self::EDITOR, $url . 'editor.js', array('mao-tk-toolkit-note-model', 'wp-hooks', 'wp-blocks', 'wp-block-editor', 'wp-components', 'wp-element', 'wp-i18n'), $version, true);
+        wp_set_script_translations(self::EDITOR, 'mao-tk-zibll-toolkit', MAO_TK_ZIBLL_TOOLKIT_DIR . 'languages');
         wp_register_script(self::PROVIDER, $url . 'provider.js', array(self::EDITOR), $version, true);
     }
     public function adapt_args(array $args, string $name): array

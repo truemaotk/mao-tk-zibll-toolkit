@@ -10,8 +10,8 @@ defined('ABSPATH') || exit;
 final class TopInfoModule implements Module
 {
     public function id(): string { return 'top-info'; }
-    public function name(): string { return '文章顶部信息'; }
-    public function description(): string { return '保留原版文章横幅效果，展示标题、封面和阅读信息；设置与预览独立于前台开关。'; }
+    public function name(): string { return __('文章顶部信息', 'mao-tk-zibll-toolkit'); }
+    public function description(): string { return __('保留原版文章横幅效果，展示标题、封面和阅读信息；设置与预览独立于前台开关。', 'mao-tk-zibll-toolkit'); }
     public function requires_zibll(): bool { return true; }
     public function boot(): void
     {

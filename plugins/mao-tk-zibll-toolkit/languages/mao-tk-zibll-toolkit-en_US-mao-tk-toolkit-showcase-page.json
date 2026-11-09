@@ -1,0 +1,36 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "全部案例": [
+        "All cases"
+      ],
+      "原分类已移除，请重新选择": [
+        "The original category has been removed, please select again."
+      ],
+      "MaoTK 案例展示": [
+        "MaoTK case presentation"
+      ],
+      "案例分类": [
+        "Case Classification"
+      ],
+      "此页面只关联分类，案例资料在Toolkit后台统一管理。": [
+        "This page is only associated with categories, and case information is managed uniformly in the Toolkit background."
+      ],
+      "在页面“模板”中选择“MaoTK 案例展示”，发布后自动显示案例。": [
+        "Select \"MaoTK Case Display\" in the \"Template\" page to automatically display the case after publishing."
+      ],
+      "案例展示模块未启用；当前选择会保留，前台暂不显示案例。": [
+        "The case display module is not enabled; the current selection will be retained and the case will not be displayed in the public site."
+      ],
+      "打开中央案例库": [
+        "Open the central case library"
+      ]
+    }
+  }
+}

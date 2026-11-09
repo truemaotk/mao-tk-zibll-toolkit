@@ -1,0 +1,123 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "设置已同步": [
+        "Settings synced"
+      ],
+      "有未保存的修改": [
+        "There are unsaved changes"
+      ],
+      "请求超时，请刷新核对保存结果后再试。": [
+        "The request timed out, please refresh and check the saved results before trying again."
+      ],
+      "会话已过期，请刷新页面。": [
+        "The session has expired, please refresh the page."
+      ],
+      "服务器未返回有效数据，请稍后重试。": [
+        "The server did not return valid data, please try again later."
+      ],
+      "请求未完成。": [
+        "Request not completed."
+      ],
+      "更新预览…": [
+        "Update preview…"
+      ],
+      "保留原邮件的回复地址": [
+        "Use the original reply address"
+      ],
+      "原生样式 · 结构预览": [
+        "Native styles · Structure preview"
+      ],
+      "正式模板 · 已更新": [
+        "Preview updated"
+      ],
+      "单独设置": [
+        "Individual settings"
+      ],
+      "独立设置": [
+        "Standalone setup"
+      ],
+      "继承通用": [
+        "Inherit universal"
+      ],
+      "选择 PNG": [
+        "Select PNG"
+      ],
+      "媒体库未加载，请填写 PNG 图片地址。": [
+        "Media library not loaded, please fill in the PNG image address."
+      ],
+      "选择邮件专用高清 PNG": [
+        "Select HD PNG for mail"
+      ],
+      "使用此 PNG": [
+        "Use this PNG"
+      ],
+      "请选择 PNG 图片。": [
+        "Please select a PNG image."
+      ],
+      "已选择。建议原图宽度至少为显示宽度的两倍，以便高清显示。": [
+        "Selected. It is recommended that the width of the original image be at least twice the display width for high-definition display."
+      ],
+      "已选择邮件 Logo；网站导航 Logo 保持原设置。": [
+        "Email logo selected; website navigation logo remains as is."
+      ],
+      "使用原尺寸高清 PNG，建议至少为显示宽度的 2 倍。独立于网站导航 Logo。": [
+        "Use full-size HD PNGs, at least 2x the display width recommended. Independent of website navigation logo."
+      ],
+      "可写普通文字并插入变量。验证码、有效期及原始通知详情由系统保留，不会因自定义文案丢失。": [
+        "Can write normal text and insert variables. The verification code, validity period and original notification details are retained by the system and will not be lost due to custom copywriting."
+      ],
+      "通用设置": [
+        "General settings"
+      ],
+      "原生模式": [
+        "Native mode"
+      ],
+      " 项独立": [
+        " independent"
+      ],
+      "全部继承": [
+        "Inherit all"
+      ],
+      "真正可用的变量（点击插入当前文案）": [
+        "Really usable variables (click to insert the current copy)"
+      ],
+      "插入变量 ": [
+        "Insert variables "
+      ],
+      "通用设置供已接入类型继承。邮件专用 Logo 不修改网站导航 Logo。": [
+        "Supported email types inherit these settings. The email logo is independent of the site logo."
+      ],
+      "调整后只影响继续继承这些字段的邮件。": [
+        "The adjustment only affects emails that continue to inherit these fields."
+      ],
+      "仅勾选的项目单独配置，其余继续继承通用设置。": [
+        "Only the checked items are configured individually, and the rest continue to inherit the common settings."
+      ],
+      "独立配置已保留，切回“单独配置此类型”即可继续使用。": [
+        "The independent configuration has been retained. Switch back to \"Configure this type separately\" to continue using it."
+      ],
+      "系统邮件手机预览": [
+        "System email mobile preview"
+      ],
+      "系统邮件桌面预览": [
+        "System mail desktop preview"
+      ],
+      "邮件设置已保存。": [
+        "Mail settings saved."
+      ],
+      "请输入有效的测试邮箱。": [
+        "Please enter a valid test email."
+      ],
+      "正在交给原邮件发送系统…": [
+        "Handing over to original email sending system..."
+      ]
+    }
+  }
+}

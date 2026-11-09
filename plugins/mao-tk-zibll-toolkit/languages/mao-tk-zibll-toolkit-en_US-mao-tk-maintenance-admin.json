@@ -1,0 +1,24 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "有未保存的修改，可先预览再保存。": [
+        "There are unsaved modifications. You can preview them first and then save them."
+      ],
+      "已提交预览；当前输入尚未保存。": [
+        "Preview submitted; current input not saved."
+      ],
+      "选择维护页 Logo": [
+        "Select maintenance page logo"
+      ],
+      "使用此图片": [
+        "Use this image"
+      ]
+    }
+  }
+}

@@ -24,30 +24,36 @@ if ($managed) {
     $total = $bulk['total'];
     $elapsed -= Sync::paused_seconds($bulk['job']);
 }
-$eta = '正在估算';
+$eta = __('正在估算', 'mao-tk-zibll-toolkit');
 if ($tracked && $done >= 2 && $total > $done && $elapsed > 0) {
     $seconds = (int) ceil(($total - $done) * $elapsed / $done);
-    $eta = $seconds < 60 ? '约 ' . $seconds . ' 秒' : ($seconds < 3600 ? '约 ' . (int) ceil($seconds / 60) . ' 分钟' : '约 ' . (int) ceil($seconds / 3600) . ' 小时');
+    if ($seconds < 60) {
+        $eta = sprintf(__('约 %d 秒', 'mao-tk-zibll-toolkit'), $seconds);
+    } elseif ($seconds < 3600) {
+        $eta = sprintf(__('约 %d 分钟', 'mao-tk-zibll-toolkit'), (int) ceil($seconds / 60));
+    } else {
+        $eta = sprintf(__('约 %d 小时', 'mao-tk-zibll-toolkit'), (int) ceil($seconds / 3600));
+    }
 }
 
 $badge = 'neutral';
-$label = '待同步';
+$label = __('待同步', 'mao-tk-zibll-toolkit');
 if (!empty($bulk['interrupted'])) {
-    $label = '任务已中断';
+    $label = __('任务已中断', 'mao-tk-zibll-toolkit');
     $badge = 'warning';
 } elseif ($paused) {
-    $label = $pausing ? '正在暂停' : '已暂停';
+    $label = $pausing ? __('正在暂停', 'mao-tk-zibll-toolkit') : __('已暂停', 'mao-tk-zibll-toolkit');
     $badge = 'warning';
 } elseif ($backoff) {
-    $label = '等待重试';
+    $label = __('等待重试', 'mao-tk-zibll-toolkit');
     $badge = 'warning';
 } elseif ($waiting) {
-    $label = '等待后台任务';
+    $label = __('等待后台任务', 'mao-tk-zibll-toolkit');
     $badge = 'warning';
 } elseif ($active) {
-    $label = $scanning ? ($tracked && $done === 0 ? '等待扫描' : '扫描中') : '同步中';
+    $label = $scanning ? ($tracked && $done === 0 ? __('等待扫描', 'mao-tk-zibll-toolkit') : __('扫描中', 'mao-tk-zibll-toolkit')) : __('同步中', 'mao-tk-zibll-toolkit');
 } elseif (isset($bulk['queued'])) {
-    $label = !$tracked ? '已排队' : ($failed ? '处理结束，有失败' : ($queued ? '同步完成' : '没有符合条件的历史图片'));
+    $label = !$tracked ? __('已排队', 'mao-tk-zibll-toolkit') : ($failed ? __('处理结束，有失败', 'mao-tk-zibll-toolkit') : ($queued ? __('同步完成', 'mao-tk-zibll-toolkit') : __('没有符合条件的历史图片', 'mao-tk-zibll-toolkit')));
     $badge = $tracked ? ($failed ? 'warning' : 'success') : 'neutral';
 }
 ?>
@@ -56,17 +62,30 @@ if (!empty($bulk['interrupted'])) {
         <?php if ($active && !$waiting && !$backoff && (!$paused || $pausing)) : ?><span class="mtk-r2-media__pulse" aria-hidden="true"></span><?php endif; ?>
         <?php echo esc_html($label); ?>
     </span>
-    <?php if ($active && $managed) : ?><span class="mtk-r2-media__muted"><?php echo ($bulk['mode'] ?? '') === 'missing' ? '仅补传未同步' : '完整核对'; ?></span><?php endif; ?>
-    <?php if ($active && !$paused && !$waiting && !$backoff && $tracked) : ?><span class="mtk-r2-media__muted">预计剩余 <?php echo esc_html($eta); ?></span><?php endif; ?>
+    <?php if ($active && $managed) : ?><span class="mtk-r2-media__muted"><?php echo ($bulk['mode'] ?? '') === 'missing' ? __('仅补传未同步', 'mao-tk-zibll-toolkit') : __('完整核对', 'mao-tk-zibll-toolkit'); ?></span><?php endif; ?>
+    <?php if ($active && !$paused && !$waiting && !$backoff && $tracked) : ?><span class="mtk-r2-media__muted"><?php echo esc_html(sprintf(__('预计剩余 %s', 'mao-tk-zibll-toolkit'), $eta)); ?></span><?php endif; ?>
 </div>
 <?php if ($active) : ?>
-    <progress class="mtk-r2-media__progress" max="<?php echo max(1, $total); ?>" <?php if ($managed || ($tracked && ($done > 0 || $waiting))) : ?>value="<?php echo min($total, $done); ?>"<?php endif; ?> aria-label="<?php echo $scanning ? '扫描进度' : '同步进度'; ?>"></progress>
+    <progress class="mtk-r2-media__progress" max="<?php echo max(1, $total); ?>" <?php if ($managed || ($tracked && ($done > 0 || $waiting))) : ?>value="<?php echo min($total, $done); ?>"<?php endif; ?> aria-label="<?php echo esc_attr($scanning ? __('扫描进度', 'mao-tk-zibll-toolkit') : __('同步进度', 'mao-tk-zibll-toolkit')); ?>"></progress>
 <?php endif; ?>
 <?php if (isset($bulk['queued'])) : ?>
-    <p class="mtk-r2-media__muted"><?php if ($managed || ($scanning && $tracked)) : ?>已扫描 <?php echo (int) $bulk['scanned']; ?> / <?php echo $total; ?> 个附件 · <?php endif; ?>已排队 <?php echo $queued; ?> 个<?php if ($tracked) : ?> · 已处理 <?php echo $processed; ?> 个<?php if ($failed) : ?> · 失败 <?php echo $failed; ?> 个<?php endif; ?><?php endif; ?></p>
+    <?php
+    $counts = array();
+    if ($managed || ($scanning && $tracked)) {
+        $counts[] = sprintf(__('已扫描 %1$d / %2$d 个附件', 'mao-tk-zibll-toolkit'), (int) $bulk['scanned'], $total);
+    }
+    $counts[] = sprintf(__('已排队 %d 个', 'mao-tk-zibll-toolkit'), $queued);
+    if ($tracked) {
+        $counts[] = sprintf(__('已处理 %d 个', 'mao-tk-zibll-toolkit'), $processed);
+        if ($failed) {
+            $counts[] = sprintf(__('失败 %d 个', 'mao-tk-zibll-toolkit'), $failed);
+        }
+    }
+    ?>
+    <p class="mtk-r2-media__muted"><?php echo esc_html(implode(' · ', $counts)); ?></p>
 <?php endif; ?>
-<?php if ($waiting) : ?><p class="mtk-r2-media__muted">超过 90 秒未收到进度。若持续停在这里，请检查 WP-Cron。</p><?php endif; ?>
-<?php if ($active && !$managed) : ?><p class="mtk-r2-media__muted">旧版任务将继续处理。新建的批量任务支持暂停和继续。</p><?php endif; ?>
-<?php if ($pausing) : ?><p class="mtk-r2-media__muted">当前图片文件处理后即暂停。</p><?php endif; ?>
-<?php if ($backoff) : ?><p class="mtk-r2-media__muted">后台将在 <?php echo esc_html(wp_date('H:i:s', $next)); ?> 后恢复处理。</p><?php endif; ?>
-<?php if (!empty($last_error['time']) && (!$managed || ($last_error['job'] ?? '') === $bulk['job'])) : ?><p class="mtk-r2-media__muted">最近一次失败 <?php echo esc_html(wp_date('Y-m-d H:i', (int) $last_error['time'])); ?>，附件 #<?php echo (int) $last_error['id']; ?>。<?php echo esc_html($last_error['message']); ?></p><?php endif; ?>
+<?php if ($waiting) : ?><p class="mtk-r2-media__muted"><?php esc_html_e('超过 90 秒未收到进度。若持续停在这里，请检查 WP-Cron。', 'mao-tk-zibll-toolkit'); ?></p><?php endif; ?>
+<?php if ($active && !$managed) : ?><p class="mtk-r2-media__muted"><?php esc_html_e('旧版任务将继续处理。新建的批量任务支持暂停和继续。', 'mao-tk-zibll-toolkit'); ?></p><?php endif; ?>
+<?php if ($pausing) : ?><p class="mtk-r2-media__muted"><?php esc_html_e('当前图片文件处理后即暂停。', 'mao-tk-zibll-toolkit'); ?></p><?php endif; ?>
+<?php if ($backoff) : ?><p class="mtk-r2-media__muted"><?php echo esc_html(sprintf(__('后台将在 %s 后恢复处理。', 'mao-tk-zibll-toolkit'), wp_date('H:i:s', $next))); ?></p><?php endif; ?>
+<?php if (!empty($last_error['time']) && (!$managed || ($last_error['job'] ?? '') === $bulk['job'])) : ?><p class="mtk-r2-media__muted"><?php esc_html_e('最近一次失败', 'mao-tk-zibll-toolkit'); ?> <?php echo esc_html(wp_date('Y-m-d H:i', (int) $last_error['time'])); ?><?php esc_html_e('，附件 #', 'mao-tk-zibll-toolkit'); ?><?php echo (int) $last_error['id']; ?>。<?php echo esc_html($last_error['message']); ?></p><?php endif; ?>

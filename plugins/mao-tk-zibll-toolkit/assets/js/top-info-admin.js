@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    const translate = text => window.wp?.i18n?.__(text, 'mao-tk-zibll-toolkit') ?? text;
     function initialize() {
         var settings = document.getElementById('mao-tk-top-info-settings');
         var form = document.getElementById('mao-tk-top-info-preview-form');
@@ -70,7 +71,7 @@
                 field.querySelector('[data-color-hue]').value = String(Math.min(359, Math.round(state.h)));
                 var label = 'H ' + Math.round(state.h) + '° · S ' + Math.round(state.s * 100) + '% · V ' + Math.round(state.v * 100) + '%';
                 field.querySelector('[data-color-hsv]').textContent = label;
-                field.querySelector('[data-color-sv]').setAttribute('aria-label', field.querySelector('legend').textContent + '色板，' + label + '，' + hex);
+                field.querySelector('[data-color-sv]').setAttribute('aria-label', field.querySelector('legend').textContent + translate("色板，") + label + '，' + hex);
             }
             field.querySelector('[data-color-output]').textContent = field.querySelector('[data-color-opacity]').value + '%';
             field.querySelectorAll('[data-color-swatch]').forEach(function (button) {
@@ -85,7 +86,7 @@
             var range = control.querySelector('[data-spacing-range]');
             if (source === range) { value.value = range.value; }
             var number = spacingNumber(value.value);
-            value.setCustomValidity(number === null ? '请输入 0—200 的整数。' : '');
+            value.setCustomValidity(number === null ? translate("请输入 0—200 的整数。") : '');
             value.setAttribute('aria-invalid', String(number === null));
             if (number !== null) { value.value = String(number); range.value = String(number); }
         }
@@ -111,7 +112,7 @@
                     if (number === null) { spacingValid = false; return; }
                     banner.style.setProperty('--maotk-top-info-' + control.getAttribute('data-spacing-key').replace(/_/g, '-'), number + 'px');
                 });
-                if (note) { note.textContent = !colorsValid ? '填写有效的十六进制颜色后，预览会继续自动更新。' : (!spacingValid ? '留白请输入 0—200 的整数；无效项保留上一次有效预览。' : '预览已实时更新，正式页面未改变。'); }
+                if (note) { note.textContent = !colorsValid ? translate("填写有效的十六进制颜色后，预览会继续自动更新。") : (!spacingValid ? translate("留白请输入 0—200 的整数；无效项保留上一次有效预览。") : translate("预览已实时更新，正式页面未改变。")); }
             } catch (error) { /* Same-origin preview may be navigating or unavailable. */ }
         }
         function refresh() {
@@ -213,7 +214,7 @@
             });
         }
         settings.addEventListener('input', function (event) {
-            if (dirty) { dirty.textContent = '有未保存的修改；实时预览不会发布修改。'; }
+            if (dirty) { dirty.textContent = translate("有未保存的修改；实时预览不会发布修改。"); }
             var field = event.target.closest('[data-color-field]');
             var spacing = event.target.closest('[data-spacing-key]');
             if (field) { syncField(field, event.target); applyLiveSettings(); }
@@ -235,7 +236,7 @@
             });
             append('action', form.getAttribute('data-preview-action'));
             append('_wpnonce', form.getAttribute('data-preview-nonce'));
-            if (note) { note.textContent = '正在加载预览；正式设置未改变。'; }
+            if (note) { note.textContent = translate("正在加载预览；正式设置未改变。"); }
             watchPreview();
         });
         form.querySelectorAll('[data-preview-device]').forEach(function (button) {
@@ -265,7 +266,7 @@
             search.removeAttribute('aria-busy');
             postId.value = String(item.id);
             search.value = item.id ? item.title : '';
-            if (selection) { selection.textContent = item.id ? '当前：' + item.type + ' #' + item.id + ' · ' + item.title : '当前：样例文章（演示数据）'; }
+            if (selection) { selection.textContent = item.id ? translate("当前：") + item.type + ' #' + item.id + ' · ' + item.title : translate("当前：样例文章（演示数据）"); }
             closeResults(); refresh();
         }
         async function lookup() {
@@ -297,11 +298,11 @@
                     option.addEventListener('click', function () { choose(item); });
                     results.appendChild(option);
                 });
-                if (!items.length) { var empty = document.createElement('li'); empty.setAttribute('role', 'presentation'); empty.textContent = '没有匹配内容，请尝试 ID 或更具体的标题。'; results.appendChild(empty); }
+                if (!items.length) { var empty = document.createElement('li'); empty.setAttribute('role', 'presentation'); empty.textContent = translate("没有匹配内容，请尝试 ID 或更具体的标题。"); results.appendChild(empty); }
                 results.hidden = false; search.setAttribute('aria-expanded', 'true'); activate(items.length ? 0 : -1);
-                if (note && data.data.limited) { note.textContent = '最多显示 20 项，请继续输入以缩小范围。'; }
+                if (note && data.data.limited) { note.textContent = translate("最多显示 20 项，请继续输入以缩小范围。"); }
             } catch (error) {
-                if (error.name !== 'AbortError' && version === searchVersion && note) { note.textContent = '搜索暂不可用，请刷新页面后重试。'; closeResults(); }
+                if (error.name !== 'AbortError' && version === searchVersion && note) { note.textContent = translate("搜索暂不可用，请刷新页面后重试。"); closeResults(); }
             } finally { if (version === searchVersion) { search.removeAttribute('aria-busy'); } }
         }
         if (search && results) {
@@ -328,7 +329,7 @@
                 applyLiveSettings();
                 if (window.MaoTKTopInfoReveal) { window.MaoTKTopInfoReveal.start(banner, { late: true }); }
             }
-            else if (note) { note.textContent = '预览未能加载，请查看画布提示或刷新页面重试。'; }
+            else if (note) { note.textContent = translate("预览未能加载，请查看画布提示或刷新页面重试。"); }
         });
         if (window.ResizeObserver && scroll) { new ResizeObserver(fit).observe(scroll); }
         window.addEventListener('resize', fit, { passive: true });

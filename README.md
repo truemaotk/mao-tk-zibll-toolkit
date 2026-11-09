@@ -2,7 +2,7 @@
 
 适用于 WordPress + Zibll 子比主题的模块化工具箱，同时提供文章写作技能 `maotk-toolkit-articles`。
 
-**稳定发行：1.22.0 · 当前候选版：1.24.0-rc.9 · SKILL：1.3.0**
+**稳定发行：1.22.0 · 当前候选版：1.24.0-rc.10 · SKILL：1.3.0**
 
 > 本仓库按作者决定公开展示源码，**暂未授予开源许可**。公开可见不等于允许任意使用、修改或再分发。第三方组件继续适用各自随附许可，详见 [权利说明](RIGHTS.md) 与 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
@@ -16,7 +16,7 @@
 | `maotk-toolkit-articles-1.3.0.zip` | 本地 Codex 写作技能；保持整个技能文件夹完整 |
 | `SHA256SUMS.txt` | 对应发行包的 SHA-256 校验值 |
 
-稳定版见 [Toolkit 1.22.0 发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.22.0)。R2 下载、图片同步和并行上传使用 [Toolkit 1.24.0-rc.9 预发布](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.24.0-rc.9)。本版 R2 下载需要配套升级下载 Worker，步骤见 [R2 下载指南](plugins/mao-tk-zibll-toolkit/R2-DOWNLOADS.md#v2-worker-升级顺序)。SKILL 1.3.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.3.0)，两者分别安装与更新。技能包含 WebP／无损图片、新文章封面、Rank Math 与旧文完整保留流程；1.3.0 增加资源迁入新站、旧站引用扫描、附件与免费／付费权限验收。
+稳定版见 [Toolkit 1.22.0 发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.22.0)。简体中文与英文后台，以及 R2 下载、图片同步和并行上传，见 [Toolkit 1.24.0-rc.10 预发布](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.24.0-rc.10)。从 rc.9 升级可继续使用已部署的 Worker。更早版本接入 R2 下载时，按 [R2 下载指南](plugins/mao-tk-zibll-toolkit/R2-DOWNLOADS.md#v2-worker-升级顺序) 配置。SKILL 1.3.0 使用独立 [技能发布页](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/skill-v1.3.0)，两者分别安装与更新。技能包含 WebP／无损图片、新文章封面、Rank Math 与旧文完整保留流程。1.3.0 增加资源迁入新站、旧站引用扫描、附件与免费／付费权限验收。
 
 GitHub 自动生成的 **Source code / Download ZIP 是整仓库源码，不是 WordPress 安装包**。请使用 Releases 中的插件 ZIP。升级前备份；已有明确关闭的模块不会被强制开启。使用与再分发权限以本仓库权利说明为准。
 
@@ -29,6 +29,8 @@ GitHub 自动生成的 **Source code / Download ZIP 是整仓库源码，不是 
 1.24.0-rc.5 提供两个默认关闭的 R2 模块，分别使用私有下载桶和媒体桶。下载文件通过浏览器直传并保留子比的下载权限检查。图片同步保留 WordPress 本地文件，可选择补传或完整核对。配置与 Worker 源码见 [R2 下载](plugins/mao-tk-zibll-toolkit/R2-DOWNLOADS.md)、[下载 Worker](workers/r2-downloads/worker.js)、[R2 图片](plugins/mao-tk-zibll-toolkit/R2-MEDIA.md)、[媒体 Worker](workers/r2-media/worker.mjs)。
 
 1.24.0-rc.9 支持同篇文章的公开文件和子比付费文件分别授权。公开卡片从原文提交请求，直接打开复制的入口会返回原文；付费文件继续由子比验权和计数。最终的十分钟临时地址绑定下载浏览器，跨浏览器复制会被拒绝，同一浏览器可在有效期内分段续传。线上已核对免费文件授权、跨会话拒绝和 Range 响应，真实付费账号的购买权益与计数仍需单独验收。
+
+1.24.0-rc.10 的工作台、后台页面和交互反馈支持简体中文及 English (United States)。工作台右上角「界面语言」链接到 WordPress 个人资料，保存后按当前账号显示。
 
 ## 两部分怎样配合
 

@@ -1,0 +1,282 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "请检查输入": [
+        "Please check your input"
+      ],
+      "未保存": [
+        "Not saved"
+      ],
+      "已保存": [
+        "Saved"
+      ],
+      "请检查标红的输入": [
+        "Please check the input marked in red"
+      ],
+      "有未保存的修改": [
+        "There are unsaved changes"
+      ],
+      "页脚配置已保存": [
+        "Footer configuration saved"
+      ],
+      "已配置": [
+        "Configured"
+      ],
+      "未配置": [
+        "Not configured"
+      ],
+      "请填写 HTTP(S) 地址": [
+        "Please fill in the HTTP(S) address"
+      ],
+      "或 mailto: 邮箱链接": [
+        "or mailto: email link"
+      ],
+      "，也可留空。": [
+        ", can also be left blank."
+      ],
+      "请填写有效图片地址、站内路径或留空。": [
+        "Please fill in a valid image address, site path or leave it blank."
+      ],
+      "请填写 HTTP(S) 地址、站内路径或留空。": [
+        "Please fill in the HTTP(S) address, site path or leave it blank."
+      ],
+      "https://… 或从媒体库选择": [
+        "https://… or select from media library"
+      ],
+      "预览": [
+        "Preview"
+      ],
+      "选择图片": [
+        "Select image"
+      ],
+      "媒体库未加载，请刷新后重试。": [
+        "The media library is not loaded, please refresh and try again."
+      ],
+      "选择": [
+        "Select"
+      ],
+      "使用此图片": [
+        "Use this image"
+      ],
+      "使用原图": [
+        "Use original image"
+      ],
+      "清除": [
+        "Clear"
+      ],
+      "支持图片地址；建议使用清晰的 PNG 或 WebP。": [
+        "Support image addresses; clear PNG or WebP recommended."
+      ],
+      "文字": [
+        "Text"
+      ],
+      "地址": [
+        "address"
+      ],
+      "删除第 ": [
+        "Delete the "
+      ],
+      " 项": [
+        " items"
+      ],
+      "添加链接": [
+        "Add link"
+      ],
+      "新链接": [
+        "New link"
+      ],
+      "显示范围": [
+        "Display range"
+      ],
+      "关于我们": [
+        "About us"
+      ],
+      "三个导航栏目": [
+        "Three navigation columns"
+      ],
+      "友情链接": [
+        "links"
+      ],
+      "关注我们与二维码": [
+        "Follow us and QR code"
+      ],
+      "手机端：关于我们常显，菜单和友链折叠，关注区在版权信息上方。": [
+        "Mobile version: About us is always displayed, the menu and friend links are folded, and the attention area is above the copyright information."
+      ],
+      "栏目标题": [
+        "Column title"
+      ],
+      "网站介绍": [
+        "Website introduction"
+      ],
+      "导航栏目": [
+        "Navigation section"
+      ],
+      "栏目 ": [
+        "Column "
+      ],
+      "社交媒体": [
+        "Social media"
+      ],
+      "统一外观": [
+        "Unified appearance"
+      ],
+      "图标大小": [
+        "Icon size"
+      ],
+      "显示图标底座": [
+        "Show icon base"
+      ],
+      "底座圆角": [
+        "Base fillet"
+      ],
+      "0px 为直角，调大可变为圆形。关闭底座仍保留点击区域。": [
+        "0px is a right angle, and it can be turned into a circle by increasing the size. The click area remains when closing the base."
+      ],
+      "微信": [
+        "WeChat"
+      ],
+      "邮箱": [
+        "Email"
+      ],
+      "提示文字": [
+        "Prompt text"
+      ],
+      "邮箱链接": [
+        "Email link"
+      ],
+      "访问地址": [
+        "Access address"
+      ],
+      "https://…（留空不显示）": [
+        "https://… (leave blank not to display)"
+      ],
+      "图标图片": [
+        "Icon picture"
+      ],
+      "恢复默认图标": [
+        "Restore default icon"
+      ],
+      "悬停二维码": [
+        "Hover QR code"
+      ],
+      "统一边框": [
+        "Unified borders"
+      ],
+      "显示边框": [
+        "Show borders"
+      ],
+      "边框粗细": [
+        "Border thickness"
+      ],
+      "外框圆角": [
+        "Frame rounded corners"
+      ],
+      "应用于此栏的所有二维码。边框颜色跟随主题，调节时二维码大小不变。": [
+        "Applies to all QR codes in this column. The border color follows the theme, and the size of the QR code remains unchanged when adjusted."
+      ],
+      "二维码 ": [
+        "QR code "
+      ],
+      "图片下方文字": [
+        "Text below image"
+      ],
+      "二维码图片地址": [
+        "QR code image address"
+      ],
+      "点击跳转（可留空）": [
+        "Click to jump (can be left blank)"
+      ],
+      "版权与备案": [
+        "Copyright and Registration"
+      ],
+      "底栏信息（并排显示）": [
+        "Bottom bar information (displayed side by side)"
+      ],
+      "显示版权信息": [
+        "Show copyright information"
+      ],
+      "版权文案": [
+        "Copyright copywriting"
+      ],
+      "显示备案信息": [
+        "Display filing information"
+      ],
+      "备案号": [
+        "Registration number"
+      ],
+      "备案查询地址": [
+        "Registration inquiry address"
+      ],
+      "原站地址为 #。当前按纯文字保留，填写有效地址后才可点击。": [
+        "The original site address is #. It is currently reserved as plain text and can only be clicked after filling in a valid address."
+      ],
+      "备案标识图片": [
+        "Registration logo picture"
+      ],
+      "显示查询次数和加载耗时": [
+        "Display query times and loading time"
+      ],
+      "性能信息来自当前请求，不作为网站测速结果。默认关闭。": [
+        "Performance information comes from the current request and is not used as website speed test results. Off by default."
+      ],
+      "布局与继承": [
+        "Layout and inheritance"
+      ],
+      "页脚内容宽度": [
+        "Footer content width"
+      ],
+      "跟随页眉": [
+        "Follow header"
+      ],
+      "全宽": [
+        "full width"
+      ],
+      "跟随页眉时，栏目和版权栏使用同一居中宽度，两侧等量留白。全宽模式使用可用宽度，背景在两种模式下均铺满。": [
+        "When following the header, use the same centered width for the column and copyright columns, with equal amounts of white space on both sides. Full-width mode uses the available width, and the background fills up in both modes."
+      ],
+      "主题与配色": [
+        "Theme and color matching"
+      ],
+      "浅色、深色、强调色和边框跟随主题。": [
+        "Light colors, dark colors, accent colors and borders follow the theme."
+      ],
+      "请求未完成，请刷新后重试。": [
+        "The request is not completed, please refresh and try again."
+      ],
+      "请求失败，请刷新后重试。": [
+        "The request failed, please refresh and try again."
+      ],
+      "更新预览…": [
+        "Update preview…"
+      ],
+      "未保存的修改仅在预览显示": [
+        "Unsaved changes only show in preview"
+      ],
+      "已与保存配置同步": [
+        "Synchronized with saved configuration"
+      ],
+      "正在保存…": [
+        "Saving…"
+      ],
+      "保存完成；仍有后续修改未保存": [
+        "Save completed; there are still subsequent modifications that have not been saved."
+      ],
+      "页脚配置已保存，前台刷新后生效": [
+        "The footer configuration has been saved and will take effect after the foreground is refreshed."
+      ],
+      "已读取主题资料，点击保存后生效": [
+        "The topic data has been read and will take effect after clicking save."
+      ],
+      "读取失败，请刷新重试。": [
+        "Failed to read, please refresh and try again."
+      ]
+    }
+  }
+}

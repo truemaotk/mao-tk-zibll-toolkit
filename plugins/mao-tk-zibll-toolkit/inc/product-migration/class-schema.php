@@ -14,9 +14,9 @@ final class Schema
     {
         $out=array();$theme=wp_get_theme(get_template());
         if(get_template()!=='zibll'||!preg_match('/^9\.2(?:\.|$)/',(string)$theme->get('Version')))$out[]='商品迁移目前仅适配已核实的 Zibll 9.2（支持其子主题）。';
-        if(!post_type_exists('shop_product')||!taxonomy_exists('shop_cat')||!taxonomy_exists('shop_tag'))$out[]='请先启用子比原生商城，商品类型或分类尚未注册。';
-        foreach(array('zib_shop_get_product_config','zib_shop_save_product_config') as $function)if(!function_exists($function))$out[]='原生商品配置接口不可用：'.$function;
-        if(!has_action('updated_post_meta','zib_shop_update_postmeta_add_action')||!has_action('added_post_meta','zib_shop_update_postmeta_add_action'))$out[]='子比商品价格同步钩子未启用，已停止迁移。';
+        if(!post_type_exists('shop_product')||!taxonomy_exists('shop_cat')||!taxonomy_exists('shop_tag'))$out[]=__('请先启用子比原生商城，商品类型或分类尚未注册。', 'mao-tk-zibll-toolkit');
+        foreach(array('zib_shop_get_product_config','zib_shop_save_product_config') as $function)if(!function_exists($function))$out[]=sprintf(__('原生商品配置接口不可用：%s', 'mao-tk-zibll-toolkit'), $function);
+        if(!has_action('updated_post_meta','zib_shop_update_postmeta_add_action')||!has_action('added_post_meta','zib_shop_update_postmeta_add_action'))$out[]=__('子比商品价格同步钩子未启用，已停止迁移。', 'mao-tk-zibll-toolkit');
         return $out;
     }
     public static function available(): void

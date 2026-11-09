@@ -1,0 +1,48 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "案例展示": [
+        "Showcase"
+      ],
+      "独立站建站案例": [
+        "Independent website building case"
+      ],
+      "浏览器式预览，点击查看在线案例站点。喜欢同款风格？可直接咨询建站方案。": [
+        "Browser-style preview, click to view the online case site. Like the same style? You can directly inquire about website building plans."
+      ],
+      "案例来源": [
+        "Case source"
+      ],
+      "案例分类": [
+        "Case Classification"
+      ],
+      "全部案例": [
+        "All cases"
+      ],
+      "旧案例保留在此区块中；切换到中央案例库后，前台改为读取Toolkit的统一资料。": [
+        "Old cases remain in this block; after switching to the central case library, the frontend changes to reading Toolkit's unified data."
+      ],
+      "使用Toolkit中央案例库": [
+        "Using Toolkit Central Case Library"
+      ],
+      "兼容旧区块：历史案例及配色属性继续保留，不自动迁移或覆盖。": [
+        "Compatible with old blocks: historical cases and color matching attributes will continue to be retained and will not be automatically migrated or overwritten."
+      ],
+      "案例在前台动态展示，请预览页面。": [
+        "The case is displayed dynamically in the foreground, please preview the page."
+      ],
+      "MaoTK 案例展示": [
+        "MaoTK case presentation"
+      ],
+      "引用Toolkit中央案例库，兼容旧案例区块。": [
+        "Reference the Toolkit central case library and be compatible with old case blocks."
+      ]
+    }
+  }
+}

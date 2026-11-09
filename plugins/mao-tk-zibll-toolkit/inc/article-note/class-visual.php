@@ -27,7 +27,12 @@ final class Visual
 
     public static function sample(string $type): string
     {
-        $label = Settings::types()[$type] ?? '说明';
-        return '<aside class="wp-block-maotk-note maotk-note-clean maotk-note-' . esc_attr($type) . ' has-maotk-note-badge has-maotk-note-title" data-maotk-note-type="' . esc_attr($type) . '" aria-label="' . esc_attr($label) . '"><div class="maotk-note-badge"><span>' . esc_html($label) . '</span></div><div class="maotk-note-title">适合哪些使用场景</div><div class="maotk-note-content"><p>用于正文中的说明和提醒。文字、段落和列表继续保留，内部标题不会加入文章目录。</p><ul><li>先检查当前设置，再保存。</li><li>标签、图标、标题与左侧色条使用同一类型色。</li></ul></div></aside>';
+        $label = translate(Settings::types()[$type] ?? '说明', 'mao-tk-zibll-toolkit');
+        return '<aside class="wp-block-maotk-note maotk-note-clean maotk-note-' . esc_attr($type) . ' has-maotk-note-badge has-maotk-note-title" data-maotk-note-type="' . esc_attr($type) . '" aria-label="' . esc_attr($label) . '">'
+            . '<div class="maotk-note-badge"><span>' . esc_html($label) . '</span></div>'
+            . '<div class="maotk-note-title">' . esc_html__('适合哪些使用场景', 'mao-tk-zibll-toolkit') . '</div>'
+            . '<div class="maotk-note-content"><p>' . esc_html__('用于正文中的说明和提醒。文字、段落和列表继续保留，内部标题不会加入文章目录。', 'mao-tk-zibll-toolkit') . '</p>'
+            . '<ul><li>' . esc_html__('先检查当前设置，再保存。', 'mao-tk-zibll-toolkit') . '</li>'
+            . '<li>' . esc_html__('标签、图标、标题与左侧色条使用同一类型色。', 'mao-tk-zibll-toolkit') . '</li></ul></div></aside>';
     }
 }

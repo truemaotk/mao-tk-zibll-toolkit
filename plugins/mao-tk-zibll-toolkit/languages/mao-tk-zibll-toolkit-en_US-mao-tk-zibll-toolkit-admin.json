@@ -1,0 +1,63 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "模块开关配置异常，操作已暂停；请检查配置后刷新页面。": [
+        "The module switch configuration is abnormal and the operation has been suspended; please check the configuration and refresh the page."
+      ],
+      "”已": [
+        "\"has"
+      ],
+      "开启": [
+        "Turn on"
+      ],
+      "关闭": [
+        "Close"
+      ],
+      "，设置已保存。": [
+        ", settings saved."
+      ],
+      "”未能保存，开关已恢复为服务器确认的状态。": [
+        "\"Failed to save, switch has reverted to server confirmed state."
+      ],
+      "”的保存结果未确认，已恢复显示；请刷新页面核对后重试。": [
+        "\"The saved result has not been confirmed and has been restored to display; please refresh the page to check and try again."
+      ],
+      "正在保存“": [
+        "Saving\""
+      ],
+      "”的开关设置…": [
+        "Switch settings for “…"
+      ],
+      "保存结果未确认，请刷新页面核对后重试。": [
+        "The saving result is not confirmed, please refresh the page to check and try again."
+      ],
+      "正在保存模块开关设置…": [
+        "Saving module switch settings..."
+      ],
+      "模块": [
+        "Module"
+      ],
+      "“%s”已开启，设置已保存。": [
+        "“%s” was enabled and saved."
+      ],
+      "“%s”已关闭，设置已保存。": [
+        "“%s” was disabled and saved."
+      ],
+      "“%s”未能保存，开关已恢复为服务器确认的状态。": [
+        "Could not save “%s”. The switch shows the last confirmed state."
+      ],
+      "无法确认“%s”的保存结果，已恢复显示。请刷新页面核对。": [
+        "Could not confirm the change to “%s”. Refresh the page to check its state."
+      ],
+      "正在保存“%s”的开关设置…": [
+        "Saving the switch setting for “%s”…"
+      ]
+    }
+  }
+}

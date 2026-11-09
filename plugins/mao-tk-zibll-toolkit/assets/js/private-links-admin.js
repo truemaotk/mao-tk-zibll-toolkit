@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    const translate = text => window.wp?.i18n?.__(text, 'mao-tk-zibll-toolkit') ?? text;
     function initialize() {
         var root = document.querySelector('.mao-tk-private-links');
         if (!root) { return; }
@@ -11,11 +12,11 @@
             function synchronize() {
                 var dirty = fields.some(function (field, index) { return (field.type === 'checkbox' ? field.checked : field.value) !== saved[index]; });
                 if (state) {
-                    state.textContent = dirty ? '有未保存的修改' : '当前规则已保存';
+                    state.textContent = dirty ? translate("有未保存的修改") : translate("当前规则已保存");
                     state.setAttribute('data-dirty', String(dirty));
                 }
                 if (counter) {
-                    counter.textContent = '已选 ' + fields.filter(function (field) { return field.checked; }).length + ' / ' + fields.length + ' 项';
+                    counter.textContent = translate("已选 ") + fields.filter(function (field) { return field.checked; }).length + ' / ' + fields.length + translate(" 项");
                 }
             }
             form.addEventListener('change', synchronize);

@@ -1,5 +1,7 @@
 (function () {
     'use strict';
+    const translate = text => window.wp?.i18n?.__(text, 'mao-tk-zibll-toolkit') ?? text;
+    const format = (text, value) => translate(text).replace('%s', () => value);
 
     function initialize() {
         var root = document.getElementById('mao-tk-toolkit');
@@ -131,25 +133,28 @@
             }
             if (reply) {
                 synchronize(job, reply);
-                if (reply.disabled) { showFeedback('模块开关配置异常，操作已暂停；请检查配置后刷新页面。', 'save-failed'); }
-                else if (reply.checked === job.target) { showFeedback('“' + job.name + '”已' + (reply.checked ? '开启' : '关闭') + '，设置已保存。', 'saved'); }
-                else { showFeedback('“' + job.name + '”未能保存，开关已恢复为服务器确认的状态。', 'save-failed'); }
+                if (reply.disabled) { showFeedback(translate("模块开关配置异常，操作已暂停；请检查配置后刷新页面。"), 'save-failed'); }
+                else if (reply.checked === job.target) {
+                    showFeedback(format(reply.checked ? '“%s”已开启，设置已保存。' : '“%s”已关闭，设置已保存。', job.name), 'saved');
+                } else {
+                    showFeedback(format('“%s”未能保存，开关已恢复为服务器确认的状态。', job.name), 'save-failed');
+                }
             } else {
                 job.button.setAttribute('aria-checked', String(job.previous));
                 field(job.form, 'enabled').value = job.previous ? '0' : '1';
-                showFeedback('“' + job.name + '”的保存结果未确认，已恢复显示；请刷新页面核对后重试。', 'save-failed');
+                showFeedback(format('无法确认“%s”的保存结果，已恢复显示。请刷新页面核对。', job.name), 'save-failed');
             }
         }
         async function drain() {
             if (running || !queue.length) { return; }
             running = true;
             var job = queue.shift();
-            var timer = window.setTimeout(function () { showFeedback('正在保存“' + job.name + '”的开关设置…', 'saving'); }, 450);
+            var timer = window.setTimeout(function () { showFeedback(format('正在保存“%s”的开关设置…', job.name), 'saving'); }, 450);
             try { await persist(job); }
             catch (error) {
                 job.button.setAttribute('aria-checked', String(job.previous));
                 field(job.form, 'enabled').value = job.previous ? '0' : '1';
-                showFeedback('保存结果未确认，请刷新页面核对后重试。', 'save-failed');
+                showFeedback(translate("保存结果未确认，请刷新页面核对后重试。"), 'save-failed');
             } finally {
                 window.clearTimeout(timer);
                 job.finish();
@@ -187,10 +192,10 @@
                 button.setAttribute('aria-checked', String(target));
                 button.disabled = true;
                 hideFeedback();
-                if (!supportsAsync) { showFeedback('正在保存模块开关设置…', 'saving'); return; }
+                if (!supportsAsync) { showFeedback(translate("正在保存模块开关设置…"), 'saving'); return; }
                 event.preventDefault();
                 pending = true;
-                queue.push({ form: form, button: button, id: field(form, 'module_id').value, name: form.getAttribute('data-module-label') || '模块', previous: confirmed, target: target, payload: payload,
+                queue.push({ form: form, button: button, id: field(form, 'module_id').value, name: form.getAttribute('data-module-label') || translate("模块"), previous: confirmed, target: target, payload: payload,
                     confirm: function (value, disabled) { confirmed = value; initiallyDisabled = disabled; },
                     finish: function () {
                         pending = false; form.removeAttribute('aria-busy'); button.removeAttribute('aria-busy'); button.disabled = initiallyDisabled;

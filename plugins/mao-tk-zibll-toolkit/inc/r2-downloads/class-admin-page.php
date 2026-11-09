@@ -32,7 +32,7 @@ final class AdminPage
     public function menu(): void
     {
         $this->screen = (string) add_submenu_page(
-            Admin::SLUG, 'R2 文件上传与下载', 'R2 文件上传与下载', 'manage_options', self::SLUG, array($this, 'render')
+            Admin::SLUG, __('R2 文件上传与下载', 'mao-tk-zibll-toolkit'), __('R2 文件上传与下载', 'mao-tk-zibll-toolkit'), 'manage_options', self::SLUG, array($this, 'render')
         );
         $this->admin->allow_screen($this->screen);
     }
@@ -42,13 +42,14 @@ final class AdminPage
         if ($hook === $this->screen && $this->screen !== '' && current_user_can('manage_options')) {
             wp_enqueue_style('mao-tk-toolkit-r2-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/r2-downloads/admin.css', array('mao-tk-zibll-toolkit-admin'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
             wp_enqueue_script('mao-tk-toolkit-r2-uploads', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/r2-downloads/upload.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+            wp_set_script_translations('mao-tk-toolkit-r2-uploads', 'mao-tk-zibll-toolkit', MAO_TK_ZIBLL_TOOLKIT_DIR . 'languages');
         }
     }
 
     public function render(): void
     {
         if (!current_user_can('manage_options')) {
-            wp_die('需要管理员权限。', '', array('response' => 403));
+            wp_die(__('需要管理员权限。', 'mao-tk-zibll-toolkit'), '', array('response' => 403));
         }
         $switch_module = $this->module();
         $switch_valid = $this->manager->storage_is_valid();
@@ -65,10 +66,10 @@ final class AdminPage
     public function save(): void
     {
         if (!current_user_can('manage_options')) {
-            wp_die('需要管理员权限。', '', array('response' => 403));
+            wp_die(__('需要管理员权限。', 'mao-tk-zibll-toolkit'), '', array('response' => 403));
         }
         if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
-            wp_die('请通过 R2 管理页提交。', '', array('response' => 405));
+            wp_die(__('请通过 R2 管理页提交。', 'mao-tk-zibll-toolkit'), '', array('response' => 405));
         }
         check_admin_referer(self::SAVE_ACTION);
         $submitted = isset($_POST['mao_tk_r2']) && is_array($_POST['mao_tk_r2']) ? wp_unslash($_POST['mao_tk_r2']) : array();
@@ -84,26 +85,26 @@ final class AdminPage
     private static function notice(string $status): string
     {
         if (isset(Settings::FIELDS[$status])) {
-            return Settings::FIELDS[$status]['label'] . ' 格式有误，连接设置未保存。';
+            return Settings::FIELDS[$status]['label'] . __(' 格式有误，连接设置未保存。', 'mao-tk-zibll-toolkit');
         }
         return array(
-            'saved' => '连接设置已保存。可用小文件上传和生成引用验证连接。',
-            'encryption' => '服务器暂时无法加密保存密钥。请检查 OpenSSL 与 WordPress 安全密钥后重试。',
-            'write' => '连接设置写入失败，请重试。',
+            'saved' => __('连接设置已保存。可用小文件上传和生成引用验证连接。', 'mao-tk-zibll-toolkit'),
+            'encryption' => __('服务器暂时无法加密保存密钥。请检查 OpenSSL 与 WordPress 安全密钥后重试。', 'mao-tk-zibll-toolkit'),
+            'write' => __('连接设置写入失败，请重试。', 'mao-tk-zibll-toolkit'),
         )[$status] ?? '';
     }
 
     public function ajax(): void
     {
         if (!current_user_can('manage_options') || !check_ajax_referer(self::ACTION, 'nonce', false)) {
-            wp_send_json_error(array('message' => '会话已过期或权限不足，请刷新后再试。'), 403);
+            wp_send_json_error(array('message' => __('会话已过期或权限不足，请刷新后再试。', 'mao-tk-zibll-toolkit')), 403);
         }
         if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
-            wp_send_json_error(array('message' => '请通过 R2 管理页提交。'), 405);
+            wp_send_json_error(array('message' => __('请通过 R2 管理页提交。', 'mao-tk-zibll-toolkit')), 405);
         }
         $storage = Storage::configured();
         if ($this->module()['status'] !== 'loaded' || !$storage) {
-            wp_send_json_error(array('message' => '请启用模块并配置 R2 上传凭据。'), 503);
+            wp_send_json_error(array('message' => __('请启用模块并配置 R2 上传凭据。', 'mao-tk-zibll-toolkit')), 503);
         }
 
         try {
@@ -125,7 +126,7 @@ final class AdminPage
             if ($operation === 'delete_file') {
                 $key = self::input('object_key');
                 if (!Storage::managed_key($key) || !wp_verify_nonce(self::input('delete_nonce'), self::delete_action($storage, $key))) {
-                    wp_send_json_error(array('message' => '删除确认已失效，请刷新文件列表后重试。'), 403);
+                    wp_send_json_error(array('message' => __('删除确认已失效，请刷新文件列表后重试。', 'mao-tk-zibll-toolkit')), 403);
                 }
                 $storage->delete_file($key);
                 wp_send_json_success();
@@ -145,12 +146,12 @@ final class AdminPage
                     wp_send_json_success();
                     break;
                 default:
-                    throw new \InvalidArgumentException('无法识别上传操作。');
+                    throw new \InvalidArgumentException(__('无法识别上传操作。', 'mao-tk-zibll-toolkit'));
             }
         } catch (\InvalidArgumentException $error) {
-            wp_send_json_error(array('message' => $error->getMessage()), 400);
+            wp_send_json_error(array('message' => translate($error->getMessage(), 'mao-tk-zibll-toolkit')), 400);
         } catch (\RuntimeException $error) {
-            wp_send_json_error(array('message' => $error->getMessage()), 502);
+            wp_send_json_error(array('message' => translate($error->getMessage(), 'mao-tk-zibll-toolkit')), 502);
         }
     }
 
@@ -160,20 +161,20 @@ final class AdminPage
         $key = self::input('object_key');
         $mode = self::input('reference_mode');
         if (!in_array($mode, array('', 'native', 'public'), true)) {
-            throw new \InvalidArgumentException('请选择有效的下载方式。');
+            throw new \InvalidArgumentException(__('请选择有效的下载方式。', 'mao-tk-zibll-toolkit'));
         }
         if ($mode === 'public' && !class_exists('WP_HTML_Tag_Processor')) {
-            throw new \InvalidArgumentException('公开下载需要 WordPress 6.2 或更高版本。');
+            throw new \InvalidArgumentException(__('公开下载需要 WordPress 6.2 或更高版本。', 'mao-tk-zibll-toolkit'));
         }
         if (Runtime::origin() === '' || Runtime::signing_key() === '') {
-            throw new \RuntimeException('请先配置下载域名和 Worker 签名密钥。');
+            throw new \RuntimeException(__('请先配置下载域名和 Worker 签名密钥。', 'mao-tk-zibll-toolkit'));
         }
         if (!$post_id || !current_user_can('edit_post', $post_id) || get_post_type($post_id) !== 'post'
             || !in_array(get_post_status($post_id), array('publish', 'draft', 'pending', 'future'), true)) {
-            throw new \InvalidArgumentException('请填写有权编辑的文章 ID。');
+            throw new \InvalidArgumentException(__('请填写有权编辑的文章 ID。', 'mao-tk-zibll-toolkit'));
         }
         if (!Storage::valid_key($key) || $storage->size($key) === null) {
-            throw new \InvalidArgumentException('R2 桶中没有找到该对象，请核对完整对象键。');
+            throw new \InvalidArgumentException(__('R2 桶中没有找到该对象，请核对完整对象键。', 'mao-tk-zibll-toolkit'));
         }
         return array('url' => $mode === 'public' ? PublicDownload::reference($post_id, $key) : Runtime::reference($post_id, $key));
     }
@@ -195,6 +196,6 @@ final class AdminPage
                 return $module;
             }
         }
-        return array('id' => Runtime::MODULE, 'name' => 'R2 文件上传与下载', 'enabled' => false, 'status' => 'disabled');
+        return array('id' => Runtime::MODULE, 'name' => __('R2 文件上传与下载', 'mao-tk-zibll-toolkit'), 'enabled' => false, 'status' => 'disabled');
     }
 }

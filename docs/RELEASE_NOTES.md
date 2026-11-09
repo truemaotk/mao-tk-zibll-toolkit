@@ -1,5 +1,14 @@
 # Toolkit 发行记录
 
+## Toolkit 1.24.0-rc.10 — 中英文后台（2026-11-09）
+
+- 插件名称保持 Mao TK Zibll Toolkit。后台界面支持简体中文与 English (United States)，使用当前 WordPress 账号的语言。
+- 工作台右上角加入「界面语言」，直接打开个人资料中的语言选项。已保存的内容按原文展示。
+- R2 上传入口根据模块的实际开关状态启用，适配中英文界面。rc.9 的下载 Worker 可继续使用。
+- 本地 WordPress 7.1.4 已逐页检查 20 个 Toolkit 后台页面，验证账号语言切换、模块开关和邮件预览。R2 分片上传与 WordPress/Worker 下载授权回归通过。
+
+安装包和 SHA-256 校验文件见 [GitHub 预发布](https://github.com/truemaotk/mao-tk-zibll-toolkit/releases/tag/v1.24.0-rc.10)。
+
 ## Toolkit 1.24.0-rc.9 — R2 下载浏览器授权（2026-11-05）
 
 - 汇总 rc.6–rc.8 的正文下载卡片路由修复。公开文件通过 WordPress 前台处理，文章内已保存的旧卡片在显示时迁到前台入口，适配子比的后台访问保护。

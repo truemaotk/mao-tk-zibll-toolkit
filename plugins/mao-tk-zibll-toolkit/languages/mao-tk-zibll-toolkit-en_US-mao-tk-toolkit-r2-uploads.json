@@ -1,0 +1,150 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "后台请求失败，请刷新登录状态或稍后重试。": [
+        "The background request failed, please refresh the login status or try again later."
+      ],
+      "模块运行中": [
+        "Module running"
+      ],
+      "保存上传凭据后可以选择文件。": [
+        "Ability to select files after saving upload credentials."
+      ],
+      "启用模块后可以选择文件。": [
+        "Enable file selection when module is enabled."
+      ],
+      "上传时请保持本页打开，失败后可继续当前任务。": [
+        "Please keep this page open when uploading. If it fails, you can continue the current task."
+      ],
+      "保存上传与签名设置后可生成引用。": [
+        "References can be generated after saving upload and signature settings."
+      ],
+      "启用模块后可生成引用。": [
+        "References can be generated when modules are enabled."
+      ],
+      "文章 ID 可从编辑地址中的 post= 参数查看。": [
+        "The post ID can be viewed from the post= parameter in the edit address."
+      ],
+      "重试确认": [
+        "Retry confirmation"
+      ],
+      "继续上传": [
+        "Continue uploading"
+      ],
+      "开始上传": [
+        "Start uploading"
+      ],
+      "用此文件生成引用": [
+        "Use this file to generate citations"
+      ],
+      "从 R2 删除": [
+        "Removed from R2"
+      ],
+      "正在读取 R2 文件…": [
+        "Reading R2 file..."
+      ],
+      "本页没有 Toolkit 文件，可查看下一页。": [
+        "There is no Toolkit file on this page, please see the next page."
+      ],
+      "暂无 Toolkit 上传文件。": [
+        "There is no Toolkit upload file yet."
+      ],
+      "永久删除这个 R2 文件？\n": [
+        "Permanently delete this R2 file?\n"
+      ],
+      "\n引用此文件的文章将无法下载。": [
+        "\nArticles citing this file will not be downloadable."
+      ],
+      "正在从 R2 删除文件…": [
+        "Deleting files from R2..."
+      ],
+      "文件已从 R2 删除。": [
+        "File removed from R2."
+      ],
+      " 可刷新列表核对。": [
+        " Refreshable list check."
+      ],
+      "R2 上传返回 HTTP ": [
+        "R2 upload returns HTTP "
+      ],
+      "直传连接中断。请检查网络和 R2 的 CORS 配置。": [
+        "Direct transfer connection interrupted. Please check the CORS configuration of your network and R2."
+      ],
+      "当前分片上传超时。": [
+        "The current multipart upload has timed out."
+      ],
+      "上传已停止。": [
+        "Upload stopped."
+      ],
+      "正在重试分片 ": [
+        "Retrying sharding "
+      ],
+      "已上传 ": [
+        "Uploaded "
+      ],
+      " 个分片。": [
+        " shards."
+      ],
+      "正在取消上传任务…": [
+        "Canceling upload task..."
+      ],
+      "已取消上传。": [
+        "Upload canceled."
+      ],
+      " 可重试取消。": [
+        " Cancellation can be retried."
+      ],
+      "请选择大于 0 字节、最大 30 GiB 的文件。": [
+        "Please select a file larger than 0 bytes, up to 30 GiB."
+      ],
+      "正在创建 R2 上传任务…": [
+        "Creating R2 upload task..."
+      ],
+      "正在让 R2 合并分片并核对文件大小…": [
+        "Letting R2 merge shards and check file sizes…"
+      ],
+      "上传已完成。请在下方填入文章 ID 并生成引用。": [
+        "Upload completed. Please enter your article ID below and generate a citation."
+      ],
+      " 当前任务可重试。": [
+        " The current task can be retried."
+      ],
+      "请先完成或取消当前上传任务。": [
+        "Please complete or cancel the current upload task first."
+      ],
+      "仅用于可公开分享的文件。文章的阅读限制仍然有效。": [
+        "Only for files that can be shared publicly. Article reading restrictions remain in effect."
+      ],
+      "沿用文章设置的登录、购买和下载次数规则。": [
+        "Inherit the login, purchase and download count rules set by the article."
+      ],
+      "正在检查对象并生成引用…": [
+        "Checking object and generating reference..."
+      ],
+      "公开下载链接": [
+        "Public download link"
+      ],
+      "子比资源下载地址（R2 引用）": [
+        "Zibi resource download address (R2 reference)"
+      ],
+      "请贴到该文章正文的子比「文件下载」区块。保存并发布后即可下载。": [
+        "Please paste it into the \"File Download\" section of the article's text. Save and publish to download."
+      ],
+      "请贴到该文章的「付费功能 → 资源下载 → 下载地址」。": [
+        "Please post it to the \"Paid Function → Resource Download → Download Address\" of the article."
+      ],
+      "引用已复制。": [
+        "Reference copied."
+      ],
+      "已选中链接，可以手动复制。": [
+        "The link is selected and can be copied manually."
+      ]
+    }
+  }
+}

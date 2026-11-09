@@ -14,7 +14,7 @@ final class Editor
 
     public function add_box(): void
     {
-        add_meta_box('mao-tk-toolkit-top-info-property', '文章顶部信息 · 文章属性', array($this, 'render'), 'post', 'side', 'default');
+        add_meta_box('mao-tk-toolkit-top-info-property', __('文章顶部信息 · 文章属性', 'mao-tk-zibll-toolkit'), array($this, 'render'), 'post', 'side', 'default');
     }
 
     public function render($post): void
@@ -24,9 +24,9 @@ final class Editor
         $labels = (new Settings())->read()['value']['properties'];
         if ($current !== '' && !in_array($current, $labels, true)) { $labels[] = $current; }
         wp_nonce_field('mao_tk_top_info_property_' . (int) $post->ID, 'mao_tk_top_info_property_nonce');
-        echo '<p>模块关闭时仍保留属性；前台展示由 Toolkit 开关控制。</p>';
+        echo ('<p>' . esc_html__('模块关闭时仍保留属性；前台展示由 Toolkit 开关控制。', 'mao-tk-zibll-toolkit') . '</p>');
         foreach (array_merge(array(''), $labels) as $label) {
-            echo '<p><label><input type="radio" name="mao_tk_top_info_property" value="' . esc_attr($label) . '" ' . checked($current, $label, false) . '> ' . esc_html($label === '' ? '不显示属性' : $label) . '</label></p>';
+            echo '<p><label><input type="radio" name="mao_tk_top_info_property" value="' . esc_attr($label) . '" ' . checked($current, $label, false) . '> ' . esc_html($label === '' ? __('不显示属性', 'mao-tk-zibll-toolkit') : $label) . '</label></p>';
         }
     }
 

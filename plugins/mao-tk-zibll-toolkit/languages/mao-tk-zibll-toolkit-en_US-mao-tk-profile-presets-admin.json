@@ -1,0 +1,27 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "有未保存的修改，保存后才会应用到前台。": [
+        "There are unsaved modifications, which will not be applied to the foreground until saved."
+      ],
+      "选择预设图片": [
+        "Select default image"
+      ],
+      "添加到预设": [
+        "Add to preset"
+      ],
+      "图片 ": [
+        "Pictures "
+      ],
+      "移出预设": [
+        "Move out of default"
+      ]
+    }
+  }
+}

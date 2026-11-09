@@ -36,9 +36,9 @@ final class ContentSearch
             $candidates[(int) $post->ID] = $post;
         }
         $items = array();
-        $statuses = array('publish' => '已发布', 'draft' => '草稿', 'pending' => '待审核', 'private' => '私密', 'future' => '定时');
+        $statuses = array('publish' => __('已发布', 'mao-tk-zibll-toolkit'), 'draft' => __('草稿', 'mao-tk-zibll-toolkit'), 'pending' => __('待审核', 'mao-tk-zibll-toolkit'), 'private' => __('私密', 'mao-tk-zibll-toolkit'), 'future' => __('定时', 'mao-tk-zibll-toolkit'));
         foreach (array_slice(array_values($candidates), 0, 20) as $post) {
-            $items[] = array('id' => (int) $post->ID, 'title' => wp_strip_all_tags(get_the_title((int) $post->ID)), 'type' => $post->post_type === 'product' ? '产品' : '文章', 'status' => $statuses[$post->post_status]);
+            $items[] = array('id' => (int) $post->ID, 'title' => wp_strip_all_tags(get_the_title((int) $post->ID)), 'type' => $post->post_type === 'product' ? __('产品', 'mao-tk-zibll-toolkit') : __('文章', 'mao-tk-zibll-toolkit'), 'status' => $statuses[$post->post_status]);
         }
         return array('items' => $items, 'limited' => count($candidates) > 20);
     }

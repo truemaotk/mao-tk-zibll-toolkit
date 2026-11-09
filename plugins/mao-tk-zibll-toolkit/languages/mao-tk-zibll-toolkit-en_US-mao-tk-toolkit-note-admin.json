@@ -1,0 +1,42 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "五种类型": [
+        "Five types"
+      ],
+      " / 图标 ": [
+        " / icon "
+      ],
+      "左对齐": [
+        "Left aligned"
+      ],
+      "居中": [
+        "Center"
+      ],
+      "右对齐": [
+        "Right justified"
+      ],
+      "未保存": [
+        "Not saved"
+      ],
+      "已同步": [
+        "Synced"
+      ],
+      "浅色模式": [
+        "Light mode"
+      ],
+      "深色模式": [
+        "Dark mode"
+      ],
+      "默认色 ": [
+        "Default color "
+      ]
+    }
+  }
+}

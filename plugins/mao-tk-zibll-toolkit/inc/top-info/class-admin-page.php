@@ -33,7 +33,7 @@ final class AdminPage
 
     public function menu(): void
     {
-        $hook = add_submenu_page(Admin::SLUG, '文章顶部信息', '文章顶部信息', 'manage_options', self::SLUG, array($this, 'render'));
+        $hook = add_submenu_page(Admin::SLUG, __('文章顶部信息', 'mao-tk-zibll-toolkit'), __('文章顶部信息', 'mao-tk-zibll-toolkit'), 'manage_options', self::SLUG, array($this, 'render'));
         $this->screen = is_string($hook) ? $hook : '';
         $this->admin->allow_screen($this->screen);
     }
@@ -44,12 +44,13 @@ final class AdminPage
         wp_enqueue_style('mao-tk-toolkit-top-info-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/css/top-info-admin.css', array('mao-tk-zibll-toolkit-admin'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
         wp_enqueue_script('mao-tk-toolkit-top-info-reveal', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/top-info/reveal.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
         wp_enqueue_script('mao-tk-toolkit-top-info-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/top-info-admin.js', array('mao-tk-toolkit-top-info-reveal'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+        wp_set_script_translations('mao-tk-toolkit-top-info-admin', 'mao-tk-zibll-toolkit', MAO_TK_ZIBLL_TOOLKIT_DIR . 'languages');
     }
 
     private function authorize(string $action): void
     {
-        if (!current_user_can('manage_options')) { wp_die('你没有访问文章顶部信息设置的权限。', '', array('response' => 403)); }
-        if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') { wp_die('请使用设置页表单。', '', array('response' => 405)); }
+        if (!current_user_can('manage_options')) { wp_die(__('你没有访问文章顶部信息设置的权限。', 'mao-tk-zibll-toolkit'), '', array('response' => 403)); }
+        if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') { wp_die(__('请使用设置页表单。', 'mao-tk-zibll-toolkit'), '', array('response' => 405)); }
         check_admin_referer($action);
     }
 
@@ -57,7 +58,7 @@ final class AdminPage
     {
         $raw = $_POST['top_info'] ?? null;
         $settings = Settings::from_form(is_array($raw) ? wp_unslash($raw) : null);
-        if ($settings === null) { wp_die('颜色、留白或属性格式无效。留白为 0—200 的整数；属性每行一个，最多 100 项，每项最多 600 字节。', '', array('response' => 400)); }
+        if ($settings === null) { wp_die(__('颜色、留白或属性格式无效。留白为 0—200 的整数；属性每行一个，最多 100 项，每项最多 600 字节。', 'mao-tk-zibll-toolkit'), '', array('response' => 400)); }
         return $settings;
     }
 
@@ -74,14 +75,14 @@ final class AdminPage
         $this->authorize(self::PREVIEW);
         $settings = $this->posted_settings();
         $id = $_POST['post_id'] ?? '0';
-        if (!is_string($id) || !preg_match('/^(?:0|[1-9][0-9]{0,9})$/D', $id)) { wp_die('文章编号无效。', '', array('response' => 400)); }
+        if (!is_string($id) || !preg_match('/^(?:0|[1-9][0-9]{0,9})$/D', $id)) { wp_die(__('文章编号无效。', 'mao-tk-zibll-toolkit'), '', array('response' => 400)); }
         $sample = $id === '0';
         if ($sample) {
             $data = ArticleData::sample($settings);
         } else {
             $post = get_post((int) $id);
             if (!ContentSearch::can_preview($post)) {
-                wp_die('内容不存在，或你没有预览该内容的权限。', '', array('response' => 403));
+                wp_die(__('内容不存在，或你没有预览该内容的权限。', 'mao-tk-zibll-toolkit'), '', array('response' => 403));
             }
             $data = (new ArticleData())->collect($post, true);
         }
@@ -100,14 +101,14 @@ final class AdminPage
     {
         $this->authorize(self::SEARCH);
         $query = $_POST['query'] ?? '';
-        if (!is_string($query) || strlen($query) > 400) { wp_die('搜索内容过长或格式无效。', '', array('response' => 400)); }
+        if (!is_string($query) || strlen($query) > 400) { wp_die(__('搜索内容过长或格式无效。', 'mao-tk-zibll-toolkit'), '', array('response' => 400)); }
         nocache_headers();
         wp_send_json_success((new ContentSearch())->find(wp_unslash($query)));
     }
 
     public function render(): void
     {
-        if (!current_user_can('manage_options')) { wp_die('你没有访问此页面的权限。', '', array('response' => 403)); }
+        if (!current_user_can('manage_options')) { wp_die(__('你没有访问此页面的权限。', 'mao-tk-zibll-toolkit'), '', array('response' => 403)); }
         $state = (new Settings())->read();
         $settings = $state['value'];
         $module = array('enabled' => false, 'status' => 'disabled');

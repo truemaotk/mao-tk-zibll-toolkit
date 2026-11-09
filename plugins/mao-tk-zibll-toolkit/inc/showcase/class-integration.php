@@ -19,7 +19,7 @@ final class Integration
     }
     public static function templates(array $templates): array
     {
-        $templates[Settings::TEMPLATE] = Runtime::enabled() ? 'MaoTK 案例展示' : 'MaoTK 案例展示（模块未启用）'; return $templates;
+        $templates[Settings::TEMPLATE] = Runtime::enabled() ? __('MaoTK 案例展示', 'mao-tk-zibll-toolkit') : __('MaoTK 案例展示（模块未启用）', 'mao-tk-zibll-toolkit'); return $templates;
     }
     public static function init(): void
     {
@@ -28,6 +28,7 @@ final class Integration
             'auth_callback' => static function ($allowed, $key, $id): bool { return current_user_can('edit_post', (int) $id); }));
         wp_register_style('mao-tk-toolkit-showcase', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/showcase.css', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION);
         wp_register_script('mao-tk-toolkit-showcase-block', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/block.js', array('wp-blocks', 'wp-element', 'wp-components', 'wp-block-editor', 'wp-server-side-render', 'wp-api-fetch'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+        wp_set_script_translations('mao-tk-toolkit-showcase-block', 'mao-tk-zibll-toolkit', MAO_TK_ZIBLL_TOOLKIT_DIR . 'languages');
         if (self::supported() && !\WP_Block_Type_Registry::get_instance()->is_registered('maotk/demo-showcase')) {
             register_block_type(MAO_TK_ZIBLL_TOOLKIT_DIR . 'blocks/showcase', array('render_callback' => array(__CLASS__, 'block'))); self::$owns_block = true;
         }
@@ -42,15 +43,16 @@ final class Integration
     {
         $screen = get_current_screen(); if (!$screen || $screen->post_type !== 'page' || !current_user_can('edit_pages')) { return; }
         wp_enqueue_script('mao-tk-toolkit-showcase-page', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/showcase/page-editor.js', array('wp-plugins', 'wp-editor', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-data'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+        wp_set_script_translations('mao-tk-toolkit-showcase-page', 'mao-tk-zibll-toolkit', MAO_TK_ZIBLL_TOOLKIT_DIR . 'languages');
         wp_add_inline_script('mao-tk-toolkit-showcase-page', 'window.MaoTKShowcasePage=' . wp_json_encode(array('categories' => self::categories(), 'metaKey' => Settings::META, 'template' => Settings::TEMPLATE, 'enabled' => Runtime::enabled(), 'manageUrl' => admin_url('admin.php?page=' . AdminPage::SLUG)), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ';', 'before');
     }
-    public static function meta_box(): void { add_meta_box('mao-tk-showcase-category', 'MaoTK 案例分类', array(__CLASS__, 'render_meta_box'), 'page', 'side', 'default', array('__back_compat_meta_box' => true)); }
+    public static function meta_box(): void { add_meta_box('mao-tk-showcase-category', __('MaoTK 案例分类', 'mao-tk-zibll-toolkit'), array(__CLASS__, 'render_meta_box'), 'page', 'side', 'default', array('__back_compat_meta_box' => true)); }
     public static function render_meta_box(\WP_Post $post): void
     {
         $current = (string) get_post_meta($post->ID, Settings::META, true); wp_nonce_field('mao_tk_showcase_page', 'mao_tk_showcase_page_nonce');
-        echo '<p><label for="mao-tk-showcase-category-select">选择“MaoTK 案例展示”模板后，页面自动显示对应分类。</label></p><select id="mao-tk-showcase-category-select" name="mao_tk_showcase_category" class="widefat"><option value="">全部案例</option>';
+        echo ('<p><label for="mao-tk-showcase-category-select">' . esc_html__('选择“MaoTK 案例展示”模板后，页面自动显示对应分类。', 'mao-tk-zibll-toolkit') . '</label></p><select id="mao-tk-showcase-category-select" name="mao_tk_showcase_category" class="widefat"><option value="">' . esc_html__('全部案例', 'mao-tk-zibll-toolkit') . '</option>');
         $known = $current === ''; foreach (self::categories() as $category) { if ($current === $category['id']) { $known = true; } echo '<option value="' . esc_attr($category['id']) . '"' . selected($current, $category['id'], false) . '>' . esc_html($category['name']) . '</option>'; }
-        if (!$known) { echo '<option selected value="' . esc_attr($current) . '">原分类已移除，请重新选择</option>'; }
+        if (!$known) { echo '<option selected value="' . esc_attr($current) . ('">' . esc_html__('原分类已移除，请重新选择', 'mao-tk-zibll-toolkit') . '</option>'); }
         echo '</select>';
     }
     public static function save_meta(int $id, \WP_Post $post): void
@@ -62,13 +64,13 @@ final class Integration
     }
     public static function routes(): void
     {
-        $admin = static function () { return current_user_can('manage_options') ? true : new \WP_Error('showcase_forbidden', '你没有管理案例库的权限。', array('status' => rest_authorization_required_code())); };
+        $admin = static function () { return current_user_can('manage_options') ? true : new \WP_Error('showcase_forbidden', __('你没有管理案例库的权限。', 'mao-tk-zibll-toolkit'), array('status' => rest_authorization_required_code())); };
         register_rest_route(self::REST, '/showcase', array(
             array('methods' => 'GET', 'permission_callback' => $admin, 'callback' => static function () { return rest_ensure_response((new Settings())->read()); }),
             array('methods' => 'PUT', 'permission_callback' => $admin, 'callback' => static function (\WP_REST_Request $request) {
-                if (strlen($request->get_body()) > 1200000) { return new \WP_Error('showcase_size', '案例库超过保存大小限制。', array('status' => 413)); }
+                if (strlen($request->get_body()) > 1200000) { return new \WP_Error('showcase_size', __('案例库超过保存大小限制。', 'mao-tk-zibll-toolkit'), array('status' => 413)); }
                 $payload = $request->get_json_params(); $revision = $request->get_header('if-match');
-                if (!is_array($payload) || !is_string($revision) || $revision === '') { return new \WP_Error('showcase_invalid', '保存内容或版本标识缺失。', array('status' => 400)); }
+                if (!is_array($payload) || !is_string($revision) || $revision === '') { return new \WP_Error('showcase_invalid', __('保存内容或版本标识缺失。', 'mao-tk-zibll-toolkit'), array('status' => 400)); }
                 $result = (new Settings())->save($payload, $revision); return is_wp_error($result) ? $result : rest_ensure_response($result);
             }),
         ));

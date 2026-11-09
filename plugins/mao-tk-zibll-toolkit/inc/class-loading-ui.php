@@ -14,6 +14,6 @@ final class LoadingUI
 
     public static function editor_placeholder(): string
     {
-        return '<div class="mao-tk-skeleton mao-tk-skeleton--editor" aria-hidden="true"><div class="mao-tk-skeleton__toolbar"></div><div class="mao-tk-skeleton__columns"><div class="mao-tk-skeleton__list"></div><div class="mao-tk-skeleton__canvas"></div><div class="mao-tk-skeleton__list"></div></div></div><p class="screen-reader-text" role="status">正在加载案例库…</p>';
+        return ('<div class="mao-tk-skeleton mao-tk-skeleton--editor" aria-hidden="true"><div class="mao-tk-skeleton__toolbar"></div><div class="mao-tk-skeleton__columns"><div class="mao-tk-skeleton__list"></div><div class="mao-tk-skeleton__canvas"></div><div class="mao-tk-skeleton__list"></div></div></div><p class="screen-reader-text" role="status">' . esc_html__('正在加载案例库…', 'mao-tk-zibll-toolkit') . '</p>');
     }
 }

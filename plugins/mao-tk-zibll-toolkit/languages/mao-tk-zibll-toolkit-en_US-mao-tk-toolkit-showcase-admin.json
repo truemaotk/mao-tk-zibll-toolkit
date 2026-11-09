@@ -1,0 +1,618 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "尚未填写网址": [
+        "URL not filled in yet"
+      ],
+      "撤销": [
+        "Undo"
+      ],
+      "有未保存的修改": [
+        "There are unsaved changes"
+      ],
+      "案例库已保存": [
+        "Case library has been saved"
+      ],
+      "正在保存…": [
+        "Saving…"
+      ],
+      "保存案例库": [
+        "Save case library"
+      ],
+      "请先填写按钮链接": [
+        "Please fill in the button link first"
+      ],
+      "图片暂时无法加载": [
+        "Image cannot be loaded temporarily"
+      ],
+      "还没有选择预览图片": [
+        "No preview image selected yet"
+      ],
+      "案例链接仍可正常打开": [
+        "Case links can still be opened normally"
+      ],
+      "添加网站截图后，在这里预览": [
+        "After adding the website screenshot, preview it here"
+      ],
+      "的完整网址": [
+        "full URL"
+      ],
+      "· 点击选中完整网址": [
+        "· Click to select full URL"
+      ],
+      "浏览器窗口装饰": [
+        "Browser window decoration"
+      ],
+      "预览": [
+        "Preview"
+      ],
+      "长截图": [
+        "Long screenshot"
+      ],
+      " 页面截图": [
+        " Page screenshot"
+      ],
+      "悬停浏览长图": [
+        "Hover to browse long images"
+      ],
+      "放大": [
+        "Zoom in"
+      ],
+      "截图": [
+        "Screenshot"
+      ],
+      "放大截图": [
+        "Enlarge screenshot"
+      ],
+      "未命名案例": [
+        "Unnamed case"
+      ],
+      "独立站案例展示": [
+        "Independent station case display"
+      ],
+      "这里将展示你的案例": [
+        "Your case will be shown here"
+      ],
+      "在后台添加第一个案例，即可预览。": [
+        "Add the first case in the background to preview."
+      ],
+      "案例管理": [
+        "Case Management"
+      ],
+      "案例列表": [
+        "Case list"
+      ],
+      "新增案例": [
+        "New case"
+      ],
+      "拖动左侧手柄调整顺序。": [
+        "Drag the left handle to adjust the order."
+      ],
+      "也可以选中案例后按 Alt＋↑ / ↓。": [
+        "You can also select the case and press Alt＋↑ / ↓."
+      ],
+      "案例库工具": [
+        "Case library tool"
+      ],
+      "导出当前配置": [
+        "Export current configuration"
+      ],
+      "恢复默认外观": [
+        "Restore default appearance"
+      ],
+      "拖动排序": [
+        "Drag sort"
+      ],
+      "拖动排序 · Alt＋方向键移动": [
+        "Drag to sort · Alt + arrow keys to move"
+      ],
+      "编辑": [
+        "Edit"
+      ],
+      "实时预览": [
+        "Live Preview"
+      ],
+      "页面预览": [
+        "Page preview"
+      ],
+      "预览设备": [
+        "Preview device"
+      ],
+      "桌面预览": [
+        "Desktop preview"
+      ],
+      "手机预览": [
+        "Mobile preview"
+      ],
+      "切换预览浅深色": [
+        "Switch preview between light and dark colors"
+      ],
+      "页面": [
+        "page"
+      ],
+      "案例展示": [
+        "Showcase"
+      ],
+      "设置会实时更新此预览": [
+        "Settings will update this preview in real time"
+      ],
+      "深色": [
+        "Dark"
+      ],
+      "浅色": [
+        "Light"
+      ],
+      "色值": [
+        "color value"
+      ],
+      "案例内容": [
+        "Case content"
+      ],
+      "展示标签（可选）": [
+        "Display tags (optional)"
+      ],
+      "在前台展示此案例": [
+        "Display this case in the foreground"
+      ],
+      "简要说明": [
+        "Brief description"
+      ],
+      "案例网址": [
+        "Case URL"
+      ],
+      "地址栏显示文字": [
+        "Display text in address bar"
+      ],
+      "留空时显示完整案例网址。": [
+        "Show full case URL when left empty."
+      ],
+      "预览图片": [
+        "Preview image"
+      ],
+      "移除图片": [
+        "Remove image"
+      ],
+      "当前案例预览图片": [
+        "Current case preview image"
+      ],
+      "替换图片": [
+        "Replace image"
+      ],
+      "选择图片": [
+        "Select image"
+      ],
+      "图片 ALT": [
+        "Image ALT"
+      ],
+      "用一句话说明截图内容，帮助读屏与图片检索。": [
+        "Use one sentence to describe the content of the screenshot to help screen reading and image retrieval."
+      ],
+      "操作按钮": [
+        "Action buttons"
+      ],
+      "显示查看按钮": [
+        "Show view button"
+      ],
+      "查看按钮文字": [
+        "View button text"
+      ],
+      "查看按钮链接": [
+        "View button link"
+      ],
+      "留空时使用案例网址。": [
+        "Use case URL when left blank."
+      ],
+      "显示咨询按钮": [
+        "Show consultation button"
+      ],
+      "咨询按钮文字": [
+        "Consult button text"
+      ],
+      "咨询按钮链接": [
+        "Consult button link"
+      ],
+      "链接选项": [
+        "Link options"
+      ],
+      "在新窗口打开": [
+        "Opens in new window"
+      ],
+      "案例链接添加 nofollow": [
+        "Add nofollow to case link"
+      ],
+      "咨询链接添加 nofollow": [
+        "Add nofollow to consultation link"
+      ],
+      "上移当前案例": [
+        "Move current case up"
+      ],
+      "上移": [
+        "Move up"
+      ],
+      "下移当前案例": [
+        "Move current case down"
+      ],
+      "下移": [
+        "Move down"
+      ],
+      "复制当前案例": [
+        "Copy current case"
+      ],
+      "复制": [
+        "Copy"
+      ],
+      "删除当前案例": [
+        "Delete current case"
+      ],
+      "删除": [
+        "Delete"
+      ],
+      "咨询按钮": [
+        "Consult button"
+      ],
+      "查看按钮": [
+        "View button"
+      ],
+      "图标": [
+        "icon"
+      ],
+      "当前图标": [
+        "Current icon"
+      ],
+      "上传图标": [
+        "Upload icon"
+      ],
+      "恢复默认": [
+        "Restore default"
+      ],
+      "或填写图标链接": [
+        "Or fill in the icon link"
+      ],
+      "图标链接": [
+        "Icon link"
+      ],
+      "应用": [
+        "Application"
+      ],
+      "共用查看按钮图标": [
+        "Shared view button icon"
+      ],
+      "使用默认图标": [
+        "Use default icon"
+      ],
+      "关闭上方共用开关，即可单独设置。": [
+        "Turn off the shared switch above to set it individually."
+      ],
+      "支持 SVG、PNG、JPG、WebP，最大 512 KB。": [
+        "Supports SVG, PNG, JPG, WebP, up to 512 KB."
+      ],
+      "模块上下留白": [
+        "Leave space above and below the module"
+      ],
+      "模块上方间距": [
+        "Spacing above module"
+      ],
+      "模块下方间距": [
+        "Spacing below module"
+      ],
+      "分别调整整个案例区域的上下留白，默认各10px。不改变卡片内部间距。": [
+        "Adjust the upper and lower margins of the entire case area separately, defaulting to 10px each. Does not change the internal spacing of the card."
+      ],
+      "两个按钮的统一图标": [
+        "Unified icon for both buttons"
+      ],
+      "上传你自己的图标，或粘贴图片链接。设置统一应用到所有案例。": [
+        "Upload your own icon, or paste a link to an image. Settings are applied uniformly to all cases."
+      ],
+      "两个按钮使用相同图标": [
+        "Same icon for two buttons"
+      ],
+      "两个按钮图标大小": [
+        "Two button icon sizes"
+      ],
+      "保留图标原有颜色；上传文件和链接图片都会导入WordPress媒体库。": [
+        "Keep the original color of the icon; uploaded files and linked images will be imported into the WordPress media library."
+      ],
+      "浏览器窗口": [
+        "Browser window"
+      ],
+      "显示浏览器顶栏": [
+        "Show browser top bar"
+      ],
+      "显示红黄绿圆点": [
+        "Display red, yellow and green dots"
+      ],
+      "显示胶囊地址栏": [
+        "Show capsule address bar"
+      ],
+      "显示分享与书签装饰": [
+        "Show sharing and bookmark decoration"
+      ],
+      "恢复原版苹果式窗口细节。右上角分享与书签为装饰；放大图片使用截图上的独立入口。": [
+        "Restore original Apple style window details. The sharing and bookmarks in the upper right corner are for decoration; to enlarge the picture, use the independent entrance on the screenshot."
+      ],
+      "页面与布局": [
+        "Pages and Layouts"
+      ],
+      "页面标题": [
+        "Page title"
+      ],
+      "页面说明": [
+        "Page Description"
+      ],
+      "显示模块标题": [
+        "Show module title"
+      ],
+      "显示说明文字": [
+        "Show description text"
+      ],
+      "桌面列数": [
+        "Number of desktop columns"
+      ],
+      "每行 3 个": [
+        "3 per line"
+      ],
+      "每行 2 个": [
+        "2 per line"
+      ],
+      "内容宽度": [
+        "Content width"
+      ],
+      "跟随页面容器": [
+        "Follow page container"
+      ],
+      "自定义最大宽度": [
+        "Custom maximum width"
+      ],
+      "内容最大宽度": [
+        "Content maximum width"
+      ],
+      "沿用页面可用宽度，不额外缩窄。样板按本站 1440px 外层容器预览；正式接入跟随主题。": [
+        "Use the available width of the page without additional narrowing. The template is previewed according to the 1440px outer container of this site; it is officially connected to follow the theme."
+      ],
+      "卡片间距": [
+        "Card Spacing"
+      ],
+      "卡片圆角": [
+        "Card rounded corners"
+      ],
+      "案例标题字号": [
+        "Case title font size"
+      ],
+      "主题与配色": [
+        "Theme and color matching"
+      ],
+      "显示模式": [
+        "Display mode"
+      ],
+      "跟随网站": [
+        "Follow the website"
+      ],
+      "固定浅色": [
+        "Fixed light color"
+      ],
+      "固定深色": [
+        "Fixed dark color"
+      ],
+      "主按钮背景": [
+        "Main button background"
+      ],
+      "主按钮悬停": [
+        "Main button hover"
+      ],
+      "浅色卡片背景": [
+        "Light card background"
+      ],
+      "浅色边框": [
+        "Light border"
+      ],
+      "浅色标题": [
+        "Light title"
+      ],
+      "深色卡片背景": [
+        "Dark card background"
+      ],
+      "深色边框": [
+        "Dark border"
+      ],
+      "深色标题": [
+        "Dark title"
+      ],
+      "默认跟随网站浅深色。可在预览上方切换查看。": [
+        "Default to follow website light and dark colors. You can switch between views above the preview."
+      ],
+      "正在导入图标…": [
+        "Importing icons…"
+      ],
+      "图标导入失败": [
+        "Icon import failed"
+      ],
+      "图片无法显示，请换一个图标。": [
+        "The image cannot be displayed, please change the icon."
+      ],
+      "图标已导入WordPress媒体库，全部案例同步更新。": [
+        "The icon has been imported into the WordPress media library, and all cases are updated simultaneously."
+      ],
+      "图标已导入媒体库，保存后应用": [
+        "The icon has been imported into the media library and will be applied after saving."
+      ],
+      "请填写完整的 HTTP 或 HTTPS 图片链接。": [
+        "Please complete the HTTP or HTTPS image link."
+      ],
+      "长截图预览": [
+        "Long screenshot preview"
+      ],
+      "启用长截图预览": [
+        "Enable long screenshot preview"
+      ],
+      "当前案例允许滚动": [
+        "Current case allows scrolling"
+      ],
+      "显示图片操作提示": [
+        "Show image operation prompts"
+      ],
+      "桌面预览高度": [
+        "Desktop preview height"
+      ],
+      "手机预览高度": [
+        "Mobile preview height"
+      ],
+      "浏览速度": [
+        "Browsing speed"
+      ],
+      "电脑悬停浏览，移开后平滑回到顶部。手机轻点开始，再点回到顶部。放大按钮可打开完整截图。": [
+        "When hovering on the computer to browse, it will smoothly return to the top after moving away. Tap on your phone to start, then tap back to the top. The zoom button opens the full screenshot."
+      ],
+      "动效与操作": [
+        "Animation and operation"
+      ],
+      "卡片轻微抬起 2px，按钮不放大。图片预览与访问网站使用独立入口，避免误跳转。": [
+        "Card slightly raised 2px, button not enlarged. Use separate entrances for image preview and website access to avoid accidental jumps."
+      ],
+      "键盘可聚焦预览区，按 Enter 或空格控制。系统开启“减少动态效果”时停止自动滚动，可手动查看截图。": [
+        "Keyboard can focus the preview area, press Enter or space control. When the system turns on \"Reduce Dynamic Effects\", automatic scrolling is stopped and screenshots can be viewed manually."
+      ],
+      "这里调整的是中央案例库的公共展示配置。保存后会更新WordPress中央案例库，引用这些案例的页面同步使用新配置。": [
+        "What is adjusted here is the public display configuration of the central case library. After saving, the WordPress central case library will be updated, and pages that reference these cases will use the new configuration simultaneously."
+      ],
+      "组件设置": [
+        "Component settings"
+      ],
+      "设置分类": [
+        "Set categories"
+      ],
+      "正在编辑：": [
+        "Editing:"
+      ],
+      "选择案例，或添加第一个案例。": [
+        "Select a case, or add the first case."
+      ],
+      "内容": [
+        "Content"
+      ],
+      "样式": [
+        "Style"
+      ],
+      "交互": [
+        "Interaction"
+      ],
+      "添加一个案例，开始编辑图片、文字和链接。": [
+        "Add a case and start editing images, text and links."
+      ],
+      "切换案例列表与设置面板": [
+        "Switch case list and settings panel"
+      ],
+      "页面组件 / 中央案例库": [
+        "Page Components/Central Case Library"
+      ],
+      "撤销最近修改": [
+        "Undo recent changes"
+      ],
+      "导出": [
+        "Export"
+      ],
+      "新建展示页面": [
+        "Create a new display page"
+      ],
+      "创建页面 → 选择“MaoTK 案例展示”模板 → 选择案例分类": [
+        "Create page → Select the \"MaoTK Case Display\" template → Select the case category"
+      ],
+      "保存后更新所有关联页面": [
+        "Update all associated pages after saving"
+      ],
+      "再点回到顶部": [
+        "Click back to the top"
+      ],
+      "正在浏览长图": [
+        "Browsing long image"
+      ],
+      "轻点浏览长图": [
+        "Tap to browse the long image"
+      ],
+      "案例顺序已更新": [
+        "Case order updated"
+      ],
+      "保存失败，请保留当前修改并重试。": [
+        "Saving failed, please keep the current modifications and try again."
+      ],
+      "案例库已保存，关联页面已更新": [
+        "The case library has been saved and the associated page has been updated"
+      ],
+      "保存失败，当前修改仍保留。": [
+        "Save failed, current modifications are retained."
+      ],
+      "当前案例库配置已导出": [
+        "The current case library configuration has been exported"
+      ],
+      "已添加案例，请填写内容": [
+        "Case has been added, please fill in the content"
+      ],
+      "已复制当前案例": [
+        "Current case copied"
+      ],
+      "案例已移除": [
+        "Case removed"
+      ],
+      "已撤销最近修改": [
+        "Recent changes undone"
+      ],
+      "已恢复默认外观，案例与分类保留": [
+        "Default appearance restored, cases and categories retained"
+      ],
+      "预览图片已移除": [
+        "Preview image removed"
+      ],
+      "已恢复默认图标": [
+        "Default icon restored"
+      ],
+      "请选择 512 KB 以内的 SVG、PNG、JPG 或 WebP 图标。": [
+        "Please select an SVG, PNG, JPG or WebP icon under 512 KB."
+      ],
+      "管理案例分类 ·": [
+        "Management case classification ·"
+      ],
+      "添加分类": [
+        "Add category"
+      ],
+      "分类供页面选择。移除分类后，原来引用该分类的页面显示空状态，不会自动切换为全部案例。": [
+        "Categories for page selection. After removing a category, the page that originally referenced the category will appear empty and will not automatically switch to all cases."
+      ],
+      "分类名称": [
+        "Classification name"
+      ],
+      "移除分类": [
+        "Remove categories"
+      ],
+      "案例分类": [
+        "Case Classification"
+      ],
+      "先在左侧“管理案例分类”中添加分类。": [
+        "First add a category in the \"Management Case Category\" on the left."
+      ],
+      "媒体库暂时无法打开，请刷新管理页后重试。": [
+        "The media library cannot be opened temporarily, please refresh the management page and try again."
+      ],
+      "选择案例截图": [
+        "Select case screenshot"
+      ],
+      "使用这张截图": [
+        "Use this screenshot"
+      ],
+      "已选择媒体库截图，保存后应用": [
+        "Selected media library screenshot, save and apply"
+      ],
+      "分类已从草稿中移除，保存后生效": [
+        "Category has been removed from draft, will take effect after saving"
+      ],
+      "未分类": [
+        "Uncategorized"
+      ]
+    }
+  }
+}

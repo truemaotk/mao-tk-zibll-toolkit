@@ -10,7 +10,7 @@ defined('ABSPATH') || exit;
     <input type="hidden" name="enabled" value="<?php echo $switch_module['enabled'] ? '0' : '1'; ?>">
     <input type="hidden" name="return_page" value="<?php echo esc_attr($switch_return_page); ?>">
     <input type="hidden" name="_wpnonce" value="<?php echo esc_attr(wp_create_nonce(Admin::ACTION)); ?>">
-    <button type="submit" class="mao-tk-toolkit__switch" role="switch" aria-checked="<?php echo $switch_module['enabled'] ? 'true' : 'false'; ?>" aria-label="<?php echo esc_attr($switch_module['name'] . '开关'); ?>" <?php disabled(!$switch_valid); ?>>
+    <button type="submit" class="mao-tk-toolkit__switch" role="switch" aria-checked="<?php echo $switch_module['enabled'] ? 'true' : 'false'; ?>" aria-label="<?php echo esc_attr(sprintf(__('%s开关', 'mao-tk-zibll-toolkit'), $switch_module['name'])); ?>" <?php disabled(!$switch_valid); ?>>
         <span class="mao-tk-toolkit__switch-track" aria-hidden="true"></span>
     </button>
 </form>

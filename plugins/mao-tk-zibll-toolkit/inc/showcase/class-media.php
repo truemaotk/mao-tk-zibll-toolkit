@@ -13,25 +13,25 @@ final class Media
         $files = $request->get_file_params(); $bytes = ''; $name = '';
         if (isset($files['icon']) && is_array($files['icon'])) {
             $file = $files['icon'];
-            if (($file['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK || !is_uploaded_file($file['tmp_name'] ?? '') || ($file['size'] ?? 0) > self::LIMIT) { return self::error('请选择512KB以内的SVG、PNG、JPG或WebP图标。'); }
+            if (($file['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK || !is_uploaded_file($file['tmp_name'] ?? '') || ($file['size'] ?? 0) > self::LIMIT) { return self::error(__('请选择512KB以内的SVG、PNG、JPG或WebP图标。', 'mao-tk-zibll-toolkit')); }
             $bytes = (string) file_get_contents($file['tmp_name']); $name = sanitize_file_name($file['name'] ?? 'icon');
         } else {
             $url = Settings::url($request->get_param('url'));
-            if (!$url) { return self::error('请填写完整的HTTP或HTTPS图片链接。'); }
+            if (!$url) { return self::error(__('请填写完整的HTTP或HTTPS图片链接。', 'mao-tk-zibll-toolkit')); }
             // Safe HTTP API checks every redirect; no cookies, authentication or browser headers forwarded.
             $response = wp_safe_remote_get($url, array('timeout' => 12, 'redirection' => 3, 'limit_response_size' => self::LIMIT + 1, 'cookies' => array(), 'headers' => array('Accept' => 'image/svg+xml,image/png,image/jpeg,image/webp')));
-            if (is_wp_error($response) || wp_remote_retrieve_response_code($response) !== 200) { return self::error('图片链接无法读取，请确认网址可公开访问，或改为上传文件。'); }
+            if (is_wp_error($response) || wp_remote_retrieve_response_code($response) !== 200) { return self::error(__('图片链接无法读取，请确认网址可公开访问，或改为上传文件。', 'mao-tk-zibll-toolkit')); }
             $bytes = wp_remote_retrieve_body($response); $name = sanitize_file_name(basename(wp_parse_url($url, PHP_URL_PATH) ?: 'icon'));
         }
-        if ($bytes === '' || strlen($bytes) > self::LIMIT) { return self::error('图标为空或超过512KB。'); }
+        if ($bytes === '' || strlen($bytes) > self::LIMIT) { return self::error(__('图标为空或超过512KB。', 'mao-tk-zibll-toolkit')); }
         $mime = ''; $extension = '';
         if (preg_match('/^\s*(?:<\?xml[^>]*>\s*)?(?:<!DOCTYPE[\s\S]*?>\s*)?<svg\b/i', $bytes)) {
-            $safe = self::svg($bytes); if ($safe === null) { return self::error('SVG包含不支持的脚本、外部引用或图形属性，请换用纯图形SVG或PNG。'); }
+            $safe = self::svg($bytes); if ($safe === null) { return self::error(__('SVG包含不支持的脚本、外部引用或图形属性，请换用纯图形SVG或PNG。', 'mao-tk-zibll-toolkit')); }
             $bytes = $safe; $mime = 'image/svg+xml'; $extension = 'svg';
         } else {
             $info = @getimagesizefromstring($bytes);
             $types = array('image/png' => 'png', 'image/jpeg' => 'jpg', 'image/webp' => 'webp');
-            if (!$info || !isset($types[$info['mime'] ?? ''])) { return self::error('文件内容不是支持的图片格式。'); }
+            if (!$info || !isset($types[$info['mime'] ?? ''])) { return self::error(__('文件内容不是支持的图片格式。', 'mao-tk-zibll-toolkit')); }
             $mime = $info['mime']; $extension = $types[$mime];
         }
         $name = sanitize_file_name(pathinfo($name, PATHINFO_FILENAME)); $name = ($name ?: 'showcase-icon') . '-' . substr(hash('sha256', $bytes), 0, 12) . '.' . $extension;
@@ -41,9 +41,9 @@ final class Media
         $allow = static function (array $mimes) use ($extension, $mime): array { $mimes[$extension] = $mime; return $mimes; };
         add_filter('upload_mimes', $allow);
         try { $upload = wp_upload_bits($name, null, $bytes); } finally { remove_filter('upload_mimes', $allow); }
-        if (!empty($upload['error'])) { return self::error('图标无法写入媒体目录，请检查上传目录权限。', 500); }
+        if (!empty($upload['error'])) { return self::error(__('图标无法写入媒体目录，请检查上传目录权限。', 'mao-tk-zibll-toolkit'), 500); }
         $id = wp_insert_attachment(array('post_title' => pathinfo($name, PATHINFO_FILENAME), 'post_mime_type' => $mime, 'post_status' => 'inherit', 'post_content' => ''), $upload['file'], 0, true);
-        if (is_wp_error($id)) { wp_delete_file($upload['file']); return self::error('媒体记录保存失败，请重试。', 500); }
+        if (is_wp_error($id)) { wp_delete_file($upload['file']); return self::error(__('媒体记录保存失败，请重试。', 'mao-tk-zibll-toolkit'), 500); }
         if ($mime !== 'image/svg+xml') { $metadata = wp_generate_attachment_metadata($id, $upload['file']); if (is_array($metadata)) { wp_update_attachment_metadata($id, $metadata); } }
         update_post_meta($id, '_mao_tk_showcase_icon', 1);
         return rest_ensure_response(array('id' => $id, 'asset' => wp_get_attachment_url($id), 'name' => $name, 'bytes' => strlen($bytes)));

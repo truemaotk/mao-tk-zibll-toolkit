@@ -75,6 +75,7 @@ final class Admin
         wp_enqueue_style('mao-tk-toolkit-disclosure-motion', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/css/disclosure-motion.css', array('mao-tk-zibll-toolkit-admin'), MAO_TK_ZIBLL_TOOLKIT_VERSION);
         wp_enqueue_script('mao-tk-toolkit-disclosure-motion', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/disclosure-motion.js', array(), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
         wp_enqueue_script('mao-tk-zibll-toolkit-admin', MAO_TK_ZIBLL_TOOLKIT_URL . 'assets/js/admin.js', array('mao-tk-toolkit-disclosure-motion'), MAO_TK_ZIBLL_TOOLKIT_VERSION, true);
+        wp_set_script_translations('mao-tk-zibll-toolkit-admin', 'mao-tk-zibll-toolkit', MAO_TK_ZIBLL_TOOLKIT_DIR . 'languages');
     }
 
     public function enqueue_controls(string $hook_suffix): void
@@ -123,7 +124,7 @@ final class Admin
             wp_die(esc_html__('模块或目标状态无效，请返回工作台重试。', 'mao-tk-zibll-toolkit'), '', array('response' => 400));
         }
         if ($id === Maintenance\Settings::MODULE && $enabled === '1' && (Maintenance\Runtime::conflict() || !(new Maintenance\Settings())->read()['valid'])) {
-            wp_die('维护页配置异常或旧维护模式仍在运行，未开启维护。', '', array('response' => 400));
+            wp_die(__('维护页配置异常或旧维护模式仍在运行，未开启维护。', 'mao-tk-zibll-toolkit'), '', array('response' => 400));
         }
         $saved = $this->manager->set_enabled($id, $enabled === '1');
         if ($saved && $id === R2Media\Runtime::MODULE && $enabled === '0') {

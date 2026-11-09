@@ -51,7 +51,17 @@ final class Settings
         $common=array();foreach(self::fields() as $key=>$field)$common[$key]=$field['default'];$types=array();foreach(Catalog::all() as $id=>$type)$types[$id]=array('mode'=>'common','overrides'=>array());
         return array('version'=>1,'common'=>$common,'types'=>$types);
     }
-    public static function groups(): array{return array('brand'=>'品牌与邮件 Logo','colors'=>'邮件配色','layout'=>'版式与金额显示','support'=>'客服与回复','footer'=>'按钮与页脚','copy'=>'该类型文案与变量');}
+    public static function groups(): array
+    {
+        return array(
+            'brand' => __('品牌与邮件 Logo', 'mao-tk-zibll-toolkit'),
+            'colors' => __('邮件配色', 'mao-tk-zibll-toolkit'),
+            'layout' => __('版式与金额显示', 'mao-tk-zibll-toolkit'),
+            'support' => __('客服与回复', 'mao-tk-zibll-toolkit'),
+            'footer' => __('按钮与页脚', 'mao-tk-zibll-toolkit'),
+            'copy' => __('该类型文案与变量', 'mao-tk-zibll-toolkit'),
+        );
+    }
     public static function placeholders(string $value,array $allowed): void
     {
         preg_match_all('/\{\{\s*([a-z_]+)\s*\}\}/',$value,$m);foreach($m[1] as $token)if(!in_array($token,$allowed,true))throw new \InvalidArgumentException('该类型不支持变量：'.$token);

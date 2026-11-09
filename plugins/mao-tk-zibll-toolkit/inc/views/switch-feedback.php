@@ -4,8 +4,8 @@ namespace MaoTK\ZibllToolkit;
 defined('ABSPATH') || exit;
 /** $switch_notice is the validated result key supplied by each page. */
 $switch_messages = array(
-    'saved' => '模块开关已保存，实际加载状态已更新。',
-    'save-failed' => '模块开关未能保存，请检查配置状态与数据库连接后重试。',
+    'saved' => __('模块开关已保存，实际加载状态已更新。', 'mao-tk-zibll-toolkit'),
+    'save-failed' => __('模块开关未能保存，请检查配置状态与数据库连接后重试。', 'mao-tk-zibll-toolkit'),
 );
 $switch_message = $switch_messages[$switch_notice] ?? '';
 ?>

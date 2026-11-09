@@ -34,6 +34,18 @@
 .mao-tk-toolkit :is(button, input, select, textarea, .button):focus-visible { outline: none; border-color: var(--mao-tk-accent); box-shadow: inset 0 0 0 1px var(--mao-tk-accent); }
 .mao-tk-toolkit .mao-tk-toolkit__header { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
 .mao-tk-toolkit .mao-tk-toolkit__identity { display: flex; align-items: center; gap: 16px; min-width: 0; }
+.mao-tk-toolkit .mao-tk-toolkit__language {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-height: 36px;
+    padding: 0 10px;
+    border-radius: 6px;
+    color: var(--mao-tk-muted);
+    text-decoration: none;
+}
+.mao-tk-toolkit .mao-tk-toolkit__language:hover { color: var(--mao-tk-accent); text-decoration: underline; }
+.mao-tk-toolkit .mao-tk-toolkit__language:focus-visible { outline: 2px solid var(--mao-tk-accent); outline-offset: 2px; }
 .mao-tk-toolkit .mao-tk-toolkit__brand { display: block; flex: 0 0 48px; width: 48px; height: 48px; object-fit: contain; }
 .mao-tk-toolkit .mao-tk-toolkit__title-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .mao-tk-toolkit h1 { color: var(--mao-tk-text); font-size: clamp(23px, 2.2vw, 29px); font-weight: 650; line-height: 1.3; overflow-wrap: anywhere; }

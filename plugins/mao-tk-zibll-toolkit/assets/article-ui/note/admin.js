@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+  const translate = text => window.wp?.i18n?.__(text, 'mao-tk-zibll-toolkit') ?? text;
   function init() {
     var root = document.querySelector('[data-mao-tk-note-settings]');
     var model = window.MaoTKNoteModel, payload = window.MaoTKNoteSettings;
@@ -43,10 +44,10 @@
           root.querySelector('[data-note-color-trigger="' + field.id + '"]').style.setProperty('--mao-tk-note-swatch', value[key]);
         });
       });
-      var label = root.querySelector('[data-note-preview-label]'); label.textContent = allTypes ? '五种类型' : payload.types[previewType];
-      root.querySelector('[data-note-preview-summary]').textContent = selected[theme === 'dark' ? 'dark' : 'light'].toUpperCase() + ' / 图标 ' + selected.iconSize + 'px / ' + ({left:'左对齐',center:'居中',right:'右对齐'})[selected.badgePosition];
+      var label = root.querySelector('[data-note-preview-label]'); label.textContent = allTypes ? translate("五种类型") : payload.types[previewType];
+      root.querySelector('[data-note-preview-summary]').textContent = selected[theme === 'dark' ? 'dark' : 'light'].toUpperCase() + translate(" / 图标 ") + selected.iconSize + 'px / ' + ({left:translate("左对齐"),center:translate("居中"),right:translate("右对齐")})[selected.badgePosition];
       var dirty = root.querySelector('[data-note-dirty]'), changed = snapshot() !== original;
-      dirty.textContent = changed ? '未保存' : '已同步'; dirty.dataset.changed = String(changed);
+      dirty.textContent = changed ? translate("未保存") : translate("已同步"); dirty.dataset.changed = String(changed);
       if (activeColor && !colorLock) { syncPalette(); }
     }
     function positionTabIndicator() {
@@ -133,12 +134,12 @@
       if (trigger === activeTrigger && !palette.hidden) { closePalette(true); return; }
       closePalette(false); activeTrigger = trigger; activeColor = document.getElementById(trigger.dataset.noteColorTrigger);
       trigger.setAttribute('aria-expanded','true'); palette.hidden = false;
-      palette.querySelector('#mao-tk-note-palette-title').textContent = activeColor.dataset.noteField === 'light' ? '浅色模式' : '深色模式';
+      palette.querySelector('#mao-tk-note-palette-title').textContent = activeColor.dataset.noteField === 'light' ? translate("浅色模式") : translate("深色模式");
       var presets = palette.querySelector('[data-note-color-presets]'); presets.replaceChildren();
       Object.keys(payload.baselines).forEach(function (type) {
         var color = payload.baselines[type][activeColor.dataset.noteField], button = document.createElement('button');
         button.type = 'button'; button.style.backgroundColor = color; button.dataset.notePreset = color;
-        button.setAttribute('aria-label', payload.types[type] + '默认色 ' + color); presets.appendChild(button);
+        button.setAttribute('aria-label', payload.types[type] + translate("默认色 ") + color); presets.appendChild(button);
       });
       syncPalette(); positionPalette(); board.focus({preventScroll:true});
     }

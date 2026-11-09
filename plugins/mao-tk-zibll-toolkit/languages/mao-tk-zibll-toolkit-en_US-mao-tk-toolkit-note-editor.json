@@ -1,0 +1,93 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "浅色模式": [
+        "Light mode"
+      ],
+      "深色模式": [
+        "Dark mode"
+      ],
+      "单块覆盖": [
+        "Single block coverage"
+      ],
+      "继承": [
+        "Inheritance"
+      ],
+      "恢复该颜色继承": [
+        "Restore this color inheritance"
+      ],
+      "继承（当前：": [
+        "Inheritance (currently:"
+      ],
+      "标签位置": [
+        "Label position"
+      ],
+      "左": [
+        "Left"
+      ],
+      "中": [
+        "Medium"
+      ],
+      "右": [
+        "Right"
+      ],
+      "图标位置": [
+        "Icon position"
+      ],
+      "文字前": [
+        "before text"
+      ],
+      "文字后": [
+        "After text"
+      ],
+      "本地图标": [
+        "Local icon"
+      ],
+      "图标尺寸 · ": [
+        "Icon size · "
+      ],
+      "恢复尺寸继承": [
+        "Restore size inheritance"
+      ],
+      "显示图标": [
+        "Show icon"
+      ],
+      "显示": [
+        "Show"
+      ],
+      "隐藏": [
+        "Hide"
+      ],
+      "内部标题颜色": [
+        "Internal title color"
+      ],
+      "跟随类型色": [
+        "Follow type color"
+      ],
+      "正文中性色": [
+        "Neutral color for body text"
+      ],
+      "全部恢复继承": [
+        "Restore inheritance in all"
+      ],
+      "使用封板默认（单块覆盖）": [
+        "Use cover default (single block coverage)"
+      ],
+      "Toolkit 提示框外观": [
+        "Toolkit prompt box appearance"
+      ],
+      "前台外观增强未启用或此文章类型未纳入范围。配置仍可保存，画布保留基础外观。": [
+        "Frontend appearance enhancements are not enabled or this post type is not in scope. Configurations can still be saved and the canvas retains its base appearance."
+      ],
+      "标签和标题的显示开关仍在原提示框设置中；内部标题不加入文章目录。": [
+        "The display switches of tags and titles are still in the original prompt box settings; internal titles are not added to the article table of contents."
+      ]
+    }
+  }
+}

@@ -1,4 +1,5 @@
 (() => {
+    const translate = text => window.wp?.i18n?.__(text, 'mao-tk-zibll-toolkit') ?? text;
     const panel = document.querySelector('[data-mtk-r2-job]');
     if (!panel || panel.dataset.active !== '1') return;
 
@@ -23,7 +24,7 @@
             const response = await fetch(panel.dataset.ajax, { method: 'POST', body, credentials: 'same-origin', signal: controller.signal });
             if (response.status === 403) {
                 active = false;
-                message.textContent = '请重新加载后台页面以继续查看进度。';
+                message.textContent = translate("请重新加载后台页面以继续查看进度。");
                 return;
             }
             const result = await response.json();
@@ -42,12 +43,12 @@
             });
             pause.hidden = !job.value || (paused && !pausing);
             pause.disabled = !ready || pausing;
-            pause.textContent = pausing ? '正在暂停…' : '暂停同步';
+            pause.textContent = pausing ? translate("正在暂停…") : translate("暂停同步");
             resume.hidden = !paused || pausing;
             resume.disabled = !ready;
             message.textContent = '';
         } catch (error) {
-            message.textContent = '暂时无法读取进度，将自动重试。';
+            message.textContent = translate("暂时无法读取进度，将自动重试。");
         } finally {
             window.clearTimeout(timeout);
             pending = false;

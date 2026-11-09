@@ -1,0 +1,24 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "请重新加载后台页面以继续查看进度。": [
+        "Please reload the background page to continue viewing progress."
+      ],
+      "正在暂停…": [
+        "Pausing…"
+      ],
+      "暂停同步": [
+        "Pause sync"
+      ],
+      "暂时无法读取进度，将自动重试。": [
+        "Temporarily unable to read progress, will automatically retry."
+      ]
+    }
+  }
+}

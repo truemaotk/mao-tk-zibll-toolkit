@@ -1,0 +1,51 @@
+{
+  "domain": "mao-tk-zibll-toolkit",
+  "locale_data": {
+    "mao-tk-zibll-toolkit": {
+      "": {
+        "domain": "mao-tk-zibll-toolkit",
+        "lang": "en_US",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "色板，": [
+        "Swatches,"
+      ],
+      "请输入 0—200 的整数。": [
+        "Please enter an integer from 0 to 200."
+      ],
+      "填写有效的十六进制颜色后，预览会继续自动更新。": [
+        "After filling in a valid hex color, the preview continues to update automatically."
+      ],
+      "留白请输入 0—200 的整数；无效项保留上一次有效预览。": [
+        "Leave blank, please enter an integer from 0 to 200; invalid items will retain the last valid preview."
+      ],
+      "预览已实时更新，正式页面未改变。": [
+        "The preview has been updated in real time, and the official page has not changed."
+      ],
+      "有未保存的修改；实时预览不会发布修改。": [
+        "There are unsaved changes; live preview will not post changes."
+      ],
+      "正在加载预览；正式设置未改变。": [
+        "Loading preview; official settings unchanged."
+      ],
+      "当前：": [
+        "Currently:"
+      ],
+      "当前：样例文章（演示数据）": [
+        "Current: Sample article (demo data)"
+      ],
+      "没有匹配内容，请尝试 ID 或更具体的标题。": [
+        "No match, please try ID or more specific title."
+      ],
+      "最多显示 20 项，请继续输入以缩小范围。": [
+        "Maximum of 20 items displayed, please continue entering to narrow the range."
+      ],
+      "搜索暂不可用，请刷新页面后重试。": [
+        "Search is temporarily unavailable, please refresh the page and try again."
+      ],
+      "预览未能加载，请查看画布提示或刷新页面重试。": [
+        "The preview failed to load, please check the canvas prompt or refresh the page to try again."
+      ]
+    }
+  }
+}
